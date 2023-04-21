@@ -1,1 +1,14 @@
-h1 { color: red; }
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Orbitron:wght@400;700&display=swap');
+
+.nav-links {
+  font-family: "Orbitron", sans-serif;
+
+}
+
+.nav-links li {
+  margin: .75rem 0;
+}
+
+.sub-items {
+  font-family: "Inter", sans-serif;
+}
