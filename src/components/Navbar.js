@@ -20,7 +20,7 @@ const Navbar = () => {
         </div>
         {/* hamburger button */}
         <button className="mobile-btn">
-          <label for="check">
+          <label htmlFor="check">
             <input type="checkbox" id="check" onClick={() => setMenuOpen(!menuOpen)}/> 
             <span></span>
             <span></span>
