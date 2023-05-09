@@ -3,3 +3,29 @@
   padding: 0;
   border: 0;
 }
+
+.wd-grid {
+  display: grid;
+}
+
+@media screen and (min-width: 768px) {
+  .wd-content-body {
+    grid-template-areas: "img text";
+    gap: 3rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .wd-text-container {
+    grid-area: text;
+    align-self: center;
+  }
+  
+  .wd-preview-img {
+    grid-area: img;
+  }
+
+  .wd-reverse-grid {
+    display: grid;
+    grid-template-areas: "text img";
+  }
+}

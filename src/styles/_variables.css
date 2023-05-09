@@ -5,4 +5,9 @@
   --color-tertiary: rgba(235, 235, 235, 1);
   --color-accent: rgba(41, 166, 176, 1);
   --color-bg-alt: rgba(35, 40, 66, 1);
+
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
 }
