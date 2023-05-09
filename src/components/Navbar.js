@@ -15,7 +15,7 @@ const Navbar = () => {
         {/* logo */}
         <div className="logo-wrapper">
           <Link href={"/index.html"}>
-            <Image className="logo" src="/images/logo.svg" alt="" width={74} height={21} />
+            <Image className="logo" src="/images/logo.png" alt="" width={200} height={31.5} />
           </Link>
         </div>
         {/* hamburger button */}
