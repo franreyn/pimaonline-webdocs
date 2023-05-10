@@ -178,11 +178,19 @@ a:hover {
 
 /* Homepage content */
 .wd-content-wrapper {
-  margin: 4rem 1rem;
+  padding: 4rem 1rem;
+  background-image: url("../../public/images/hex.svg");
+  background-repeat: no-repeat;
+  background-size: 100px;
+  background-position-x: 100%;
+  background-position-y: 50%;
 }
 
 .wd-header {
   position: relative;
+  background-image: url("../../public/images/box.svg");
+  background-repeat: no-repeat;
+  background-size: 100px;
 }
 
 .wd-text-center {
@@ -194,30 +202,12 @@ a:hover {
   margin: 0 auto;
 }
 
-.box-svg {
-  opacity: 0.3;
-  position: absolute;
-  left: -2rem;
-  z-index: -1;
-  width: 100px;
-  top: -5rem;
-}
-
-.hex-svg {
-  position: absolute;
-  opacity: .5;
-  right: 0;
-  bottom: 0;
-  width: 70px;
-  z-index: -1;
-}
-
-.wd-content-body {
+section {
   margin: 9rem auto 0 auto;
   max-width: var(--breakpoint-lg);
 }
 
-.wd-content-body p {
+section p {
   margin-bottom: 1rem;
 }
 
@@ -254,14 +244,6 @@ a:hover {
   justify-content: center;
 }
 
-.wave {
-  width: 100%;
-  position: absolute;
-  z-index: -1;
-  left: 0;
-  top: 80rem;
-}
-
 @media screen and (min-width: 576px) {
   .wd-header {
     display: flex;
@@ -269,15 +251,15 @@ a:hover {
     margin: 0 auto;
     gap: 2rem;
   }
-
-  .wave {
-    top: 70rem;
-  }
 }
 
 @media screen and (min-width: 768px) {
-  .box-svg {
-    position: static;
+  .wd-header {
+    background-size: auto;
+  }
+
+  .wd-header .wd-text-container {
+    margin: 0 auto 0 13rem;
   }
 
   .wd-img-wrap {
@@ -285,32 +267,15 @@ a:hover {
     flex-direction: row;
     margin: 0 auto;
   }
-
-  .wave {
-    top: 50rem;
-  }
 }
 
 @media screen and (min-width: 1024px) {
   .wd-img-wrap {
     gap: 3rem;
   }
-
-  .box-svg {
-    width: 200px;
-  }
-
-  .wave {
-    top: 60rem;
-  }
 }
 
 @media screen and (min-width: 1280px) {
-  .box-svg {
-    left: 3rem;
-    top: 0;
-  }
-
   .wd-header h1 {
     font-size: 3.5rem;
   }

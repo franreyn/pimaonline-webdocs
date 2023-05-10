@@ -9,7 +9,7 @@
 }
 
 @media screen and (min-width: 768px) {
-  .wd-content-body {
+  section {
     grid-template-areas: "img text";
     gap: 3rem;
     grid-template-columns: repeat(2, 1fr);
