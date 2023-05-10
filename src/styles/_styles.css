@@ -4,14 +4,6 @@ body {
   background-color: var(--color-primary);
 }
 
-h1, h2, h3, h4 {
-  margin-bottom: 1rem;
-}
-
-.wd-text-container p {
-  margin-bottom: 2rem;
-}
-
 /* Navbar */
 .wd-navbar {
   display: block;
@@ -184,6 +176,10 @@ a:hover {
   background-size: 100px;
   background-position-x: 100%;
   background-position-y: 50%;
+  display: grid;
+  justify-items: center;
+  grid-template-rows: repeat(4, auto);
+  grid-row-gap: 9rem;
 }
 
 .wd-header {
@@ -203,7 +199,7 @@ a:hover {
 }
 
 section {
-  margin: 9rem auto 0 auto;
+  margin: 0 auto;
   max-width: var(--breakpoint-lg);
 }
 
@@ -211,7 +207,17 @@ section p {
   margin-bottom: 1rem;
 }
 
-.wd-img-wrap {
+.wd-horizontal-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wd-horizontal-display h2 {
+  margin-bottom: 2rem;
+}
+
+.wd-img-container {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
   grid-template-rows: 200px;
@@ -219,7 +225,13 @@ section p {
   gap: 1rem;
 }
 
-.wd-preview-img {
+.wd-img-container img {
+  object-fit: contain;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.wd-side-by-side-item img {
   object-fit: contain;
   width: 100%;
   margin-bottom: 1rem;
@@ -237,11 +249,6 @@ section p {
 .wd-btn:hover {
   background-color: var(--color-secondary);
   color: var(--color-primary);
-}
-
-.wd-btn-center {
-  display: flex;
-  justify-content: center;
 }
 
 @media screen and (min-width: 576px) {
@@ -262,7 +269,7 @@ section p {
     margin: 0 auto 0 13rem;
   }
 
-  .wd-img-wrap {
+  .wd-img-container {
     display: flex;
     flex-direction: row;
     margin: 0 auto;
@@ -270,7 +277,7 @@ section p {
 }
 
 @media screen and (min-width: 1024px) {
-  .wd-img-wrap {
+  .wd-img-container {
     gap: 3rem;
   }
 }

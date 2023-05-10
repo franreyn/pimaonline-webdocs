@@ -4,28 +4,18 @@
   border: 0;
 }
 
-.wd-grid {
-  display: grid;
-}
-
 @media screen and (min-width: 768px) {
-  section {
-    grid-template-areas: "img text";
-    gap: 3rem;
+  .wd-side-by-side {
+    display: grid;
+    grid-gap: 2rem;
     grid-template-columns: repeat(2, 1fr);
   }
-  
-  .wd-text-container {
-    grid-area: text;
+
+  .wd-side-by-side-item {
     align-self: center;
   }
-  
-  .wd-preview-img {
-    grid-area: img;
-  }
 
-  .wd-reverse-grid {
-    display: grid;
-    grid-template-areas: "text img";
+  .wd-side-by-side.reverse .wd-side-by-side-item:first-child {
+    order: 2;
   }
 }
