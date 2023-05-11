@@ -14,7 +14,7 @@ const Navbar = () => {
       <nav className="wd-navbar">
         {/* logo */}
         <div className="logo-wrapper">
-          <Link href="/index.html">
+          <Link href="index">
             <Image className="logo" src="/images/logo.png" alt="Pima logo" width={200} height={31.5} />
           </Link>
         </div>
@@ -31,16 +31,16 @@ const Navbar = () => {
         <div className={`nav-container ${menuOpen ? 'show-menu' : 'hide-menu'}`}>
           <ul className="nav-links">
             <li>
-              <Link href="/site/getting-started.html">Docs</Link>
+              <Link href="getting-started">Docs</Link>
               <ul className="sub-items">
-                <li><Link href="/site/getting-started.html">Getting Started</Link></li>
-                <li><Link href="/site/layouts.html">Layouts</Link></li>
-                <li><Link href="/site/widgets.html">Widgets</Link></li>
-                <li><Link href="/site/utilities.html">Utilities</Link></li>
+                <li><Link href="getting-started">Getting Started</Link></li>
+                <li><Link href="layouts">Layouts</Link></li>
+                <li><Link href="widgets">Widgets</Link></li>
+                <li><Link href="utilities">Utilities</Link></li>
               </ul>
             </li>
             <li>
-              <Link href="/site/themes.html">Themes</Link>
+              <Link href="themes">Themes</Link>
             </li>
             <li>
               <Link href="https://fontawesome.com/v5/search?m=free">Icons</Link>
