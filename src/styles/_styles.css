@@ -189,6 +189,10 @@ a:hover {
   background-size: 100px;
 }
 
+.wd-header p {
+  margin-bottom: 2rem;
+}
+
 .wd-text-center {
   text-align: center;
 }
