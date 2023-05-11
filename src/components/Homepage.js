@@ -25,7 +25,7 @@ const Home = () => {
           <h2>Always the latest technology thanks to continuous improvement</h2>
           <p>We store our code in the cloud and that code trickles down to all courses. This means that when we update our code, all courses are updated too.</p>
         </div>
-        <div class="wd-side-by-side-item">
+        <div className="wd-side-by-side-item">
           <Image src="/images/code.png" alt="" width={400} height={250} />
         </div>
       </section>
@@ -34,7 +34,7 @@ const Home = () => {
           <h2>Easily customizable and project specific</h2>
           <p>We offer a selection of themes, these themes are program specific and customizable. Non program specific customizable themes are also available.</p>
         </div>
-        <div class="wd-side-by-side-item">
+        <div className="wd-side-by-side-item">
           <Image src="/images/widget-ex.png" alt="" width={400} height={250} />
         </div>
       </section>
