@@ -176,10 +176,6 @@ a:hover {
   background-size: 100px;
   background-position-x: 100%;
   background-position-y: 50%;
-  display: grid;
-  justify-items: center;
-  grid-template-rows: repeat(4, auto);
-  grid-row-gap: 9rem;
 }
 
 .wd-header {
@@ -221,14 +217,6 @@ section p {
   margin-bottom: 2rem;
 }
 
-.wd-img-container {
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  grid-template-rows: 200px;
-  align-items: center;
-  gap: 1rem;
-}
-
 .wd-img-container img {
   object-fit: contain;
   width: 100%;
@@ -238,6 +226,7 @@ section p {
 .wd-side-by-side-item img {
   object-fit: contain;
   width: 100%;
+  height: auto;
   margin-bottom: 1rem;
 }
 

@@ -4,6 +4,21 @@
   border: 0;
 }
 
+.wd-content-wrapper {
+  display: grid;
+  justify-items: center;
+  grid-template-rows: repeat(4, auto);
+  grid-row-gap: 9rem;
+}
+
+.wd-img-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 200px;
+  align-items: center;
+  gap: 1rem;
+}
+
 @media screen and (min-width: 768px) {
   .wd-side-by-side {
     display: grid;
