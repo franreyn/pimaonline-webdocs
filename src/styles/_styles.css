@@ -200,7 +200,6 @@ a:hover {
 
 section {
   margin: 0 auto;
-  max-width: var(--breakpoint-lg);
 }
 
 section p {
@@ -279,8 +278,4 @@ section p {
   .wd-header h1 {
     font-size: 3.5rem;
   }
-}
-
-.mb-12 {
-  margin-bottom: 3rem;
 }
