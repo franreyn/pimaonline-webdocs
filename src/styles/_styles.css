@@ -43,6 +43,7 @@ a:hover {
     right: 0;
     width: 75vw;
     height: 100vh;
+    z-index: 1;
   }
 
   .mobile-btn {
@@ -51,7 +52,7 @@ a:hover {
     position: absolute;
     right: 0;
     padding: 0 1rem;
-    z-index: 1;
+    z-index: 2;
   }
 
   .nav-links {
@@ -114,10 +115,7 @@ a:hover {
     width: 100%;
   }
 
-  input[type="checkbox"]:checked ~ span:nth-of-type(3) {   
-  /*   transform-origin:bottom;
-    width:50%;
-    transform: translate(-15.75px,-40px) rotatez(45deg); */
+  input[type="checkbox"]:checked ~ span:nth-of-type(3) {
     opacity: 0;
   }
    
@@ -167,5 +165,117 @@ a:hover {
 
   .sub-items {
     display: none;
+  }
+}
+
+/* Homepage content */
+.wd-content-wrapper {
+  padding: 4rem 1rem;
+  background-image: url("../../public/images/hex.svg");
+  background-repeat: no-repeat;
+  background-size: 100px;
+  background-position-x: 100%;
+  background-position-y: 50%;
+}
+
+.wd-header {
+  position: relative;
+  background-image: url("../../public/images/box.svg");
+  background-repeat: no-repeat;
+  background-size: 100px;
+}
+
+.wd-header p {
+  margin-bottom: 2rem;
+}
+
+.wd-text-center {
+  text-align: center;
+}
+
+.wd-text-container {
+  max-width: var(--breakpoint-lg);
+  margin: 0 auto;
+}
+
+section {
+  margin: 0 auto;
+}
+
+section p {
+  margin-bottom: 1rem;
+}
+
+.wd-horizontal-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wd-horizontal-display h2 {
+  margin-bottom: 2rem;
+}
+
+.wd-img-container img {
+  object-fit: contain;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.wd-side-by-side-item img {
+  object-fit: contain;
+  width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.wd-btn {
+  background-color: var(--color-accent);
+  padding: 1rem 1.25rem;
+  border-radius: 5px;
+  display: inline-block;
+  transition: all .2s ease-in-out;
+  font-weight: 700;
+}
+
+.wd-btn:hover {
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+}
+
+@media screen and (min-width: 576px) {
+  .wd-header {
+    display: flex;
+    max-width: var(--breakpoint-lg);
+    margin: 0 auto;
+    gap: 2rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .wd-header {
+    background-size: auto;
+  }
+
+  .wd-header .wd-text-container {
+    margin: 0 auto 0 13rem;
+  }
+
+  .wd-img-container {
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .wd-img-container {
+    gap: 3rem;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .wd-header h1 {
+    font-size: 3.5rem;
   }
 }
