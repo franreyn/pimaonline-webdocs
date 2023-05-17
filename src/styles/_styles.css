@@ -279,3 +279,39 @@ section p {
     font-size: 3.5rem;
   }
 }
+
+/* Docs */
+.wd-sidebar {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.5;
+}
+
+.wd-sidebar > li {
+  margin-bottom: 1rem;
+}
+
+.wd-sidebar > li > ul {
+  padding-left: 0.75rem;
+  box-sizing: border-box;
+  border-left: 1px solid rgba(235, 235, 235, .3);
+}
+
+.wd-sidebar > li > ul > li {
+  position: relative;
+  width: fit-content;
+}
+
+.wd-sidebar > li > ul > li::before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 20px;
+  background-color: var(--color-tertiary);
+  left: -13px;
+  opacity: 0;
+  transition: opacity .2s ease-in-out;
+}
+
+.wd-sidebar > li > ul > li:hover::before {
+  opacity: 1;
+}
