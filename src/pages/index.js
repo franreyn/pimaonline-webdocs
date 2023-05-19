@@ -14,7 +14,7 @@ export default function Home() {
       <header>
         <Navbar />
       </header>
-      <main>
+      <main className="wd-home-main">
         <Homepage />
       </main>
       <footer>

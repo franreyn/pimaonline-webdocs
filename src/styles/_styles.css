@@ -173,7 +173,7 @@ a:hover {
 }
 
 /* Homepage content */
-main {
+.wd-home-main {
   padding: 4rem 1rem;
   background-image: url("../../public/images/hex.svg");
   background-repeat: no-repeat;
