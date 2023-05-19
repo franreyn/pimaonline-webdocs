@@ -173,13 +173,18 @@ a:hover {
 }
 
 /* Homepage content */
-.wd-content-wrapper {
+main {
   padding: 4rem 1rem;
   background-image: url("../../public/images/hex.svg");
   background-repeat: no-repeat;
   background-size: 100px;
   background-position-x: 100%;
   background-position-y: 50%;
+}
+
+.wd-content-wrapper {
+  max-width: var(--breakpoint-lg);
+  margin: 0 auto;
 }
 
 .wd-header {
@@ -198,7 +203,6 @@ a:hover {
 }
 
 .wd-text-container {
-  max-width: var(--breakpoint-lg);
   margin: 0 auto;
 }
 
@@ -251,7 +255,6 @@ section p {
 @media screen and (min-width: 576px) {
   .wd-header {
     display: flex;
-    max-width: var(--breakpoint-lg);
     margin: 0 auto;
     gap: 2rem;
   }
