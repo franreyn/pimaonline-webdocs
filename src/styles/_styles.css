@@ -202,14 +202,6 @@ main {
   text-align: center;
 }
 
-.wd-text-container {
-  margin: 0 auto;
-}
-
-section {
-  margin: 0 auto;
-}
-
 section p {
   margin-bottom: 1rem;
 }
@@ -252,14 +244,6 @@ section p {
   color: var(--color-primary);
 }
 
-@media screen and (min-width: 576px) {
-  .wd-header {
-    display: flex;
-    margin: 0 auto;
-    gap: 2rem;
-  }
-}
-
 @media screen and (min-width: 768px) {
   .wd-header {
     background-size: auto;
@@ -267,12 +251,6 @@ section p {
 
   .wd-header .wd-text-container {
     margin: 0 auto 0 13rem;
-  }
-
-  .wd-img-container {
-    display: flex;
-    flex-direction: row;
-    margin: 0 auto;
   }
 }
 
