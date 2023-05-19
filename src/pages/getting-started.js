@@ -2,7 +2,7 @@ import Head from 'next/head';
 import Navbar from '@/components/Navbar';
 import Sidebar from '@/components/Sidebar';
 
-const GettingStarted = () => {
+export default function GettingStarted() {
   return (
     <>
       <Head>
@@ -14,7 +14,7 @@ const GettingStarted = () => {
       <header>
         <Navbar />
       </header>
-      <div class="wd-grid">
+      <div className="wd-grid">
         <main>
         </main>
         <aside>
@@ -24,5 +24,3 @@ const GettingStarted = () => {
     </>
   )
 }
-
-export default GettingStarted
