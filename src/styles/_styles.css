@@ -1,5 +1,9 @@
 @import "@/styles/_variables.css";
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   background-color: var(--color-primary);
 }
@@ -292,7 +296,6 @@ section p {
 
 .wd-sidebar > li > ul {
   padding-left: 0.75rem;
-  box-sizing: border-box;
   border-left: 1px solid rgba(235, 235, 235, .3);
 }
 
@@ -314,4 +317,66 @@ section p {
 
 .wd-sidebar > li > ul > li:hover::before {
   opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .wd-sidebar {
+    background-color: var(--color-bg-alt);
+    border-radius: 5px;
+    padding: 1rem;
+    margin-top: 2rem;
+    height: 300px;
+    overflow: scroll;
+    overflow-x: hidden;
+    transition: all .5s;
+  }
+
+  .toc-btn {
+    display: flex;
+    gap: 1rem;
+    background-color: transparent;
+    cursor: pointer;
+    position: absolute;
+    left: 0;
+    margin: 0 1rem;
+    padding: .5rem;
+  }
+
+  .toc-btn p:hover {
+    color: var(--color-secondary);
+  }
+
+  .show-toc {
+    opacity: 1;
+  }
+  
+  .hide-toc {
+    opacity: 0;
+    height: 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .toc-btn {
+    display: none;
+  }
+}
+
+/* Scrollbars */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(133, 137, 156, .2);
+}
+
+*::-webkit-scrollbar {
+  width: 7px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgba(133, 137, 156, .2);
+  border-radius: 20px;
 }
