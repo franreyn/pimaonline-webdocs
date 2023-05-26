@@ -9,11 +9,19 @@ export default function Sidebar() {
     setTocOpen(!tocOpen);
   };
 
+  const closeSidebar = () => {
+    setTocOpen(false);
+  };
+
   return (
     <>
-      <button className="toc-btn" onClick={() => setTocOpen(!tocOpen)}>
+      <button className="toc-btn" onClick={toggleTOC}>
         <Image className="toc-icon" src="/images/toc.svg" alt="TOC icon" width={20} height={16} />
         <p>Docs Content</p>
+      </button>
+      <button className={`close-btn ${tocOpen ? 'show-close-btn' : 'hide-close-btn'}`} onClick={closeSidebar}>
+        <span></span>
+        <span></span>
       </button>
       <ul className={`wd-sidebar ${tocOpen ? 'show-toc' : 'hide-toc'}`}>
         <li><Link href="getting-started">Getting Started</Link>
