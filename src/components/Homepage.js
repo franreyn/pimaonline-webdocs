@@ -14,9 +14,9 @@ const Home = () => {
       <section className="wd-horizontal-display">
         <h2 className="wd-text-center">Online course development just got easier</h2>
         <div className="wd-img-container">
-          <Image src="/images/theme-2.png" alt="Snapshot of dental theme" width={250} height={150} />
-          <Image src="/images/theme-1.png" alt="Snapshot of HR theme" width={400} height={250} />
-          <Image src="/images/theme-3.png" alt="Snapshot of fitness theme" width={250} height={150} />
+          <Image src="/images/theme-2.png" alt="Snapshot of dental theme" width={333} height={269} />
+          <Image src="/images/theme-1.png" alt="Snapshot of HR theme" width={423} height={342} />
+          <Image src="/images/theme-3.png" alt="Snapshot of fitness theme" width={327} height={273} />
         </div>
         <Link className="wd-btn" href="getting-started.html">Explore Themes</Link>
       </section>

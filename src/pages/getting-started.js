@@ -1,8 +1,8 @@
-import Head from "next/head";
-import Navbar from "@/components/Navbar";
-import Homepage from "@/components/Homepage";
+import Head from 'next/head';
+import Navbar from '@/components/Navbar';
+import Sidebar from '@/components/Sidebar';
 
-export default function Home() {
+export default function GettingStarted() {
   return (
     <>
       <Head>
@@ -14,12 +14,13 @@ export default function Home() {
       <header>
         <Navbar />
       </header>
-      <main className="wd-home-main">
-        <Homepage />
-      </main>
-      <footer>
-        
-      </footer>
+      <div className="wd-grid">
+        <main>
+        </main>
+        <aside>
+          <Sidebar />
+        </aside>
+      </div>
     </>
   )
 }
