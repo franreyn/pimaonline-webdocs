@@ -259,6 +259,44 @@ section p {
   color: var(--color-primary);
 }
 
+.carousel {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.carousel-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-container img {
+  width: 90%;
+  height: auto;
+}
+
+.previous-button,
+.next-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 10px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  width: 2rem;
+  height: 2rem;
+}
+
+.previous-button {
+  left: -20px;
+}
+
+.next-button {
+  right: -20px;
+}
+
 @media screen and (min-width: 768px) {
   .wd-header {
     background-size: auto;
@@ -266,6 +304,18 @@ section p {
 
   .wd-header .wd-text-container {
     margin: 0 auto 0 13rem;
+  }
+
+  .carousel-container img {
+    width: 100%;
+  }
+
+  .previous-button {
+    left: -50px;
+  }
+  
+  .next-button {
+    right: -50px;
   }
 }
 

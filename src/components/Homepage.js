@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import Carousel from "./Carousel";
 
 const Home = () => {
   return (
@@ -13,11 +14,7 @@ const Home = () => {
       </div>
       <section className="wd-horizontal-display">
         <h2 className="wd-text-center">Online course development just got easier</h2>
-        <div className="wd-img-container">
-          <Image src="/images/theme-2.png" alt="Snapshot of dental theme" width={333} height={269} />
-          <Image src="/images/theme-1.png" alt="Snapshot of HR theme" width={423} height={342} />
-          <Image src="/images/theme-3.png" alt="Snapshot of fitness theme" width={327} height={273} />
-        </div>
+        <Carousel />
         <Link className="wd-btn" href="getting-started.html">Explore Themes</Link>
       </section>
       <section className="wd-side-by-side">
