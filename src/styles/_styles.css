@@ -8,6 +8,10 @@ body {
   background-color: var(--color-primary);
 }
 
+.display-block {
+  display: block;
+}
+
 /* Navbar */
 .wd-navbar {
   display: block;
