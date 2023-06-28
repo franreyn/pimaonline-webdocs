@@ -44,7 +44,7 @@ export default function Tabs() {
                 Some long text to demonstrate a tab widget. This text can be something as long as multiple paragraphs or as short as a couple of sentences.
               </p>
             </div>
-            <input type="radio" id="tab4" name="hint-group-1" aria-describedby="tabHeading4" checked />
+            <input type="radio" id="tab4" name="hint-group-1" aria-describedby="tabHeading4" checked readOnly />
             <label className="tab-header hide-tab" htmlFor="tab4" title="Hide Panel">
               <span>Hide</span>
             </label>

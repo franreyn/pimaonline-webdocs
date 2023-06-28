@@ -10,32 +10,32 @@ export default function VocabCards() {
       </p>
       <div className="wd-window">
         <div className="wd-visual-ex">
-        <dl class="vocab-cards">
-          <div class="vocab">
+        <dl className="vocab-cards">
+          <div className="vocab">
             <dt>Perennial</dt>
             <dd>Perennial is used to describe things that exist or continue in the same way or state for a long time, as well as things that happen again and again.</dd>
           </div>
-          <div class="vocab">
+          <div className="vocab">
             <dt>Perennial</dt>
             <dd>Perennial is used to describe things that exist or continue in the same way or state for a long time, as well as things that happen again and again.</dd>
           </div>
-          <div class="vocab">
+          <div className="vocab">
             <dt>Perennial</dt>
             <dd>Perennial is used to describe things that exist or continue in the same way or state for a long time, as well as things that happen again and again.</dd>
           </div>
-          <div class="vocab">
+          <div className="vocab">
             <dt>Perennial</dt>
             <dd>Perennial is used to describe things that exist or continue in the same way or state for a long time, as well as things that happen again and again.</dd>
           </div>
-          <div class="vocab">
+          <div className="vocab">
             <dt>Perennial</dt>
             <dd>Perennial is used to describe things that exist or continue in the same way or state for a long time, as well as things that happen again and again.</dd>
           </div>
-          <div class="vocab">
+          <div className="vocab">
             <dt>Perennial</dt>
             <dd>Perennial is used to describe things that exist or continue in the same way or state for a long time, as well as things that happen again and again.</dd>
           </div>
-          <div class="vocab">
+          <div className="vocab">
             <dt>Perennial</dt>
             <dd>Perennial is used to describe things that exist or continue in the same way or state for a long time, as well as things that happen again and again.</dd>
           </div>
@@ -45,34 +45,34 @@ export default function VocabCards() {
           <pre>
             <code className="language-html">
               <span className="display-block">{'<dl class="vocab-cards">'}</span>
-              <span className="display-block">{ '<div class="vocab">'}</span>
-              <span className="display-block">{   '<dt>Perennial</dt>'}</span>
-              <span className="display-block">{   '<dd>Perennial is used to describe things that exist or continue in the same way or state for a long time, as well as things that happen again and again.</dd>'}</span>
-              <span className="display-block">{ '</div>'}</span>
-              <span className="display-block">{ '<div class="vocab">'}</span>
-              <span className="display-block">{   '<dt>Perennial</dt>'}</span>
-              <span className="display-block">{   '<dd>Perennial is used to describe things that exist or continue in the same way or state for a long time, as well as things that happen again and again.</dd>'}</span>
-              <span className="display-block">{ '</div>'}</span>
-              <span className="display-block">{ '<div class="vocab">'}</span>
-              <span className="display-block">{   '<dt>Perennial</dt>'}</span>
-              <span className="display-block">{   '<dd>Perennial is used to describe things that exist or continue in the same way or state for a long time, as well as things that happen again and again.</dd>'}</span>
-              <span className="display-block"></span>{ '</div>'}
-              <span className="display-block">{ '<div class="vocab">'}</span>
-              <span className="display-block">{   '<dt>Perennial</dt>'}</span>
-              <span className="display-block">{   '<dd>Perennial is used to describe things that exist or continue in the same way or state for a long time, as well as things that happen again and again.</dd>'}</span>
-              <span className="display-block">{ '</div>'}</span>
-              <span className="display-block">{ '<div class="vocab">'}</span>
-              <span className="display-block">{   '<dt>Perennial</dt>'}</span>
-              <span className="display-block">{   '<dd>Perennial is used to describe things that exist or continue in the same way or state for a long time, as well as things that happen again and again.</dd>'}</span>
-              <span className="display-block">{ '</div>'}</span>
-              <span className="display-block">{ '<div class="vocab">'}</span>
-              <span className="display-block">{   '<dt>Perennial</dt>'}</span>
-              <span className="display-block">{   '<dd>Perennial is used to describe things that exist or continue in the same way or state for a long time, as well as things that happen again and again.</dd>'}</span>
-              <span className="display-block">{ '</div>'}</span>
-              <span className="display-block">{ '<div class="vocab">'}</span>
-              <span className="display-block">{   '<dt>Perennial</dt>'}</span>
-              <span className="display-block">{   '<dd>Perennial is used to describe things that exist or continue in the same way or state for a long time, as well as things that happen again and again.</dd>'}</span>
-              <span className="display-block">{ '</div>'}</span>
+              <span className="display-block">{'  <div class="vocab">'}</span>
+              <span className="display-block">{'    <dt>Perennial</dt>'}</span>
+              <span className="display-block">{'    <dd>Perennial is used to describe things that exist or continue in the same way or state for a long time, as well as things that happen again and again.</dd>'}</span>
+              <span className="display-block">{'  </div>'}</span>
+              <span className="display-block">{'  <div class="vocab">'}</span>
+              <span className="display-block">{'    <dt>Perennial</dt>'}</span>
+              <span className="display-block">{'    <dd>Perennial is used to describe things that exist or continue in the same way or state for a long time, as well as things that happen again and again.</dd>'}</span>
+              <span className="display-block">{'  </div>'}</span>
+              <span className="display-block">{'  <div class="vocab">'}</span>
+              <span className="display-block">{'    <dt>Perennial</dt>'}</span>
+              <span className="display-block">{'    <dd>Perennial is used to describe things that exist or continue in the same way or state for a long time, as well as things that happen again and again.</dd>'}</span>
+              <span className="display-block"></span>{' </div>'}
+              <span className="display-block">{'  <div class="vocab">'}</span>
+              <span className="display-block">{'    <dt>Perennial</dt>'}</span>
+              <span className="display-block">{'    <dd>Perennial is used to describe things that exist or continue in the same way or state for a long time, as well as things that happen again and again.</dd>'}</span>
+              <span className="display-block">{'  </div>'}</span>
+              <span className="display-block">{'  <div class="vocab">'}</span>
+              <span className="display-block">{'    <dt>Perennial</dt>'}</span>
+              <span className="display-block">{'    <dd>Perennial is used to describe things that exist or continue in the same way or state for a long time, as well as things that happen again and again.</dd>'}</span>
+              <span className="display-block">{'  </div>'}</span>
+              <span className="display-block">{'  <div class="vocab">'}</span>
+              <span className="display-block">{'    <dt>Perennial</dt>'}</span>
+              <span className="display-block">{'    <dd>Perennial is used to describe things that exist or continue in the same way or state for a long time, as well as things that happen again and again.</dd>'}</span>
+              <span className="display-block">{'  </div>'}</span>
+              <span className="display-block">{'  <div class="vocab">'}</span>
+              <span className="display-block">{'    <dt>Perennial</dt>'}</span>
+              <span className="display-block">{'    <dd>Perennial is used to describe things that exist or continue in the same way or state for a long time, as well as things that happen again and again.</dd>'}</span>
+              <span className="display-block">{'  </div>'}</span>
               <span className="display-block">{'</dl>'}</span>
             </code>
           </pre>
