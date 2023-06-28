@@ -336,6 +336,9 @@ section p {
 }
 
 /* Docs */
+.wd-content {
+  margin: 5rem 0;
+}
 .wd-sidebar {
   font-family: "Roboto", sans-serif;
   line-height: 1.5;
@@ -368,6 +371,12 @@ section p {
 
 .wd-sidebar > li > ul > li:hover::before {
   opacity: 1;
+}
+
+.wd-html-code {
+  overflow-x: scroll;
+  padding: 2rem 0;
+  margin-bottom: 1rem;
 }
 
 @media screen and (max-width: 768px) {
@@ -466,6 +475,21 @@ section p {
   }
 }
 
+.wd-copy-btn {
+  background-color: var(--color-accent);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  display: inline-block;
+  transition: all .2s ease-in-out;
+  font-weight: 700;
+}
+
+.wd-copy-btn:hover {
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+  cursor: pointer;
+}
+
 /* Scrollbars */
 * {
   scrollbar-width: thin;
@@ -474,6 +498,7 @@ section p {
 
 *::-webkit-scrollbar {
   width: 7px;
+  height: 7px;
 }
 
 *::-webkit-scrollbar-track {
