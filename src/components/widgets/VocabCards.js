@@ -22,7 +22,7 @@ export default function VocabCards() {
 
   return (
     <section className="wd-content" id="toc-vocab-cards">
-      <h2 className="section-top" id="vocab-cards">Vocab Cards Widget</h2>
+      <h2 className="section-top" id="vocab-cards">Vocab Cards</h2>
       <p>
         Use the <strong>Vocab Cards Widget</strong> to create a set of flashcards with terms and definitions.
       </p>
