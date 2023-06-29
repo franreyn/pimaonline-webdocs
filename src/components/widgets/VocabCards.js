@@ -77,7 +77,6 @@ export default function VocabCards() {
   <div class="vocab">
     <dt>Perennial</dt>
     <dd>Perennial is used to describe things that exist or continue in the same way or state for a long time, as well as things that happen again and again.</dd>
-              </span>
   </div>
   <div class="vocab">
     <dt>Perennial</dt>
