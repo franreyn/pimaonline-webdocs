@@ -22,7 +22,7 @@ export default function VocabList() {
 
   return (
     <section className="wd-content" id="toc-vocab-list">
-      <h2 className="section-top" id="vocab-list-widget">Vocab List Widget</h2>
+      <h2 className="section-top" id="vocab-list">Vocab List</h2>
       <p>
         Use the <strong>Vocab List Widget</strong> to create a list of collapsible vocabulary items with terms and definitions.
       </p>

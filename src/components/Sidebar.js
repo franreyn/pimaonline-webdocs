@@ -91,8 +91,8 @@ export default function Sidebar() {
               </Link>
             </li>
             <li>
-              <Link href="widgets#tabs-widget" className="toc-tabs-widget">
-                Tabs Widget
+              <Link href="widgets#tabs" className="toc-tabs">
+                Tabs
               </Link>
             </li>
             <li>
@@ -101,8 +101,13 @@ export default function Sidebar() {
               </Link>
             </li>
             <li>
-              <Link href="widgets#vocab-list-widget" className="toc-vocab-list-widget">
-                Vocab List Widget
+              <Link href="widgets#vocab-cards" className="toc-vocab-cards">
+                Vocab Cards
+              </Link>
+            </li>
+            <li>
+              <Link href="widgets#vocab-list" className="toc-vocab-list">
+                Vocab List
               </Link>
             </li>
           </ul>

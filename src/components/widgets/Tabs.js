@@ -21,9 +21,9 @@ export default function Tabs() {
   };
 
   return (
-    <section className="wd-content" id="toc-tabs-widget">
-      <h2 id="tabs-widget" className="section-top">
-        Tabs Widget
+    <section className="wd-content" id="toc-tabs">
+      <h2 id="tabs" className="section-top">
+        Tabs
       </h2>
       <p>
         Use the <strong>Tabs Widget</strong> to organize and separate related information into their own individual tabs. Best used when there are multiple tabs.
