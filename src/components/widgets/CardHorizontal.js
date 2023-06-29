@@ -1,4 +1,25 @@
+import { useRef, useState } from 'react';
+
 export default function CardHorizontal() {
+  const codeRef = useRef(null);
+  const [buttonText, setButtonText] = useState('Copy code');
+
+  const handleCopyCode = () => {
+    const codeElement = codeRef.current;
+    const range = document.createRange();
+    range.selectNode(codeElement);
+    window.getSelection().removeAllRanges();
+    window.getSelection().addRange(range);
+    document.execCommand('copy');
+    window.getSelection().removeAllRanges();
+
+    setButtonText('Copied!');
+
+    setTimeout(() => {
+      setButtonText('Copy code');
+    }, 2000);
+  };
+
   return (
     <section className="wd-content" id="toc-card-horizontal">
       <h2 id="card-horizontal" className="section-top">
@@ -25,20 +46,20 @@ export default function CardHorizontal() {
         </div>
         <div className="wd-html-code">
           <pre>
-            <code className="language-html">
-              <span className="display-block">{'<div class="card-horizontal">'}</span>
-              <span className="display-block">{'  <div class="card-body">'}</span>
-              <span className="display-block">{'    <p>Some long text used to help display the card horizontal widget which includes a paragraph and an image.</p>'}</span>
-              <span className="display-block">{'  </div>'}</span>
-              <span className="display-block">{'  <div class="card-img">'}</span>
-              <span className="display-block">{'    <img src="https://via.placeholder.com/300" alt="" />'}</span>
-              <span className="display-block">{'  </div>'}</span>
-              <span className="display-block">{'</div>'}</span>
+            <code className="language-html" ref={codeRef}>
+              {String.raw`<div class="card-horizontal">
+  <div class="card-body">
+    <p>Some long text used to help display the card horizontal widget which includes a paragraph and an image.</p>
+  </div>
+  <div class="card-img">
+    <img src="https://via.placeholder.com/300" alt="" />
+  </div>
+</div>`}
             </code>
           </pre>
         </div>
         <div className="wd-btn-container">
-          <button className="wd-copy-btn">Copy code</button>
+          <button className="wd-copy-btn" onClick={handleCopyCode}>{buttonText}</button>
         </div>
       </div>
     </section>

@@ -1,4 +1,25 @@
+import { useRef, useState } from 'react';
+
 export default function MediaContainer() {
+  const codeRef = useRef(null);
+  const [buttonText, setButtonText] = useState('Copy code');
+
+  const handleCopyCode = () => {
+    const codeElement = codeRef.current;
+    const range = document.createRange();
+    range.selectNode(codeElement);
+    window.getSelection().removeAllRanges();
+    window.getSelection().addRange(range);
+    document.execCommand('copy');
+    window.getSelection().removeAllRanges();
+
+    setButtonText('Copied!');
+
+    setTimeout(() => {
+      setButtonText('Copy code');
+    }, 2000);
+  };
+
   return (
     <section className="wd-content" id="toc-media-container">
       <h2 id="media-container" className="section-top">
@@ -34,20 +55,20 @@ export default function MediaContainer() {
         </div>
         <div className="wd-html-code">
           <pre>
-            <code className="language-html">
-              <span className="display-block">{'<div class="media-container">'}</span>
-              <span className="display-block">{'  <div class="media-object">'}</span>
-              <span className="display-block">{'    <iframe width="560" height="315" src="https://www.youtube.com/embed/rFve845ScJ4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'}</span>
-              <span className="display-block">{'  </div>'}</span>
-              <span className="display-block">{'  <div class="media-info">'}</span>
-              <span className="display-block">{'    <p>Some text used to describe the media object.</p>'}</span>
-              <span className="display-block">{'  </div>'}</span>
-              <span className="display-block">{'</div>'}</span>
+            <code className="language-html" ref={codeRef}>
+              {String.raw`<div class="media-container">
+  <div class="media-object">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/rFve845ScJ4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+  <div class="media-info">
+    <p>Some text used to describe the media object.</p>
+  </div>
+</div>`}
             </code>
           </pre>
         </div>
         <div className="wd-btn-container">
-          <button className="wd-copy-btn">Copy code</button>
+          <button className="wd-copy-btn" onClick={handleCopyCode}>{buttonText}</button>
         </div>
       </div>
       <h3>Without caption</h3>
@@ -73,17 +94,17 @@ export default function MediaContainer() {
         </div>
         <div className="wd-html-code">
           <pre>
-            <code className="language-html">
-              <span className="display-block">{'<div class="media-container">'}</span>
-              <span className="display-block">{'  <div class="media-object">'}</span>
-              <span className="display-block">{'    <iframe width="560" height="315" src="https://www.youtube.com/embed/rFve845ScJ4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'}</span>
-              <span className="display-block">{'  </div>'}</span>
-              <span className="display-block">{'</div>'}</span>
+            <code className="language-html" ref={codeRef}>
+              {String.raw`<div class="media-container">
+  <div class="media-object">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/rFve845ScJ4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+</div>`}
             </code>
           </pre>
         </div>
         <div className="wd-btn-container">
-          <button className="wd-copy-btn">Copy code</button>
+          <button className="wd-copy-btn" onClick={handleCopyCode}>{buttonText}</button>
         </div>
       </div>
     </section>

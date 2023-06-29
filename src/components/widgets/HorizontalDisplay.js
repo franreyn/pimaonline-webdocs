@@ -1,4 +1,25 @@
+import { useRef, useState } from 'react';
+
 export default function HorizontalDisplay() {
+  const codeRef = useRef(null);
+  const [buttonText, setButtonText] = useState('Copy code');
+
+  const handleCopyCode = () => {
+    const codeElement = codeRef.current;
+    const range = document.createRange();
+    range.selectNode(codeElement);
+    window.getSelection().removeAllRanges();
+    window.getSelection().addRange(range);
+    document.execCommand('copy');
+    window.getSelection().removeAllRanges();
+
+    setButtonText('Copied!');
+
+    setTimeout(() => {
+      setButtonText('Copy code');
+    }, 2000);
+  };
+
   return (
     <section className="wd-content" id="toc-horizontal-display">
       <h2 id="horizontal-display" className="section-top">
@@ -29,26 +50,26 @@ export default function HorizontalDisplay() {
         </div>
         <div className="wd-html-code">
           <pre>
-            <code className="language-html">
-              <span className="display-block">{'<div class="horizontal-display">'}</span>
-              <span className="display-block">{'  <div>'}</span>
-              <span className="display-block">{'    <img src="https://via.placeholder.com/200" alt="" />'}</span>
-              <span className="display-block">{'  </div>'}</span>
-              <span className="display-block">{'  <div>'}</span>
-              <span className="display-block">{'    <img src="https://via.placeholder.com/200" alt="" />'}</span>
-              <span className="display-block">{'  </div>'}</span>
-              <span className="display-block">{'  <div>'}</span>
-              <span className="display-block">{'    <img src="https://via.placeholder.com/200" alt="" />'}</span>
-              <span className="display-block">{'  </div>'}</span>
-              <span className="display-block">{'  <div>'}</span>
-              <span className="display-block">{'    <img src="https://via.placeholder.com/200" alt="" />'}</span>
-              <span className="display-block">{'  </div>'}</span>
-              <span className="display-block">{'</div>'}</span>
+            <code className="language-html" ref={codeRef}>
+              {String.raw`<div class="horizontal-display">
+  <div>
+    <img src="https://via.placeholder.com/200" alt="" />
+  </div>
+  <div>
+    <img src="https://via.placeholder.com/200" alt="" />
+  </div>
+  <div>
+    <img src="https://via.placeholder.com/200" alt="" />
+  </div>
+  <div>
+    <img src="https://via.placeholder.com/200" alt="" />
+  </div>
+</div>`}
             </code>
           </pre>
         </div>
         <div className="wd-btn-container">
-          <button className="wd-copy-btn">Copy code</button>
+          <button className="wd-copy-btn" onClick={handleCopyCode}>{buttonText}</button>
         </div>
       </div>
     </section>

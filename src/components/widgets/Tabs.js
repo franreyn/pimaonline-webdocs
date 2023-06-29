@@ -1,4 +1,25 @@
+import { useRef, useState } from 'react';
+
 export default function Tabs() {
+  const codeRef = useRef(null);
+  const [buttonText, setButtonText] = useState('Copy code');
+
+  const handleCopyCode = () => {
+    const codeElement = codeRef.current;
+    const range = document.createRange();
+    range.selectNode(codeElement);
+    window.getSelection().removeAllRanges();
+    window.getSelection().addRange(range);
+    document.execCommand('copy');
+    window.getSelection().removeAllRanges();
+
+    setButtonText('Copied!');
+
+    setTimeout(() => {
+      setButtonText('Copy code');
+    }, 2000);
+  };
+
   return (
     <section className="wd-content" id="toc-tabs-widget">
       <h2 id="tabs-widget" className="section-top">
@@ -53,43 +74,42 @@ export default function Tabs() {
         </div>
         <div className="wd-html-code">
           <pre>
-            <code className="language-html">
-              <span className="display-block">{'<div class="tabs" role="region" aria-label="tab group 1">'}</span>
-              <span className="display-block">{'  <input class="tab-input" type="radio" id="tab1" name="hint-group-1" aria-describedby="tabHeading1" />'}</span>
-              <span className="display-block">{'  <label class="tab-header" for="tab1">'}</span>
-              <span className="display-block">{'    <span>Tab Title 1</span>'}
-              {'  </label>'}</span>
-              <span className="display-block">{'  <div class="tab-panel" tabindex="0" id="tabHeading1">'}</span>
-              <span className="display-block">{'    <h4>Tab 1 Heading Inside</h4>'}</span>
-              <span className="display-block">{'    <p>Some long text to demonstrate a tab widget. This text can be something as long as multiple paragraphs or as short as a couple of sentences.</p>'}</span>
-              <span className="display-block">{'  </div>'}</span>
-              <span className="display-block">{'  <input class="tab-input" type="radio" id="tab2" name="hint-group-1" aria-describedby="tabHeading2" />'}</span>
-              <span className="display-block">{'  <label class="tab-header" for="tab2">'}</span>
-              <span className="display-block">{'    <span>Tab Title 2</span>'}</span>
-              <span className="display-block">{'  </label>'}</span>
-              <span className="display-block">{'  <div class="tab-panel" tabindex="0" id="tabHeading2">'}</span>
-              <span className="display-block">{'    <h4>Tab 2 Heading Inside</h4>'}</span>
-              <span className="display-block">{'    <p>Some long text to demonstrate a tab widget. This text can be something as long as multiple paragraphs or as short as a couple of sentences.</p>'}</span>
-              <span className="display-block">{'  </div>'}</span>
-              <span className="display-block">{'  <input class="tab-input" type="radio" id="tab3" name="hint-group-1" aria-describedby="tabHeading3" />'}</span>
-              <span className="display-block">{'  <label class="tab-header" for="tab3">'}</span>
-              <span className="display-block">{'    <span>Tab Title 3</span>'}</span>
-              <span className="display-block">{'  </label>'}</span>
-              <span className="display-block">{'  <div class="tab-panel" tabindex="0" id="tabHeading3">'}</span>
-              <span className="display-block">{'    <h4>Tab 3 Heading Inside</h4>'}</span>
-              <span className="display-block">{'    <p>Some long text to demonstrate a tab widget. This text can be something as long as multiple paragraphs or as short as a couple of sentences.</p>'}</span>
-              <span className="display-block">{'  </div>'}</span>
-              <span className="display-block">{'  <input type="radio" id="tab4" name="hint-group-1" aria-describedby="tabHeading4" checked />'}</span>
-              <span className="display-block">{'  <label class="tab-header hide-tab" for="tab4" title="Hide Panel">'}</span>
-              <span className="display-block">{'    <span>Hide</span>'}</span>
-              <span className="display-block">{'  </label>'}</span>
-              <span className="display-block"></span>
-              <span className="display-block">{'</div>'}</span>
+            <code className="language-html" ref={codeRef}>
+              {String.raw`<div class="tabs" role="region" aria-label="tab group 1">
+  <input class="tab-input" type="radio" id="tab1" name="hint-group-1" aria-describedby="tabHeading1" />
+  <label class="tab-header" for="tab1">
+    <span>Tab Title 1</span>
+  </label>
+  <div class="tab-panel" tabindex="0" id="tabHeading1">
+    <h4>Tab 1 Heading Inside</h4>
+    <p>Some long text to demonstrate a tab widget. This text can be something as long as multiple paragraphs or as short as a couple of sentences.</p>
+  </div>
+  <input class="tab-input" type="radio" id="tab2" name="hint-group-1" aria-describedby="tabHeading2" />
+  <label class="tab-header" for="tab2">
+    <span>Tab Title 2</span>
+  </label>
+  <div class="tab-panel" tabindex="0" id="tabHeading2">
+    <h4>Tab 2 Heading Inside</h4>
+    <p>Some long text to demonstrate a tab widget. This text can be something as long as multiple paragraphs or as short as a couple of sentences.</p>
+  </div>
+  <input class="tab-input" type="radio" id="tab3" name="hint-group-1" aria-describedby="tabHeading3" />
+  <label class="tab-header" for="tab3">
+    <span>Tab Title 3</span>
+  </label>
+  <div class="tab-panel" tabindex="0" id="tabHeading3">
+    <h4>Tab 3 Heading Inside</h4>
+    <p>Some long text to demonstrate a tab widget. This text can be something as long as multiple paragraphs or as short as a couple of sentences.</p>
+  </div>
+  <input type="radio" id="tab4" name="hint-group-1" aria-describedby="tabHeading4" checked />
+  <label class="tab-header hide-tab" for="tab4" title="Hide Panel">
+    <span>Hide</span>
+  </label>
+</div>`}
             </code>
           </pre>
         </div>
         <div className="wd-btn-container">
-          <button className="wd-copy-btn">Copy code</button>
+          <button className="wd-copy-btn" onClick={handleCopyCode}>{buttonText}</button>
         </div>
       </div>
     </section>

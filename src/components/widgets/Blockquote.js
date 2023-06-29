@@ -1,4 +1,25 @@
+import { useRef, useState } from 'react';
+
 export default function Blockquote() {
+  const codeRef = useRef(null);
+  const [buttonText, setButtonText] = useState('Copy code');
+
+  const handleCopyCode = () => {
+    const codeElement = codeRef.current;
+    const range = document.createRange();
+    range.selectNode(codeElement);
+    window.getSelection().removeAllRanges();
+    window.getSelection().addRange(range);
+    document.execCommand('copy');
+    window.getSelection().removeAllRanges();
+
+    setButtonText('Copied!');
+
+    setTimeout(() => {
+      setButtonText('Copy code');
+    }, 2000);
+  };
+
   return (
     <>
       <section className="wd-content" id="toc-blockquote">
@@ -11,13 +32,13 @@ export default function Blockquote() {
           </div>
           <div className="wd-html-code">
             <pre>
-              <code className="language-html">
-              {'<blockquote class="text-center">Some text used to help display a blockquote</blockquote>'}
-                </code>
-                </pre>
-                </div>
+              <code className="language-html" ref={codeRef}>
+                {String.raw`<blockquote class="text-center">Some text used to help display a blockquote</blockquote>`}
+              </code>
+            </pre>
+          </div>
           <div className="wd-btn-container">
-            <button className="wd-copy-btn">Copy code</button>
+            <button className="wd-copy-btn" onClick={handleCopyCode}>{buttonText}</button>
           </div>
         </div>
       </section>
