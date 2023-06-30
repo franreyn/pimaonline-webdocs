@@ -13,7 +13,6 @@
 .btn {
   background-color: #2e5e8e;
   color: #fff;
-  border: 3px solid #2e5e8e;
   border-radius: .3em;
   cursor: pointer;
   display: inline-block;
@@ -177,7 +176,7 @@
   padding-bottom: 100% !important
 }
 .border {
-  background-color: rgba(0, 174, 239, .06);
+  background-color: var(--color-pcc-ltgrey);
   border-left: 3px solid #045594;
   margin: 1.4rem 0;
   padding: .6rem
@@ -185,6 +184,10 @@
 .border h1, .border h2, .border h3, .border h4 {
   margin: 0 0 .3rem 0;
   font-family: "Lato", sans-serif;
+  color: var(--color-pcc-primary);
+}
+.border p {
+  color: var(--color-pcc-black);
 }
 @media screen and (min-width: 768px) {
   .border {
@@ -254,6 +257,9 @@ blockquote::after {
     bottom: -10px
   }
 }
+.text-center {
+  text-align: center;
+}
 .border > blockquote {
   border-bottom: none
 }
@@ -312,13 +318,16 @@ blockquote::after {
   }
 }
 .call-out {
-  background-color: rgba(4, 85, 148, .2);
+  background-color: var(--color-pcc-ltgrey);
   margin: 1.4rem 0;
   padding: .6rem
 }
+.call-out p {
+  color: var(--color-pcc-black);
+}
 .call-out::before {
-  background: #045594;
-  color: #fff;
+  background: rgba(207, 207, 207, 1);
+  color: var(--color-pcc-primary);
   content: "Explore More";
   display: block;
   font-family: "Lato", Helvetica, sans-serif;
@@ -530,6 +539,9 @@ blockquote::after {
   grid-gap: .6rem;
   margin-bottom: 1rem
 }
+.horizontal-display img {
+  width: 100%;
+}
 @media screen and (min-width: 500px) {
   .fixed-col2 {
     grid-template-columns: repeat(2, minmax(8.3rem, 1fr))
@@ -563,7 +575,7 @@ blockquote::after {
   justify-self: center
 }
 #video-wrapper .video-card, .video-widget .video-card {
-  background: rgba(4, 85, 148, .1);
+  background: var(--color-pcc-ltgrey);
   border-top: 1px solid rgba(26, 97, 143, .3);
   box-shadow: 1px 1px 10px 2px rgba(13, 13, 13, .15);
   box-sizing: border-box;
@@ -580,12 +592,15 @@ blockquote::after {
 #video-wrapper .video-card h2, .video-widget .video-card h2 {
   margin-top: .3rem;
   font-family: "Lato", sans-serif;
+  color: var(--color-pcc-primary);
 }
 .video-card h3 {
   font-family: "Lato", sans-serif;
+  color: var(--color-pcc-primary);
 }
 #video-wrapper .video-card p, .video-widget .video-card p {
-  font-size: .9em
+  font-size: .9em;
+  color: var(--color-pcc-black);
 }
 #video-wrapper .video-card a.btn, .video-widget .video-card a.btn {
   display: block;
@@ -632,7 +647,7 @@ blockquote::after {
   justify-content: space-between
 }
 li.assignment {
-  background-color: rgba(0, 174, 239, .06);
+  background-color: var(--color-pcc-ltgrey);
   border-top: 1px solid var(--color-pcc-primary);
   border-radius: 0px;
   margin: 0;
@@ -644,7 +659,8 @@ li.assignment:hover {
   transform: translate(0, -5px)
 }
 li.assignment h2, li.assignment h3, li.assignment h4 {
-  background-color: rgba(0, 174, 239, .06);
+  background-color: rgba(207, 207, 207, 1);
+  color: var(--color-pcc-primary);
   font-size: 1.15em;
   font-weight: 600;
   margin: -0.6rem -0.6rem .6rem -0.6rem !important;
@@ -656,6 +672,9 @@ li.assignment ol li, li.assignment ul li {
 }
 li.assignment p, li.assignment ol, li.assignment ul, li.assignment .btn {
   font-size: .95em
+}
+li.assignment p {
+  color: var(--color-pcc-black);
 }
 li.assignment::before, li.assignment::marker {
   content: none
@@ -836,7 +855,7 @@ li.assignment::before, li.assignment::marker {
 }
 .vocab {
   border-radius: 15px 15px 15px 15px;
-  background-color: rgba(4, 85, 148, .1);
+  background-color: var(--color-pcc-ltgrey);
   box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, .15);
   margin: 10px auto;
   max-width: 275px;
@@ -846,6 +865,10 @@ li.assignment::before, li.assignment::marker {
 
 .vocab dt {
   margin: .5em 0;
+  color: var(--color-pcc-primary);
+}
+.vocab dd {
+  color: var(--color-pcc-black);
 }
 .vocab:hover {
   transform: translate(0, -5px);
@@ -1050,14 +1073,18 @@ table tbody tr {
   padding: .8rem
 }
 table.display-lg {
-  width: 100%
+  width: 100%;
+  background-color: var(--color-pcc-white);
+}
+table.display-lg tbody {
+  color: var(--color-pcc-black);
 }
 table.display-lg td, table.display-lg th {
   font-size: 1em;
   padding: 10px 10px 20px 10px;
 }
 table.display-lg thead {
-  background-color: rgba(193, 193, 193, .1);
+  background-color: var(--color-pcc-primary);
 }
 @media screen and (min-width: 730px) {
   table {
@@ -1074,14 +1101,14 @@ table.display-lg thead {
 }
 @media screen and (min-width: 998px) {
   tr:nth-child(even) {
-    background: rgba(193, 193, 193, 0.06);
+    background: var(--color-pcc-ltgrey);
   }
 }
 @media screen and (max-width: 768px) {
   table.display-lg {
-    background: none;
+    background: var(--color-pcc-white);
     display: inline-table !important;
-    margin: 10px auto
+    margin: 10px auto;
   }
   table.display-lg thead {
     display: none
@@ -1097,7 +1124,7 @@ table.display-lg thead {
     color: var(--color-pcc-ltgrey)
   }
   table.display-lg tbody td:first-child {
-    background: rgba(193, 193, 193, 0.06);
+    background: var(--color-pcc-primary);
     color: #fff
   }
   table.display-lg tbody td::before {
