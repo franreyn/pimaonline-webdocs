@@ -460,6 +460,19 @@ section p {
   .toc-btn {
     display: none;
   }
+
+  .wd-grid aside {
+    position: sticky;
+    top: 75px;
+    height: 85vh;
+    overflow: auto;
+    width: max-content;
+    margin-bottom: 3rem;
+  }
+
+  .wd-sidebar {
+    margin-right: 5rem;
+  }
 }
 
 /* Scrollbars */
