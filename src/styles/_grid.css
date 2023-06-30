@@ -1,3 +1,5 @@
+@import "@/styles/_variables.css";
+
 * {
   margin: 0;
   padding: 0;
@@ -55,4 +57,16 @@
   .wd-side-by-side.reverse .wd-side-by-side-item:first-child {
     order: 2;
   }
+}
+
+footer {
+  padding: 1rem;
+}
+
+.wd-footer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  grid-gap: 2rem 1rem;
+  max-width: var(--breakpoint-lg);
+  margin: 0 auto;
 }
