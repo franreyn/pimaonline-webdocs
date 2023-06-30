@@ -488,7 +488,7 @@ footer {
 
 .wd-logo-wrapper {
   margin: 4rem 0;
-  max-width: 1024px;
+  max-width: var(--breakpoint-xl);
   margin-left: auto;
   margin-right: auto;
 }
@@ -496,6 +496,12 @@ footer {
 @media screen and (min-width: 640px) {
   footer {
     background-size: 300px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .wd-footer, .wd-logo-wrapper {
+    padding: 0 1rem;
   }
 }
 

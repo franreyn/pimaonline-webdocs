@@ -67,6 +67,6 @@ footer {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
   grid-gap: 2rem 1rem;
-  max-width: var(--breakpoint-lg);
+  max-width: var(--breakpoint-xl);
   margin: 0 auto;
 }
