@@ -27,7 +27,7 @@ export default function VocabList() {
         Use the <strong>Vocab List Widget</strong> to create a list of collapsible vocabulary items with terms and definitions.
       </p>
       <p>
-        Use <code className="monospace">.vocab-list</code> to wrap the vocabulary list. Use <code className="monospace">&lt;dt&gt;</code> tags for terms and <code className="monospace">&lt;dd&gt;</code> for definitions.
+        Use <code className="wd-monospace">.vocab-list</code> to wrap the vocabulary list. Use <code className="wd-monospace">&lt;dt&gt;</code> tags for terms and <code className="wd-monospace">&lt;dd&gt;</code> for definitions.
       </p>
       <div className="wd-window">
         <div className="wd-visual-ex">

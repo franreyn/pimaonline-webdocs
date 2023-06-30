@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
 import hljs from 'highlight.js/lib/core';
-import 'highlight.js/styles/default.css';
 import 'highlight.js/styles/night-owl.css';
 import html from 'highlight.js/lib/languages/xml';
 
@@ -33,7 +32,7 @@ export default function Assignments() {
     <section className="wd-content" id="toc-assignments">
       <h2 id="assignments" className="section-top">Assignments Widget</h2>
       <p>Use <strong>Assignments Widget</strong> to display each assignment in a unit or module as a card.</p>
-      <p>Use <span className="monospace">&lt;ul class="assignments-widget"&gt;&lt;/ul&gt;</span> to wrap your content.</p>
+      <p>Use <span className="wd-monospace">&lt;ul class="assignments-widget"&gt;&lt;/ul&gt;</span> to wrap your content.</p>
       <div className="wd-window">
         <div className="wd-visual-ex">
           <ul className="assignments-widget">

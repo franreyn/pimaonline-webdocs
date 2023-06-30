@@ -29,7 +29,7 @@ export default function CardHorizontal() {
         Use <strong>Card Horizontal</strong> to display an image with supportive text. Both the image and text display horizontally with the text side displaying wider than the image.
       </p>
       <p>
-        Use <span className="monospace">.card-horizontal</span> as the parent element of both <span className="monospace">.card-body</span>, which contains the text, and <br /> <span className="monospace">.card-img</span>, which contains the image.
+        Use <span className="wd-monospace">.card-horizontal</span> as the parent element of both <span className="wd-monospace">.card-body</span>, which contains the text, and <br /> <span className="wd-monospace">.card-img</span>, which contains the image.
       </p>
       <div className="wd-window">
         <div className="wd-visual-ex">

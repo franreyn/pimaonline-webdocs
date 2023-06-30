@@ -29,7 +29,7 @@ export default function Border() {
         Use <strong>Border</strong> to bring attention to any piece of learning content. The content is contained within a subtly-colored background, making it ideal for learning objectives or any other content that needs to stand out.
       </p>
       <p>
-        Use <span className="monospace">.border</span> to wrap your content. You may use a single element or multiple.
+        Use <span className="wd-monospace">.border</span> to wrap your content. You may use a single element or multiple.
       </p>
       <div className="wd-window">
         <div className="wd-visual-ex">

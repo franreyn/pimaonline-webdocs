@@ -29,7 +29,7 @@ export default function Tables() {
         Use <strong>Tables</strong> to organize information in rows and columns.
       </p>
       <p>
-        Add <span className="monospace">.display-lg</span> to <span className="monospace">&lt;table&gt;</span> to create a responsive table.
+        Add <span className="wd-monospace">.display-lg</span> to <span className="wd-monospace">&lt;table&gt;</span> to create a responsive table.
       </p>
       <div className="wd-window">
         <div className="wd-visual-ex">

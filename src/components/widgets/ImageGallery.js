@@ -29,7 +29,7 @@ export default function ImageGallery() {
         Use <strong>Image Gallery</strong> to display images in a grid and allow users to expand the images.
       </p>
       <p>
-        Use <span className="monospace">&lt;div class="image-gallery"&gt;&lt;/div&gt;</span> to wrap your content.
+        Use <span className="wd-monospace">&lt;div class="image-gallery"&gt;&lt;/div&gt;</span> to wrap your content.
       </p>
       <div className="wd-window">
         <div className="wd-visual-ex">

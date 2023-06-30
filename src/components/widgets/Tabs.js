@@ -29,8 +29,8 @@ export default function Tabs() {
         Use the <strong>Tabs Widget</strong> to organize and separate related information into their own individual tabs. Best used when there are multiple tabs.
       </p>
       <p>
-        Use <span className="monospace">.tabs</span> to wrap your entire tab widget. Use <span className="monospace">&lt;label class="tab-header"&gt;Tab Title&lt;/label&gt;</span> to edit the title. <br />
-        Use <span className="monospace">&lt;div class="tab-panel"&gt; [content inside] &lt;/div&gt;</span> to edit what appears inside the tabs.
+        Use <span className="wd-monospace">.tabs</span> to wrap your entire tab widget. Use <span className="wd-monospace">&lt;label class="tab-header"&gt;Tab Title&lt;/label&gt;</span> to edit the title. <br />
+        Use <span className="wd-monospace">&lt;div class="tab-panel"&gt; [content inside] &lt;/div&gt;</span> to edit what appears inside the tabs.
       </p>
       <div className="wd-window">
         <div className="wd-visual-ex">

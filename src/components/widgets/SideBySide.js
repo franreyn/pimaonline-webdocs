@@ -29,8 +29,8 @@ export default function SideBySide() {
         Use <strong>Side-by-side</strong> to display two horizontal containers that can contain any content.
       </p>
       <p>
-        Use <span className="monospace">.side-by-side</span> as the parent element of two{' '}
-        <span className="monospace">.side-by-side-item</span>.
+        Use <span className="wd-monospace">.side-by-side</span> as the parent element of two{' '}
+        <span className="wd-monospace">.side-by-side-item</span>.
       </p>
       <div className="wd-window">
         <div className="wd-visual-ex">

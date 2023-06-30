@@ -29,7 +29,7 @@ export default function CallOut() {
         Use <strong>Call Out</strong> to bring attention to any supplementary learning content. The content is contained within a colored background with an "Explore More" heading attached.
       </p>
       <p>
-        Use <span className="monospace">.call-out</span> to wrap your paragraph element.
+        Use <span className="wd-monospace">.call-out</span> to wrap your paragraph element.
       </p>
       <div className="wd-window">
         <div className="wd-visual-ex">

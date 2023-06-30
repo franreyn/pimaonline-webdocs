@@ -29,7 +29,7 @@ export default function VideoWidget() {
         Use <strong>Video Widget</strong> to create a grid-like video gallery. In addition to the video, each video card can contain general information such as the title and duration of the video.
       </p>
       <p>
-        Use <span className="monospace">&lt;div className="video-widget"&gt;&lt;/div&gt;</span> to wrap your content.
+        Use <span className="wd-monospace">&lt;div className="video-widget"&gt;&lt;/div&gt;</span> to wrap your content.
       </p>
       <div className="wd-window">
         <div className="wd-visual-ex">

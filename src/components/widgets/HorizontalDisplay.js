@@ -29,7 +29,7 @@ export default function HorizontalDisplay() {
         Use <strong>Horizontal Display</strong> to display any content in an inline manner. This content will appear inline on desktops but will stack on smaller screens.
       </p>
       <p>
-        Use <span className="monospace">.horizontal-display</span> to wrap.
+        Use <span className="wd-monospace">.horizontal-display</span> to wrap.
       </p>
       <div className="wd-window">
         <div className="wd-visual-ex">

@@ -30,9 +30,9 @@ export default function MediaContainer() {
       </p>
       <h3>With caption</h3>
       <p>
-        Use <span className="monospace">.media-container</span> as the parent element of both{' '}
-        <span className="monospace">.media-object</span> which will house your iframe and{' '}
-        <span className="monospace">.media-info</span> which will house your video's caption.
+        Use <span className="wd-monospace">.media-container</span> as the parent element of both{' '}
+        <span className="wd-monospace">.media-object</span> which will house your iframe and{' '}
+        <span className="wd-monospace">.media-info</span> which will house your video's caption.
       </p>
       <div className="wd-window">
         <div className="wd-visual-ex">
@@ -70,11 +70,11 @@ export default function MediaContainer() {
         <div className="wd-btn-container">
           <button className="wd-copy-btn" onClick={handleCopyCode}>{buttonText}</button>
         </div>
-      </div>
+      </div><br /><br />
       <h3>Without caption</h3>
       <p>
-        Use <span className="monospace">.media-container</span> as the parent element of{' '}
-        <span className="monospace">.media-object</span> which will house your iframe.
+        Use <span className="wd-monospace">.media-container</span> as the parent element of{' '}
+        <span className="wd-monospace">.media-object</span> which will house your iframe.
       </p>
       <div className="wd-window">
         <div className="wd-visual-ex">
