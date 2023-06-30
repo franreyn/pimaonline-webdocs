@@ -44,7 +44,7 @@ export default function Border() {
           <pre>
             <code className="language-html" ref={codeRef}>
             {String.raw`<div class="border">
-  <h3>Some example text to help display a border widget.</h3>
+  <h3>Some heading</h3>
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 </div>`}
             </code>

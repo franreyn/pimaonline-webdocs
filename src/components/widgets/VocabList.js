@@ -44,14 +44,14 @@ export default function VocabList() {
         <div className="wd-html-code">
           <pre>
             <code className="language-html" ref={codeRef}>
-              {String.raw`<dl class="vocab-list">'
-  <button>Close All</button>'
-  <dt tabIndex="0">Term 1</dt>'
-  <dd>Term Definition 1</dd>'
-  <dt tabIndex="0">Term 2</dt>'
-  <dd>Term Definition 2</dd>'
-  <dt tabIndex="0">Term 3</dt>'
-  <dd>Term Definition 3</dd>'
+              {String.raw`<dl class="vocab-list">
+  <button>Close All</button>
+  <dt tabIndex="0">Term 1</dt>
+  <dd>Term Definition 1</dd>
+  <dt tabIndex="0">Term 2</dt>
+  <dd>Term Definition 2</dd>
+  <dt tabIndex="0">Term 3</dt>
+  <dd>Term Definition 3</dd>
 </dl>`}
             </code>
           </pre>

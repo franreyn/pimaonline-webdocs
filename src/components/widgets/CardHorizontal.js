@@ -49,7 +49,7 @@ export default function CardHorizontal() {
             <code className="language-html" ref={codeRef}>
               {String.raw`<div class="card-horizontal">
   <div class="card-body">
-    <p>Some long text used to help display the card horizontal widget which includes a paragraph and an image.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
   </div>
   <div class="card-img">
     <img src="https://via.placeholder.com/300" alt="" />
