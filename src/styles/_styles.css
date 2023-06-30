@@ -374,20 +374,30 @@ section p {
 }
 
 .wd-visual-ex {
-  background-color: var(--color-bg-alt);
+  background-color: rgba(45, 51, 83, 1);
   padding: 2rem;
-  border-radius: 10px;
+  border-radius: 10px 10px 0 0;
   border: 0.5px solid rgba(62, 71, 116, 1);
 }
 
 .wd-html-code {
   overflow-x: scroll;
-  padding: 2rem 0 0;
   margin-bottom: 1rem;
 }
 
 pre code.hljs {
-  border-radius: 10px;
+  border-radius: 0 0 10px 10px;
+  border: 0.5px solid black;
+}
+
+.wd-monospace {
+  color: var(--color-accent);
+  font-family:'Courier New', Courier, monospace;
+  font-weight: 700;
+}
+
+#toc-media-container h3:nth-child(2) {
+  margin-top: 2rem;
 }
 
 @media screen and (max-width: 768px) {
