@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -45,6 +46,11 @@ export default function Footer() {
               </ul>
           </li>
         </ul>
+      </div>
+      <div className="wd-logo-wrapper">
+        <Link href="index">
+          <Image className="logo" src="/images/logo.png" alt="Pima Community College logo" width={200} height={31} priority={true} />
+        </Link>
       </div>
     </>
   )
