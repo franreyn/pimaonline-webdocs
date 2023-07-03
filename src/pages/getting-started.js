@@ -21,10 +21,10 @@ export default function GettingStarted() {
         <aside>
           <Sidebar />
         </aside>
+        <footer>
+          <Footer />
+        </footer>
       </div>
-      <footer>
-        <Footer />
-      </footer>
     </>
   )
 }
