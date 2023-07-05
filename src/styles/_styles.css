@@ -539,7 +539,7 @@ footer::after {
 }
 
 .wd-logo-wrapper {
-  margin: 4rem 0;
+  padding: 4rem 0;
   max-width: var(--breakpoint-xl);
   margin-left: auto;
   margin-right: auto;
