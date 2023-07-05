@@ -1,3 +1,5 @@
+@import "@/styles/_variables.css";
+
 * {
   margin: 0;
   padding: 0;
@@ -24,6 +26,13 @@
   grid-area: sidebar;
 }
 
+.wd-grid footer {
+  grid-area: footer;
+  padding: 0;
+  margin-right: -1rem;
+  margin-bottom: -1rem;
+}
+
 .wd-img-container {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
@@ -44,10 +53,12 @@
 @media screen and (min-width: 768px) {
   .wd-grid {
     display: grid;
+    grid-template-columns: 280px minmax(400px, 1fr);
+    padding: 1rem;
     max-width: 1280px;
     margin: 0 auto;
-    grid-template-areas: "sidebar main";
-    grid-template-columns: 280px minmax(400px, 800px);
+    grid-template-areas:  "sidebar main"
+                          ". footer";
   }
 
   .wd-grid main {
@@ -57,4 +68,16 @@
   .wd-side-by-side.reverse .wd-side-by-side-item:first-child {
     order: 2;
   }
+}
+
+footer {
+  padding: 1rem;
+}
+
+.wd-footer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  grid-gap: 2rem 1rem;
+  max-width: var(--breakpoint-xl);
+  margin: 0 auto;
 }

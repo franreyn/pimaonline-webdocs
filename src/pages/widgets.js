@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Navbar from '@/components/Navbar';
 import Sidebar from '@/components/Sidebar';
+import Footer from '@/components/Footer';
 import Assignments from "@/components/widgets/Assignments";
 import Blockquote from '@/components/widgets/Blockquote';
 import Border from '@/components/widgets/Border';
@@ -50,6 +51,9 @@ export default function Widgets() {
         <VocabCards />
         <VocabList />
         </main>
+        <footer>
+          <Footer />
+        </footer>
       </div>
     </>
   )
