@@ -1,16 +1,8 @@
 import { useRef, useState } from 'react';
-import hljs from 'highlight.js/lib/core';
-import 'highlight.js/styles/night-owl.css';
-import html from 'highlight.js/lib/languages/xml';
 
 export default function Highlight() {
   const codeRef = useRef(null);
   const [buttonText, setButtonText] = useState('Copy code');
-
-  hljs.registerLanguage('html', html);
-  useEffect(() => {
-    hljs.highlightAll();
-  }, []);
 
   const handleCopyCode = () => {
     const codeElement = codeRef.current;
