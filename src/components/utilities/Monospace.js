@@ -27,7 +27,7 @@ export default function Monospace() {
         <p>Add <span className="wd-monospace">.monospace</span> to any text element to create monospaced text. Note: Changes the text's font.</p>
         <div className="wd-window">
           <div className="wd-visual-ex">
-            <p class="monospace">Some monospaced text.</p>
+            <p className="monospace">Some monospaced text.</p>
           </div>
           <div className="wd-html-code">
             <pre>

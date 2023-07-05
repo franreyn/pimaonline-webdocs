@@ -27,8 +27,8 @@ export default function Labels() {
         <p>Use <span className="wd-monospace">.label</span> to create a badge-like icon using any text.</p>
         <div className="wd-window">
           <div className="wd-visual-ex">
-            <label class="label label-default">Default label</label>
-            <label class="label label-muted">Muted label</label>
+            <label className="label label-default">Default label</label>
+            <label className="label label-muted">Muted label</label>
           </div>
           <div className="wd-html-code">
             <pre>
