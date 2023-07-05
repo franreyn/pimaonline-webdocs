@@ -49,7 +49,7 @@ export default function Footer() {
       </div>
       <div className="wd-logo-wrapper">
         <Link href="index">
-          <Image className="logo" src="/images/logo.png" alt="Pima Community College logo" width={200} height={31} priority={true} />
+          <Image className="logo" src="/images/logo.png" alt="Pima Community College logo" width={200} height={31} />
         </Link>
       </div>
     </>
