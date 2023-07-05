@@ -114,9 +114,13 @@ export default function Sidebar() {
         </li>
         <li><Link href="utilities">Utilities</Link>
           <ul>
-            <li><Link href="caption">Caption</Link></li>
-            <li><Link href="edit">Edit</Link></li>
-            <li><Link href="font-sizes">Font Sizes</Link></li>
+            <li><Link href="utilities#caption">Caption</Link></li>
+            <li><Link href="utilities#edit">Edit</Link></li>
+            <li><Link href="utilities#font-sizes">Font Sizes</Link></li>
+            <li><Link href="utilities#highlight">Highlight</Link></li>
+            <li><Link href="utilities#labels">Labels</Link></li>
+            <li><Link href="utilities#lead">Lead</Link></li>
+            <li><Link href="utilities#monospace">Monospace</Link></li>
           </ul>
         </li>
       </ul>
