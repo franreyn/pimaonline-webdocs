@@ -6,10 +6,21 @@
 
 body {
   background-color: var(--color-primary);
+  background-image: url("../../public/images/footer-graphic.svg");
+  background-repeat: no-repeat;
+  background-position-x: right;
+  background-position-y: bottom;
+  background-size: 200px;
 }
 
 .display-block {
   display: block;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    background-size: 300px;
+  }
 }
 
 /* Navbar */
@@ -514,14 +525,6 @@ pre code.hljs {
 /* Footer */
 footer {
   margin-top: 4rem;
-  position: relative;
-}
-
-footer::after {
-  content: url("../../public/images/footer-graphic.svg");
-  position: absolute;
-  right: 0;
-  bottom: 0;
 }
 
 .wd-footer .sub-items {
