@@ -50,6 +50,9 @@ export default function Widgets() {
         <VocabCards />
         <VocabList />
         </main>
+        <footer>
+          <Footer />
+        </footer>
       </div>
     </>
   )
