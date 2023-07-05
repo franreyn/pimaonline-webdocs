@@ -8,6 +8,7 @@ import Highlight from '@/components/utilities/Highlight';
 import Labels from '@/components/utilities/Labels';
 import Lead from '@/components/utilities/Lead';
 import Monospace from '@/components/utilities/Monospace';
+import Footer from '@/components/Footer';
 
 export default function Utilities() {
   return (
@@ -17,9 +18,6 @@ export default function Utilities() {
         <meta name="description" content="Pima Online Webdocs" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-        <Script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js" defer />
-        <Script src="https://cdn.jsdelivr.net/npm/@pimaonline/pimaonline-themepack/dist/js/scripts2.js" defer />
       </Head>
       <header>
         <Navbar />
@@ -39,6 +37,9 @@ export default function Utilities() {
           <Lead />
           <Monospace />
         </main>
+        <footer>
+          <Footer />
+        </footer>
       </div>
     </>
   )
