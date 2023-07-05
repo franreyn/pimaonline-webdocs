@@ -13,11 +13,9 @@ const Navbar = () => {
     <>
       <nav className="wd-navbar">
         {/* logo */}
-        <div className="logo-wrapper">
-          <Link href="index">
-            <Image className="logo" src="/images/logo.png" alt="Pima Community College logo" width={200} height={31} priority={true} />
-          </Link>
-        </div>
+        <Link href="index">
+          <Image className="logo" src="/images/logo.png" alt="Pima Community College logo" width={200} height={31} priority={true} />
+        </Link>
         {/* hamburger button */}
         <button className="mobile-btn">
           <label htmlFor="check">
