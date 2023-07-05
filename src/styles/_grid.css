@@ -20,12 +20,11 @@
                         "footer";
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   padding: 1rem;
-  max-width: 1280px;
-  margin: 0 auto;
 }
 
 .wd-grid main {
   grid-area: main;
+  margin-top: 4rem;
 }
 
 .wd-grid aside {
