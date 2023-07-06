@@ -6,6 +6,21 @@
 
 body {
   background-color: var(--color-primary);
+  background-image: url("../../public/images/footer-graphic.svg");
+  background-repeat: no-repeat;
+  background-position-x: right;
+  background-position-y: bottom;
+  background-size: 200px;
+}
+
+.display-block {
+  display: block;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    background-size: 300px;
+  }
 }
 
 /* Navbar */
@@ -15,6 +30,10 @@ body {
   max-width: var(--breakpoint-xl);
   margin: 0 auto;
   padding: 1rem;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  background-color: rgba(29, 34, 56, .7);
 }
 
 li {
@@ -35,11 +54,10 @@ a:hover {
 @media screen and (max-width: 768px) {
   .wd-navbar {
     display: flex;
-    position: relative;
   }
 
   .nav-container {
-    position: absolute;
+    position: fixed;
     transition: all .5s;
     overflow: hidden;
     background-color: var(--color-bg-alt);
@@ -332,6 +350,14 @@ section p {
 }
 
 /* Docs */
+.wd-content {
+  margin: 5rem 0;
+}
+
+aside {
+  margin-top: 5rem;
+}
+
 .wd-sidebar {
   font-family: "Roboto", sans-serif;
   line-height: 1.5;
@@ -366,6 +392,33 @@ section p {
   opacity: 1;
 }
 
+.wd-visual-ex {
+  background-color: rgba(45, 51, 83, 1);
+  padding: 2rem;
+  border-radius: 10px 10px 0 0;
+  border: 0.5px solid rgba(62, 71, 116, 1);
+}
+
+.wd-html-code {
+  overflow-x: scroll;
+  margin-bottom: 1rem;
+}
+
+pre code.hljs {
+  border-radius: 0 0 10px 10px;
+  border: 0.5px solid black;
+}
+
+.wd-monospace {
+  color: var(--color-accent);
+  font-family:'Courier New', Courier, monospace;
+  font-weight: 700;
+}
+
+#toc-media-container h3:nth-child(2) {
+  margin-top: 2rem;
+}
+
 @media screen and (max-width: 768px) {
   .wd-sidebar {
     background-color: var(--color-bg-alt);
@@ -373,7 +426,7 @@ section p {
     overflow: scroll;
     overflow-x: hidden;
     transition: all .5s;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 75vw;
@@ -445,7 +498,7 @@ section p {
   }
 
   .show-close-btn {
-    position: absolute;
+    position: fixed;
     z-index: 20;
     left: 65%;
     top: 20px;
@@ -457,9 +510,66 @@ section p {
 }
 
 @media screen and (min-width: 768px) {
+  aside {
+    margin-top: 0;
+  }
+
   .toc-btn {
     display: none;
   }
+
+  .wd-grid aside {
+    position: sticky;
+    top: 75px;
+    height: 85vh;
+    overflow: auto;
+    width: max-content;
+  }
+
+  .wd-sidebar {
+    margin-right: 5rem;
+  }
+}
+
+.wd-copy-btn {
+  background-color: var(--color-accent);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  display: inline-block;
+  transition: all .2s ease-in-out;
+  font-weight: 700;
+}
+
+.wd-copy-btn:hover {
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+  cursor: pointer;
+}
+
+/* Footer */
+footer {
+  margin-top: 4rem;
+}
+
+.wd-footer .sub-items {
+  padding-left: 0;
+  border-left: none;
+  display: block;
+}
+
+.wd-footer .sub-items li {
+  margin: .75rem 0;
+}
+
+.wd-footer .sub-items li::before {
+  content: none;
+}
+
+.wd-logo-wrapper {
+  padding: 4rem 0;
+  max-width: var(--breakpoint-xl);
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Scrollbars */
@@ -470,6 +580,7 @@ section p {
 
 *::-webkit-scrollbar {
   width: 7px;
+  height: 7px;
 }
 
 *::-webkit-scrollbar-track {
@@ -479,4 +590,73 @@ section p {
 *::-webkit-scrollbar-thumb {
   background-color: rgba(133, 137, 156, .2);
   border-radius: 20px;
+}
+
+/* Utilities page */
+.caption {
+  color: var(--color-pcc-ltgrey);
+  font-size: 0.85em;
+}
+
+.edit {
+  color: rgba(178, 3, 3, 1);
+  font-weight: bold;
+}
+
+.font-size-h3 {
+  font-family: "Lato", sans-serif;
+  font-size: 1.463em;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.font-size-h4 {
+  font-family: "Lato", sans-serif;
+  font-size: 1.122em;
+  font-weight: 400;
+  margin-bottom: 5px;
+  margin-top: 15px;
+}
+
+.highlight {
+  background-color: transparent;
+  background-image: linear-gradient(to bottom, #b4e7f8, #b4e7f8);
+  border-bottom: 2px solid #b4e7f8;
+  border-left: 2px solid #b4e7f8;
+  border-right: 2px solid #b4e7f8;
+  border-top: 2px solid #b4e7f8;
+  color: var(--color-pcc-black);
+}
+
+.label {
+  border-radius: 1px;
+  color: rgba(255, 255, 255, 1);
+  display: inline;
+  font-size: 0.7em;
+  font-weight: 700;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0.2em 0.6em 0.3em;
+  text-align: center;
+  vertical-align: baseline;
+  white-space: nowrap;
+}
+
+.label-default {
+  background-color: rgba(26, 97, 143, 1);
+}
+
+.label-muted {
+  background-color: var(--color-pcc-ltgrey);
+  color: #232323;
+}
+
+.lead {
+  font-size: 1.225em;
+  font-weight: 400;
+  letter-spacing: -0.002em;
+}
+
+.monospace {
+  font-family: "Courier New", Courier, monospace;
 }

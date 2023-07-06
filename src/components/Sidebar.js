@@ -40,16 +40,87 @@ export default function Sidebar() {
         </li>
         <li><Link href="widgets">Widgets</Link>
           <ul>
-            <li><Link href="assignments">Assignments</Link></li>
-            <li><Link href="blockquote">Blockquote</Link></li>
-            <li><Link href="border">Border</Link></li>
+            <li>
+              <Link href="widgets#assignments" className="toc-assignments">
+                Assignments Widget
+              </Link>
+            </li>
+            <li>
+              <Link href="widgets#blockquote" className="toc-blockquote">
+                Blockquote
+              </Link>
+            </li>
+            <li>
+              <Link href="widgets#border" className="toc-border">
+                Border
+              </Link>
+            </li>
+            <li>
+              <Link href="widgets#call-out" className="toc-call-out">
+                Call Out
+              </Link>
+            </li>
+            <li>
+              <Link href="widgets#card-horizontal" className="toc-card-horizontal">
+                Card Horizontal
+              </Link>
+            </li>
+            <li>
+              <Link href="widgets#horizontal-display" className="toc-horizontal-display">
+                Horizontal Display
+              </Link>
+            </li>
+            <li>
+              <Link href="widgets#img-gallery" className="toc-img-gallery">
+                Image Gallery
+              </Link>
+            </li>
+            <li>
+              <Link href="widgets#media-container" className="toc-media-container">
+                Media Container
+              </Link>
+            </li>
+            <li>
+              <Link href="widgets#side-by-side" className="toc-side-by-side">
+                Side-by-side
+              </Link>
+            </li>
+            <li>
+              <Link href="widgets#tables" className="toc-tables">
+                Tables
+              </Link>
+            </li>
+            <li>
+              <Link href="widgets#tabs" className="toc-tabs">
+                Tabs
+              </Link>
+            </li>
+            <li>
+              <Link href="widgets#video-widget" className="toc-video-widget">
+                Video Widget
+              </Link>
+            </li>
+            <li>
+              <Link href="widgets#vocab-cards" className="toc-vocab-cards">
+                Vocab Cards
+              </Link>
+            </li>
+            <li>
+              <Link href="widgets#vocab-list" className="toc-vocab-list">
+                Vocab List
+              </Link>
+            </li>
           </ul>
         </li>
         <li><Link href="utilities">Utilities</Link>
           <ul>
-            <li><Link href="caption">Caption</Link></li>
-            <li><Link href="edit">Edit</Link></li>
-            <li><Link href="font-sizes">Font Sizes</Link></li>
+            <li><Link href="utilities#caption">Caption</Link></li>
+            <li><Link href="utilities#edit">Edit</Link></li>
+            <li><Link href="utilities#font-sizes">Font Sizes</Link></li>
+            <li><Link href="utilities#highlight">Highlight</Link></li>
+            <li><Link href="utilities#labels">Labels</Link></li>
+            <li><Link href="utilities#lead">Lead</Link></li>
+            <li><Link href="utilities#monospace">Monospace</Link></li>
           </ul>
         </li>
       </ul>
