@@ -19,7 +19,7 @@
 
 .wd-grid main {
   grid-area: main;
-  margin-top: 4rem;
+  margin-top: 10rem;
 }
 
 .wd-grid aside {
@@ -62,7 +62,7 @@
   }
 
   .wd-grid main {
-    margin-top: 1rem;
+    margin-top: 4rem;
   }
   
   .wd-side-by-side.reverse .wd-side-by-side-item:first-child {

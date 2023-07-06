@@ -30,6 +30,10 @@ body {
   max-width: var(--breakpoint-xl);
   margin: 0 auto;
   padding: 1rem;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  background-color: rgba(29, 34, 56, .7);
 }
 
 li {
@@ -50,11 +54,10 @@ a:hover {
 @media screen and (max-width: 768px) {
   .wd-navbar {
     display: flex;
-    position: relative;
   }
 
   .nav-container {
-    position: absolute;
+    position: fixed;
     transition: all .5s;
     overflow: hidden;
     background-color: var(--color-bg-alt);
@@ -350,6 +353,11 @@ section p {
 .wd-content {
   margin: 5rem 0;
 }
+
+aside {
+  margin-top: 5rem;
+}
+
 .wd-sidebar {
   font-family: "Roboto", sans-serif;
   line-height: 1.5;
@@ -418,7 +426,7 @@ pre code.hljs {
     overflow: scroll;
     overflow-x: hidden;
     transition: all .5s;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 75vw;
@@ -490,7 +498,7 @@ pre code.hljs {
   }
 
   .show-close-btn {
-    position: absolute;
+    position: fixed;
     z-index: 20;
     left: 65%;
     top: 20px;
@@ -502,6 +510,10 @@ pre code.hljs {
 }
 
 @media screen and (min-width: 768px) {
+  aside {
+    margin-top: 0;
+  }
+
   .toc-btn {
     display: none;
   }
@@ -512,7 +524,6 @@ pre code.hljs {
     height: 85vh;
     overflow: auto;
     width: max-content;
-    margin-bottom: 3rem;
   }
 
   .wd-sidebar {
