@@ -6,6 +6,7 @@ import 'highlight.js/styles/night-owl.css';
 import html from 'highlight.js/lib/languages/xml';
 import { useEffect, useRef, useState } from 'react';
 import styles from "../styles/layouts.module.css"
+import Footer from "../components/Footer"
 
 export default function Layouts() {
 
@@ -243,6 +244,9 @@ export default function Layouts() {
       </div>
       </section>
       </main>
+      <footer>
+          <Footer />
+        </footer>
         </div>
     </>
   )
