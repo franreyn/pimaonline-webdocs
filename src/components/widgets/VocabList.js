@@ -3,6 +3,7 @@ import { useRef, useState } from 'react';
 export default function VocabList() {
   const codeRef = useRef(null);
   const [buttonText, setButtonText] = useState('Copy code');
+  const [openIndexes, setOpenIndexes] = useState([]);
 
   const handleCopyCode = () => {
     const codeElement = codeRef.current;
@@ -20,6 +21,18 @@ export default function VocabList() {
     }, 2000);
   };
 
+  const toggleAccordion = (index) => {
+    if (openIndexes.includes(index)) {
+      setOpenIndexes(openIndexes.filter((i) => i !== index));
+    } else {
+      setOpenIndexes([...openIndexes, index]);
+    }
+  };
+
+  const closeAll = () => {
+    setOpenIndexes([]);
+  };
+
   return (
     <section className="wd-content" id="toc-vocab-list">
       <h2 className="section-top" id="vocab-list">Vocab List</h2>
@@ -32,13 +45,13 @@ export default function VocabList() {
       <div className="wd-window">
         <div className="wd-visual-ex">
           <dl className="vocab-list">
-            <button>Close All</button>
-            <dt tabIndex="0">Term 1</dt>
-            <dd>Term Definition 1</dd>
-            <dt tabIndex="0">Term 2</dt>
-            <dd>Term Definition 2</dd>
-            <dt tabIndex="0">Term 3</dt>
-            <dd>Term Definition 3</dd>
+            <button onClick={closeAll}>Close All</button>
+            <dt tabIndex="0" onClick={() => toggleAccordion(0)}>Term 1</dt>
+            <dd style={{ display: openIndexes.includes(0) ? 'block' : 'none' }}>Term Definition 1</dd>
+            <dt tabIndex="0" onClick={() => toggleAccordion(1)}>Term 2</dt>
+            <dd style={{ display: openIndexes.includes(1) ? 'block' : 'none' }}>Term Definition 2</dd>
+            <dt tabIndex="0" onClick={() => toggleAccordion(2)}>Term 3</dt>
+            <dd style={{ display: openIndexes.includes(2) ? 'block' : 'none' }}>Term Definition 3</dd>
           </dl>
         </div>
         <div className="wd-html-code">
