@@ -26,9 +26,9 @@ export default function Sidebar() {
       <ul className={`wd-sidebar ${tocOpen ? 'show-toc' : 'hide-toc'}`}>
         <li><Link href="getting-started">Getting Started</Link>
           <ul>
-            <li><Link href="quick-start">Quick Start</Link></li>
-            <li><Link href="manual-setup">Manual Setup</Link></li>
-            <li><Link href="community">Community</Link></li>
+            <li><Link href="getting-started#quick-start">Quick Start</Link></li>
+            <li><Link href="getting-started#manual-setup">Manual Setup</Link></li>
+            <li><Link href="getting-started#community">Community</Link></li>
           </ul>
         </li>
         <li><Link href="layouts">Layouts</Link>
