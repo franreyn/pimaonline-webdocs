@@ -41,13 +41,13 @@ export default function Edit() {
         </div>
         <br />
         <br />
-        <h3>JS</h3>
-        <p>Include the scripts2.js file by adding the following code in <span className="wd-monospace">&lt;head&gt;</span> immediately after the stylesheets.</p>
+        <h3>jQuery</h3>
+        <p>Include jQuery by adding the following code immediately before scripts2.js.</p>
         <div className="wd-window">
           <div className="wd-html-code">
             <pre>
               <code className="language-html" ref={codeRef}>
-                {String.raw`<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@pimaonline/pimaonline-themepack/dist/js/scripts2.js" defer></script>`}
+                {String.raw`<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js" defer></script>`}
               </code>
             </pre>
           </div>
@@ -57,13 +57,13 @@ export default function Edit() {
         </div>
         <br />
         <br />
-        <h3>jQuery</h3>
-        <p>Include jQuery by adding the following code immediately before scripts2.js.</p>
+        <h3>JS</h3>
+        <p>Include the scripts2.js file by adding the following code in <span className="wd-monospace">&lt;head&gt;</span> immediately after the stylesheets.</p>
         <div className="wd-window">
           <div className="wd-html-code">
             <pre>
               <code className="language-html" ref={codeRef}>
-                {String.raw`<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js" defer></script>`}
+                {String.raw`<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@pimaonline/pimaonline-themepack/dist/js/scripts2.js" defer></script>`}
               </code>
             </pre>
           </div>
