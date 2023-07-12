@@ -946,7 +946,9 @@ dl.vocab-list dd {
   overflow: hidden;
   border: 1px solid var(--color-pcc-ltgrey);
   margin-top: -0.3rem;
-  border-top: none
+  border-top: none;
+  background-color: var(--color-pcc-white);
+  color: var(--color-pcc-black);
 }
 @media screen and (min-width: 700px) {
   dl.vocab-list dd {
@@ -1003,6 +1005,9 @@ dl.vocab-list dd {
 .tabs label.hide-tab {
   background-color: transparent !important;
   border: none !important;
+}
+.tabs label span {
+  background: transparent;
 }
 .hide-panel {
   background-color: transparent !important;
