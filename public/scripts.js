@@ -1,5 +1,7 @@
 /// @description Main JS file for PimaOnline Themepack
 /// @dependencies jQuery 3.3.1 or later
+/// updated on July 13, 2023 - edited querySelector to querySelectorAll for major layout types
+/// removed Grid rules, applied those in the layout components with a class instead
 
 const courseBody = document.querySelector("body");
 const contentWrapper = document.querySelector("#content-wrapper");
