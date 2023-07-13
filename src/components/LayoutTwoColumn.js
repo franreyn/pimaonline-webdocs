@@ -1,5 +1,3 @@
-import Head from "next/head";
-import React, { useEffect } from 'react';
 import styles from "../styles/themeLayout.module.css"
 
 export default function LayoutTwoColumn(props) {

@@ -1,7 +1,4 @@
-import Head from "next/head";
-import { useRouter } from "next/router";
 import styles from "../styles/themeLayout.module.css"
-import Script from "next/script"
 import { useEffect,useState, useRef } from 'react';
 
 export default function LayoutOneColumn(props) {
