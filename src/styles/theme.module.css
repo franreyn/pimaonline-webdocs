@@ -1,0 +1,51 @@
+.layoutArea {
+  background: rgb(29, 34, 56);
+  max-width: var(--breakpoint-xl);
+  margin: auto;
+  padding-bottom: 40px;
+} 
+
+ .layoutArea h1.mainH1 {
+  font-family: "Orbitron", sans-serif;
+  color: white;
+  margin-top: 2em;
+}
+
+.layoutArea p {
+  font-family: "Roboto", sans-serif;
+
+}
+
+ul.wd-sidebar {
+  margin: 0 5rem 0 0 !important;
+}
+
+.description {
+  color: white;
+}
+
+.wdNavbar {
+  background: var(--color-primary);
+}
+
+.header a:visited, .header a, .header a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.header ul>li::before {
+  content: "";
+}
+
+.hello {
+  color: red;
+}
+
+.h2, .h2:not([class^=icon]) {
+  font-family: "Orbitron", sans-serif;
+  color:white;
+  border: none;
+  margin-bottom: 40px;
+  text-transform: none;
+  letter-spacing: normal;
+}
