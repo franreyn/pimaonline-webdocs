@@ -1,7 +1,7 @@
 /// @description Main JS file for PimaOnline Themepack
 /// @dependencies jQuery 3.3.1 or later
 /// updated on July 13, 2023 - edited querySelector to querySelectorAll for major layout types
-/// removed Grid rules, applied those in the layout components with a class instead
+/// removed Grid javascript & JQuery, applied grid in the layout components with a class instead
 
 const courseBody = document.querySelector("body");
 const contentWrapper = document.querySelector("#content-wrapper");
@@ -305,29 +305,3 @@ if(hrsBorders) {
     callAnimateBorder.observe(hrsBorders[hrsBorder]);
   }
 };
-
-// // Call function with jQuery scripts
-// const callJquery = () => {
-//   // Toggle Button's Arrow Right Points Down on Click
-//   $('.arrow-right').on('click', function () {
-//     $(this).toggleClass('arrow-down');
-//   });
-//   // TOOLTIP
-//   //  Allows Screen readers to toggle a tooltip on click and to say if the tooltip is collapsed or expanded.
-//   $(".tooltip").click(function () {
-//     $(this).children(".tip-hover").toggle();
-//     if ($(this).children(".tip-hover").is(':visible')) {
-//       $(this).attr('aria-expanded', 'true');
-//       $(this).removeClass('hidden');
-//     } else {
-//       $(this).attr('aria-expanded', 'false');
-//       $(this).addClass('hidden');
-//     }
-//   });
-//   let start = 999;
-//   $('.tooltip').each(function (i) {
-//     $(this).css('z-index', start--);
-//   });
-//   $(".tooltip .video-container").parent().css("width", "450px");
-// }
-// callJquery();
