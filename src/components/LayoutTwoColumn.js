@@ -16,26 +16,25 @@ export default function LayoutTwoColumn(props) {
     <div className={styles.contentBody}>
       <h2 className="icon-book-open">Aenean euismod</h2>
       <p>
-        {" "}
         Nunc sed lacus sit amet purus convallis vestibulum vitae quis libero.
         Nunc consectetur tristique aliquet. Suspendisse risus ex, vestibulum non
         leo sit amet, consequat ultricies eros. Curabitur leo nulla, ornare et
         bibendum imperdiet, congue id purus. Nullam lobortis quam id justo porta
-        suscipit.{" "}
+        suscipit.
         <a rel="noopener" href="#">
           Fusce posuere
-        </a>{" "}
+        </a>
         lectus turpis, egestas rhoncus ex vitae, porttitor commodo nisl.
-        Vestibulum tempor ante{" "}
+        Vestibulum tempor ante
         <a href="#" target="_blank" rel="noopener">
           Curabitur
         </a>
-        , "{" "}
+        , "
         <a href="#" target="_blank" rel="noopener">
           Vivamus mollis
         </a>
         vitae nunc nec tellus sollicitudin cursus. Suspendisse quis tortor eget
-        lorem condimentum malesuada mollis eget nulla.{" "}
+        lorem condimentum malesuada mollis eget nulla.
       </p>
       <div className="border">
         <h3>Module Objectives:</h3>
@@ -47,11 +46,10 @@ export default function LayoutTwoColumn(props) {
       </div>
       <div className="side-by-side">
         <div className="side-by-side-item">
-          {" "}
           <img
             src="https://d2l.pima.edu/shared/images/placeholder/400x400.jpg"
             alt=""
-          />{" "}
+          />
         </div>
         <div className="side-by-side-item">
           <p>
@@ -88,41 +86,37 @@ export default function LayoutTwoColumn(props) {
       </p>
       <div className="horizontal-display">
         <div>
-          {" "}
           <img
             src="https://d2l.pima.edu/shared/images/placeholder/400x400.jpg"
             alt=""
-          />{" "}
+          />
         </div>
         <div>
-          {" "}
+          
           <img
             src="https://d2l.pima.edu/shared/images/placeholder/400x400.jpg"
             alt=""
-          />{" "}
+          />
         </div>
         <div>
-          {" "}
           <img
             src="https://d2l.pima.edu/shared/images/placeholder/400x400.jpg"
             alt=""
-          />{" "}
+          />
         </div>
         <div>
-          {" "}
           <img
             src="https://d2l.pima.edu/shared/images/placeholder/400x400.jpg"
             alt=""
-          />{" "}
+          />
         </div>
       </div>
     </div>
     <div className={styles.contentBody}>
       <blockquote className="text-center">
-        {" "}
         " Mauris eros nibh, lobortis eu lacinia quis, mattis venenatis purus.
         Curabitur commodo lacus eget facilisis ornare. " <br />
-        <br />- Lorem Ipsum{" "}
+        <br />- Lorem Ipsum
       </blockquote>
     </div>
     <div className={styles.contentBody}>
@@ -135,11 +129,10 @@ export default function LayoutTwoColumn(props) {
           </p>
         </div>
         <div className="card-img">
-          {" "}
           <img
             src="https://d2l.pima.edu/shared/images/placeholder/400x400.jpg"
             alt=""
-          />{" "}
+          />
         </div>
       </div>
     </div>
@@ -187,72 +180,61 @@ export default function LayoutTwoColumn(props) {
           <h3>Lorem Ipsum</h3>
           <ul>
             <li>
-              {" "}
-              <strong>Commodo:</strong> vivamus mollis lorem{" "}
+              <strong>Commodo:</strong> vivamus mollis lorem
             </li>
             <li>
-              {" "}
-              <strong>Morbi:</strong> vulputate condimentum ante{" "}
+              <strong>Morbi:</strong> vulputate condimentum ante
             </li>
             <li>
-              {" "}
-              <strong>Commodo:</strong> vitae ante varius{" "}
+              <strong>Commodo:</strong> vitae ante varius
             </li>
             <li>
-              {" "}
               <strong>Commodo:</strong> lobortis eu lacinia quis, mattis
-              venenatis{" "}
+              venenatis
             </li>
           </ul>
           <a className="btn" href="#">
             Ut posuere vitae
-          </a>{" "}
+          </a>
         </li>
         <li className="assignment">
           <h3>Curabitur Sodales</h3>
           <ul>
             <li>
-              {" "}
-              <strong>Lorem:</strong> mattis venenatis{" "}
+              <strong>Lorem:</strong> mattis venenatis
             </li>
             <li>
-              {" "}
               <strong>Commodo:</strong> lobortis eu lacinia quis, mattis
-              venenatis{" "}
+              venenatis
             </li>
             <li>
-              {" "}
-              <strong>Morbi:</strong> vulputate condimentum ante{" "}
+              <strong>Morbi:</strong> vulputate condimentum ante
             </li>
           </ul>
           <a className="btn" href="#">
             Ut posuere vitae
-          </a>{" "}
+          </a>
         </li>
         <li className="assignment">
           <h3>Lorem Ipsum</h3>
           <ul>
             <li>
-              {" "}
-              <strong>Commodo:</strong> vivamus mollis lorem{" "}
+              <strong>Commodo:</strong> vivamus mollis lorem
             </li>
             <li>
-              {" "}
-              <strong>Morbi:</strong> vulputate condimentum ante{" "}
+              <strong>Morbi:</strong> vulputate condimentum ante
             </li>
             <li>
-              {" "}
-              <strong>Commodo:</strong> vitae ante varius{" "}
+              <strong>Commodo:</strong> vitae ante varius
             </li>
             <li>
-              {" "}
               <strong>Commodo:</strong> lobortis eu lacinia quis, mattis
-              venenatis{" "}
+              venenatis
             </li>
           </ul>
           <a className="btn" href="#">
             Ut posuere vitae
-          </a>{" "}
+          </a>
         </li>
       </ul>
     </div>
@@ -262,10 +244,9 @@ export default function LayoutTwoColumn(props) {
       <p className="text-center toggle-footnotes">[Show Footnotes]</p>
       <div className="footnotes">
         <p>
-          {" "}
           Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur arcu
           erat, accumsan id imperdiet et, porttitor at sem. Vivamus magna justo,
-          lacinia eget consectetur sed, convallis at tellus.{" "}
+          lacinia eget consectetur sed, convallis at tellus.
         </p>
         <ul>
           <li>Lorem culim ghus.</li>
@@ -274,7 +255,6 @@ export default function LayoutTwoColumn(props) {
         </ul>
       </div>
     </div>
-    
   </footer>
   </div>
 </>

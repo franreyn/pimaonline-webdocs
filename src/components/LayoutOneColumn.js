@@ -74,19 +74,17 @@ if (bodyStyleMatches && bodyStyleMatches.length > 0) {
       <h2 className="icon-clipboard">Donec Luctus</h2>
       <h3>Nam A Risus </h3>
       <p>
-        {" "}
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod
         vulputate malesuada. Nam a risus purus. Orci varius natoque penatibus et
         magnis dis parturient montes, nascetur ridiculus mus. In vel neque
         tempus, porta enim a, feugiat purus. Donec luctus ullamcorper ornare.
-        Suspendisse et luctus leo.{" "}
+        Suspendisse et luctus leo.
       </p>
       <ul>
         <li> Morbi id cursus velit </li>
         <li> Ut posuere vitae ante varius consequat</li>
         <li>
-          {" "}
-          Vivamus id condimentum dui{" "}
+          Vivamus id condimentum dui
           <a
             rel="noopener"
             href="../Lecture%20Slides/Ch%201%20Slides.pdf"
@@ -100,7 +98,7 @@ if (bodyStyleMatches && bodyStyleMatches.length > 0) {
             target="_blank"
           >
             sodales
-          </a>{" "}
+          </a>
         </li>
         <li> Nulla vestibulum rhoncus neque non facilisis </li>
       </ul>
@@ -233,7 +231,7 @@ if (bodyStyleMatches && bodyStyleMatches.length > 0) {
         <tbody>
           <tr>
             <td data-th="Assignment">
-              Aenean euismod{" "}
+              Aenean euismod
               <a href="#" target="_blank" rel="noopener">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               </a>
@@ -244,7 +242,7 @@ if (bodyStyleMatches && bodyStyleMatches.length > 0) {
           </tr>
           <tr>
             <td data-th="Assignment">
-              Aenean euismod{" "}
+              Aenean euismod
               <a href="#" target="_blank" rel="noopener">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               </a>
@@ -265,7 +263,7 @@ if (bodyStyleMatches && bodyStyleMatches.length > 0) {
         Nunc consectetur tristique aliquet. Suspendisse risus ex, vestibulum non
         leo sit amet, consequat ultricies eros. Curabitur leo nulla, ornare et
         bibendum imperdiet, congue id purus. Nullam lobortis quam id justo porta
-        suscipit.{" "}
+        suscipit.
       </p>
       <h3>Suspendisse</h3>
       <p>
@@ -273,7 +271,7 @@ if (bodyStyleMatches && bodyStyleMatches.length > 0) {
         Nunc consectetur tristique aliquet. Suspendisse risus ex, vestibulum non
         leo sit amet, consequat ultricies eros. Curabitur leo nulla, ornare et
         bibendum imperdiet, congue id purus. Nullam lobortis quam id justo porta
-        suscipit.{" "}
+        suscipit.
       </p>
       <ol>
         <li>Mattis venenatis purus</li>
@@ -289,7 +287,7 @@ if (bodyStyleMatches && bodyStyleMatches.length > 0) {
         Nunc consectetur tristique aliquet. Suspendisse risus ex, vestibulum non
         leo sit amet, consequat ultricies eros. Curabitur leo nulla, ornare et
         bibendum imperdiet, congue id purus. Nullam lobortis quam id justo porta
-        suscipit.{" "}
+        suscipit.
       </p>
       <div className="video-widget">
         <div className="video-card">
@@ -308,7 +306,6 @@ if (bodyStyleMatches && bodyStyleMatches.length > 0) {
                   allowFullScreen=""
                   width={560}
                   height={315}
-                  frameBorder={0}
                 />
               </div>
             </div>
@@ -319,7 +316,7 @@ if (bodyStyleMatches && bodyStyleMatches.length > 0) {
               rel="nonopener noopener"
             >
               Suspendisse
-            </a>{" "}
+            </a>
           </div>
         </div>
         <div className="video-card">
@@ -336,7 +333,6 @@ if (bodyStyleMatches && bodyStyleMatches.length > 0) {
                   allowFullScreen=""
                   width={560}
                   height={315}
-                  frameBorder={0}
                 />
               </div>
             </div>
@@ -347,7 +343,7 @@ if (bodyStyleMatches && bodyStyleMatches.length > 0) {
               rel="nonopener noopener"
             >
               Suspendisse
-            </a>{" "}
+            </a>
           </div>
         </div>
         <div className="video-card">
@@ -364,7 +360,6 @@ if (bodyStyleMatches && bodyStyleMatches.length > 0) {
                   allowFullScreen=""
                   width={560}
                   height={315}
-                  frameBorder={0}
                 />
               </div>
             </div>
@@ -375,7 +370,7 @@ if (bodyStyleMatches && bodyStyleMatches.length > 0) {
               rel="nonopener noopener"
             >
               Suspendisse
-            </a>{" "}
+            </a>
           </div>
         </div>
         <div className="video-card">
@@ -403,7 +398,7 @@ if (bodyStyleMatches && bodyStyleMatches.length > 0) {
               rel="nonopener noopener"
             >
               Suspendisse
-            </a>{" "}
+            </a>
           </div>
         </div>
       </div>
@@ -414,10 +409,10 @@ if (bodyStyleMatches && bodyStyleMatches.length > 0) {
       <p className="text-center toggle-footnotes">[Show Footnotes]</p>
       <div className={styles.footnotes}>
         <p>
-          {" "}
+          
           Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur arcu
           erat, accumsan id imperdiet et, porttitor at sem. Vivamus magna justo,
-          lacinia eget consectetur sed, convallis at tellus.{" "}
+          lacinia eget consectetur sed, convallis at tellus.
         </p>
         <ul>
           <li>Lorem culim ghus.</li>

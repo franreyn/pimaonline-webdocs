@@ -17,26 +17,25 @@ export default function LayoutThreeColumn(props) {
     <div className={styles.contentBody}>
       <h2 className="icon-book-open">Aenean euismod</h2>
       <p>
-        {" "}
         Nunc sed lacus sit amet purus convallis vestibulum vitae quis libero.
         Nunc consectetur tristique aliquet. Suspendisse risus ex, vestibulum non
         leo sit amet, consequat ultricies eros. Curabitur leo nulla, ornare et
         bibendum imperdiet, congue id purus. Nullam lobortis quam id justo porta
-        suscipit.{" "}
+        suscipit.
         <a rel="noopener" href="#">
           Fusce posuere
-        </a>{" "}
+        </a>
         lectus turpis, egestas rhoncus ex vitae, porttitor commodo nisl.
-        Vestibulum tempor ante{" "}
+        Vestibulum tempor ante
         <a href="#" target="_blank" rel="noopener">
           Curabitur
         </a>
-        , "{" "}
+        , "
         <a href="#" target="_blank" rel="noopener">
           Vivamus mollis
         </a>
         vitae nunc nec tellus sollicitudin cursus. Suspendisse quis tortor eget
-        lorem condimentum malesuada mollis eget nulla.{" "}
+        lorem condimentum malesuada mollis eget nulla.
       </p>
       <div className="border">
         <h3>Nec Ultricies</h3>
@@ -56,7 +55,7 @@ export default function LayoutThreeColumn(props) {
         Nunc consectetur tristique aliquet. Suspendisse risus ex, vestibulum non
         leo sit amet, consequat ultricies eros. Curabitur leo nulla, ornare et
         bibendum imperdiet, congue id purus. Nullam lobortis quam id justo porta
-        suscipit.{" "}
+        suscipit.
       </p>
       <h3>Suspendisse</h3>
       <p>
@@ -64,15 +63,15 @@ export default function LayoutThreeColumn(props) {
         Nunc consectetur tristique aliquet. Suspendisse risus ex, vestibulum non
         leo sit amet, consequat ultricies eros. Curabitur leo nulla, ornare et
         bibendum imperdiet, congue id purus. Nullam lobortis quam id justo porta
-        suscipit.{" "}
+        suscipit.
       </p>
       <div className="side-by-side">
         <div className="side-by-side-item">
-          {" "}
+          
           <img
             src="https://d2l.pima.edu/shared/images/placeholder/400x400.jpg"
             alt=""
-          />{" "}
+          />
         </div>
         <div className="side-by-side-item">
           <p>
@@ -87,11 +86,10 @@ export default function LayoutThreeColumn(props) {
     <div className={styles.contentBody}>
       <h2 className="icon-pencil font-size-h3">Nam A Risus</h2>
       <figure>
-        {" "}
         <img
           src="https://d2l.pima.edu/shared/images/placeholder/400x400.jpg"
           alt=""
-        />{" "}
+        />
       </figure>
     </div>
     <div className={styles.contentBody}>
@@ -119,9 +117,8 @@ export default function LayoutThreeColumn(props) {
       <div className="border border-yellow">
         <h2 className="icon-ruler font-size-h3">Did you know?!</h2>
         <p>
-          {" "}
           The <strong>Galapagos Penguin</strong> is the only penguin species
-          that ventures north of the equator in the wild.{" "}
+          that ventures north of the equator in the wild.
         </p>
       </div>
     </div>
@@ -149,10 +146,9 @@ export default function LayoutThreeColumn(props) {
       <p className="text-center toggle-footnotes">[Show Footnotes]</p>
       <div className="footnotes">
         <p>
-          {" "}
           Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur arcu
           erat, accumsan id imperdiet et, porttitor at sem. Vivamus magna justo,
-          lacinia eget consectetur sed, convallis at tellus.{" "}
+          lacinia eget consectetur sed, convallis at tellus.
         </p>
         <ul>
           <li>Lorem culim ghus.</li>
