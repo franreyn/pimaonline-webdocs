@@ -15,7 +15,7 @@ export default function Theme() {
   const { theme, name, description } = router.query;
 
   //Capitalize theme name for title tag
-  const titleName = theme.toUpperCase();
+  const titleName = name.toUpperCase();
 
   // Remove the :before pseudo-element by setting its content to an empty string for top level menu
   useLayoutEffect(() => {
@@ -29,7 +29,7 @@ export default function Theme() {
   return (   
     <>
     <Head>
-    <title>{`${titleName} Theme`}</title>
+    <title>{`${name} Theme`}</title>
     </Head>
     <div  style={{backgroundColor: "rgba(29, 34, 56, 1)"}} >
       <header className={styles.header}>
