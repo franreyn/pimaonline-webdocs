@@ -13,8 +13,8 @@ import { useLayoutEffect } from 'react';
 
 export default function Utilities() {
 
+  // Remove any existing theme link (required to keep theme styles just on the theme page)
   useLayoutEffect(() => {
-    // Remove any existing theme link
     const existingLink = document.querySelector('link[data-theme-link]');
     if (existingLink) {
       document.head.removeChild(existingLink);
