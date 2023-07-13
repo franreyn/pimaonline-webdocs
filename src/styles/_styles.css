@@ -17,6 +17,10 @@ body {
   display: block;
 }
 
+.mb-8 {
+  margin-bottom: 8rem;
+}
+
 @media screen and (min-width: 768px) {
   body {
     background-size: 300px;
