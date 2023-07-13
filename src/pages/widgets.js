@@ -16,8 +16,18 @@ import Tabs from '@/components/widgets/Tabs';
 import VideoWidget from '@/components/widgets/VideoWidget';
 import VocabCards from '@/components/widgets/VocabCards';
 import VocabList from '@/components/widgets/VocabList';
+import { useLayoutEffect } from 'react';
 
 export default function Widgets() {
+
+  useLayoutEffect(() => {
+    // Remove any existing theme link
+    const existingLink = document.querySelector('link[data-theme-link]');
+    if (existingLink) {
+      document.head.removeChild(existingLink);
+    }
+})
+
   return (
     <>
       <Head>

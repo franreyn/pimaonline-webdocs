@@ -4,11 +4,19 @@ import Sidebar from "@/components/Sidebar";
 import hljs from 'highlight.js/lib/core';
 import 'highlight.js/styles/night-owl.css';
 import html from 'highlight.js/lib/languages/xml';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, useLayoutEffect } from 'react';
 import styles from "../styles/layouts.module.css"
 import Footer from "../components/Footer"
 
 export default function Layouts() {
+
+  useLayoutEffect(() => {
+    // Remove any existing theme link
+    const existingLink = document.querySelector('link[data-theme-link]');
+    if (existingLink) {
+      document.head.removeChild(existingLink);
+    }
+  }, []);
 
   const codeRef = useRef(null);
   const [buttonText, setButtonText] = useState('Copy code');

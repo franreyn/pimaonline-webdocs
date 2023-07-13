@@ -9,8 +9,18 @@ import Labels from '@/components/utilities/Labels';
 import Lead from '@/components/utilities/Lead';
 import Monospace from '@/components/utilities/Monospace';
 import Footer from '@/components/Footer';
+import { useLayoutEffect } from 'react';
 
 export default function Utilities() {
+
+  useLayoutEffect(() => {
+    // Remove any existing theme link
+    const existingLink = document.querySelector('link[data-theme-link]');
+    if (existingLink) {
+      document.head.removeChild(existingLink);
+    }
+})
+
   return (
     <>
       <Head>
