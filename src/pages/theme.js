@@ -14,11 +14,14 @@ export default function Theme() {
   const router = useRouter();
   const { theme, name, description } = router.query;
 
+  //Capitalize theme name for title tag
+  const titleName = theme.toUpperCase();
+
+  // Remove the :before pseudo-element by setting its content to an empty string for top level menu
   useLayoutEffect(() => {
     const navigationLinks = document.querySelectorAll(".nav-links>li::before");
 
     navigationLinks.forEach((link) => {
-      // Remove the :before pseudo-element by setting its content to an empty string
       link.style.content = "";
     });
   }, []);
@@ -26,10 +29,7 @@ export default function Theme() {
   return (   
     <>
     <Head>
-    <title>{`${theme} Theme`}</title>
-        <meta name="description" content="Pima Online Webdocs" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+    <title>{`${titleName} Theme`}</title>
     </Head>
     <div  style={{backgroundColor: "rgba(29, 34, 56, 1)"}} >
       <header className={styles.header}>
