@@ -75,33 +75,33 @@ export default function Tabs() {
         <div className="wd-html-code">
           <pre>
             <code className="language-html" ref={codeRef}>
-              {String.raw`<div class="tabs" role="region" aria-label="tab group 1">
-  <input class="tab-input" type="radio" id="tab1" name="hint-group-1" aria-describedby="tabHeading1" />
-  <label class="tab-header" for="tab1">
+              {String.raw`<div class="tabs">
+  <input/>
+  <label>
     <span>Tab Title 1</span>
   </label>
-  <div class="tab-panel" tabindex="0" id="tabHeading1">
+  <div>
     <h4>Tab 1 Heading Inside</h4>
     <p>Some long text to demonstrate a tab widget. This text can be something as long as multiple paragraphs or as short as a couple of sentences.</p>
   </div>
-  <input class="tab-input" type="radio" id="tab2" name="hint-group-1" aria-describedby="tabHeading2" />
-  <label class="tab-header" for="tab2">
+  <input/>
+  <label>
     <span>Tab Title 2</span>
   </label>
-  <div class="tab-panel" tabindex="0" id="tabHeading2">
+  <div>
     <h4>Tab 2 Heading Inside</h4>
     <p>Some long text to demonstrate a tab widget. This text can be something as long as multiple paragraphs or as short as a couple of sentences.</p>
   </div>
-  <input class="tab-input" type="radio" id="tab3" name="hint-group-1" aria-describedby="tabHeading3" />
-  <label class="tab-header" for="tab3">
+  <input/>
+  <label>
     <span>Tab Title 3</span>
   </label>
-  <div class="tab-panel" tabindex="0" id="tabHeading3">
+  <div>
     <h4>Tab 3 Heading Inside</h4>
     <p>Some long text to demonstrate a tab widget. This text can be something as long as multiple paragraphs or as short as a couple of sentences.</p>
   </div>
-  <input type="radio" id="tab4" name="hint-group-1" aria-describedby="tabHeading4" checked />
-  <label class="tab-header hide-tab" for="tab4" title="Hide Panel">
+  <input/>
+  <label>
     <span>Hide</span>
   </label>
 </div>`}
