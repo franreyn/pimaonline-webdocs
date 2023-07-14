@@ -1,3 +1,32 @@
+.pageWrapper {
+  font-size: 16px;
+  background-color:#1e2238;
+}
+
+/* Scrollbars */
+.pageWrapper {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(133, 137, 156, .2);
+}
+
+.pageWrapper::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+.pageWrapper::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.pageWrapper::-webkit-scrollbar-thumb {
+  background-color: rgba(133, 137, 156, .2);
+  border-radius: 20px;
+}
+
+.mainH1 {
+  font-weight: 700;
+}
+
 .layoutArea {
   background: rgb(29, 34, 56);
   max-width: var(--breakpoint-xl);
@@ -9,11 +38,11 @@
   font-family: "Orbitron", sans-serif;
   color: white;
   margin-top: 2em;
+  text-transform: none;
 }
 
 .layoutArea p {
   font-family: "Roboto", sans-serif;
-
 }
 
 ul.wd-sidebar {
@@ -28,13 +57,57 @@ ul.wd-sidebar {
   background: var(--color-primary);
 }
 
-.header a:visited, .header a, .header a:hover {
-  color: white;
+.header:first-child() {
+  padding: 16px;
+}
+
+.header a:visited {
+  color: rgba(235, 235, 235, 1)  ;
   text-decoration: none;
 }
 
+.header ul, .header li {
+  margin: 0;
+  padding: 0;
+  column-gap: 16px;
+}
+
+.header nav div {
+  height: 35px;
+}
+
 .header ul>li::before {
-  content: "";
+  content: none;
+  display: none;
+}
+
+.header nav {
+  padding: 16px;
+}
+
+.header a {
+  background-image: none;
+  border-bottom-color: transparent !important;
+  border-bottom-width: 0;
+  border-image-width: 0;
+  text-decoration: none;
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+  color: rgba(235, 235, 235, 1) !important;
+  line-height: normal;
+  -webkit-font-smoothing: auto;
+}
+
+.header a:hover {
+  background-image: none;
+  border-bottom-color: transparent !important;
+  border-bottom-width: 0;
+  border-image-width: 0;
+  text-decoration: none;
+  border: none;
+  color: rgba(171, 182, 241, 1);
+  background-image: none;
 }
 
 .hello {
@@ -48,4 +121,12 @@ ul.wd-sidebar {
   margin-bottom: 40px;
   text-transform: none;
   letter-spacing: normal;
+  margin: 4rem 0 2rem;
+  width: 100%;
+  padding: 1rem;
+  background-color: #285b68;
+}
+
+.threeColumn {
+  margin: 0 !important;
 }
