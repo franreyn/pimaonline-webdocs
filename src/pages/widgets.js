@@ -16,15 +16,22 @@ import Tabs from '@/components/widgets/Tabs';
 import VideoWidget from '@/components/widgets/VideoWidget';
 import VocabCards from '@/components/widgets/VocabCards';
 import VocabList from '@/components/widgets/VocabList';
+import { useLayoutEffect } from 'react';
 
 export default function Widgets() {
+
+  // Remove any existing theme link (required to keep theme styles just on the theme page)
+  useLayoutEffect(() => {
+    const existingLink = document.querySelector('link[data-theme-link]');
+    if (existingLink) {
+      document.head.removeChild(existingLink);
+    }
+})
+
   return (
     <>
       <Head>
-        <title>PimaOnline Webdocs</title>
-        <meta name="description" content="Pima Online Webdocs" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <title>Widgets</title>
       </Head>
       <header>
         <Navbar />

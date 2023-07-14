@@ -9,15 +9,22 @@ import Labels from '@/components/utilities/Labels';
 import Lead from '@/components/utilities/Lead';
 import Monospace from '@/components/utilities/Monospace';
 import Footer from '@/components/Footer';
+import { useLayoutEffect } from 'react';
 
 export default function Utilities() {
+
+  // Remove any existing theme link (required to keep theme styles just on the theme page)
+  useLayoutEffect(() => {
+    const existingLink = document.querySelector('link[data-theme-link]');
+    if (existingLink) {
+      document.head.removeChild(existingLink);
+    }
+})
+
   return (
     <>
       <Head>
-        <title>PimaOnline Webdocs</title>
-        <meta name="description" content="Pima Online Webdocs" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <title>Utilities</title>
       </Head>
       <header>
         <Navbar />
