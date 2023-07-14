@@ -2,15 +2,22 @@ import Head from "next/head";
 import Navbar from "@/components/Navbar";
 import Homepage from "@/components/Homepage";
 import Footer from "@/components/Footer";
+import { useLayoutEffect } from "react";
 
 export default function Home() {
+
+  // Remove any existing theme link (required to keep theme styles just on the theme page)
+  useLayoutEffect(() => {
+    const existingLink = document.querySelector('link[data-theme-link]');
+    if (existingLink) {
+      document.head.removeChild(existingLink);
+    }
+  }, []);
+
   return (
     <>
       <Head>
         <title>PimaOnline Webdocs</title>
-        <meta name="description" content="Pima Online Webdocs" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
       </Head>
       <header>
         <Navbar />
