@@ -4,11 +4,20 @@ import Sidebar from "@/components/Sidebar";
 import hljs from 'highlight.js/lib/core';
 import 'highlight.js/styles/night-owl.css';
 import html from 'highlight.js/lib/languages/xml';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, useLayoutEffect } from 'react';
 import styles from "../styles/layouts.module.css"
 import Footer from "../components/Footer"
 
 export default function Layouts() {
+
+
+  // Remove any existing theme link (required to keep theme styles just on the theme page)
+  useLayoutEffect(() => {
+    const existingLink = document.querySelector('link[data-theme-link]');
+    if (existingLink) {
+      document.head.removeChild(existingLink);
+    }
+  }, []);
 
   const codeRef = useRef(null);
   const [buttonText, setButtonText] = useState('Copy code');
@@ -39,9 +48,6 @@ export default function Layouts() {
     <>
       <Head>
         <title>Layouts</title>
-        <meta name="description" content="Pima Online Webdocs" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
       </Head>
       <header>
         <Navbar />
