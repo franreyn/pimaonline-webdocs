@@ -14,24 +14,27 @@ export default function Theme() {
   const router = useRouter();
   const { theme, name, description } = router.query;
 
-  //Capitalize theme name for title tag
-  const titleName = name.toUpperCase();
 
-  // Remove the :before pseudo-element by setting its content to an empty string for top level menu
   useLayoutEffect(() => {
-    const navigationLinks = document.querySelectorAll(".nav-links>li::before");
 
+    // Remove the :before pseudo-element by setting its content to an empty string for top level menu
+    const navigationLinks = document.querySelectorAll(".nav-links>li::before");
     navigationLinks.forEach((link) => {
       link.style.content = "";
     });
+
+    // Change the background of the body to dark blue 
+    const docBody = document.querySelector("body");
+    docBody.style.backgroundColor = "#1e2238";
+  
   }, []);
 
   return (   
-    <>
+    <div className={styles.pageWrapper}>
     <Head>
     <title>{`${name} Theme`}</title>
     </Head>
-    <div  style={{backgroundColor: "rgba(29, 34, 56, 1)"}} >
+    <div style={{backgroundColor: "rgba(29, 34, 56, 1)"}} >
       <header className={styles.header}>
         <Navbar />
       </header>
@@ -53,5 +56,5 @@ export default function Theme() {
       </div>
       </div>
       <Script src="/scripts.js" />
-      </>
+      </div>
       )}
