@@ -29,14 +29,14 @@ export default function ThemeSidebar() {
     <div className={styles.themeSidebarBody} style={{ fontSize: '16px' }} >
       <button className="toc-btn" onClick={toggleTOC}>
         <Image className="toc-icon" src="/images/toc.svg" alt="table of content open button" width={20} height={16} />
-        <p>Docs Content</p>
+        <p className={styles.themeSidebarText}>Themes</p>
       </button>
-      <button className={`close-btn ${tocOpen ? 'show-close-btn' : 'hide-close-btn'}`} onClick={closeSidebar}>
+      <button className={`${styles.closeBtn} close-btn ${tocOpen ? 'show-close-btn' : 'hide-close-btn'}`} onClick={closeSidebar}>
         <span></span>
         <span></span>
       </button>
       <ul className={`wd-sidebar ${styles.themeSidebar} ${tocOpen ? 'show-toc' : 'hide-toc'}`}>
-        <li> Themes
+        <li className={styles.themesListTitle}> Themes
       <ul className={styles.themeList}>
       {themeArray.map((item) => (
         <li className={styles.innerLink}> <Link href={{
