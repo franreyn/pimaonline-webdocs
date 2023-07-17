@@ -1,38 +1,94 @@
+
+/* This style is for the entire component body */
 .themeSidebarBody {
   font-size: 16px;
   -webkit-font-smoothing: auto;
-  margin-left: -2px;
 }
 
 .themeSidebarBody button {
   background-color: transparent;
 }
 
+.themeSidebarBody :is(.btn,button,.btn.ext) {
+  background-color: transparent;
+  border-radius: 0;
+  box-shadow: none;
+  color: rgba(235, 235, 235, 1);
+}
+
+.themeSidebarText {
+  color: rgba(235, 235, 235, 1);
+}
+
 .themeSidebar {
+  z-index: 999;
+  margin: 0;
+}
+
+@media screen and (min-width: 768px) {
+
+  .themeSidebar {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .themeSidebar li {
+    color: rgba(235, 235, 235, 1);
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+
+}
+
+/* This is for the X close button on mobile menu */
+.closeBtn {
   margin: 0;
   padding: 0;
+}
+
+.closeBtn span {
+  background: rgba(171, 182, 241, 1) !important
 }
 
 /* .themeSidebar::before {
   color: transparent;
 } */
 
+
+/* This style is for the first <li> in the <ul> for wd-sidebar */
+.themesListTitle::before {
+  display:none;
+}
+
+.themesListTitle {
+  padding: 0;
+  color: rgba(235, 235, 235, 1) !important;
+}
+
 .themeList {
   padding-left: 12px !important;
   border-left: 1px solid rgba(235, 235, 235, .3);
-  margin-right: 0;
-  margin-left: 0;
+  margin: 0;
   padding: 0;
 }
 
 .innerLink {
   position: relative;
   width: fit-content;
-  color: rgba(235, 235, 235, 1);
   list-style-type: none;
   margin: 0;
   padding-left: 0;
   font-size: 16px;
+  transition: opacity .2s ease-in-out;
+}
+
+.innerLink a {
+  font-weight: 500 !important;
+  border-bottom: transparent !important;
+  color: rgba(235, 235, 235, 1) !important;
+  text-decoration-color: transparent !important;
 }
 
 .innerLink:hover::before {
@@ -43,16 +99,18 @@
 
 .innerLink a:visited {
   color: rgba(235, 235, 235, 1);
+  text-decoration-color: transparent !important;
 }
 
 .innerLink a:hover {
   text-decoration: none;
-  color: rgba(171, 182, 241, 1);
+  color: rgba(171, 182, 241, 1) !important;
   transition: color .2s ease-in-out;
+  background-image: none;
 }
 
 .innerLink::before {
-  content: "";
+  content: "" !important;
   position: absolute;
   width: 1px;
   height: 20px;
@@ -60,6 +118,7 @@
   left: -13px;
   opacity: 0;
   transition: opacity .2s ease-in-out;
+  margin: 0;
 }
 
 .themeListButton {
