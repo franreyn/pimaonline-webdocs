@@ -8,6 +8,7 @@ import Navbar from '@/components/Navbar';
 import Script from "next/script";
 import Sidebar from '@/components/Sidebar';
 import Head from 'next/head'
+import ThemeSidebar from '@/components/themeSidebar';
 
 export default function Theme() {
 
@@ -40,7 +41,7 @@ export default function Theme() {
       </header>
       <div className={`${styles.layoutArea} wd-grid`}>
         <aside>
-          <Sidebar/>
+          <ThemeSidebar/>
         </aside>
       <main>
       <h1 className={styles.mainH1}>{name}</h1>
