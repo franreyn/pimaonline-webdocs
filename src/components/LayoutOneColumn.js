@@ -16,6 +16,18 @@ export default function LayoutOneColumn(props) {
         document.head.removeChild(existingLink);
       }
 
+          // Remove existing styles for styles.contentBody elements
+    const contentBodyElements = document.querySelectorAll(`.${styles.contentBody}`);
+    contentBodyElements.forEach((contentBodyElement) => {
+      contentBodyElement.removeAttribute("style");
+    });
+
+    // Remove existing styles for styles.themeBody elements
+    const themeBodyElements = document.querySelectorAll(`.${styles.themeBody}`);
+    themeBodyElements.forEach((themeBodyElement) => {
+      themeBodyElement.removeAttribute("style");
+    });
+
       // Adds the link to the head of the document
       const link = document.createElement('link');
       link.rel = 'stylesheet';
@@ -27,7 +39,7 @@ export default function LayoutOneColumn(props) {
       fetch(stylesheetUrl)
       .then((response) => response.text())
       .then((cssContent) => {
-        const h1StyleMatches = cssContent.match(/(h1|\.header\s\.text-container\sh1)\s*{([^}]*)}/);
+        const contentBodyStyleMatches = cssContent.match(/\.content-body\s*{([^}]*)}/); // New regex to match .content-body styles
         const bodyStyleMatches = cssContent.match(/body\s*{([^}]*)}/);
 
         // Matches body styles
@@ -51,13 +63,32 @@ if (bodyStyleMatches && bodyStyleMatches.length > 0) {
     Object.assign(themeBodyElement.style, bodyStyle);
   });
 }
+
+if (contentBodyStyleMatches && contentBodyStyleMatches.length > 0) {
+  const contentBodyStyleText = contentBodyStyleMatches[1];
+  const contentBodyStyle = Object.fromEntries(
+    contentBodyStyleText.split(";").map((declaration) => {
+      const [property, ...values] = declaration.split(":");
+      const value = values
+        .map((val) => {
+          const trimmedVal = val.trim();
+          return trimmedVal.startsWith("url(") ? val : trimmedVal;
+        })
+        .join(":"); // Rejoin the split values into a single string
+      return [property.trim(), value.trim()];
+    })
+  );
+  const contentBodyElements = document.querySelectorAll(`.${styles.contentBody}`);
+  contentBodyElements.forEach((contentBodyElement) => {
+    Object.assign(contentBodyElement.style, contentBodyStyle);
+  });
+  }
     })
       .catch((error) => {
         console.error('Error fetching or parsing the stylesheet:', error);
       });
     }
 }, [theme]);
-
 
   return (
     <>
@@ -70,7 +101,7 @@ if (bodyStyleMatches && bodyStyleMatches.length > 0) {
     </div>
   </header>
   <div id="content-wrapper">
-    <div className={styles.contentBody}>
+    <div className={`${styles.contentBody} content-body`}>
       <h2 className="icon-clipboard">Donec Luctus</h2>
       <h3>Nam A Risus </h3>
       <p>
@@ -289,7 +320,7 @@ if (bodyStyleMatches && bodyStyleMatches.length > 0) {
         bibendum imperdiet, congue id purus. Nullam lobortis quam id justo porta
         suscipit.
       </p>
-      <div className="video-widget">
+      <div className={`${styles.videoWidget} video-widget`}>
         <div className="video-card">
           <h2>Lorem ipsum</h2>
           <div className="card-content">
