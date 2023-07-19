@@ -16,7 +16,7 @@ export default function LayoutOneColumn(props) {
         document.head.removeChild(existingLink);
       }
 
-          // Remove existing styles for styles.contentBody elements
+      // Remove existing styles for styles.contentBody elements
     const contentBodyElements = document.querySelectorAll(`.${styles.contentBody}`);
     contentBodyElements.forEach((contentBodyElement) => {
       contentBodyElement.removeAttribute("style");
@@ -34,6 +34,11 @@ export default function LayoutOneColumn(props) {
       link.href = stylesheetUrl;
       link.setAttribute('data-theme-link', ''); // Add a custom attribute to identify the theme link
       document.head.appendChild(link);
+
+      const docBody = document.querySelector('body');
+      if (docBody) {
+      docBody.style.borderTop = 'none';
+      }
 
       // Gets the external stylesheet and parses it for matching styles
       fetch(stylesheetUrl)
@@ -79,6 +84,7 @@ if (contentBodyStyleMatches && contentBodyStyleMatches.length > 0) {
     })
   );
   const contentBodyElements = document.querySelectorAll(`.${styles.contentBody}`);
+
   contentBodyElements.forEach((contentBodyElement) => {
     Object.assign(contentBodyElement.style, contentBodyStyle);
   });
@@ -96,7 +102,7 @@ if (contentBodyStyleMatches && contentBodyStyleMatches.length > 0) {
   <header className={`${styles.header} header`}>
     <img src="https://unsplash.it/1920/600" alt="" />
     <div className="text-container">
-      <h1  aria-level="2">Module 1: Lorem ipsum dolor</h1>
+      <h1  aria-level="2">Module 1: Lorem ipsum </h1>
       <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit </p>
     </div>
   </header>
@@ -242,7 +248,7 @@ if (contentBodyStyleMatches && contentBodyStyleMatches.length > 0) {
         </div>
       </div>
     </div>
-    <div className={styles.contentBody}>
+    <div className={`${styles.contentBody} content-body`}>
       <h2 className="icon-envelope">Lorem</h2>
       <p>
         Curabitur leo nulla, ornare et bibendum imperdiet, congue id purus.
@@ -287,7 +293,7 @@ if (contentBodyStyleMatches && contentBodyStyleMatches.length > 0) {
         </tbody>
       </table>
     </div>
-    <div className={styles.contentBody}>
+    <div className={`${styles.contentBody} content-body`}>
       <h2 className="icon-microscope">Fusce Posuere</h2>
       <p>
         Nunc sed lacus sit amet purus convallis vestibulum vitae quis libero.
@@ -311,7 +317,7 @@ if (contentBodyStyleMatches && contentBodyStyleMatches.length > 0) {
         <li>Praesent a urna egestas, blandit ex at, ultrices urna</li>
       </ol>
     </div>
-    <div className={styles.contentBody}>
+    <div className={`${styles.contentBody} content-body`}>
       <h2>Video Widget</h2>
       <p>
         Nunc sed lacus sit amet purus convallis vestibulum vitae quis libero.

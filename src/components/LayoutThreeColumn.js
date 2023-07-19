@@ -9,12 +9,12 @@ export default function LayoutThreeColumn(props) {
           <header className={`${styles.header} header`}>
     <img src="https://unsplash.it/1920/600" alt="" />
     <div className="text-container">
-      <h1  aria-level="2">Module 1: Lorem ipsum dolor 3</h1>
+      <h1  aria-level="2">Module 3: Lorem ipsum</h1>
       <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit </p>
     </div>
   </header>
   <div id="content-wrapper" className={styles.contentWrapper}>
-    <div className={styles.contentBody}>
+    <div className={`${styles.contentBody} content-body`}>
       <h2 className="icon-book-open">Aenean euismod</h2>
       <p>
         Nunc sed lacus sit amet purus convallis vestibulum vitae quis libero.
@@ -48,7 +48,7 @@ export default function LayoutThreeColumn(props) {
         </ul>
       </div>
     </div>
-    <div className={styles.contentBody}>
+    <div className={`${styles.contentBody} content-body`}>
       <h2 className="icon-pencil font-size-h3">Fusce Posuere</h2>
       <p>
         Nunc sed lacus sit amet purus convallis vestibulum vitae quis libero.
@@ -82,8 +82,8 @@ export default function LayoutThreeColumn(props) {
       </div>
     </div>
   </div>
-  <div id="secondColumn" className={styles.secondColumn}>
-    <div className={styles.contentBody}>
+  <div id="secondColumn">
+    <div className={`${styles.contentBody} content-body`}>
       <h2 className="icon-pencil font-size-h3">Nam A Risus</h2>
       <figure>
         <img
@@ -92,7 +92,7 @@ export default function LayoutThreeColumn(props) {
         />
       </figure>
     </div>
-    <div className={styles.contentBody}>
+    <div className={`${styles.contentBody} content-body`}>
       <h2 className="font-size-h3">Nullam lobortis</h2>
       <dl>
         <dt>Feathers:</dt>
@@ -113,7 +113,7 @@ export default function LayoutThreeColumn(props) {
         <dd>Grow under conditions that promote development.</dd>
       </dl>
     </div>
-    <div className={styles.contentBody}>
+    <div className={`${styles.contentBody} content-body`}>
       <div className="border border-yellow">
         <h2 className="icon-ruler font-size-h3">Did you know?!</h2>
         <p>
@@ -124,7 +124,7 @@ export default function LayoutThreeColumn(props) {
     </div>
   </div>
   <div id="thirdColumn" className={styles.thirdColumn}>
-    <div className={styles.contentBody}>
+    <div className={`${styles.contentBody} content-body`}>
       <h2>Lorem Ipsum Dolor</h2>
       <div className="media-container">
         <div className="media-object">
