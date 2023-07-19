@@ -1,5 +1,5 @@
 .pageWrapper {
-  font-size: 16px;
+  font-size: 18px;
   background-color:#1e2238;
 }
 
@@ -31,10 +31,20 @@
   border: none;
   background-color: transparent;
   max-width:none;
+  margin-top: 5em;
+  width: max-content;
+  position: inherit;
+}
+
+.pageWrapper aside span {
+  position: relative;
+  z-index: 99;
 }
 
 .mainH1 {
   font-weight: 700;
+  text-align: left;
+  color: white !important;
 }
 
 .layoutArea {
@@ -42,6 +52,7 @@
   max-width: var(--breakpoint-xl);
   margin: auto;
   padding-bottom: 40px;
+  grid-template-columns: 1fr;
 } 
 
  .layoutArea h1.mainH1 {
@@ -51,8 +62,14 @@
   text-transform: none;
 }
 
+
+
 .layoutArea p {
   font-family: "Roboto", sans-serif;
+}
+
+.contentBody p {
+  color: black !important;
 }
 
 ul.wd-sidebar {
@@ -86,6 +103,7 @@ ul.wd-sidebar {
   margin: 0;
   padding: 0;
 }
+
 }
 
 .header ul>li::before {
@@ -128,11 +146,12 @@ ul.wd-sidebar {
 
 .h2, .h2:not([class^=icon]) {
   font-family: "Orbitron", sans-serif;
-  color:white;
+  color:white !important;
   border: none;
   margin-bottom: 40px;
   text-transform: none;
   letter-spacing: normal;
+  text-align: left;
   margin: 4rem 0 2rem !important;
   width: 100%;
   padding: 1rem;
@@ -141,4 +160,223 @@ ul.wd-sidebar {
 
 .threeColumn {
   margin: 0 !important;
+}
+
+
+  .pageWrapper .header label span {
+    background: rgba(171, 182, 241, 1);
+  }
+
+  .pageWrapper .wd-sidebar {
+    background-color: var(--color-bg-alt);
+    padding: 3rem 1rem;
+    overflow: scroll;
+    overflow-x: hidden;
+    transition: all .5s;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 75vw;
+    height: 100%;
+    z-index: -1;
+  }
+
+  .pageWrapper .hide-toc {
+    opacity: 0;
+    height: 0;
+}
+
+
+/* This style is for the entire component body */
+.themeSidebarBody {
+  font-size: 16px;
+  -webkit-font-smoothing: auto;
+}
+
+.themeSidebarBody button {
+  background-color: transparent;
+}
+
+.themeSidebarBody :is(.btn,button,.btn.ext) {
+  background-color: transparent;
+  border-radius: 0;
+  box-shadow: none;
+  color: rgba(235, 235, 235, 1);
+}
+
+.themeSidebarText {
+  color: rgba(235, 235, 235, 1);
+} 
+
+.themeSidebarText:hover {
+  color: rgba(171, 182, 241, 1) !important;
+} 
+
+  .themeSidebar {
+    margin: 0;
+  }
+
+/* This is for the X close button on mobile menu */
+.closeBtn {
+  margin: 0;
+  padding: 0;
+}
+
+.closeBtn span {
+  background: rgba(171, 182, 241, 1) !important
+}
+
+/* This style is for the first <li> in the <ul> for wd-sidebar */
+.themesListTitle::before {
+  display:none;
+}
+
+.themesListTitle {
+  padding: 0;
+  color: rgba(235, 235, 235, 1) !important;
+}
+
+.themeList {
+  padding-left: 12px !important;
+  border-left: 1px solid rgba(235, 235, 235, .3);
+  margin: 0;
+  padding: 0;
+}
+
+.innerLink {
+  position: relative;
+  width: fit-content;
+  list-style-type: none;
+  margin: 0;
+  padding-left: 0;
+  font-size: 16px;
+  transition: opacity .2s ease-in-out;
+  font-family: "Roboto", sans-serif !important;
+}
+
+.innerLink a {
+  font-weight: 500 !important;
+  border-bottom: transparent !important;
+  color: rgba(235, 235, 235, 1) !important;
+  text-decoration-color: transparent !important;
+}
+
+.innerLink:hover::before {
+  opacity: 1;
+  margin: 0;
+  transition: opacity .2s ease-in-out;
+}
+
+.innerLink a:visited {
+  color: rgba(235, 235, 235, 1);
+  text-decoration-color: transparent !important;
+}
+
+.innerLink a:hover {
+  text-decoration: none;
+  color: rgba(171, 182, 241, 1) !important;
+  transition: color .2s ease-in-out;
+  background-image: none;
+}
+
+.innerLink::before {
+  content: "" !important;
+  position: absolute;
+  width: 1px;
+  height: 20px;
+  background-color: rgba(235, 235, 235, 1) !important;
+  left: -13px;
+  opacity: 0;
+  transition: opacity .2s ease-in-out;
+  margin: 0;
+}
+
+.themeListButton {
+  background-color: none;
+}
+
+/* Convert the nav to mobile  */
+
+.themeSidebarBody button:first-child {
+    display: flex;
+    gap: 1rem;
+    background-color: transparent;
+    cursor: pointer;
+    position: absolute;
+    left: 0;
+    margin: 0 1rem;
+    padding: 0.5rem;
+}
+
+.themeSidebar {
+  background-color: var(--color-bg-alt);
+  padding: 3rem 1rem;
+  overflow: scroll;
+  overflow-x: hidden;
+  transition: all .5s;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 75vw;
+  height: 100%;
+  z-index: -1;
+}
+
+.hideToc {
+  opacity: 0;
+  height: 0;
+}
+
+.showToc {
+  z-index: 10;
+}
+
+.showCloseBtn {
+  position: fixed;
+  z-index: 20;
+  left: 65%;
+  top: 20px;
+}
+
+.showCloseBtn .firstSpan {
+  width: 100%;
+  height: 2.5px;
+  display: block;
+  transform: rotate(45deg);
+  background: rgba(171, 182, 241, 1) !important;
+  border-radius: 5px;
+}
+
+.showCloseBtn .secondSpan {
+  width: 100%;
+  height: 2.5px;
+  display: block;
+  transform: rotate(-45deg) translate(1.5px, -2px);
+  border-radius: 5px;
+  background: rgba(171, 182, 241, 1) !important;
+}
+
+.closeBtn {
+  width: 32px;
+  height: 26px;
+  background: transparent;
+  cursor: pointer;
+}
+
+
+@media screen and (min-width: 768px) {
+
+  .themeSidebar {
+    margin: 0;
+    width: 30vw;
+  }
+
+  .showCloseBtn {
+    left: 25vw;
+  }
+  
+  .themeSidebar li {
+    color: rgba(235, 235, 235, 1);
+  }
+
 }

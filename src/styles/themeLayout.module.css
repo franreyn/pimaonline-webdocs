@@ -14,11 +14,11 @@ h2.themeH1 {
 }
  
  .themeBody {
-	 background-color: var(--color-pcc-white);
+	 background-color: rgba(245, 245, 245, 1) !important;
 	 background-repeat: no-repeat;
 	 background-size: contain;
 	 margin: 0;
-	 height: auto;
+	 height: auto !important;
 }
 
 .themeBody :is(li,dt,dd) {
@@ -29,9 +29,9 @@ h2.themeH1 {
 	color: #005be2 !important;
 }
 
-.videoWidget a {
+/* .videoWidget a {
 	color: var(--color-pcc-white);
-}
+} */
 
  @media screen and (max-device-width: 480px) {
   .themeBody {

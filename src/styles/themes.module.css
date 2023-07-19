@@ -1,3 +1,29 @@
+.themesGallery aside {
+  float: none;
+  margin: 0;
+  padding: 0;
+  transform: none;
+  border: none;
+  background-color: transparent;
+  max-width: none;
+  margin-top: 5em;
+  width: max-content;
+}
+
+.themesGallery {
+  background: rgb(29, 34, 56);
+  max-width: var(--breakpoint-xl);
+  margin: auto;
+  padding-bottom: 40px;
+  grid-template-columns: 1fr;
+}
+
+.themesGallery aside span {
+  position: relative;
+  z-index: 99;
+}
+
+
 .galleryBkg {
   background-color: var(--color-primary);
 }
@@ -7,6 +33,7 @@
   grid-template-columns: 1fr;
   margin: 0 auto;
   max-width: var(--breakpoint-xl);
+  margin-top: 5em;
 }
 
 @media screen and (min-width: 768px) {
