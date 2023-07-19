@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import themeArray from "../components/themeData";
+import themeArray from "./themeData";
 import styles from "../styles/theme-sidebar.module.css"
 
 export default function ThemeSidebar() {
@@ -18,11 +18,15 @@ export default function ThemeSidebar() {
   const [theme, setTheme] = useState();
   const [name, setName] = useState();
   const [description, setDescription] = useState();
+  const [buttonColor, setButtonColor] = useState();
+  const [hoverColor, setHoverColor] = useState();
 
-  const handleThemeClick = (selectedTheme, selectedName, selectedDescription) => {
+  const handleThemeClick = (selectedTheme, selectedName, selectedDescription, selectedButtonColor, selectedHoverColor) => {
     setTheme(selectedTheme);
     setName(selectedName);
     setDescription(selectedDescription);
+    setButtonColor(selectedButtonColor);
+    setHoverColor(selectedHoverColor);
   };
 
   return (
@@ -31,19 +35,19 @@ export default function ThemeSidebar() {
         <Image className="toc-icon" src="/images/toc.svg" alt="table of content open button" width={20} height={16} />
         <p className={styles.themeSidebarText}>Themes</p>
       </button>
-      <button className={`${styles.closeBtn} close-btn ${tocOpen ? 'show-close-btn' : 'hide-close-btn'}`} onClick={closeSidebar}>
-        <span></span>
-        <span></span>
+      <button className={`${styles.closeBtn} close-btn ${tocOpen ? `${styles.showCloseBtn} show-close-btn` : 'hide-close-btn'}`} onClick={closeSidebar}>
+        <span className={styles.firstSpan}></span>
+        <span className={styles.secondSpan}></span>
       </button>
-      <ul className={`wd-sidebar ${styles.themeSidebar} ${tocOpen ? 'show-toc' : 'hide-toc'}`}>
+      <ul className={`wd-sidebar ${styles.themeSidebar} ${tocOpen ? `${styles.showToc} show-toc` : `${styles.hideToc} hide-toc`}`}>
         <li className={styles.themesListTitle}> Themes
       <ul className={styles.themeList}>
       {themeArray.map((item) => (
-        <li className={styles.innerLink}> <Link href={{
+        <li className={styles.innerLink} key={item.theme}> <Link href={{
           pathname: "/theme",
         query: { ...item },
       }}
-      onClick={() => handleThemeClick(item.theme, item.name, item.description)}
+      onClick={() => handleThemeClick(item.theme, item.name, item.description, item.buttonColor, item.hoverColor)}
       >{item.name}</Link></li>
       ))
 }
