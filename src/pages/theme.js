@@ -1,4 +1,4 @@
-import  { useLayoutEffect } from 'react';
+import  { useEffect } from 'react';
 import LayoutOneColumn from '@/components/LayoutOneColumn';
 import LayoutTwoColumn from '@/components/LayoutTwoColumn';
 import LayoutThreeColumn from '@/components/LayoutThreeColumn';
@@ -6,16 +6,16 @@ import { useRouter } from "next/router";
 import styles from "../styles/theme.module.css"
 import Navbar from '@/components/Navbar';
 import Script from "next/script";
-import Sidebar from '@/components/Sidebar';
 import Head from 'next/head'
+import ThemeSidebar from '@/components/themeSidebar';
 
 export default function Theme() {
 
   const router = useRouter();
-  const { theme, name, description } = router.query;
+  const { theme, name, description, buttonColor, hoverColor } = router.query;
 
 
-  useLayoutEffect(() => {
+  useEffect(() => {
 
     // Remove the :before pseudo-element by setting its content to an empty string for top level menu
     const navigationLinks = document.querySelectorAll(".nav-links>li::before");
@@ -26,10 +26,28 @@ export default function Theme() {
     // Change the background of the body to dark blue 
     const docBody = document.querySelector("body");
     docBody.style.backgroundColor = "#1e2238";
-  
-  }, []);
 
-  return (   
+    // Set color for elements with class .btn
+    const btnElements = document.querySelectorAll("a.btn");
+
+    btnElements.forEach((btnElement) => {
+      const color = buttonColor ? buttonColor : "white";
+      const hover = hoverColor ? hoverColor : "white";
+
+      btnElement.style.setProperty("color", color, "important");    
+    
+     // Set hover style
+    btnElement.addEventListener("mouseover", () => {
+    btnElement.style.setProperty("color", hover, "important");
+  });
+    btnElement.addEventListener("mouseout", () => {
+    btnElement.style.setProperty("color", color, "important");
+  });
+    });
+  }, [buttonColor]);
+
+  return (  
+    <>
     <div className={styles.pageWrapper}>
     <Head>
     <title>{`${name} Theme`}</title>
@@ -40,7 +58,7 @@ export default function Theme() {
       </header>
       <div className={`${styles.layoutArea} wd-grid`}>
         <aside>
-          <Sidebar/>
+          <ThemeSidebar/>
         </aside>
       <main>
       <h1 className={styles.mainH1}>{name}</h1>
@@ -57,4 +75,5 @@ export default function Theme() {
       </div>
       <Script src="/scripts.js" />
       </div>
+      </>
       )}

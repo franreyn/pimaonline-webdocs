@@ -22,6 +22,8 @@ const themeArray = [
     name: "Business",
     description: "This theme uses a gradient in the background and adds frames to images.",
     image: "/images/themes/business.png",
+    buttonColor: "black",
+    hoverColor: "white"
   },
   {
     theme: "cad",
@@ -52,6 +54,8 @@ const themeArray = [
     name: "Computer Information Systems",
     description: "This theme uses a gradient in the background and adds frames to images.",
     image: "/images/themes/cis.png",
+    buttonColor: "black",
+    hoverColor: "black"
   },
   {
     theme: "culinary",
@@ -70,6 +74,8 @@ const themeArray = [
     name: "Early Childhood Education",
     description: "This theme uses a gradient in the background and adds frames to images.",
     image: "/images/themes/ece.png",
+    buttonColor: "black",
+    hoverColor: "black"
   },
   {
     theme: "fashion",
@@ -88,6 +94,7 @@ const themeArray = [
     name: "Geography",
     description: "This theme uses a gradient in the background and adds frames to images.",
     image: "/images/themes/geography.png",
+    buttonColor: "rgba(47, 65, 63, 1)"
   },
   {
     theme: "geology",
@@ -124,6 +131,7 @@ const themeArray = [
     name: "Language",
     description: "This theme uses a gradient in the background and adds frames to images.",
     image: "/images/themes/language.png",
+    buttonColor: "black"
   },
   {
     theme: "lgm",
@@ -154,6 +162,7 @@ const themeArray = [
     name: "Music",
     description: "This theme uses a gradient in the background and adds frames to images.",
     image: "/images/themes/music.png",
+    buttonColor: "black"
   },
   {
     theme: "philosophy",
@@ -172,6 +181,8 @@ const themeArray = [
     name: "SOC",
     description: "This theme uses a gradient in the background and adds frames to images.",
     image: "/images/themes/soc.png",
+    buttonColor: "black",
+    hoverColor: "black"
   },
   {
     theme: "university",

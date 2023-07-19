@@ -8,12 +8,12 @@ export default function LayoutTwoColumn(props) {
   <header className={`${styles.header} header`}>
     <img src="https://unsplash.it/1920/600" alt="" />
     <div className="text-container">
-      <h1  aria-level="2">Module 1: Lorem ipsum dolor 2</h1>
+      <h1  aria-level="2">Module 2: Lorem ipsum</h1>
       <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit </p>
     </div>
   </header>
   <div id="content-wrapper">
-    <div className={styles.contentBody}>
+    <div className={`${styles.contentBody} content-body`}>
       <h2 className="icon-book-open">Aenean euismod</h2>
       <p>
         Nunc sed lacus sit amet purus convallis vestibulum vitae quis libero.
@@ -62,7 +62,7 @@ export default function LayoutTwoColumn(props) {
         </div>
       </div>
     </div>
-    <div className={styles.contentBody}>
+    <div className={`${styles.contentBody} content-body`}>
       <h2>Nullam lobortis</h2>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod
@@ -75,7 +75,7 @@ export default function LayoutTwoColumn(props) {
         <p>In vel neque tempus, porta enim a, feugiat purus.</p>
       </div>
     </div>
-    <div className={styles.contentBody}>
+    <div className={`${styles.contentBody} content-body`}>
       <h2>Donec Luctus</h2>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod
@@ -112,14 +112,14 @@ export default function LayoutTwoColumn(props) {
         </div>
       </div>
     </div>
-    <div className={styles.contentBody}>
+    <div className={`${styles.contentBody} content-body`}>
       <blockquote className="text-center">
         " Mauris eros nibh, lobortis eu lacinia quis, mattis venenatis purus.
         Curabitur commodo lacus eget facilisis ornare. " <br />
         <br />- Lorem Ipsum
       </blockquote>
     </div>
-    <div className={styles.contentBody}>
+    <div className={`${styles.contentBody} content-body`}>
       <div className="card-horizontal">
         <div className="card-body">
           <p>
@@ -139,7 +139,7 @@ export default function LayoutTwoColumn(props) {
   </div>
   {/* End of first column */}
   <div id="second-column">
-    <div className={styles.contentBody}>
+    <div className={`${styles.contentBody} content-body`}>
       <h2 className="font-size-h4">Foleri Diciu</h2>
       <div className="image-gallery">
         <div className="gallery-wrapper">

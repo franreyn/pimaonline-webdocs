@@ -5,17 +5,21 @@ import Navbar from "@/components/Navbar";
 import { useState, useLayoutEffect } from "react";
 import Sidebar from "@/components/Sidebar";
 import Head from 'next/head'
-
+import GallerySidebar from "@/components/gallerySidebar";
 export default function Themes() {
 
   const [theme, setTheme] = useState();
   const [name, setName] = useState();
   const [description, setDescription] = useState();
+  const [buttonColor, setButtonColor] = useState();
+  const [hoverColor, setHoverColor] = useState();
 
-  const handleThemeClick = (selectedTheme, selectedName, selectedDescription) => {
+  const handleThemeClick = (selectedTheme, selectedName, selectedDescription, selectedButtonColor, selectedHoverColor) => {
     setTheme(selectedTheme);
     setName(selectedName);
     setDescription(selectedDescription);
+    setButtonColor(selectedButtonColor);
+    setHoverColor(selectedHoverColor);
   };
 
   // Remove any existing theme link (required to keep theme styles just on the theme page)
@@ -34,9 +38,9 @@ export default function Themes() {
             <header>
         <Navbar />
       </header>
-      <div className="wd-grid">
+      <div className={`${styles.themesGallery} wd-grid`}>
     <aside>
-      <Sidebar />
+      <GallerySidebar />
     </aside>
       <main>
       <div className={styles.galleryGrid}>
@@ -52,7 +56,7 @@ export default function Themes() {
                       pathname: "/theme",
                   query: { ...item },
                   }}
-                  onClick={() => handleThemeClick(item.theme, item.name, item.description)}
+                  onClick={() => handleThemeClick(item.theme, item.name, item.description, item.buttonColor, item.hoverColor)}
                >
                   View Theme
                 </Link>

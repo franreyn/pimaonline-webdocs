@@ -14,15 +14,25 @@ h2.themeH1 {
 }
  
  .themeBody {
-	 background-color: var(--color-pcc-white);
+	 background-color: rgba(245, 245, 245, 1) !important;
 	 background-repeat: no-repeat;
 	 background-size: contain;
 	 margin: 0;
+	 height: auto !important;
 }
 
 .themeBody :is(li,dt,dd) {
 	color: var(--color-pcc-black);
 }
+
+.themeBody :is(p,li,td) a {
+	color: #005be2 !important;
+}
+
+/* .videoWidget a {
+	color: var(--color-pcc-white);
+} */
+
  @media screen and (max-device-width: 480px) {
   .themeBody {
 		 -webkit-text-size-adjust: none;
@@ -142,6 +152,7 @@ table.displayLg {
 	 grid-area: header;
 	 position: relative;
 	 text-align: center;
+	 z-index: 0;
 }
  .header .textContainer {
 	 padding: 10px 0 25px 0;
