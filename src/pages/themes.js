@@ -5,7 +5,7 @@ import Navbar from "@/components/Navbar";
 import { useState, useLayoutEffect } from "react";
 import Sidebar from "@/components/Sidebar";
 import Head from 'next/head'
-import GallerySidebar from "@/components/gallerySidebar";
+import GallerySidebar from "@/components/GallerySidebar";
 export default function Themes() {
 
   const [theme, setTheme] = useState();
@@ -35,7 +35,7 @@ export default function Themes() {
     <Head>
     <title>Theme Gallery</title>
     </Head>
-            <header>
+            <header className="wd-header">
         <Navbar />
       </header>
       <div className={`${styles.themesGallery} wd-grid`}>

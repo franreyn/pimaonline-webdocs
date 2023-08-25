@@ -33,7 +33,7 @@
   grid-template-columns: 1fr;
   margin: 0 auto;
   max-width: var(--breakpoint-xl);
-  margin-top: 5em;
+  margin-top: 1rem;
 }
 
 @media screen and (min-width: 768px) {

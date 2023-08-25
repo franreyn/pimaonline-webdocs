@@ -26,13 +26,10 @@ export default function Utilities() {
       <Head>
         <title>Utilities</title>
       </Head>
-      <header>
+      <header className="wd-header">
         <Navbar />
       </header>
       <div className="wd-grid">
-        <aside>
-          <Sidebar />
-        </aside>
         <main>
           <h1>Utility Classes</h1>
           <p>Utility classes help you quickly style your elements as they override that element's native styles.</p>
@@ -44,6 +41,9 @@ export default function Utilities() {
           <Lead />
           <Monospace />
         </main>
+        <aside>
+          <Sidebar />
+        </aside>
         <footer>
           <Footer />
         </footer>

@@ -53,7 +53,7 @@ export default function Theme() {
     <title>{`${name} Theme`}</title>
     </Head>
     <div style={{backgroundColor: "rgba(29, 34, 56, 1)"}} >
-      <header className={styles.header}>
+      <header className={`${styles.header} wd-header`}>
         <Navbar />
       </header>
       <div className={`${styles.layoutArea} wd-grid`}>

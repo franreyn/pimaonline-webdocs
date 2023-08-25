@@ -5,7 +5,7 @@ import Carousel from "./Carousel";
 const Home = () => {
   return (
     <div className="wd-content-wrapper">
-      <div className="wd-header">
+      <div className="wd-hero">
         <div className="wd-text-container">
           <h1>Build courses efficiently without coding from scratch</h1>
           <p>Create online courses easily using our pre-coded templates. With access to over 20 widgets and utility classes, you have the freedom to customize your courses.</p>

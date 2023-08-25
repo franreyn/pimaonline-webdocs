@@ -19,7 +19,7 @@ export default function Home() {
       <Head>
         <title>PimaOnline Webdocs</title>
       </Head>
-      <header>
+      <header className="wd-header">
         <Navbar />
       </header>
       <main className="wd-home-main">

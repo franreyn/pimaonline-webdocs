@@ -33,13 +33,10 @@ export default function Widgets() {
       <Head>
         <title>Widgets</title>
       </Head>
-      <header>
+      <header className="wd-header">
         <Navbar />
       </header>
       <div className="wd-grid">
-        <aside>
-          <Sidebar />
-        </aside>
         <main>
         <h1>Widgets</h1>
         <p>Widgets are individual components which together form your web page.</p>
@@ -58,6 +55,9 @@ export default function Widgets() {
         <VocabCards />
         <VocabList />
         </main>
+        <aside>
+          <Sidebar />
+        </aside>
         <footer>
           <Footer />
         </footer>

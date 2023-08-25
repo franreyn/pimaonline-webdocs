@@ -58,11 +58,14 @@
  .layoutArea h1.mainH1 {
   font-family: "Orbitron", sans-serif;
   color: white;
-  margin-top: 2em;
   text-transform: none;
 }
 
-
+@media screen and (min-width: 768px) {
+  .layoutArea h1.mainH1 {
+    margin-top: 5rem;
+  }
+}
 
 .layoutArea p {
   font-family: "Roboto", sans-serif;

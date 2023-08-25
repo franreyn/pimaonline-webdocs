@@ -49,13 +49,10 @@ export default function Layouts() {
       <Head>
         <title>Layouts</title>
       </Head>
-      <header>
+      <header className="wd-header">
         <Navbar />
       </header>
       <div className="wd-grid">
-        <aside>
-          <Sidebar />
-        </aside>
       <main>
       <h1>Layouts</h1>
           <p>You may choose between three layout types.</p>
@@ -250,6 +247,9 @@ export default function Layouts() {
       </div>
       </section>
       </main>
+      <aside>
+          <Sidebar />
+      </aside>
       <footer>
           <Footer />
         </footer>
