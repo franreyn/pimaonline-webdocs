@@ -22,7 +22,7 @@ export default function GettingStarted() {
       <Head>
         <title>Getting Started</title>
       </Head>
-      <header>
+      <header className="wd-header">
         <Navbar />
       </header>
       <div className="wd-grid">

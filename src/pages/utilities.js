@@ -26,7 +26,7 @@ export default function Utilities() {
       <Head>
         <title>Utilities</title>
       </Head>
-      <header>
+      <header className="wd-header">
         <Navbar />
       </header>
       <div className="wd-grid">

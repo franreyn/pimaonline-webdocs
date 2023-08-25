@@ -49,7 +49,7 @@ export default function Layouts() {
       <Head>
         <title>Layouts</title>
       </Head>
-      <header>
+      <header className="wd-header">
         <Navbar />
       </header>
       <div className="wd-grid">

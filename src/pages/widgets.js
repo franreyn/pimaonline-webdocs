@@ -33,7 +33,7 @@ export default function Widgets() {
       <Head>
         <title>Widgets</title>
       </Head>
-      <header>
+      <header className="wd-header">
         <Navbar />
       </header>
       <div className="wd-grid">
