@@ -36,11 +36,11 @@ p {
 }
 
 @media screen and (min-width: 768px) {
-  .wd-header h1 {
+  .wd-hero h1 {
     font-size: 2.75rem;
   }
 
-  .wd-header p {
+  .wd-hero p {
     font-size: 1.25rem;
   }
 
