@@ -20,6 +20,11 @@ export default function Tables() {
     }, 2000);
   };
 
+  const tableData = [
+    { assignment: 'Read Start Here Module', points: '--', dueDate: 'May 1st' },
+    { assignment: 'Course Contract Quiz', points: '5', dueDate: 'May 7th' },
+  ];
+
   return (
     <section className="wd-content" id="toc-tables">
       <h2 id="tables" className="section-top">
@@ -42,16 +47,13 @@ export default function Tables() {
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>Read Start Here Module</td>
-                <td>--</td>
-                <td>May 1st</td>
-              </tr>
-              <tr>
-                <td>Course Contract Quiz</td>
-                <td>5</td>
-                <td>May 7th</td>
-              </tr>
+              {tableData.map((row, index) => (
+                <tr key={index}>
+                  <td data-th="Assignment">{row.assignment}</td>
+                  <td data-th="Points">{row.points}</td>
+                  <td data-th="Due Dates">{row.dueDate}</td>
+                </tr>
+              ))}
             </tbody>
           </table>
         </div>
