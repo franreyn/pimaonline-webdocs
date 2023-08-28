@@ -13,7 +13,7 @@ const Navbar = () => {
     <>
       <nav className="wd-navbar">
         {/* logo */}
-        <Link href="index">
+        <Link href="/">
           <Image className="logo" src="/images/logo.png" alt="Pima Community College logo" width={200} height={31} priority={true} />
         </Link>
         {/* hamburger button */}
