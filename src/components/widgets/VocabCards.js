@@ -37,28 +37,28 @@ export default function VocabCards() {
             <dd>Perennial is used to describe things that exist or continue in the same way or state for a long time, as well as things that happen again and again.</dd>
           </div>
           <div className="vocab">
-            <dt>Perennial</dt>
-            <dd>Perennial is used to describe things that exist or continue in the same way or state for a long time, as well as things that happen again and again.</dd>
+            <dt>Evergreen</dt>
+            <dd>Refers to plants that retain their green leaves throughout the year, regardless of the changing seasons. These plants are often associated with perennials due to their continuous growth and appearance.</dd>
           </div>
           <div className="vocab">
-            <dt>Perennial</dt>
-            <dd>Perennial is used to describe things that exist or continue in the same way or state for a long time, as well as things that happen again and again.</dd>
+            <dt>Sustained</dt>
+            <dd>Maintained or continued over an extended period of time. Perennials are known for their sustained growth and presence in a garden or landscape.</dd>
           </div>
           <div className="vocab">
-            <dt>Perennial</dt>
-            <dd>Perennial is used to describe things that exist or continue in the same way or state for a long time, as well as things that happen again and again.</dd>
+            <dt>Cyclical</dt>
+            <dd>Recurring in cycles or periods, often following a regular pattern. Perennials are part of the cyclical nature of plants, coming back each year as part of their life cycle.</dd>
           </div>
           <div className="vocab">
-            <dt>Perennial</dt>
-            <dd>Perennial is used to describe things that exist or continue in the same way or state for a long time, as well as things that happen again and again.</dd>
+            <dt>Enduring</dt>
+            <dd>Something that is able to last or persist for a long time, showing resilience and lasting quality. Perennial plants are often seen as enduring due to their ability to return year after year.</dd>
           </div>
           <div className="vocab">
-            <dt>Perennial</dt>
-            <dd>Perennial is used to describe things that exist or continue in the same way or state for a long time, as well as things that happen again and again.</dd>
+            <dt>Unfading</dt>
+            <dd>Something that does not lose its color, brilliance, or quality; remaining constant and vibrant. Perennials can be considered unfading due to their consistent return and appearance.</dd>
           </div>
           <div className="vocab">
-            <dt>Perennial</dt>
-            <dd>Perennial is used to describe things that exist or continue in the same way or state for a long time, as well as things that happen again and again.</dd>
+            <dt>Perpetual</dt>
+            <dd>Continuing indefinitely or indefinitely recurring. The concept of perennials aligns with the idea of perpetuality, as these plants come back year after year in an ongoing cycle.</dd>
           </div>
         </dl>
         </div>
@@ -71,28 +71,28 @@ export default function VocabCards() {
     <dd>Perennial is used to describe things that exist or continue in the same way or state for a long time, as well as things that happen again and again.</dd>
   </div>
   <div class="vocab">
-    <dt>Perennial</dt>
-    <dd>Perennial is used to describe things that exist or continue in the same way or state for a long time, as well as things that happen again and again.</dd>
+    <dt>Evergreen</dt>
+    <dd>Refers to plants that retain their green leaves throughout the year, regardless of the changing seasons. These plants are often associated with perennials due to their continuous growth and appearance.</dd>
   </div>
   <div class="vocab">
-    <dt>Perennial</dt>
-    <dd>Perennial is used to describe things that exist or continue in the same way or state for a long time, as well as things that happen again and again.</dd>
+    <dt>Sustained</dt>
+    <dd>Maintained or continued over an extended period of time. Perennials are known for their sustained growth and presence in a garden or landscape.</dd>
   </div>
   <div class="vocab">
-    <dt>Perennial</dt>
-    <dd>Perennial is used to describe things that exist or continue in the same way or state for a long time, as well as things that happen again and again.</dd>
+    <dt>Cyclical</dt>
+    <dd>Recurring in cycles or periods, often following a regular pattern. Perennials are part of the cyclical nature of plants, coming back each year as part of their life cycle.</dd>
   </div>
   <div class="vocab">
-    <dt>Perennial</dt>
-    <dd>Perennial is used to describe things that exist or continue in the same way or state for a long time, as well as things that happen again and again.</dd>
+    <dt>Enduring</dt>
+    <dd>Something that is able to last or persist for a long time, showing resilience and lasting quality. Perennial plants are often seen as enduring due to their ability to return year after year.</dd>
   </div>
   <div class="vocab">
-    <dt>Perennial</dt>
-    <dd>Perennial is used to describe things that exist or continue in the same way or state for a long time, as well as things that happen again and again.</dd>
+    <dt>Unfading</dt>
+    <dd>Something that does not lose its color, brilliance, or quality; remaining constant and vibrant. Perennials can be considered unfading due to their consistent return and appearance.</dd>
   </div>
   <div class="vocab">
-    <dt>Perennial</dt>
-    <dd>Perennial is used to describe things that exist or continue in the same way or state for a long time, as well as things that happen again and again.</dd>
+    <dt>Perpetual</dt>
+    <dd>Continuing indefinitely or indefinitely recurring. The concept of perennials aligns with the idea of perpetuality, as these plants come back year after year in an ongoing cycle.</dd>
   </div>
 </dl>`}
             </code>
