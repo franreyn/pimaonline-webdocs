@@ -433,6 +433,19 @@ pre code.hljs {
   margin-top: 2rem;
 }
 
+.is-current a {
+  color: var(--color-secondary) !important;
+}
+
+.is-current::before {
+  background-color: var(--color-secondary) !important;
+  opacity: 1 !important;
+}
+
+.active-page > a {
+  font-weight: 800;
+}
+
 @media screen and (max-width: 768px) {
   .wd-sidebar {
     background-color: var(--color-bg-alt);

@@ -177,7 +177,7 @@ export default function Layouts() {
     </div>
       </section>
 
-      <section className="wd-content" id="toc-three-column-layout">
+      <section className="wd-content" id="toc-three-section-layout">
       <h2 id="three-section-layout" className="section-top">Three Section Layout</h2>
       <p>The Three Section Layout displays two columns with a full-width column underneath. This layout is a combination of both previous layouts and is ideal for overview modules when the overview content is more involved.</p>
       <div className="wd-window">
