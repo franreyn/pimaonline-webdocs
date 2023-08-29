@@ -6,6 +6,8 @@ import { useState, useLayoutEffect } from "react";
 import Sidebar from "@/components/Sidebar";
 import Head from 'next/head'
 import GallerySidebar from "@/components/GallerySidebar";
+import Footer from "@/components/Footer";
+
 export default function Themes() {
 
   const [theme, setTheme] = useState();
@@ -65,6 +67,9 @@ export default function Themes() {
           ))}     
            </div>
       </main>
+      <footer>
+        <Footer />
+      </footer>
       </div>
     </>
   )

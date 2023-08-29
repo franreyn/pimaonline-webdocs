@@ -121,7 +121,7 @@
 }
 
 .themeSidebar {
-  background-color: var(--color-bg-alt);
+  background-color: var(--color-wd-bg-alt);
   padding: 3rem 1rem;
   overflow: scroll;
   overflow-x: hidden;

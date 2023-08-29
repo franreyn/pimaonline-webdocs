@@ -1,10 +1,10 @@
 :root {
   /* Colors */
-  --color-primary: rgba(29, 34, 56, 1);
-  --color-secondary: rgba(171, 182, 241, 1);
-  --color-tertiary: rgba(235, 235, 235, 1);
-  --color-accent: rgba(41, 166, 176, 1);
-  --color-bg-alt: rgba(35, 40, 66, 1);
+  --color-wd-primary: rgba(29, 34, 56, 1);
+  --color-wd-secondary: rgba(171, 182, 241, 1);
+  --color-wd-tertiary: rgba(235, 235, 235, 1);
+  --color-wd-accent: rgba(41, 166, 176, 1);
+  --color-wd-bg-alt: rgba(35, 40, 66, 1);
 
   --breakpoint-sm: 640px;
   --breakpoint-md: 768px;
