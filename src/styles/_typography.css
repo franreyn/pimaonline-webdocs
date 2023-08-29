@@ -2,18 +2,18 @@
 
 body {
   font-family: "Inter", sans-serif;
-  color: var(--color-tertiary);
+  color: var(--color-wd-tertiary);
 }
 
 h1, h2, h3, h4 {
   font-family: "Orbitron", sans-serif;
-  color: var(--color-secondary);
+  color: var(--color-wd-secondary);
   margin-bottom: 1rem;
 }
 
 p {
   font-family: "Inter", sans-serif;
-  color: var(--color-tertiary);
+  color: var(--color-wd-tertiary);
 }
 
 .nav-links {

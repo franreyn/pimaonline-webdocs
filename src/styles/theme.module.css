@@ -84,7 +84,7 @@ ul.wd-sidebar {
 }
 
 .wdNavbar {
-  background: var(--color-primary);
+  background: var(--color-wd-primary);
 }
 
 .header:first-child() {
@@ -171,7 +171,7 @@ ul.wd-sidebar {
   }
 
   .pageWrapper .wd-sidebar {
-    background-color: var(--color-bg-alt);
+    background-color: var(--color-wd-bg-alt);
     padding: 3rem 1rem;
     overflow: scroll;
     overflow-x: hidden;
@@ -312,7 +312,7 @@ ul.wd-sidebar {
 }
 
 .themeSidebar {
-  background-color: var(--color-bg-alt);
+  background-color: var(--color-wd-bg-alt);
   padding: 3rem 1rem;
   overflow: scroll;
   overflow-x: hidden;

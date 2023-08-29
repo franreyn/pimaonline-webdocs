@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: var(--color-primary);
+  background-color: var(--color-wd-primary);
   background-image: url("../../public/images/footer-graphic.svg");
   background-repeat: no-repeat;
   background-position-x: right;
@@ -44,18 +44,18 @@ body {
 }
 
 li {
-  color: var(--color-tertiary);
+  color: var(--color-wd-tertiary);
   list-style-type: none;
 }
 
 a {
-  color: var(--color-tertiary) !important;
+  color: var(--color-wd-tertiary) !important;
   text-decoration: none;
   transition: color .2s ease-in-out;
 }
 
 a:hover {
-  color: var(--color-secondary) !important;
+  color: var(--color-wd-secondary) !important;
 }
 
 @media screen and (max-width: 768px) {
@@ -67,7 +67,7 @@ a:hover {
     position: fixed;
     transition: all .5s;
     overflow: hidden;
-    background-color: var(--color-bg-alt);
+    background-color: var(--color-wd-bg-alt);
     top: 0;
     right: 0;
     width: 75vw;
@@ -121,7 +121,7 @@ a:hover {
   }
    
    label span {
-    background: var(--color-secondary);
+    background: var(--color-wd-secondary);
     border-radius: 10px;
     height: 4px;
     margin: 3px 0;
@@ -178,7 +178,7 @@ a:hover {
     position: absolute;
     width: 1px;
     height: 20px;
-    background-color: var(--color-tertiary);
+    background-color: var(--color-wd-tertiary);
     left: -13px;
     opacity: 0;
     transition: opacity .2s ease-in-out;
@@ -278,7 +278,7 @@ section p {
 }
 
 .wd-btn {
-  background-color: var(--color-accent);
+  background-color: var(--color-wd-accent);
   padding: 1rem 1.25rem;
   border-radius: 5px;
   display: inline-block;
@@ -287,8 +287,8 @@ section p {
 }
 
 .wd-btn:hover {
-  background-color: var(--color-secondary);
-  color: var(--color-primary);
+  background-color: var(--color-wd-secondary);
+  color: var(--color-wd-primary);
 }
 
 .carousel {
@@ -396,7 +396,7 @@ aside {
   position: absolute;
   width: 1px;
   height: 20px;
-  background-color: var(--color-tertiary);
+  background-color: var(--color-wd-tertiary);
   left: -13px;
   opacity: 0;
   transition: opacity .2s ease-in-out;
@@ -424,7 +424,7 @@ pre code.hljs {
 }
 
 .wd-monospace {
-  color: var(--color-accent);
+  color: var(--color-wd-accent);
   font-family:'Courier New', Courier, monospace;
   font-weight: 700;
 }
@@ -434,11 +434,11 @@ pre code.hljs {
 }
 
 .is-current a {
-  color: var(--color-secondary) !important;
+  color: var(--color-wd-secondary) !important;
 }
 
 .is-current::before {
-  background-color: var(--color-secondary) !important;
+  background-color: var(--color-wd-secondary) !important;
   opacity: 1 !important;
 }
 
@@ -448,7 +448,7 @@ pre code.hljs {
 
 @media screen and (max-width: 768px) {
   .wd-sidebar {
-    background-color: var(--color-bg-alt);
+    background-color: var(--color-wd-bg-alt);
     padding: 3rem 1rem;
     overflow: scroll;
     overflow-x: hidden;
@@ -486,7 +486,7 @@ pre code.hljs {
   }
 
   .toc-btn p:hover {
-    color: var(--color-secondary);
+    color: var(--color-wd-secondary);
   }
 
   .show-toc {
@@ -511,7 +511,7 @@ pre code.hljs {
     height: 2.5px;
     display: block;
     transform: rotate(45deg);
-    background: var(--color-secondary);
+    background: var(--color-wd-secondary);
     border-radius: 5px;
   }
 
@@ -521,7 +521,7 @@ pre code.hljs {
     display: block;
     transform: rotate(-45deg) translate(1.5px, -2px);
     border-radius: 5px;
-    background: var(--color-secondary);
+    background: var(--color-wd-secondary);
   }
 
   .show-close-btn {
@@ -559,7 +559,7 @@ pre code.hljs {
 }
 
 .wd-copy-btn {
-  background-color: var(--color-accent);
+  background-color: var(--color-wd-accent);
   padding: 0.5rem 1rem;
   border-radius: 5px;
   display: inline-block;
@@ -568,8 +568,8 @@ pre code.hljs {
 }
 
 .wd-copy-btn:hover {
-  background-color: var(--color-secondary);
-  color: var(--color-primary);
+  background-color: var(--color-wd-secondary);
+  color: var(--color-wd-primary);
   cursor: pointer;
 }
 
@@ -582,10 +582,12 @@ footer {
   padding-left: 0;
   border-left: none;
   display: block;
+  margin-left: 0;
 }
 
 .wd-footer .sub-items li {
   margin: .75rem 0;
+  padding-left: 0;
 }
 
 .wd-footer .sub-items li::before {
@@ -597,6 +599,23 @@ footer {
   max-width: var(--breakpoint-xl);
   margin-left: auto;
   margin-right: auto;
+}
+
+.wd-footer ul {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.wd-footer a {
+  text-decoration: none;
+}
+
+.wd-footer > ul > li:first-child {
+  padding-left: 0;
+}
+
+.wd-footer ul li::before {
+  content: none;
 }
 
 /* Scrollbars */
