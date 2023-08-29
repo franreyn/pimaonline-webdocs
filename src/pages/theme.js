@@ -8,6 +8,7 @@ import Navbar from '@/components/Navbar';
 import Script from "next/script";
 import Head from 'next/head'
 import ThemeSidebar from '@/components/themeSidebar';
+import Footer from '@/components/Footer';
 
 export default function Theme() {
 
@@ -71,6 +72,9 @@ export default function Theme() {
       <h2 className={styles.h2}>3 Column Layout</h2>
       <LayoutThreeColumn theme={theme}  />
       </main>
+      <footer>
+        <Footer />
+      </footer>
       </div>
       </div>
       <Script src="/scripts.js" />
