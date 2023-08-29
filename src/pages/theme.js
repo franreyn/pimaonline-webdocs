@@ -69,7 +69,7 @@ export default function Theme() {
       <LayoutOneColumn theme={theme} />
       <h2 className={styles.h2}>2 Column Layout</h2>
       <LayoutTwoColumn theme={theme}  />
-      <h2 className={styles.h2}>3 Column Layout</h2>
+      <h2 className={styles.h2}>3 Section Layout</h2>
       <LayoutThreeColumn theme={theme}  />
       </main>
       <footer>
