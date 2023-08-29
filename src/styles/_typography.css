@@ -25,6 +25,10 @@ p {
   margin: .75rem 0;
 }
 
+.nav-links li a {
+  font-weight: 400 !important;
+}
+
 .wd-footer > ul > li:first-child {
   font-family: 'Orbitron', sans-serif;
   font-weight: 700;
@@ -33,6 +37,10 @@ p {
 .sub-items {
   font-family: "Inter", sans-serif;
   font-weight: 400;
+}
+
+.sub-items li a {
+  font-weight: 400 !important;
 }
 
 @media screen and (min-width: 768px) {

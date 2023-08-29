@@ -52,7 +52,7 @@
   max-width: var(--breakpoint-xl);
   margin: auto;
   padding-bottom: 40px;
-  grid-template-columns: 1fr;
+  /* grid-template-columns: 1fr; */
 } 
 
  .layoutArea h1.mainH1 {
@@ -63,7 +63,7 @@
 
 @media screen and (min-width: 768px) {
   .layoutArea h1.mainH1 {
-    margin-top: 5rem;
+    margin-top: 1rem;
   }
 }
 
@@ -149,16 +149,15 @@ ul.wd-sidebar {
 
 .h2, .h2:not([class^=icon]) {
   font-family: "Orbitron", sans-serif;
-  color:white !important;
-  border: none;
+  color: var(--color-wd-tertiary) !important;
+  border-bottom: 2px solid rgba(171, 182, 241, 0.5);
   margin-bottom: 40px;
   text-transform: none;
   letter-spacing: normal;
   text-align: left;
   margin: 4rem 0 2rem !important;
   width: 100%;
-  padding: 1rem;
-  background-color: #285b68;
+  padding-bottom: 1rem;
 }
 
 .threeColumn {

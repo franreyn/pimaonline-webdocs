@@ -13,6 +13,10 @@ body {
   background-size: 200px;
 }
 
+body::before {
+  content: none !important;
+}
+
 .display-block {
   display: block;
 }
@@ -55,6 +59,14 @@ a {
 }
 
 a:hover {
+  color: var(--color-wd-secondary) !important;
+}
+
+.nav-links li, .wd-footer li {
+  list-style-type: none;
+}
+
+.nav-links li a:hover {
   color: var(--color-wd-secondary) !important;
 }
 
@@ -446,6 +458,11 @@ pre code.hljs {
   font-weight: 800;
 }
 
+.toc-btn, .mobile-btn {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
 @media screen and (max-width: 768px) {
   .wd-sidebar {
     background-color: var(--color-wd-bg-alt);
@@ -578,6 +595,11 @@ footer {
   margin-top: 4rem;
 }
 
+.wd-grid footer {
+  border: none;
+  box-shadow: none;
+}
+
 .wd-footer .sub-items {
   padding-left: 0;
   border-left: none;
@@ -594,6 +616,10 @@ footer {
   content: none;
 }
 
+footer .wd-logo-wrapper .logo {
+  margin: 0 !important;
+}
+
 .wd-logo-wrapper {
   padding: 4rem 0;
   max-width: var(--breakpoint-xl);
@@ -608,6 +634,7 @@ footer {
 
 .wd-footer a {
   text-decoration: none;
+  border: none !important;
 }
 
 .wd-footer > ul > li:first-child {
@@ -615,7 +642,7 @@ footer {
 }
 
 .wd-footer ul li::before {
-  content: none;
+  content: none !important;
 }
 
 /* Scrollbars */

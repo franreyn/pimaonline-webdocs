@@ -67,7 +67,6 @@
 }
 
 .innerLink a {
-  font-weight: 500 !important;
   border-bottom: transparent !important;
   color: rgba(235, 235, 235, 1) !important;
   text-decoration-color: transparent !important;

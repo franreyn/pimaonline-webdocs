@@ -43,7 +43,7 @@ h2.themeH1 {
 	 grid-row-gap: 10px;
 	 grid-template-areas: "header" "body" "footer";
 	 padding: 15px 2.5%;
-	 width: 95%;
+	 width: 100%;
 	 max-width: var(--breakpoint-xl);
 }
  .header, .contentWrapper, .footer {
@@ -73,7 +73,7 @@ h2.themeH1 {
 	 grid-row-gap: 10px;
 	 justify-content: center;
 	 padding: 10px 2.5%;
-	 width: 95%;
+	 width: 100%;
 	 max-width: var(--breakpoint-xl);
 }
  .twoColumn {
@@ -122,8 +122,8 @@ table.displayLg {
 	 grid-template-areas: "header" "body" "second-column" "third-column" "quote-area" "footer";
 	 justify-content: center;
 	 padding: 10px 2.5%;
-	 width: 95%;
-	 margin: 0 auto;
+	 width: 100%;
+	 margin-bottom: 10rem;
 }
  .thirdColumn {
 	 grid-area: third-column;
@@ -146,6 +146,7 @@ table.displayLg {
 		 grid-template-areas: "header header" "body second-column" "third-column third-column" "footer footer";
 		 grid-template-columns: minmax(360px, 830px) 330px;
 		 grid-column-gap: 10px;
+		 margin-bottom: 10rem !important;
 	}
 }
  .header {
