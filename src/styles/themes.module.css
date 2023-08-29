@@ -1,7 +1,7 @@
 .themesGallery aside {
   float: none;
   margin: 0;
-  padding: 0;
+  padding: 0 7rem 0 0;
   transform: none;
   border: none;
   background-color: transparent;
@@ -15,7 +15,6 @@
   max-width: var(--breakpoint-xl);
   margin: auto;
   padding-bottom: 40px;
-  grid-template-columns: 1fr;
 }
 
 .themesGallery aside span {
