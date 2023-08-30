@@ -4,7 +4,7 @@ PimaOnline Webdocs is a documentation site for building courses with the PimaOnl
 
 ## Version
 
-1.0.0
+0.0.1
 
 ## What's Included
 
@@ -16,6 +16,8 @@ PimaOnline Webdocs is a documentation site for building courses with the PimaOnl
   - Next
   - React
   - Highlight.js
+  - Babel
+  - React scrollspy
 
 ### PNPM Commands
 
@@ -28,6 +30,8 @@ Development mode includes a server running at `http://localhost:3000`. All files
 `pnpm start` Run this command to start the server without compiling production files.
 
 `pnpm lint` Run this command to run ESLint to detect errors in the code. Note: You will have to configure ESLint in the terminal.
+
+`pnpm install` Run this command to update package.json.
 
 ## Next JS Components and Pages
 
@@ -58,6 +62,34 @@ Contains css variables for Webdocs colors and width breakpoints.
 #### **\_widgets.css**
 
 Contains css for widget components that are displayed in Webdocs.
+
+### CSS modules
+
+Stylesheets with `module` in the file name are used to style the Layouts Page, Themes page and the individual theme pages.
+
+#### **\gallery-sidebar.module.css**
+
+Contains css for the sidebar on the Themes landing page.
+
+#### **\layouts.module.css**
+
+Contains css for Layouts page.
+
+#### **\theme-sidebar.module.css**
+
+Contains css for the sidebar on each individual theme page.
+
+#### **\theme.module.css**
+
+Contains css for the individual theme pages.
+
+#### **\themeLayout.module.css**
+
+Contains css for the different layouts of each theme (i.e. one-column, two-column, three-column).
+
+#### **\themes.module.css**
+
+Contains css for the Themes landing page.
 
 ## Public folder
 
