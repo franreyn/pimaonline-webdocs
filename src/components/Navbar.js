@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -8,6 +9,8 @@ const Navbar = () => {
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
+
+  const router = useRouter();
 
   return (
     <>
@@ -28,20 +31,20 @@ const Navbar = () => {
         {/* nav links */}
         <div className={`nav-container ${menuOpen ? 'show-menu' : 'hide-menu'}`}>
           <ul className="nav-links">
-            <li>
-              <Link href="getting-started">Docs</Link>
+            <li className={router.pathname === '/getting-started' ? 'active-nav' : ''}>
+              <Link href="/getting-started">Docs</Link>
               <ul className="sub-items">
-                <li><Link href="getting-started">Getting Started</Link></li>
-                <li><Link href="layouts">Layouts</Link></li>
-                <li><Link href="widgets">Widgets</Link></li>
-                <li><Link href="utilities">Utilities</Link></li>
+                <li><Link href="/getting-started">Getting Started</Link></li>
+                <li><Link href="/layouts">Layouts</Link></li>
+                <li><Link href="/widgets">Widgets</Link></li>
+                <li><Link href="/utilities">Utilities</Link></li>
               </ul>
             </li>
-            <li>
-              <Link href="themes">Themes</Link>
+            <li className={router.pathname === '/themes' ? 'active-nav' : ''}>
+              <Link href="/themes">Themes</Link>
             </li>
             <li>
-              <Link href="https://fontawesome.com/v5/search?m=free">Icons</Link>
+              <Link href="https://fontawesome.com/v5/search?m=free" target="_blank">Icons</Link>
             </li>
           </ul>
         </div>
