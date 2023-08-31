@@ -31,7 +31,7 @@ Development mode includes a server running at `http://localhost:3000`. All files
 
 `pnpm lint` Run this command to run ESLint to detect errors in the code. Note: You will have to configure ESLint in the terminal.
 
-`pnpm install` Run this command to update package.json.
+`pnpm install` Installs all dependencies.
 
 ## Next JS Components and Pages
 
