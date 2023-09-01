@@ -17,16 +17,7 @@ export default function Footer() {
           </li>
         </ul>
         <ul>
-          <li>
-            <Link href="themes">Themes</Link>
-              <ul className="sub-items">
-                <li><Link href="ajs">AJS</Link></li>
-                <li><Link href="art">Art</Link></li>
-                <li><Link href="aviation">Aviation</Link></li>
-                <li><Link href="business">Business</Link></li>
-                <li><Link href="cad">CAD</Link></li>
-              </ul>
-          </li>
+          <li><Link href="themes">Themes</Link></li>
         </ul>
         <ul>
           <li>
