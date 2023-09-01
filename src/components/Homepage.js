@@ -9,13 +9,13 @@ const Home = () => {
         <div className="wd-text-container">
           <h1>Build courses efficiently without coding from scratch</h1>
           <p>Create online courses easily using our pre-coded templates. With access to over 20 widgets and utility classes, you have the freedom to customize your courses.</p>
-          <Link className="wd-btn" href="getting-started.html">Get Started</Link>
+          <Link className="wd-btn" href="/getting-started">Get Started</Link>
         </div>
       </div>
       <section className="wd-horizontal-display">
         <h2 className="wd-text-center">Online course development just got easier</h2>
         <Carousel />
-        <Link className="wd-btn" href="getting-started.html">Explore Themes</Link>
+        <Link className="wd-btn" href="/getting-started">Explore Themes</Link>
       </section>
       <section className="wd-side-by-side">
         <div className="wd-side-by-side-item">
