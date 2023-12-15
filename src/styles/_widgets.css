@@ -1140,3 +1140,50 @@ table.display-lg thead {
     width: auto
   }
 }
+.accordion {
+  margin-bottom: 15px;
+}
+.accordion .accordion-title {
+  background-color: var(--color-pcc-ltgrey);
+  color: var(--color-pcc-primary);
+  font-family: "Lato", sans-serif;
+  margin-bottom: 0;
+  padding: 10px;
+  position: relative;
+  border-bottom: .1px solid rgba(210, 210, 210, 1);
+}
+.accordion .accordion-title p {
+  margin: 0;
+}
+.accordion .accordion-title:hover {
+  background-color: rgba(215, 215, 215, 1);
+  cursor: pointer;
+}
+.accordion .accordion-content {
+  padding: 10px;
+  background-color: var(--color-pcc-white);
+}
+.accordion .accordion-content p {
+  margin: 0;
+  color: var(--color-pcc-black);
+}
+.accordion .arrow-down:after {
+  content: "\f078";
+  font-family: "FontAwesome";
+  display: inline-block;
+  height: 16px;
+  margin-left: 5px;
+  width: 16px;
+  position: absolute;
+  right: 1rem;
+}
+.accordion .arrow-up:after {
+  content: "\f077";
+  font-family: "FontAwesome";
+  display: inline-block;
+  height: 16px;
+  margin-left: 5px;
+  width: 16px;
+  position: absolute;
+  right: 1rem;
+}
