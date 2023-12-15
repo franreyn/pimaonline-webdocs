@@ -66,16 +66,16 @@ export default function Accordion() {
         <div className="wd-html-code">
           <pre>
             <code className="language-html" ref={codeRef}>
-            {String.raw`<div className="accordion">
-  <div className="accordion-item">
-    <h3 className="accordion-title arrow-down">Read</h3>
-    <div className="accordion-content">
-      <p><a href="https://articles.ibpa-online.org/article/making-news/" target="_blank" className="ext" rel="noopener">Making News</a>, March/April 2018. By Deb Venasse, Reporter, <em>IBPA Independent</em> magazine</p>
+            {String.raw`<div class="accordion">
+  <div class="accordion-item">
+    <h3 class="accordion-title arrow-down">Read</h3>
+    <div class="accordion-content">
+      <p>Making News, March/April 2018. By Deb Venasse, Reporter, <em>IBPA Independent</em> magazine</p>
     </div>
   </div>
-  <div className="accordion-item">
-    <h3 className="accordion-title arrow-down">Discuss</h3>
-      <div className="accordion-content">
+  <div class="accordion-item">
+    <h3 class="accordion-title arrow-down">Discuss</h3>
+      <div class="accordion-content">
         <p>Adweek is a well-known organization that covers media and communication people, places, and things. Some of its popular elements with journalists, creatives, and media workers are the newsletters with news about the actual people doing the media work.</p>
       </div>
   </div>
