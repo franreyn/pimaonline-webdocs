@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Navbar from '@/components/Navbar';
 import Sidebar from '@/components/Sidebar';
 import Footer from '@/components/Footer';
+import Accordion from '@/components/widgets/Accordion';
 import Assignments from "@/components/widgets/Assignments";
 import Blockquote from '@/components/widgets/Blockquote';
 import Border from '@/components/widgets/Border';
@@ -40,6 +41,7 @@ export default function Widgets() {
         <main>
         <h1>Widgets</h1>
         <p>Widgets are individual components which together form your web page.</p>
+        <Accordion />
         <Assignments />
         <Blockquote />
         <Border />
