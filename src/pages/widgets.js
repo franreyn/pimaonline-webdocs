@@ -10,6 +10,7 @@ import CallOut from '@/components/widgets/CallOut';
 import CardHorizontal from '@/components/widgets/CardHorizontal';
 import HorizontalDisplay from '@/components/widgets/HorizontalDisplay';
 import ImageGallery from '@/components/widgets/ImageGallery';
+import LockedContent from '@/components/widgets/LockedContent';
 import MediaContainer from '@/components/widgets/MediaContainer';
 import SideBySide from '@/components/widgets/SideBySide';
 import Tables from '@/components/widgets/Tables';
@@ -27,7 +28,7 @@ export default function Widgets() {
     if (existingLink) {
       document.head.removeChild(existingLink);
     }
-})
+  })
 
   return (
     <>
@@ -39,23 +40,24 @@ export default function Widgets() {
       </header>
       <div className="wd-grid">
         <main>
-        <h1>Widgets</h1>
-        <p>Widgets are individual components which together form your web page.</p>
-        <Accordion />
-        <Assignments />
-        <Blockquote />
-        <Border />
-        <CallOut />
-        <CardHorizontal />
-        <HorizontalDisplay />
-        <ImageGallery />
-        <MediaContainer />
-        <SideBySide />
-        <Tables />
-        <Tabs />
-        <VideoWidget />
-        <VocabCards />
-        <VocabList />
+          <h1>Widgets</h1>
+          <p>Widgets are individual components which together form your web page.</p>
+          <Accordion />
+          <Assignments />
+          <Blockquote />
+          <Border />
+          <CallOut />
+          <CardHorizontal />
+          <HorizontalDisplay />
+          <ImageGallery />
+          <LockedContent />
+          <MediaContainer />
+          <SideBySide />
+          <Tables />
+          <Tabs />
+          <VideoWidget />
+          <VocabCards />
+          <VocabList />
         </main>
         <aside>
           <Sidebar />

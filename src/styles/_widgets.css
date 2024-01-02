@@ -1187,3 +1187,149 @@ table.display-lg thead {
   position: absolute;
   right: 1rem;
 }
+
+/* White Background for Locked Content Widget */
+
+.white-background {
+  background-color: white;
+  padding: 15px;
+}
+
+.white-background h2 {
+  color: var(--color-pcc-dkgrey);
+}
+
+.white-background p {
+  color: var(--color-pcc-black);
+}
+
+/* Locked Content Widget */ 
+
+/*
+- To use the locked content widget do the following:
+1. Wrap the hidden content in a div with the class "locked-content"
+2. Add a data key HTML attribute "data-key='1'"
+3. Add the text area for the button and text
+ <div class="instructions">
+    <h4>To continue please read Module 1 Readings</h4>
+    <a class="unlock-btn">I've read Module 1 Readings</a>
+  </div>
+4. Because we are using local storage, that means once a data key is marked as true, it'll 
+cause all other hidden content areas with that data-key to also be shown.
+*/
+
+.content-body {
+  margin-bottom: 10px;
+  padding: 15px;
+  background-color: white;
+  color: black;
+}
+
+.padding-top-20 {
+  padding-top: 20px;
+}
+
+.locked-content {
+  background-image: linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+  position: relative;
+  overflow: hidden;
+  max-height: 200px;
+  transition: max-height 0.3s ease; /* Add a transition for max-height */
+  color: black;
+}
+
+.locked-content p {
+  color: black;
+}
+
+.locked-content.open {
+  max-height: 100%;
+}
+
+.locked-content.open::before {
+  content: none;
+}
+
+#CourseLockBtn {
+  cursor: pointer;
+}
+
+.locked-content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to bottom, rgba(255,255,255, 0) 0%, rgba(255,255,255, .8) 70%, rgba(255,255,255, 1) 100%);
+  z-index: 1; /* Ensure it's above the content */
+}
+
+.instructions {
+  position: relative;
+  margin-top: 0px;
+  z-index: 4;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+  padding-top: 40px;
+  width: 100%;
+}
+
+.instructions p {
+  color: black;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.instructions::before {
+	content: "\f023";
+	font-family: "FontAwesome";
+  font-weight: 900;
+  font-size: 1.5em;
+  margin-right: 10px;
+  opacity: 1;
+	color: #2e5e8e;
+  display: block;
+  width: 100%;
+}
+
+.instructions h4 {
+    width: 100%;
+  }
+
+.instructions.complete {
+  display: none;
+}
+
+.unlock-btn:hover {
+	cursor: pointer;
+	background-color: #1c3957;
+  color: #fff;
+  text-decoration: none;
+}
+
+.unlock-btn{
+	background-color: #2e5e8e;
+	display:block;
+  color: #fff;
+  border: 3px solid #2e5e8e;
+  border-radius: 0.3em;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  padding: 5px 10px;
+  margin: 5px;
+  text-decoration: none;
+  text-align: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  width: fit-content;
+  margin: auto;
+  margin-bottom: 15px;
+}
