@@ -2,10 +2,6 @@
 
 PimaOnline Webdocs is a documentation site for building courses with the PimaOnline Themepack templating system. It is built with Next JS. Instructional Designers and faculty can use this website to find layouts and widgets we offer for courses.
 
-## Version
-
-0.0.1
-
 ## What's Included
 
 ### Dependencies
