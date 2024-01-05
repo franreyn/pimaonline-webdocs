@@ -43,12 +43,13 @@ export default function Sidebar() {
           </Scrollspy>
         </li>
         <li className={router.pathname === '/widgets' ? 'active-page' : ''}><Link href="/widgets">Widgets</Link>
-          <Scrollspy items={['toc-accordion', 'toc-assignments', 'toc-blockquote', 'toc-border', 'toc-call-out', 'toc-card-horizontal', 'toc-horizontal-display', 'toc-img-gallery', `toc-locked-content`, 'toc-media-container', 'toc-side-by-side', 'toc-tables', 'toc-tabs', 'toc-video-widget', 'toc-vocab-cards', 'toc-vocab-list']} currentClassName="is-current" offset={-100}>
+          <Scrollspy items={['toc-accordion', 'toc-assignments', 'toc-blockquote', 'toc-border', 'toc-call-out', 'toc-flip-card', 'toc-card-horizontal', 'toc-horizontal-display', 'toc-img-gallery', `toc-locked-content`, 'toc-media-container', 'toc-side-by-side', 'toc-tables', 'toc-tabs', 'toc-video-widget', 'toc-vocab-cards', 'toc-vocab-list']} currentClassName="is-current" offset={-100}>
             <li><Link href="widgets/#accordion" className="toc-accordion">Accordion</Link></li>
             <li><Link href="widgets/#assignments" className="toc-assignments">Assignments Widget</Link></li>
             <li><Link href="widgets/#blockquote" className="toc-blockquote">Blockquote</Link></li>
             <li><Link href="widgets/#border" className="toc-border">Border</Link></li>
             <li><Link href="widgets/#call-out" className="toc-call-out">Call Out</Link></li>
+            <li><Link href="widgets/#flip-card" className="toc-flip-card">Flip Card</Link></li>
             <li><Link href="widgets/#card-horizontal" className="toc-card-horizontal">Card Horizontal</Link></li>
             <li><Link href="widgets/#horizontal-display" className="toc-horizontal-display">Horizontal Display</Link></li>
             <li><Link href="widgets/#img-gallery" className="toc-img-gallery">Image Gallery</Link></li>

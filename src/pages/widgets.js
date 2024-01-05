@@ -8,6 +8,7 @@ import Blockquote from '@/components/widgets/Blockquote';
 import Border from '@/components/widgets/Border';
 import CallOut from '@/components/widgets/CallOut';
 import CardHorizontal from '@/components/widgets/CardHorizontal';
+import FlipCard from '@/components/widgets/FlipCard';
 import HorizontalDisplay from '@/components/widgets/HorizontalDisplay';
 import ImageGallery from '@/components/widgets/ImageGallery';
 import LockedContent from '@/components/widgets/LockedContent';
@@ -48,6 +49,7 @@ export default function Widgets() {
           <Border />
           <CallOut />
           <CardHorizontal />
+          <FlipCard />
           <HorizontalDisplay />
           <ImageGallery />
           <LockedContent />
