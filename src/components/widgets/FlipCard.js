@@ -70,6 +70,7 @@ export default function FlipCard() {
       <p>
         Within the <span className="wd-monospace">.flip-card-group</span> add flip cards each with their own term and definition.
       </p>
+      <p>Apply the <span className="wd-monospace">.long</span> class to the <span className="wd-monospace">.flip-card-group</span> container to make the height of the flip cards larger.</p>
       <div className="wd-window">
         <div className="wd-visual-ex">
           <div className="flip-card-group">
