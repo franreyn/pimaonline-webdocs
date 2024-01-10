@@ -751,3 +751,31 @@ footer .wd-logo-wrapper .logo {
 .monospace {
   font-family: "Courier New", Courier, monospace;
 }
+
+/* Icons page */
+.fa-book-open:before {
+  font-family: "FontAwesome";
+  margin-right: 10px;
+}
+
+.bi-pencil-fill:before {
+  font-family: "bootstrap-icons";
+  margin-right: 10px;
+}
+
+.ri-star-fill:before {
+  font-family: "remixicon";
+  margin-right: 10px;
+}
+
+[class^="bi-"], [class^="fa-"], [class^="ri-"] {
+  font-family: unset !important;
+}
+
+.color-link {
+  color: var(--color-wd-secondary) !important;
+}
+
+.color-link:hover {
+  color: var(--color-wd-accent) !important;
+}
