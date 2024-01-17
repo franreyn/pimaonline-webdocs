@@ -753,7 +753,7 @@ footer .wd-logo-wrapper .logo {
 }
 
 /* Icons page */
-.fa-book-open:before {
+.fa-book-open:before, .fa-arrow-up-right-from-square:before {
   font-family: "FontAwesome";
   margin-right: 10px;
 }
@@ -778,4 +778,13 @@ footer .wd-logo-wrapper .logo {
 
 .color-link:hover {
   color: var(--color-wd-accent) !important;
+}
+
+.flex-heading {
+  display: flex;
+  gap: 1rem;
+}
+
+.flex-heading a {
+  margin-top: .4rem;
 }

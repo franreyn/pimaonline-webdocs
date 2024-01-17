@@ -33,7 +33,10 @@ export default function RemixIcons() {
   return (
     <>
       <section className="wd-content">
-        <h2>Remix Icons</h2>
+        <div class="flex-heading">
+          <h2>Remix Icons</h2>
+          <Link href="https://remixicon.com/" target="_blank" className="color-link fa-arrow-up-right-from-square"></Link>
+        </div>
         <p>Another library included in our Themepack is Remix Icons. You can find a full list of icons <Link href="https://remixicon.com/" target="_blank" className="color-link">here</Link>.</p>
         <p>To use a Remix Icon, add a class to a heading element. <em>Note: These icons have a prefix of "ri-".</em></p>
         <div className="wd-window">

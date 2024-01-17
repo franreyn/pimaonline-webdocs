@@ -33,7 +33,10 @@ export default function BootstrapIcons() {
   return (
     <>
       <section className="wd-content">
-        <h2>Bootstrap Icons</h2>
+        <div class="flex-heading">
+          <h2>Bootstrap Icons</h2>
+          <Link href="https://icons.getbootstrap.com/" target="_blank" className="color-link fa-arrow-up-right-from-square"></Link>
+        </div>
         <p>Bootstrap Icons is also a great option with plenty of icons to choose from. You can browse through the icons <Link href="https://icons.getbootstrap.com/" target="_blank" className="color-link">here</Link>.</p>
         <p>Like Font Awesome, you can add an icon's class to a heading. <em>Note: The prefix for Bootstrap icons is "bi-".</em></p>
         <div className="wd-window">

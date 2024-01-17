@@ -33,7 +33,10 @@ export default function FontAwesome() {
   return (
     <>
       <section className="wd-content">
-        <h2>Font Awesome</h2>
+        <div class="flex-heading">
+          <h2>Font Awesome</h2>
+          <Link href="https://fontawesome.com/icons" target="_blank" className="color-link fa-arrow-up-right-from-square"></Link>
+        </div>
         <p>Over 2,000 free icons are available through Font Awesome. You can search by keyword or browser by category <Link href="https://fontawesome.com/icons" target="_blank" className="color-link">here</Link>.</p>
         <p>To use a Font Awesome Icon, add a class to a heading element. <em>Note: Instead of using the prefix "fa-", use the prefix "icon-".</em></p>
         <div className="wd-window">
