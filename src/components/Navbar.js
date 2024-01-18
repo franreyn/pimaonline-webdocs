@@ -43,8 +43,8 @@ const Navbar = () => {
             <li className={router.pathname === '/themes' ? 'active-nav' : ''}>
               <Link href="/themes">Themes</Link>
             </li>
-            <li>
-              <Link href="https://fontawesome.com/v5/search?m=free" target="_blank">Icons</Link>
+            <li className={router.pathname === '/icons' ? 'active-nav' : ''}>
+              <Link href="/icons">Icons</Link>
             </li>
           </ul>
         </div>
