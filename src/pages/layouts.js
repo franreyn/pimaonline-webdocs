@@ -19,29 +19,40 @@ export default function Layouts() {
     }
   }, []);
 
-  const codeRef = useRef(null);
-  const [buttonText, setButtonText] = useState('Copy code');
-
   hljs.registerLanguage('html', html);
   useEffect(() => {
     hljs.highlightAll();
   }, []);
 
-  const handleCopyCode = () => {
-    const codeElement = codeRef.current;
+  const codeRefs = [
+    useRef(null),
+    useRef(null),
+    useRef(null)
+  ];
+
+  const [buttonTexts, setButtonTexts] = useState([
+    'Copy code',
+    'Copy code',
+    'Copy code'
+  ]);
+
+  const handleCopyCode = (index) => {
     const range = document.createRange();
-    range.selectNode(codeElement);
+    range.selectNode(codeRefs[index].current);
     window.getSelection().removeAllRanges();
     window.getSelection().addRange(range);
     document.execCommand('copy');
     window.getSelection().removeAllRanges();
 
-    setButtonText('Copied!');
+    const newButtonTexts = [...buttonTexts];
+    newButtonTexts[index] = 'Copied!';
+    setButtonTexts(newButtonTexts);
 
     setTimeout(() => {
-      setButtonText('Copy code');
+      newButtonTexts[index] = 'Copy code';
+      setButtonTexts(newButtonTexts);
     }, 2000);
-  };
+  };  
 
 
   return (
@@ -65,7 +76,7 @@ export default function Layouts() {
         </div>
         <div className="wd-html-code">
           <pre>
-            <code className="language-html" ref={codeRef}>
+            <code className="language-html" ref={codeRefs[0]}>
             {String.raw`<!doctype html>
 <html>
 <head>
@@ -109,7 +120,7 @@ export default function Layouts() {
           </pre>
         </div>
         <div className="wd-btn-container">
-          <button className="wd-copy-btn" onClick={handleCopyCode}>{buttonText}</button>
+          <button className="wd-copy-btn" onClick={() => handleCopyCode(0)}>{buttonTexts[0]}</button>
         </div>
       </div>
       </section>
@@ -122,7 +133,7 @@ export default function Layouts() {
         </div>
         <div className="wd-html-code">
           <pre>
-            <code className="language-html" ref={codeRef}>
+            <code className="language-html" ref={codeRefs[1]}>
             {String.raw`<!doctype html>
 <html>
 <head>
@@ -172,7 +183,7 @@ export default function Layouts() {
           </pre>
         </div>
         <div className="wd-btn-container">
-          <button className="wd-copy-btn" onClick={handleCopyCode}>{buttonText}</button>
+          <button className="wd-copy-btn" onClick={() => handleCopyCode(1)}>{buttonTexts[1]}</button>
         </div>
     </div>
       </section>
@@ -186,7 +197,7 @@ export default function Layouts() {
         </div>
         <div className="wd-html-code">
           <pre>
-            <code className="language-html" ref={codeRef}>
+            <code className="language-html" ref={codeRefs[2]}>
             {String.raw`<!doctype html>
 <html>
 <head>
@@ -242,7 +253,7 @@ export default function Layouts() {
           </pre>
         </div>
         <div className="wd-btn-container">
-          <button className="wd-copy-btn" onClick={handleCopyCode}>{buttonText}</button>
+          <button className="wd-copy-btn" onClick={() => handleCopyCode(2)}>{buttonTexts[2]}</button>
         </div>
       </div>
       </section>
