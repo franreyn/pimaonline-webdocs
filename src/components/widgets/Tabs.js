@@ -76,35 +76,36 @@ export default function Tabs() {
           <pre>
             <code className="language-html" ref={codeRef}>
               {String.raw`<div class="tabs">
-  <input/>
-  <label>
-    <span>Tab Title 1</span>
-  </label>
-  <div>
-    <h4>Tab 1 Heading Inside</h4>
-    <p>Some long text to demonstrate a tab widget. This text can be something as long as multiple paragraphs or as short as a couple of sentences.</p>
-  </div>
-  <input/>
-  <label>
-    <span>Tab Title 2</span>
-  </label>
-  <div>
-    <h4>Tab 2 Heading Inside</h4>
-    <p>Some long text to demonstrate a tab widget. This text can be something as long as multiple paragraphs or as short as a couple of sentences.</p>
-  </div>
-  <input/>
-  <label>
-    <span>Tab Title 3</span>
-  </label>
-  <div>
-    <h4>Tab 3 Heading Inside</h4>
-    <p>Some long text to demonstrate a tab widget. This text can be something as long as multiple paragraphs or as short as a couple of sentences.</p>
-  </div>
-  <input/>
-  <label>
-    <span>Hide</span>
-  </label>
-</div>`}
+          <input/>
+          <label>
+            <span>Tab Title 1</span>
+          </label>
+          <div>
+            <h4>Tab 1 Heading Inside</h4>
+            <p>Some long text to demonstrate a tab widget. This text can be something as long as multiple paragraphs or as short as a couple of sentences.</p>
+          </div>
+          <input/>
+          <label>
+            <span>Tab Title 2</span>
+          </label>
+          <div>
+            <h4>Tab 2 Heading Inside</h4>
+            <p>Some long text to demonstrate a tab widget. This text can be something as long as multiple paragraphs or as short as a couple of sentences.</p>
+          </div>
+          <input/>
+          <label>
+            <span>Tab Title 3</span>
+          </label>
+          <div>
+            <h4>Tab 3 Heading Inside</h4>
+            <p>Some long text to demonstrate a tab widget. This text can be something as long as multiple paragraphs or as short as a couple of sentences.</p>
+          </div>
+          <input/>
+          <label>
+            <span>Hide</span>
+          </label>
+          <div></div>
+        </div>`}
             </code>
           </pre>
         </div>
