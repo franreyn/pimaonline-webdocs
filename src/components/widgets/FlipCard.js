@@ -91,19 +91,20 @@ export default function FlipCard() {
         <div className="wd-html-code">
           <pre>
             <code className="language-html" ref={codeRef}>
-              {String.raw`          
-              <div class="flip-card-group">
-              <div class="flip-card">
-              <div class="inner-card">
-                <div class="front">This is the term. The term has a brief description of the thing or it is simply one word.<div class="overlay">Your front text here</div></div>
-                <div class="back">This is the definition. The definition can be long or short it just depends on what it is defining. This is an extra long definition of something important and we don't want it to get cut off so we're going to make this a large flip card and give it a special class to helps resize it. If it does go past this certain size we can make it full widget even.  But I can't type enough to breka the smaller one so it must be a pretty big definition.          <div class="overlay">Your back text here</div></div>
-            </div>
-                <div class="flip-card">
-                  <div class="inner-card">
-                    <div class="front">This is the term. The term has a brief description of the thing or it is simply one word.<div class="overlay">Your front text here</div></div>
-                    <div class="back">This is the definition. The definition can be long or short it just depends on what it is defining. This is an extra long definition of something important and we don't want it to get cut off so we're going to make this a large flip card and give it a special class to helps resize it. If it does go past this certain size we can make it full widget even.  But I can't type enough to breka the smaller one so it must be a pretty big definition.          <div class="overlay">Your back text here</div></div>
-                </div>
-              </div>`}
+              {String.raw`<div class="flip-card-group">
+  <div class="flip-card">
+    <div class="inner-card">
+      <div class="front">This is the term. The term has a brief description of the thing or it is simply one word.<div class="overlay">Your front text here</div></div>
+      <div class="back">This is the definition. The definition can be long or short it just depends on what it is defining.            <div class="overlay">Your back text here</div></div>
+    </div>
+  </div>
+  <div class="flip-card">
+    <div class="inner-card">
+      <div class="front">This is the term. The term has a brief description of the thing or it is simply one word.<div class="overlay">Your front text here</div></div>
+      <div class="back">This is the definition. The definition can be long or short it just depends on what it is defining.            <div class="overlay">Your back text here</div></div>
+    </div>
+  </div>
+</div>`}
             </code>
           </pre>
         </div>
