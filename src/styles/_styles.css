@@ -481,7 +481,7 @@ pre code.hljs {
   box-shadow: none !important;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .wd-sidebar {
     background-color: var(--color-wd-bg-alt);
     padding: 3rem 1rem;
@@ -571,7 +571,7 @@ pre code.hljs {
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   aside {
     margin-top: 0;
   }
@@ -788,3 +788,15 @@ footer .wd-logo-wrapper .logo {
 .flex-heading a {
   margin-top: .4rem;
 }
+
+/* Templates page */
+.template-preview {
+  display: flex;
+  gap: 3rem;
+}
+
+.template-preview > img {
+  width: 2500px;
+  height: fit-content;
+}
+

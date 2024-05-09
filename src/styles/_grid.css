@@ -56,7 +56,7 @@
   align-self: center;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .wd-grid {
     grid-template-columns: 280px minmax(400px, 1fr);
     padding: 1rem;
@@ -85,4 +85,37 @@ footer {
   grid-gap: 2rem 1rem;
   max-width: var(--breakpoint-xl);
   margin: 0 auto;
+}
+
+h1 ~ p {
+  margin-bottom: 3rem;
+}
+
+.template-section {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 1.5rem;
+  margin-bottom: 5rem;
+}
+ 
+.template-section > div {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  width: 292px;
+  height: 500px;
+}
+
+.template-section > div > div {
+  display: flex;
+  flex-wrap: wrap;
+  height: 200px;
+  align-content: space-between;
+}
+
+@media screen and (min-width: 1024px) {
+  .template-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 300px));
+  }
 }
