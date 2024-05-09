@@ -40,6 +40,9 @@ const Navbar = () => {
                 <li><Link href="/utilities">Utilities</Link></li>
               </ul>
             </li>
+            <li className={router.pathname === '/templates' ? 'active-nav' : ''}>
+              <Link href="/templates">Templates</Link>
+            </li>
             <li className={router.pathname === '/themes' ? 'active-nav' : ''}>
               <Link href="/themes">Themes</Link>
             </li>
