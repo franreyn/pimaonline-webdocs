@@ -4,6 +4,7 @@ import Footer from '@/components/Footer';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useLayoutEffect } from 'react';
+import TemplateSidebar from '@/components/TemplateSidebar';
 
 export default function Templates() {
 
@@ -23,11 +24,13 @@ export default function Templates() {
       <header className="wd-header">
         <Navbar />
       </header>
+      <div className="wd-intro">
+    <h1>Browse Course Templates</h1>
+      <p className='wd-break'>Premade templates to browse and inspire your course content layouts. Ready to grab and go!</p>
+      </div>
       <div className="wd-grid">
         <main>
-          <h1>Templates</h1>
-          <p>Premade templates to browse and inspire your course content layouts. Ready to grab and go!</p>
-          <h2>One Column Templates</h2>
+          <h2 id='one-column-templates'>One Column Templates</h2>
           <section className="template-section">
             <div>
               <Image src="/images/templates/one-col-1.png" alt="" width={292} height={280} />
@@ -78,7 +81,7 @@ export default function Templates() {
               </div>
             </div>
           </section>
-          <h2>Two Column Templates</h2>
+          <h2 id='two-column-templates'>Two Column Templates</h2>
           <section className="template-section">
           <div>
             <Image src="/images/templates/two-col-1.png" alt="" width={292} height={280} />
@@ -129,7 +132,7 @@ export default function Templates() {
             </div>
           </div>
           </section>
-          <h2>SOW Templates</h2>
+          <h2 id='sow-templates'>SOW Templates</h2>
           <section className="template-section">
           <div>
             <Image src="/images/templates/two-col-1.png" alt="" width={292} height={280} />
@@ -149,10 +152,13 @@ export default function Templates() {
           </div>
           </section>
         </main>
+        <aside>
+            <TemplateSidebar />
+          </aside>
+        </div>
         <footer>
           <Footer />
         </footer>
-      </div>
     </>
   )
 }
