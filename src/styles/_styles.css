@@ -6,11 +6,6 @@
 
 body {
   background-color: var(--color-wd-primary);
-  background-image: url("../../public/images/footer-graphic.svg");
-  background-repeat: no-repeat;
-  background-position-x: right;
-  background-position-y: bottom;
-  background-size: 200px;
 }
 
 body::before {
@@ -36,7 +31,7 @@ body::before {
   position: fixed;
   width: 100%;
   z-index: 10;
-  background-color: rgba(29, 34, 56, .7);
+  background-color: rgba(30, 33, 47, .7);
 }
 
 .wd-navbar {
@@ -48,13 +43,12 @@ body::before {
 }
 
 li {
-  color: var(--color-wd-tertiary);
+  color: var(--color-wd-secondary);
   list-style-type: none;
 }
 
 a {
-  color: var(--color-wd-tertiary) !important;
-  text-decoration: none;
+  color: var(--color-wd-secondary) !important;
   transition: color .2s ease-in-out;
 }
 
@@ -64,6 +58,10 @@ a:hover {
 
 .nav-links li, .wd-footer li {
   list-style-type: none;
+}
+
+.nav-links > li > a {
+  text-decoration: none;
 }
 
 .nav-links li a:hover {
@@ -190,7 +188,7 @@ a:hover {
     position: absolute;
     width: 1px;
     height: 20px;
-    background-color: var(--color-wd-tertiary);
+    background-color: var(--color-wd-accent);
     left: -13px;
     opacity: 0;
     transition: opacity .2s ease-in-out;
@@ -233,11 +231,6 @@ a:hover {
 /* Homepage content */
 .wd-home-main {
   padding: 4rem 1rem;
-  background-image: url("../../public/images/hex.svg");
-  background-repeat: no-repeat;
-  background-size: 100px;
-  background-position-x: 100%;
-  background-position-y: 50%;
 }
 
 .wd-content-wrapper {
@@ -247,9 +240,6 @@ a:hover {
 
 .wd-hero {
   position: relative;
-  background-image: url("../../public/images/box.svg");
-  background-repeat: no-repeat;
-  background-size: 100px;
   margin-top: 5rem;
 }
 
@@ -263,6 +253,7 @@ a:hover {
 
 section p {
   margin-bottom: 1rem;
+  line-height: 1.7rem;
 }
 
 .wd-horizontal-display {
@@ -290,16 +281,19 @@ section p {
 }
 
 .wd-btn {
-  background-color: var(--color-wd-accent);
+  background-color: var(--color-wd-primary);
+  color: var(--color-wd-secondary);
   padding: 1rem 1.25rem;
-  border-radius: 5px;
+  border-radius: 10px;
+  border: .2rem solid var(--color-wd-accent);
   display: inline-block;
   transition: all .2s ease-in-out;
   font-weight: 700;
+  text-decoration: none;
 }
 
 .wd-btn:hover {
-  background-color: var(--color-wd-secondary);
+  background-color: var(--color-wd-accent);
   color: var(--color-wd-primary) !important;
 }
 
@@ -361,7 +355,8 @@ section p {
   }
 
   .wd-hero .wd-text-container {
-    margin: 0 auto 0 13rem;
+    margin: 0;
+    width: 90%;
   }
 
   .carousel-container img {
@@ -390,8 +385,48 @@ section p {
 }
 
 /* Docs */
+.wd-intro {
+  padding-top: 25%;
+  padding-left: 5%;
+  width: 90%;
+}
+
+@media screen and (min-width: 768px) {
+.wd-intro {
+  width: 90%;
+  padding-top: 10%;
+}
+}
+
+@media screen and (min-width: 1024px) {
+  .wd-intro {
+    width: 90%;
+    padding-top: 10%;
+    padding-left: 10%;
+    }
+  }
+
+@media screen and (min-width: 1200px) {
+  .wd-intro {
+    width: 90%;
+    padding-top: 10%;
+    padding-left: 15%;
+    }
+} 
+
+.wd-break {
+  line-height: 1.7rem;
+  margin-bottom: 3rem;
+  padding-bottom:2rem;
+}
+
 .wd-content {
-  margin: 5rem 0;
+  margin-bottom: 5rem;
+}
+
+.wd-subitems {
+  border-left: .15rem solid var(--color-wd-overlay);
+  padding-left: 3rem;
 }
 
 aside {
@@ -400,7 +435,7 @@ aside {
 
 .wd-sidebar {
   font-family: "Roboto", sans-serif;
-  line-height: 1.5;
+  line-height: 1.8rem;
 }
 
 .wd-sidebar > li {
@@ -422,7 +457,7 @@ aside {
   position: absolute;
   width: 1px;
   height: 20px;
-  background-color: var(--color-wd-tertiary);
+  background-color: var(--color-wd-accent);
   left: -13px;
   opacity: 0;
   transition: opacity .2s ease-in-out;
@@ -432,11 +467,15 @@ aside {
   opacity: 1;
 }
 
+.wd-sidebar > li > a {
+  text-decoration: none !important;
+}
+
 .wd-visual-ex {
-  background-color: rgba(45, 51, 83, 1);
+  background-color: var(--color-wd-overlay);
   padding: 2rem;
   border-radius: 10px 10px 0 0;
-  border: 0.5px solid rgba(62, 71, 116, 1);
+  border: 0.5px solid var(--color-wd-overlay);
 }
 
 .wd-html-code {
@@ -460,7 +499,7 @@ pre code.hljs {
 }
 
 .is-current a {
-  color: var(--color-wd-secondary) !important;
+  color: var(--color-wd-accent) !important;
 }
 
 .is-current::before {
@@ -473,7 +512,7 @@ pre code.hljs {
 }
 
 .active-nav > a {
-  color: var(--color-wd-secondary) !important;
+  color: var(--color-wd-accent) !important;
 }
 
 .toc-btn, .mobile-btn {
@@ -583,7 +622,7 @@ pre code.hljs {
   .wd-grid aside {
     position: sticky;
     top: 75px;
-    height: 85vh;
+    height: 99%;
     overflow: auto;
     width: max-content;
   }
@@ -594,16 +633,18 @@ pre code.hljs {
 }
 
 .wd-copy-btn {
-  background-color: var(--color-wd-accent);
+  color: var(--color-wd-secondary);
+  background-color: var(--color-wd-primary);
   padding: 0.5rem 1rem;
-  border-radius: 5px;
+  border: 0.2rem solid var(--color-wd-accent);
+  border-radius: 10px;
   display: inline-block;
   transition: all .2s ease-in-out;
   font-weight: 700;
 }
 
 .wd-copy-btn:hover {
-  background-color: var(--color-wd-secondary);
+  background-color: var(--color-wd-accent);
   color: var(--color-wd-primary);
   cursor: pointer;
 }
@@ -639,7 +680,7 @@ footer .wd-logo-wrapper .logo {
 }
 
 .wd-logo-wrapper {
-  padding: 4rem 0;
+  padding: 0;
   max-width: var(--breakpoint-xl);
   margin-left: auto;
   margin-right: auto;

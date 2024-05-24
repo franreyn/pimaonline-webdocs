@@ -1,10 +1,10 @@
 :root {
   /* Colors */
-  --color-wd-primary: rgba(29, 34, 56, 1);
-  --color-wd-secondary: rgba(171, 182, 241, 1);
-  --color-wd-tertiary: rgba(235, 235, 235, 1);
-  --color-wd-accent: rgba(41, 166, 176, 1);
-  --color-wd-bg-alt: rgba(35, 40, 66, 1);
+  --color-wd-primary: rgba(30, 33, 47, 1);
+  --color-wd-secondary: rgba(235, 235, 235, 1);
+  --color-wd-overlay: rgba(235, 235, 235, .05);
+  --color-wd-accent: rgba(105, 197, 249, 1);
+  --color-wd-bg-alt: rgba(18, 20, 31, 1);
 
   --breakpoint-sm: 640px;
   --breakpoint-md: 768px;
