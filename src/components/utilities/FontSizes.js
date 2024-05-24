@@ -23,7 +23,7 @@ export default function FontSizes() {
   return (
     <>
       <section className="wd-content" id="toc-font-sizes">
-        <h2 id="font-sizes" className="section-top">Font Sizes</h2>
+        <h3 id="font-sizes" className="section-top">Font Sizes</h3>
         <p>Use <span className="wd-monospace">.font-size-h3</span> to convert any text to the native size of our heading-3.</p>
         <p>Use <span className="wd-monospace">.font-size-h4</span> to convert any text to the native size of our heading-4.</p>
         <div className="wd-window">

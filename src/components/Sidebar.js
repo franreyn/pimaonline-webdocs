@@ -42,25 +42,11 @@ export default function Sidebar() {
             <li><Link href="layouts/#three-section-layout" className="toc-three-section-layout">Three Section</Link></li>
           </Scrollspy>
         </li>
-        <li className={router.pathname === '/widgets' ? 'active-page' : ''}><Link href="/widgets">Widgets</Link>
-          <Scrollspy items={['toc-accordion', 'toc-assignments', 'toc-blockquote', 'toc-border', 'toc-call-out', 'toc-flip-card', 'toc-card-horizontal', 'toc-horizontal-display', 'toc-img-gallery', `toc-locked-content`, 'toc-media-container', 'toc-side-by-side', 'toc-tables', 'toc-tabs', 'toc-video-widget', 'toc-vocab-cards', 'toc-vocab-list']} currentClassName="is-current" offset={-100}>
-            <li><Link href="widgets/#accordion" className="toc-accordion">Accordion</Link></li>
-            <li><Link href="widgets/#assignments" className="toc-assignments">Assignments Widget</Link></li>
-            <li><Link href="widgets/#blockquote" className="toc-blockquote">Blockquote</Link></li>
-            <li><Link href="widgets/#border" className="toc-border">Border</Link></li>
-            <li><Link href="widgets/#call-out" className="toc-call-out">Call Out</Link></li>
-            <li><Link href="widgets/#flip-card" className="toc-flip-card">Flip Card</Link></li>
-            <li><Link href="widgets/#card-horizontal" className="toc-card-horizontal">Card Horizontal</Link></li>
-            <li><Link href="widgets/#horizontal-display" className="toc-horizontal-display">Horizontal Display</Link></li>
-            <li><Link href="widgets/#img-gallery" className="toc-img-gallery">Image Gallery</Link></li>
-            <li><Link href="widgets/#locked-content" className="toc-locked-content">Locked Content</Link></li>
-            <li><Link href="widgets/#media-container" className="toc-media-container">Media Container</Link></li>
-            <li><Link href="widgets/#side-by-side" className="toc-side-by-side">Side-by-side</Link></li>
-            <li><Link href="widgets/#tables" className="toc-tables">Tables</Link></li>
-            <li><Link href="widgets/#tabs" className="toc-tabs">Tabs</Link></li>
-            <li><Link href="widgets/#video-widget" className="toc-video-widget">Video Widget</Link></li>
-            <li><Link href="widgets/#vocab-cards" className="toc-vocab-cards">Vocab Cards</Link></li>
-            <li><Link href="widgets/#vocab-list" className="toc-vocab-list">Vocab List</Link></li>
+        <li className={router.pathname === '/icons' ? 'active-page' : ''}><Link href="/icons">Icons</Link>
+          <Scrollspy items={['toc-bootstrap-icons', 'toc-font-awesome', 'toc-remix-icons']} currentClassName="is-current" offset={-100}>
+            <li><Link href="icons/#toc-bootstrap-icons">Bootstrap Icons</Link></li>
+            <li><Link href="icons/#toc-font-awesome">Font Awesome Icons</Link></li>
+            <li><Link href="icons/#toc-remix-icons">Remix Icons</Link></li>
           </Scrollspy>
         </li>
         <li className={router.pathname === '/utilities' ? 'active-page' : ''}><Link href="/utilities">Utilities</Link>

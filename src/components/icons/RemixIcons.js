@@ -32,21 +32,21 @@ export default function RemixIcons() {
 
   return (
     <>
-      <section className="wd-content">
+      <section className="wd-content" id="toc-remix-icons">
         <div class="flex-heading">
-          <h2>Remix Icons</h2>
+          <h3>Remix Icons</h3>
           <Link href="https://remixicon.com/" target="_blank" className="color-link fa-arrow-up-right-from-square"></Link>
         </div>
         <p>Another library included in our Themepack is Remix Icons. You can find a full list of icons <Link href="https://remixicon.com/" target="_blank" className="color-link">here</Link>.</p>
         <p>To use a Remix Icon, add a class to a heading element. <em>Note: These icons have a prefix of "ri-".</em></p>
         <div className="wd-window">
           <div className="wd-visual-ex">
-            <h2 className="ri-star-fill">Welcome to English 101!</h2>
+            <h3 className="ri-star-fill">Welcome to English 101!</h3>
           </div>
           <div className="wd-html-code">
             <pre>
               <code className="language-html" ref={codeRef}>
-                {String.raw`<h2 class="ri-star-fill">Welcome to English 101!</h2>`}
+                {String.raw`<h3 class="ri-star-fill">Welcome to English 101!</h3>`}
               </code>
             </pre>
           </div>

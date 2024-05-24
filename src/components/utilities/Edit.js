@@ -23,7 +23,7 @@ export default function Edit() {
   return (
     <>
       <section className="wd-content" id="toc-edit">
-        <h2 id="edit" className="section-top">Edit</h2>
+        <h3 id="edit" className="section-top">Edit</h3>
         <p>Use <span className="wd-monospace">.edit</span> on any text element to color the text red. Note: This is used to leave notes for others and will be removed prior to cloning.</p>
         <div className="wd-window">
           <div className="wd-visual-ex">

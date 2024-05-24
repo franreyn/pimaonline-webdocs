@@ -23,7 +23,7 @@ export default function Highlight() {
   return (
     <>
       <section className="wd-content" id="toc-highlight">
-        <h2 id="highlight" className="section-top">Highlight</h2>
+        <h3 id="highlight" className="section-top">Highlight</h3>
         <p>Use <span className="wd-monospace">.highlight</span> to give a background color to your text, similar to highlighting text, to any word or group of words.</p>
         <div className="wd-window">
           <div className="wd-visual-ex">

@@ -36,7 +36,7 @@ const Navbar = () => {
               <ul className="sub-items">
                 <li><Link href="/getting-started">Getting Started</Link></li>
                 <li><Link href="/layouts">Layouts</Link></li>
-                <li><Link href="/widgets">Widgets</Link></li>
+                <li><Link href="/icons">Icons</Link></li>
                 <li><Link href="/utilities">Utilities</Link></li>
               </ul>
             </li>
@@ -47,7 +47,7 @@ const Navbar = () => {
               <Link href="/themes">Themes</Link>
             </li>
             <li className={router.pathname === '/icons' ? 'active-nav' : ''}>
-              <Link href="/icons">Icons</Link>
+              <Link href="/widgets">Widgets</Link>
             </li>
           </ul>
         </div>

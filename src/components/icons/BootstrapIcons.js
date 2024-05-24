@@ -32,21 +32,21 @@ export default function BootstrapIcons() {
 
   return (
     <>
-      <section className="wd-content">
+      <section className="wd-content" id="toc-bootstrap-icons">
         <div class="flex-heading">
-          <h2>Bootstrap Icons</h2>
+          <h3>Bootstrap Icons</h3>
           <Link href="https://icons.getbootstrap.com/" target="_blank" className="color-link fa-arrow-up-right-from-square"></Link>
         </div>
         <p>Bootstrap Icons is also a great option with plenty of icons to choose from. You can browse through the icons <Link href="https://icons.getbootstrap.com/" target="_blank" className="color-link">here</Link>.</p>
         <p>Like Font Awesome, you can add an icon's class to a heading. <em>Note: The prefix for Bootstrap icons is "bi-".</em></p>
         <div className="wd-window">
           <div className="wd-visual-ex">
-            <h2 className="bi-pencil-fill">Week 1 Assignments</h2>
+            <h3 className="bi-pencil-fill">Week 1 Assignments</h3>
           </div>
           <div className="wd-html-code">
             <pre>
               <code className="language-html" ref={codeRef}>
-                {String.raw`<h2 class="bi-pencil-fill">Week 1 Assignments</h2>`}
+                {String.raw`<h3 class="bi-pencil-fill">Week 1 Assignments</h3>`}
               </code>
             </pre>
           </div>

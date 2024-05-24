@@ -23,7 +23,7 @@ export default function Labels() {
   return (
     <>
       <section className="wd-content" id="toc-labels">
-        <h2 id="labels" className="section-top">Labels</h2>
+        <h3 id="labels" className="section-top">Labels</h3>
         <p>Use <span className="wd-monospace">.label</span> to create a badge-like icon using any text.</p>
         <div className="wd-window">
           <div className="wd-visual-ex">

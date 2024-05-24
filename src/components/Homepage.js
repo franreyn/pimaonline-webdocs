@@ -7,34 +7,41 @@ const Home = () => {
     <div className="wd-content-wrapper">
       <div className="wd-hero">
         <div className="wd-text-container">
-          <h1>Build courses efficiently without coding from scratch</h1>
-          <p>Create online courses easily using our pre-coded templates. With access to over 20 widgets and utility classes, you have the freedom to customize your courses.</p>
+          <h1>Build courses efficiently, <br />without coding from scratch.</h1>
+          <p>Create online courses easily using our pre-coded templates. With access to over 20 widgets and utility classes, you have the freedom to customize your courses with ease.</p>
           <Link className="wd-btn" href="/getting-started">Get Started</Link>
         </div>
       </div>
-      <section className="wd-horizontal-display">
-        <h2 className="wd-text-center">Online course development just got easier</h2>
-        <Carousel />
-        <Link className="wd-btn" href="/getting-started">Explore Themes</Link>
-      </section>
+      <main>
       <section className="wd-side-by-side">
         <div className="wd-side-by-side-item">
-          <h2>Always the latest technology thanks to continuous improvement</h2>
-          <p>We store our code in the cloud and that code trickles down to all courses. This means that when we update our code, all courses are updated too.</p>
+          <h2>Developing online courses just got easier</h2>
+          <Link className="wd-btn" href="/getting-started">Explore Themes</Link>
         </div>
         <div className="wd-side-by-side-item">
-          <Image src="/images/code.png" alt="" width={400} height={250} />
+        <Carousel />
         </div>
       </section>
-      <section className="wd-side-by-side reverse">
-        <div className="wd-side-by-side-item">
-          <h2>Easily customizable and project specific</h2>
-          <p>We offer a selection of themes, these themes are program specific and customizable. Non program specific customizable themes are also available.</p>
+      <br />
+      <br />
+      <section className="wd-tricolumn">
+        <div className="wd-tricolumn-item">
+          <Image src="/images/improving-icon.png" alt="" width={100} height={100} />
+          <h3>Continuously <br /> Improving</h3>
+          <p>Our code is stored in the cloud, trickling down to all courses. So when we make updates to our code, all courses are updated too.</p>
         </div>
-        <div className="wd-side-by-side-item">
-          <Image src="/images/widget-ex.png" alt="" width={400} height={250} />
+        <div className="wd-tricolumn-item">
+        <Image src="/images/time-icon.png" alt="" width={100} height={100} />
+          <h3>Saving Time <br /> and Energy</h3>
+          <p>With premade themes, widgets, and layouts, you can spend less time coding and more time on your course content.</p>
+        </div>
+        <div className="wd-tricolumn-item">
+        <Image src="/images/code-icon.png" alt="" width={100} height={100} />
+          <h3>Customizable <br /> Coding</h3>
+          <p>With our variety of pre-coded widgets, you can set up your course however you see fit. Pick and choose what works for you.</p>
         </div>
       </section>
+      </main>
     </div>
   )
 }
