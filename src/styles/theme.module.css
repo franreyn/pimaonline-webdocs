@@ -1,26 +1,11 @@
 .pageWrapper {
-  font-size: 18px;
-  background-color:#1e2238;
+  font-size: 14px;
 }
 
 /* Scrollbars */
 .pageWrapper {
   scrollbar-width: thin;
   scrollbar-color: rgba(133, 137, 156, .2);
-}
-
-.pageWrapper::-webkit-scrollbar {
-  width: 7px;
-  height: 7px;
-}
-
-.pageWrapper::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-.pageWrapper::-webkit-scrollbar-thumb {
-  background-color: rgba(133, 137, 156, .2);
-  border-radius: 20px;
 }
 
 .pageWrapper aside {
@@ -33,7 +18,6 @@
   max-width:none;
   margin-top: 5em;
   width: max-content;
-  position: inherit;
 }
 
 .pageWrapper aside span {
@@ -48,11 +32,8 @@
 }
 
 .layoutArea {
-  background: rgb(29, 34, 56);
-  max-width: var(--breakpoint-xl);
   margin: auto;
   padding-bottom: 40px;
-  /* grid-template-columns: 1fr; */
 } 
 
  .layoutArea h1.mainH1 {
@@ -67,24 +48,14 @@
   }
 }
 
-.layoutArea p {
-  font-family: "Roboto", sans-serif;
-}
-
-.contentBody p {
-  color: black !important;
-}
-
 ul.wd-sidebar {
   margin: 0 5rem 0 0 !important;
 }
 
 .description {
-  color: white;
-}
-
-.wdNavbar {
-  background: var(--color-wd-primary);
+  margin-bottom: 60px;
+  border-bottom: .1rem solid white;
+  padding-bottom: 40px;
 }
 
 .header:first-child() {
@@ -112,10 +83,6 @@ ul.wd-sidebar {
 .header ul>li::before {
   content: none;
   display: none;
-}
-
-.header nav {
-  padding: 16px;
 }
 
 .header a {
@@ -147,17 +114,17 @@ ul.wd-sidebar {
   color: red;
 }
 
-.h2, .h2:not([class^=icon]) {
-  font-family: "Orbitron", sans-serif;
-  color: var(--color-wd-tertiary) !important;
-  border-bottom: 2px solid rgba(171, 182, 241, 0.5);
-  margin-bottom: 40px;
-  text-transform: none;
-  letter-spacing: normal;
-  text-align: left;
-  margin: 4rem 0 2rem !important;
-  width: 100%;
-  padding-bottom: 1rem;
+.badge {
+  font-size: .8rem;
+  font-weight: 700;
+  margin-left: 20px;
+  color: var(--color-wd-primary);
+  background: var(--color-wd-accent);
+  border-radius: 20px;
+  display: inline;
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+  padding: 5px 10px;
 }
 
 .threeColumn {
@@ -191,7 +158,7 @@ ul.wd-sidebar {
 
 /* This style is for the entire component body */
 .themeSidebarBody {
-  font-size: 16px;
+  font-size: 12px;
   -webkit-font-smoothing: auto;
 }
 
@@ -251,7 +218,7 @@ ul.wd-sidebar {
   list-style-type: none;
   margin: 0;
   padding-left: 0;
-  font-size: 16px;
+  font-size: 12px;
   transition: opacity .2s ease-in-out;
   font-family: "Roboto", sans-serif !important;
 }
@@ -311,7 +278,6 @@ ul.wd-sidebar {
 }
 
 .themeSidebar {
-  background-color: var(--color-wd-bg-alt);
   padding: 3rem 1rem;
   overflow: scroll;
   overflow-x: hidden;

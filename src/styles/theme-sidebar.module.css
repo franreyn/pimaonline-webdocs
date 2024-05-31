@@ -46,6 +46,7 @@
 .themesListTitle {
   padding: 0;
   color: rgba(235, 235, 235, 1) !important;
+  font-weight: 800;
 }
 
 .themeList {

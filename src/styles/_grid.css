@@ -19,7 +19,8 @@
   grid-template-areas:  "sidebar"
                         "main"
                         "footer";
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  height: max-content;
 }
 
 .wd-grid main {
@@ -51,15 +52,25 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   column-gap: 2rem;
+  vertical-align: top;
 }
 
 .wd-side-by-side-item {
   align-self: center;
   padding: 20px 30px 20px 0;
+  vertical-align: top;
+}
+
+.wd-side-by-side-item.no-pad {
+  padding: 0px;
+}
+
+.wd-side-by-side-item.no-pad.right-align {
+  text-align: end !important;
+  align-content: end;
 }
 
 .wd-side-by-side-item > h2 {
-  width: 65%;
   margin-bottom: 50px;
 }
 
@@ -81,11 +92,22 @@
   height: min-content;
   align-items: center;
   text-align: center;
+  transition: ease-in-out 200ms;
+}
+
+.wd-tricolumn-item:hover {
+  transform: scale(1.05);
 }
 
 .wd-tricolumn-item > img {
   margin-bottom: 30px;
+  transition: ease-in-out 300ms;
 }
+
+.wd-tricolumn-item > img:hover {
+  transform: scale(.95);
+}
+
 
 .wd-tricolumn-item > h3 {
   line-height: 1.6rem;
@@ -93,13 +115,13 @@
 
 @media screen and (min-width: 1024px) {
   .wd-grid {
-    grid-template-columns: 280px minmax(400px, 1fr);
+    grid-template-columns: 310px minmax(400px, 1fr);
     padding: 1rem;
-    max-width: 1280px;
+    max-width: 1200px;
     margin: 0 auto;
-    grid-template-areas:  "sidebar main"
-                          ". footer";
-  }
+    grid-template-areas: "sidebar main"
+      ". footer";
+}
 
   .wd-grid main {
     margin-top: 1rem;
@@ -137,6 +159,11 @@ footer {
   scroll-snap-align: start;
   width: 292px;
   height: fit-content;
+  margin: 20px 20px 20px 0;
+}
+
+.template-section > div > img {
+  border-radius: 15px;
 }
 
 .template-section > div > div {
@@ -150,6 +177,17 @@ footer {
 @media screen and (min-width: 1024px) {
   .template-section {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 300px));
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   }
+}
+
+@media screen and (min-width: 768px) {
+.wd-grid aside {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 75px;
+  height: 85vh;
+  overflow: auto;
+  width: max-content;
+}
 }
