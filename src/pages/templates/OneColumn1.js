@@ -7,6 +7,7 @@ import hljs from 'highlight.js/lib/core';
 import 'highlight.js/styles/night-owl.css';
 import html from 'highlight.js/lib/languages/xml';
 import Image from 'next/image';
+import TemplateSidebar from '@/components/TemplateSidebar';
 
 export default function OneColumn1() {
   const codeRef = useRef(null);
@@ -49,27 +50,38 @@ export default function OneColumn1() {
       <header className="wd-header">
         <Navbar />
       </header>
+      <div className="wd-intro">
+    <h1>Browse Course Templates</h1>
+      <p className='wd-break'>Premade templates to browse and inspire your course content layouts. Ready to grab and go!</p>
+      </div>
       <div className="wd-grid">
         <main>
-          <h1>Inspirational Structure</h1>
+          <h2>Inspirational Structure</h2>
           <p>This template gives students a clear idea of the course overview and objects, while also providing a bit of encouragement and support. With opportunities for images throughout, this layout will feel visually balanced rather than intimidating chunks of text. Plus, give them quick reference shortcuts to the resources they'll need throughout the semester.</p>
-          <h2>Template Preview</h2>
+          <h3 className='spacer'>Template Preview</h3>
           <div className="template-preview">
-            <Image src="/images/templates/one-col-1.png" alt="" width={292} height={280} />
+            <Image src="/images/templates/onecolumn1.jpg" alt="" width={292} height={280} />
             <div>
-              <h3>Featured Widgets</h3>
-              <h4>Border</h4>
+              <h4>Featured Widgets</h4>
+              <div className='wd-border'>
+              <h5>Border</h5>
               <p>Call out a main idea, draw attention to learning objectives or any other content that needs to stand out.</p>
-              <h4>Vocab Cards</h4>
+              </div><div className='wd-border'>
+              <h5>Vocab Cards</h5>
               <p>More than just for vocab! Use these subtly-interactive cards to build on a standard list.</p>
-              <h4>Side-by-Side</h4>
+              </div><div className='wd-border'>
+              <h5>Side-by-Side</h5>
               <p>Display two horizontal containers that can contain any content.</p>
-              <h4>Blockquote</h4>
+              </div><div className='wd-border'>
+              <h5>Blockquote</h5>
               <p>Separate any block of text along with supportive quotes. Call out phrases from the text or just relevant inspiration.</p>
-              <h4>Horizontal Display</h4>
+              </div><div className='wd-border'>
+              <h5>Horizontal Display</h5>
               <p>Display any content in an inline fashion.</p>
-              <h4>Image Gallery</h4>
+              </div><div className='wd-border'>
+              <h5>Image Gallery</h5>
               <p>Break up large chunks of text or add some flair to your course shell with imagery.</p>
+              </div>
             </div>
           </div>
           <div className="wd-window">
@@ -178,10 +190,13 @@ export default function OneColumn1() {
             </div>
           </div>
         </main>
-        <footer>
+        <aside>
+            <TemplateSidebar />
+          </aside>
+      </div>
+      <footer>
           <Footer />
         </footer>
-      </div>
     </>
   )
 }
