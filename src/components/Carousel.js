@@ -15,7 +15,7 @@ export default function Carousel() {
   useEffect(() => {
     const timer = setInterval(() => {
       handleNext();
-    }, 5000);
+    }, 8000);
     return () => clearInterval(timer);
   }, []);
 
@@ -23,11 +23,11 @@ export default function Carousel() {
     <div className="carousel">
       <div className="carousel-container">
         <button className="previous-button" onClick={handlePrevious}>
-          <Image src="/images/chevron-left-solid.png" alt="Left arrow" width={36} height={36} />
+          <Image src="/images/arrow-left-solid.png" alt="Left arrow" width={30} height={30} />
         </button>
-        <Image src={images[activeIndex].src} alt={images[activeIndex].alt} width={1390} height={855} />
+        <Image src={images[activeIndex].src} alt={images[activeIndex].alt} width={400} height={200} />
         <button className="next-button" onClick={handleNext}>
-          <Image src="/images/chevron-right-solid.png" alt="Right arrow" width={36} height={36} />
+          <Image src="/images/arrow-right-solid.png" alt="Right arrow" width={30} height={30} />
         </button>
       </div>
     </div>
@@ -36,15 +36,19 @@ export default function Carousel() {
 
 const images = [
   {
-    src: "/images/theme-2.png",
-    alt: "Snapshot of dental theme",
+    src: "/images/themes/ajs-02.jpg",
+    alt: "Snapshot of Administration of Justice theme",
   },
   {
-    src: "/images/theme-1.png",
-    alt: "Snapshot of HR theme",
+    src: "/images/themes/bct-03.jpg",
+    alt: "Snapshot of Building & Contstruction theme",
   },
   {
-    src: "/images/theme-3.png",
-    alt: "Snapshot of fitness theme",
+    src: "/images/themes/lang-01.jpg",
+    alt: "Snapshot of Language theme",
+  },
+  {
+    src: "/images/themes/minimalist-03.jpg",
+    alt: "Snapshot of Minimalist theme",
   },
 ];
