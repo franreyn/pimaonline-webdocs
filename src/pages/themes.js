@@ -1,6 +1,7 @@
 import themeArray from "../components/themeData";
 import styles from "../styles/themes.module.css"
 import Link from "next/link";
+import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import { useState } from "react";
 import Head from 'next/head'
@@ -37,7 +38,7 @@ export default function Themes({ onThemeSelect }) {
       {themeArray.map((item) => (
             <div className={styles.galleryItem} key={item.theme}>
               <div className={styles.overlay}>
-                <img src={item.image2} />
+                <img src={item.image2} priority="true" />
               </div>
               <div key={item.theme}>
               <div className={styles.galleryInfo}>
@@ -46,7 +47,8 @@ export default function Themes({ onThemeSelect }) {
                 pathname: "/theme",
                 query: {...item },
               }}
-              onClick={() => onThemeSelect(activeIndex)}
+              // Keeping command here for now, delete once confirmed not needed
+              // onClick={() => onThemeSelect(activeIndex)}
               >
                 View Theme
               </Link>

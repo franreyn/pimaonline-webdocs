@@ -6,7 +6,7 @@ import { useLayoutEffect } from 'react';
 import QuickStart from '@/components/getting-started/QuickStart';
 import ManualSetup from '@/components/getting-started/ManualSetup';
 import Community from '@/components/getting-started/Community';
-import Docs from '@/components/docsIntro';
+import Docs from '@/components/DocsIntro';
 
 export default function GettingStarted() {
 

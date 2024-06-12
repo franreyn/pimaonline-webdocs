@@ -7,7 +7,7 @@ import html from 'highlight.js/lib/languages/xml';
 import { useEffect, useRef, useState, useLayoutEffect } from 'react';
 import styles from "../styles/layouts.module.css"
 import Footer from "../components/Footer"
-import Docs from "@/components/docsIntro";
+import Docs from "@/components/DocsIntro";
 
 export default function Layouts() {
 

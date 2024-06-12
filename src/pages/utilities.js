@@ -10,7 +10,7 @@ import Lead from '@/components/utilities/Lead';
 import Monospace from '@/components/utilities/Monospace';
 import Footer from '@/components/Footer';
 import { useLayoutEffect } from 'react';
-import Docs from '@/components/docsIntro';
+import Docs from '@/components/DocsIntro';
 
 export default function Utilities() {
 

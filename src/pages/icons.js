@@ -6,7 +6,7 @@ import { useLayoutEffect } from 'react';
 import FontAwesome from '@/components/icons/FontAwesome';
 import BootstrapIcons from '@/components/icons/BootstrapIcons';
 import RemixIcons from '@/components/icons/RemixIcons';
-import Docs from '@/components/docsIntro';
+import Docs from '@/components/DocsIntro';
 
 export default function Icons() {
 
