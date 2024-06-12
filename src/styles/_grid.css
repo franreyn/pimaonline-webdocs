@@ -157,13 +157,22 @@ footer {
 .template-section > div {
   flex: 0 0 auto;
   scroll-snap-align: start;
-  width: 292px;
+  width: fit-content;
   height: fit-content;
   margin: 20px 20px 20px 0;
 }
 
-.template-section > div > img {
+.template-section > div > a > img {
   border-radius: 15px;
+  filter: brightness(.9);
+  height: 400px;
+  width: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.template-section > div > a > img:hover {
+  filter: brightness(1.1);
 }
 
 .template-section > div > div {
