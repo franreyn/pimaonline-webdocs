@@ -23,7 +23,7 @@ export default function Lead() {
   return (
     <>
       <section className="wd-content" id="toc-lead">
-        <h2 id="lead" className="section-top">Lead</h2>
+        <h3 id="lead" className="section-top">Lead</h3>
         <p>Add <span className="wd-monospace">.lead</span> to any paragraph element to make its text slightly larger. Use sparingly, lead paragraphs are great for introductory paragraphs but lose their magic if they are overused.</p>
         <div className="wd-window">
           <div className="wd-visual-ex">

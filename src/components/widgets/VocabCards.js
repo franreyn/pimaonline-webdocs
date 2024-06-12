@@ -27,7 +27,7 @@ export default function VocabCards() {
         Use the <strong>Vocab Cards Widget</strong> to create a set of flashcards with terms and definitions.
       </p>
       <p>
-        Use <code className="wd-monospace">.vocab-cards</code> to wrap the vocabulary list. Use <code className="wd-monospace">&lt;dt&gt;</code> tags for terms and <code className="wd-monospace">&lt;dd&gt;</code> for definitions.
+        Use <span className="wd-monospace">.vocab-cards</span> to wrap the vocabulary list. Use <span className="wd-monospace">&lt;dt&gt;</span> tags for terms and <span className="wd-monospace">&lt;dd&gt;</span> for definitions.
       </p>
       <div className="wd-window">
         <div className="wd-visual-ex">

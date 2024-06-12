@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import Navbar from '@/components/Navbar';
-import Sidebar from '@/components/Sidebar';
 import Footer from '@/components/Footer';
 import Accordion from '@/components/widgets/Accordion';
 import Assignments from "@/components/widgets/Assignments";
@@ -20,6 +19,8 @@ import VideoWidget from '@/components/widgets/VideoWidget';
 import VocabCards from '@/components/widgets/VocabCards';
 import VocabList from '@/components/widgets/VocabList';
 import { useLayoutEffect } from 'react';
+import WidgetSidebar from '@/components/WidgetSidebar';
+
 
 export default function Widgets() {
 
@@ -29,7 +30,7 @@ export default function Widgets() {
     if (existingLink) {
       document.head.removeChild(existingLink);
     }
-  })
+  }, []);
 
   return (
     <>
@@ -39,10 +40,12 @@ export default function Widgets() {
       <header className="wd-header">
         <Navbar />
       </header>
+      <div className="wd-intro">
+      <h1>Widgets</h1>
+          <p>Widgets are individual components that you can mix-and-match to form your web page. With these, there’s plenty of opportunity for customization.</p>
+      </div>
       <div className="wd-grid">
         <main>
-          <h1>Widgets</h1>
-          <p>Widgets are individual components which together form your web page.</p>
           <Accordion />
           <Assignments />
           <Blockquote />
@@ -62,12 +65,12 @@ export default function Widgets() {
           <VocabList />
         </main>
         <aside>
-          <Sidebar />
+          <WidgetSidebar />
         </aside>
+        </div>
         <footer>
           <Footer />
         </footer>
-      </div>
     </>
   )
 }

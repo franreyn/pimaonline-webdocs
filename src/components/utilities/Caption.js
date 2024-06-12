@@ -31,7 +31,7 @@ export default function Caption() {
   return (
     <>
       <section className="wd-content" id="toc-caption">
-        <h2 id="caption" className="section-top">Caption</h2>
+        <h3 id="caption" className="section-top">Caption</h3>
         <p>Use <span className="wd-monospace">.caption</span> to style text as a caption. This makes the text lighter, gray, and smaller.</p>
         <div className="wd-window">
           <div className="wd-visual-ex">

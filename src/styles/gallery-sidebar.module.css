@@ -1,7 +1,8 @@
 
 /* This style is for the entire component body */
 .themeSidebarBody {
-  font-size: 16px;
+  font-size: 12px;
+  line-height: 1rem;
   -webkit-font-smoothing: auto;
 }
 
@@ -21,7 +22,7 @@
 } 
 
 .themeSidebarText:hover {
-  color: rgba(171, 182, 241, 1) !important;
+  color: var(--color-wd-accent) !important;
 } 
 
   .themeSidebar {
@@ -35,7 +36,7 @@
 }
 
 .closeBtn span {
-  background: rgba(171, 182, 241, 1) !important
+  background: var(--color-wd-accent) !important
 }
 
 /* This style is for the first <li> in the <ul> for wd-sidebar */
@@ -46,6 +47,7 @@
 .themesListTitle {
   padding: 0;
   color: rgba(235, 235, 235, 1) !important;
+  font-weight: 800;
 }
 
 .themeList {
@@ -59,16 +61,14 @@
   position: relative;
   width: fit-content;
   list-style-type: none;
+  font-weight:500;
   margin: 0;
   padding-left: 0;
-  font-size: 16px;
   transition: opacity .2s ease-in-out;
-  font-family: "Roboto", sans-serif !important;
 }
 
 .innerLink a {
-  border-bottom: transparent !important;
-  color: rgba(235, 235, 235, 1) !important;
+  text-decoration: underline;
   text-decoration-color: transparent !important;
 }
 
@@ -80,14 +80,20 @@
 
 .innerLink a:visited {
   color: rgba(235, 235, 235, 1);
-  text-decoration-color: transparent !important;
 }
 
 .innerLink a:hover {
-  text-decoration: none;
-  color: rgba(171, 182, 241, 1) !important;
+  color: var(--color-wd-accent) !important;
   transition: color .2s ease-in-out;
   background-image: none;
+  text-decoration: underline;
+  text-decoration-color: var(--color-wd-accent) !important;
+}
+
+.innerLink a:active {
+  color: var(--color-wd-accent) !important;
+  text-decoration: underline;
+  text-decoration-color: var(--color-wd-accent) !important;
 }
 
 .innerLink::before {

@@ -5,6 +5,11 @@ export default function Footer() {
   return (
     <>
       <div className="wd-footer">
+      <div className="wd-logo-wrapper">
+        <Link href="/">
+          <Image className="logo" src="/images/logo-icon.png" alt="Pima Community College logo" width={50} height={50} />
+        </Link>
+      </div>
         <ul>
           <li>
             <Link href="getting-started">Docs</Link>
@@ -37,11 +42,6 @@ export default function Footer() {
               </ul>
           </li>
         </ul>
-      </div>
-      <div className="wd-logo-wrapper">
-        <Link href="/">
-          <Image className="logo" src="/images/logo.png" alt="Pima Community College logo" width={200} height={31} />
-        </Link>
       </div>
     </>
   )

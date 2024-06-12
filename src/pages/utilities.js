@@ -10,6 +10,7 @@ import Lead from '@/components/utilities/Lead';
 import Monospace from '@/components/utilities/Monospace';
 import Footer from '@/components/Footer';
 import { useLayoutEffect } from 'react';
+import Docs from '@/components/DocsIntro';
 
 export default function Utilities() {
 
@@ -29,25 +30,42 @@ export default function Utilities() {
       <header className="wd-header">
         <Navbar />
       </header>
+      <div className="wd-intro">
+      <Docs />
+      </div>
       <div className="wd-grid">
         <main>
-          <h1>Utility Classes</h1>
-          <p>Utility classes help you quickly style your elements as they override that element's native styles.</p>
+          <h2>Utility Classes</h2>
+          <p className='wd-break'> Utility classes help you quickly style your elements as they override that element's native styles.</p>
+          <div className='wd-subitems'>
           <Caption />
+          </div>
+          <div className="wd-subitems">
           <Edit />
+          </div>
+          <div className="wd-subitems">
           <FontSizes />
+          </div>
+          <div className="wd-subitems">
           <Highlight />
+          </div>
+          <div className="wd-subitems">
           <Labels />
+          </div>
+          <div className="wd-subitems">
           <Lead />
+          </div>
+          <div className="wd-subitems">
           <Monospace />
+          </div>
         </main>
         <aside>
           <Sidebar />
         </aside>
+        </div>
         <footer>
           <Footer />
         </footer>
-      </div>
     </>
   )
 }

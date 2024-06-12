@@ -25,6 +25,7 @@ export default function Edit() {
       <section className="wd-content" id="toc-manual-setup">
         <h2 id="manual-setup" className="section-top">Manual Setup</h2>
         <p>For a more custom approach, follow these steps to manually install the template system.</p>
+        <div className='wd-subitems'>
         <h3>CSS</h3>
         <p>Include the stylesheet by copying the code below and adding it in <span className="wd-monospace">&lt;head&gt;</span> before all other stylesheets.</p>
         <div className="wd-window">
@@ -70,6 +71,7 @@ export default function Edit() {
           <div className="wd-btn-container">
             <button className="wd-copy-btn" onClick={handleCopyCode}>{buttonText}</button>
           </div>
+        </div>
         </div>
       </section>
     </>

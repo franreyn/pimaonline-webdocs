@@ -6,6 +6,7 @@ import { useLayoutEffect } from 'react';
 import QuickStart from '@/components/getting-started/QuickStart';
 import ManualSetup from '@/components/getting-started/ManualSetup';
 import Community from '@/components/getting-started/Community';
+import Docs from '@/components/DocsIntro';
 
 export default function GettingStarted() {
 
@@ -25,10 +26,13 @@ export default function GettingStarted() {
       <header className="wd-header">
         <Navbar />
       </header>
+      <div className="wd-intro">
+      <Docs />
+      </div>
       <div className="wd-grid">
         <main>
-          <h1>Getting Started</h1>
-          <p>Find help getting up and running with the PimaOnline ThemePack.</p>
+          <h2>Getting Started</h2>
+          <p className='wd-break'>Find help getting up and running with the PimaOnline ThemePack.</p>
           <QuickStart />
           <ManualSetup />
           <Community />
@@ -36,10 +40,10 @@ export default function GettingStarted() {
         <aside>
           <Sidebar />
         </aside>
+        </div>
         <footer>
           <Footer />
         </footer>
-      </div>
     </>
   )
 }
