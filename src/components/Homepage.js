@@ -28,7 +28,7 @@ const Home = () => {
         <div className="wd-tricolumn-item">
           <Image src="/images/improving-icon.png" alt="" width={100} height={100} />
           <h3>Continuously <br /> Improving</h3>
-          <p>Our code is stored in the cloud, trickling down to all courses. So when we make updates to our code, all courses are updated too.</p>
+          <p>Our code is stored in the cloud, trickling down to all courses. So when we make code updates, all courses are updated too.</p>
         </div>
         <div className="wd-tricolumn-item">
         <Image src="/images/time-icon.png" alt="" width={100} height={100} />

@@ -4,6 +4,25 @@ import Image from 'next/image';
 export default function Carousel() {
   const [activeIndex, setActiveIndex] = useState(0);
 
+  const images = [
+    {
+      src: "/images/themes/ajs-02.jpg",
+      alt: "Snapshot of Administration of Justice theme",
+    },
+    {
+      src: "/images/themes/bct-03.jpg",
+      alt: "Snapshot of Building & Contstruction theme",
+    },
+    {
+      src: "/images/themes/lang-01.jpg",
+      alt: "Snapshot of Language theme",
+    },
+    {
+      src: "/images/themes/minimalist-03.jpg",
+      alt: "Snapshot of Minimalist theme",
+    },
+  ];
+
   const handleNext = () => {
     setActiveIndex((prevIndex) => (prevIndex === images.length - 1 ? 0 : prevIndex + 1));
   };
@@ -33,22 +52,3 @@ export default function Carousel() {
     </div>
   );
 };
-
-const images = [
-  {
-    src: "/images/themes/ajs-02.jpg",
-    alt: "Snapshot of Administration of Justice theme",
-  },
-  {
-    src: "/images/themes/bct-03.jpg",
-    alt: "Snapshot of Building & Contstruction theme",
-  },
-  {
-    src: "/images/themes/lang-01.jpg",
-    alt: "Snapshot of Language theme",
-  },
-  {
-    src: "/images/themes/minimalist-03.jpg",
-    alt: "Snapshot of Minimalist theme",
-  },
-];

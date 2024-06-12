@@ -44,11 +44,11 @@ export default function LayoutCarousel({ activeIndex }) {
       <h4 className="layout-type">{getHeading()}</h4>
       <div className="carousel-container">
         <button className="previous-button layoutCarousel" onClick={handlePrevious}>
-          <Image src="/images/arrow-left-solid.png" alt="Left arrow" width={20} height={20} />
+          <Image src="/images/arrow-left-solid.png" alt="Left arrow" width={20} height={20} priority="true" />
         </button>
-        <Image src={getImageSrc()} alt={themeArray[activeIndex].name} width={1390} height={855} />
+        <Image src={getImageSrc()} alt={themeArray[activeIndex].name} width={1390} height={855} priority="true" />
         <button className="next-button layoutCarousel" onClick={handleNext}>
-          <Image src="/images/arrow-right-solid.png" alt="Right arrow" width={20} height={20} />
+          <Image src="/images/arrow-right-solid.png" alt="Right arrow" width={20} height={20} priority="true" />
         </button>
       </div>
     </div>
