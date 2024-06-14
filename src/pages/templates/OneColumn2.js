@@ -125,9 +125,9 @@ export default function OneColumn2() {
       <p className='wd-break'>Premade templates to browse and inspire your course content layouts. Ready to grab and go!</p>
       </div>
       <div className="wd-grid">
-        <main id='one-column-2'>
+        <main className="anchor" id='one-column-2'>
           <h2>Organized Welcome</h2>
-          <p> Description TBD </p>
+          <p>Invite students in with a personalized video from their instructor and some additional encouragement as they begin their course or module. You can provide students the expectations for the unit with organized clarity, using tables, accordions and assignment lists to help them prioritze tasks. </p>
             <h3 className='spacer'>Template Preview</h3>
           <div className="template-preview">
             <Image src={templateImage} alt="" width={292} height={280} />
@@ -165,7 +165,11 @@ export default function OneColumn2() {
               </div>
             </div>
           </div>
+          <br />
           <div className="wd-window">
+          <div className="wd-btn-container">
+              <button className="wd-copy-btn" onClick={handleCopyCode}>{buttonText}</button>
+            </div>
             <div className="wd-html-code">
               <pre>
                 <code className="language-html" ref={codeRef}>
@@ -331,9 +335,6 @@ export default function OneColumn2() {
 </html>`}
                 </code>
               </pre>
-            </div>
-            <div className="wd-btn-container">
-              <button className="wd-copy-btn" onClick={handleCopyCode}>{buttonText}</button>
             </div>
           </div>
         </main>

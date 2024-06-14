@@ -30,7 +30,7 @@ export default function Templates() {
       </div>
       <div className="wd-grid">
         <main>
-          <h2 id='one-column-templates'>One Column Templates</h2>
+          <h2 className="anchor" id='one-column-templates'>One Column Templates</h2>
           <section className="template-section">
             <div>
               <Link href="/templates/OneColumn1"><Image src="/images/templates/onecolumn1.jpg" alt="" width={292} height={280}  /></Link>
@@ -81,7 +81,7 @@ export default function Templates() {
               </div>
             </div>
           </section>
-          <h2 id='two-column-templates'>Two Column Templates</h2>
+          <h2 className="anchor" id='two-column-templates'>Two Column Templates</h2>
           <section className="template-section">
           <div>
           <Link href="/templates/TwoColumn1"><Image src="/images/templates/twocolumn1.jpg" alt="" width={292} height={280} /></Link>
@@ -127,7 +127,7 @@ export default function Templates() {
             </div>
           </div>
           </section>
-          <h2 id='sow-templates'>SOW Templates</h2>
+          <h2 className="anchor" id='sow-templates'>SOW Templates</h2>
           <section className="template-section">
           <div>
           <Link href="/templates/SOW1"><Image src="/images/templates/sow1.jpg" alt="" width={292} height={280} /></Link>            <div>

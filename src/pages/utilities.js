@@ -10,7 +10,7 @@ import Lead from '@/components/utilities/Lead';
 import Monospace from '@/components/utilities/Monospace';
 import Footer from '@/components/Footer';
 import { useLayoutEffect } from 'react';
-import Docs from '@/components/DocsIntro';
+import DocsIntro from '@/components/DocsIntro';
 
 export default function Utilities() {
 
@@ -31,7 +31,7 @@ export default function Utilities() {
         <Navbar />
       </header>
       <div className="wd-intro">
-      <Docs />
+      <DocsIntro />
       </div>
       <div className="wd-grid">
         <main>

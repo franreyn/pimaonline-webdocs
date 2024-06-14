@@ -42,6 +42,32 @@ export default function SOW1() {
     }
   }, []);
 
+      // Show the highlighted component
+      const [templateView, setTemplateView] = useState();
+
+      // Change the url for the highlighted image
+      const [templateImage, setTemplateImage] = useState();
+      
+      useEffect(() => {
+        switch(templateView) {
+          
+          case "table":
+          setTemplateImage("/images/templates/sow1-table.jpg");
+          break;
+          
+          default:
+          setTemplateImage("/images/templates/sow1.jpg");
+          break;
+        }
+      }, [templateView]);
+    
+      const changeToTable = () => {
+        if (templateView != "table") {
+          setTemplateView("table");
+        }
+        else {setTemplateView()};
+      };
+
   return (
     <>
       <Head>
@@ -55,21 +81,27 @@ export default function SOW1() {
       <p className='wd-break'>Premade templates to browse and inspire your course content layouts. Ready to grab and go!</p>
       </div>
       <div className="wd-grid">
-        <main id='sow-1'>
+        <main className="anchor" id='sow-1'>
           <h2>Schedule Overview</h2>
-          <p> Description TBD </p>
+          <p>Give a broader overview of the courseload, focusing on larger assignment, discussion and exam due dates. Keep students from feeling overwhelmed by hitting the main points and avoiding the nitty-gritty.</p>
             <h3 className='spacer'>Template Preview</h3>
           <div className="template-preview">
-            <Image src="/images/templates/sow1.jpg" alt="" width={292} height={280} />
+            <Image src={templateImage} alt="" width={292} height={280} />
             <div>
               <h4>Featured Widgets</h4>
               <div className='wd-border'>
               <h5>Table</h5>
               <p>Display tasks, due dates, and more in an organized and clear manner.</p>
+              <br />
+              <button className="wd-btn thin" onClick={changeToTable}>Toggle in Preview</button>
               </div>
             </div>
           </div>
+          <br />
           <div className="wd-window">
+          <div className="wd-btn-container">
+              <button className="wd-copy-btn" onClick={handleCopyCode}>{buttonText}</button>
+            </div>
             <div className="wd-html-code">
               <pre>
                 <code className="language-html" ref={codeRef}>
@@ -281,9 +313,6 @@ Nunc sit amet venenatis mauris, eget vulputate mi. Phasellus euismod libero non 
 </div></body></html>`}
                 </code>
               </pre>
-            </div>
-            <div className="wd-btn-container">
-              <button className="wd-copy-btn" onClick={handleCopyCode}>{buttonText}</button>
             </div>
           </div>
         </main>

@@ -114,9 +114,9 @@ export default function OneColumn4() {
       <p className='wd-break'>Premade templates to browse and inspire your course content layouts. Ready to grab and go!</p>
       </div>
       <div className="wd-grid">
-        <main id='one-column-4'>
+        <main className="anchor" id='one-column-4'>
           <h2>Clean Grids</h2>
-          <p> Description TBD </p>
+          <p>Provide some visual structure to your content with this template that leans into row- and column-based widgets. Include the weeks tasks in a table, provide key takeaways in card format, and offer supplemental video walkthroughs in a grid-like fashionl.</p>
             <h3 className='spacer'>Template Preview</h3>
           <div className="template-preview">
             <Image src={templateImage} alt="" width={292} height={280} />
@@ -148,7 +148,11 @@ export default function OneColumn4() {
               </div>
             </div>
           </div>
+          <br />
           <div className="wd-window">
+          <div className="wd-btn-container">
+              <button className="wd-copy-btn" onClick={handleCopyCode}>{buttonText}</button>
+            </div>
             <div className="wd-html-code">
               <pre>
                 <code className="language-html" ref={codeRef}>
@@ -302,9 +306,6 @@ export default function OneColumn4() {
 </html>`}
                 </code>
               </pre>
-            </div>
-            <div className="wd-btn-container">
-              <button className="wd-copy-btn" onClick={handleCopyCode}>{buttonText}</button>
             </div>
           </div>
         </main>

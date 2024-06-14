@@ -136,9 +136,9 @@ export default function OneColumn3() {
       <p className='wd-break'>Premade templates to browse and inspire your course content layouts. Ready to grab and go!</p>
       </div>
       <div className="wd-grid">
-        <main id='one-column-3'>
+        <main className="anchor" id='one-column-3'>
           <h2>Content Roadmap</h2>
-          <p> Description TBD </p>
+          <p>Keep your students from getting lost in the coursework with this virtual content roadmap. Provide module learning goals, a list of items due in the next week, where they are in the overall course, and additional content &amp; resources to explore.</p>
             <h3 className='spacer'>Template Preview</h3>
           <div className="template-preview">
             <Image src={templateImage} alt="" width={292} height={280} />
@@ -181,7 +181,11 @@ export default function OneColumn3() {
               </div>
             </div>
           </div>
+          <br />
           <div className="wd-window">
+          <div className="wd-btn-container">
+              <button className="wd-copy-btn" onClick={handleCopyCode}>{buttonText}</button>
+            </div>
             <div className="wd-html-code">
               <pre>
                 <code className="language-html" ref={codeRef}>
@@ -344,9 +348,6 @@ export default function OneColumn3() {
 </html>`}
                 </code>
               </pre>
-            </div>
-            <div className="wd-btn-container">
-              <button className="wd-copy-btn" onClick={handleCopyCode}>{buttonText}</button>
             </div>
           </div>
         </main>

@@ -7,7 +7,7 @@ import html from 'highlight.js/lib/languages/xml';
 import { useEffect, useRef, useState, useLayoutEffect } from 'react';
 import styles from "../styles/layouts.module.css"
 import Footer from "../components/Footer"
-import Docs from "@/components/DocsIntro";
+import DocsIntro from "@/components/docsIntro";
 
 export default function Layouts() {
 
@@ -65,7 +65,7 @@ export default function Layouts() {
         <Navbar />
       </header>
       <div className="wd-intro">
-      <Docs />
+      <DocsIntro />
       </div>
       <div className="wd-grid">
       <main>
@@ -73,11 +73,14 @@ export default function Layouts() {
           <p className='wd-break'>You may choose between three layout types.</p>
           <section className="wd-content" id="toc-one-column-layout">
           <div className="wd-subitems">
-          <h3 id="one-column-layout" className="section-top">One Column Layout</h3>
+          <h3 id="one-column-layout" className="section-top anchor">One Column Layout</h3>
           <p>The <strong>One Column Layout</strong> is ideal for inner pages, meaning the pages that come after the module overview and contain the majority of the learning content. Its simple single-column design allows content to flow from top to bottom keeping the learner's focus on one item at a time. This layout is great for text heavy and information heavy sections.</p>
       <div className="wd-window">
         <div className="wd-visual-ex">
           <img className={styles.mockLayout} src="/images/1-column.jpg"/>
+        </div>
+        <div className="wd-btn-container">
+          <button className="wd-copy-btn" onClick={() => handleCopyCode(0)}>{buttonTexts[0]}</button>
         </div>
         <div className="wd-html-code">
           <pre>
@@ -124,19 +127,19 @@ export default function Layouts() {
             </code>
           </pre>
         </div>
-        <div className="wd-btn-container">
-          <button className="wd-copy-btn" onClick={() => handleCopyCode(0)}>{buttonTexts[0]}</button>
-        </div>
       </div>
       </div>
       </section>
       <section className="wd-content" id="toc-two-column-layout">
       <div className="wd-subitems">
-      <h3 id="two-column-layout" className="section-top">Two Column Layout</h3>
+      <h3 id="two-column-layout" className="section-top anchor">Two Column Layout</h3>
       <p><strong>The Two Column Layout</strong> is ideal for module overviews. In the larger left-column you can place primary content such as learning objectives, required readings, or homework. In the smaller right-column you can place supplementary content such as an assignments list, image gallery, or vocabulary list.</p>
       <div className="wd-window">
         <div className="wd-visual-ex">
           <img className={styles.mockLayout} src="/images/2-column.jpg"/>
+        </div>
+        <div className="wd-btn-container">
+          <button className="wd-copy-btn" onClick={() => handleCopyCode(0)}>{buttonTexts[0]}</button>
         </div>
         <div className="wd-html-code">
           <pre>
@@ -189,20 +192,20 @@ export default function Layouts() {
             </code>
           </pre>
         </div>
-        <div className="wd-btn-container">
-          <button className="wd-copy-btn" onClick={() => handleCopyCode(1)}>{buttonTexts[1]}</button>
-        </div>
     </div>
     </div>
       </section>
 
       <section className="wd-content" id="toc-three-section-layout">
       <div className="wd-subitems">
-      <h3 id="three-section-layout" className="section-top">Three Section Layout</h3>
+      <h3 id="three-section-layout" className="section-top anchor">Three Section Layout</h3>
       <p>The Three Section Layout displays two columns with a full-width column underneath. This layout is a combination of both previous layouts and is ideal for overview modules when the overview content is more involved.</p>
       <div className="wd-window">
         <div className="wd-visual-ex">
           <img className={styles.mockLayout} src="/images/3-column.jpg"/>
+        </div>
+        <div className="wd-btn-container">
+          <button className="wd-copy-btn" onClick={() => handleCopyCode(0)}>{buttonTexts[0]}</button>
         </div>
         <div className="wd-html-code">
           <pre>
@@ -260,9 +263,6 @@ export default function Layouts() {
 </html>`}
             </code>
           </pre>
-        </div>
-        <div className="wd-btn-container">
-          <button className="wd-copy-btn" onClick={() => handleCopyCode(2)}>{buttonTexts[2]}</button>
         </div>
       </div>
       </div>
