@@ -22,7 +22,7 @@ export default function ImageGallery() {
 
   return (
     <section className="wd-content" id="toc-img-gallery">
-      <h2 id="img-gallery" className="section-top">
+      <h2 id="img-gallery" className="section-top anchor">
         Image Gallery
       </h2>
       <p>
@@ -53,6 +53,9 @@ export default function ImageGallery() {
             </div>
           </div>
         </div>
+        <div className="wd-btn-container">
+          <button className="wd-copy-btn" onClick={handleCopyCode}>{buttonText}</button>
+        </div>
         <div className="wd-html-code">
           <pre>
             <code className="language-html" ref={codeRef}>
@@ -77,9 +80,6 @@ export default function ImageGallery() {
 </div>`}
             </code>
           </pre>
-        </div>
-        <div className="wd-btn-container">
-          <button className="wd-copy-btn" onClick={handleCopyCode}>{buttonText}</button>
         </div>
       </div>
     </section>

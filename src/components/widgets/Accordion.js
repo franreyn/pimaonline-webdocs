@@ -49,7 +49,7 @@ export default function Accordion() {
 
   return (
     <section className="wd-content" id="toc-accordion">
-      <h2 id="accordion" className="section-top">Accordion</h2>
+      <h2 id="accordion" className="section-top anchor">Accordion</h2>
       <p>Use the <strong>Accordion</strong> to display content in collapsible compartments.</p>
       <p>Use <span className="wd-monospace">&lt;div class="accordion"&gt;&lt;/div&gt;</span> to wrap your content.</p>
       <div className="wd-window">
@@ -62,6 +62,9 @@ export default function Accordion() {
             <p>Adweek is a well-known organization that covers media and communication people, places, and things. Some of its popular elements with journalists, creatives, and media workers are the newsletters with news about the actual people doing the media work.</p>
           </AccordionItem>
           </div>
+        </div>
+        <div className="wd-btn-container">
+          <button className="wd-copy-btn" onClick={handleCopyCode}>{buttonText}</button>
         </div>
         <div className="wd-html-code">
           <pre>
@@ -82,9 +85,6 @@ export default function Accordion() {
 </div>`}
             </code>
           </pre>
-        </div>
-        <div className="wd-btn-container">
-          <button className="wd-copy-btn" onClick={handleCopyCode}>{buttonText}</button>
         </div>
       </div>
     </section>

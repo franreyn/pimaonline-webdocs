@@ -27,7 +27,7 @@ export default function Tables() {
 
   return (
     <section className="wd-content" id="toc-tables">
-      <h2 id="tables" className="section-top">
+      <h2 id="tables" className="section-top anchor">
         Tables
       </h2>
       <p>
@@ -57,6 +57,9 @@ export default function Tables() {
             </tbody>
           </table>
         </div>
+        <div className="wd-btn-container">
+          <button className="wd-copy-btn" onClick={handleCopyCode}>{buttonText}</button>
+        </div>
         <div className="wd-html-code">
           <pre>
             <code className="language-html" ref={codeRef}>
@@ -83,9 +86,6 @@ export default function Tables() {
 </table>`}
             </code>
           </pre>
-        </div>
-        <div className="wd-btn-container">
-          <button className="wd-copy-btn" onClick={handleCopyCode}>{buttonText}</button>
         </div>
       </div>
     </section>

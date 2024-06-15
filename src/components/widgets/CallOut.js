@@ -22,7 +22,7 @@ export default function CallOut() {
 
   return (
     <section className="wd-content" id="toc-call-out">
-      <h2 id="call-out" className="section-top">
+      <h2 id="call-out" className="section-top anchor">
         Call Out
       </h2>
       <p>
@@ -37,6 +37,9 @@ export default function CallOut() {
             <p>Some text to help display a caption.</p>
           </div>
         </div>
+        <div className="wd-btn-container">
+          <button className="wd-copy-btn" onClick={handleCopyCode}>{buttonText}</button>
+        </div>
         <div className="wd-html-code">
           <pre>
             <code className="language-html" ref={codeRef}>
@@ -45,9 +48,6 @@ export default function CallOut() {
 </div>`}
             </code>
           </pre>
-        </div>
-        <div className="wd-btn-container">
-          <button className="wd-copy-btn" onClick={handleCopyCode}>{buttonText}</button>
         </div>
       </div>
     </section>

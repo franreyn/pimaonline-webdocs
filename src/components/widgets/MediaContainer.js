@@ -22,7 +22,7 @@ export default function MediaContainer() {
 
   return (
     <section className="wd-content" id="toc-media-container">
-      <h2 id="media-container" className="section-top">
+      <h2 id="media-container" className="section-top anchor">
         Media Container
       </h2>
       <p>
@@ -53,6 +53,9 @@ export default function MediaContainer() {
             </div>
           </div>
         </div>
+        <div className="wd-btn-container">
+          <button className="wd-copy-btn" onClick={handleCopyCode}>{buttonText}</button>
+        </div>
         <div className="wd-html-code">
           <pre>
             <code className="language-html" ref={codeRef}>
@@ -66,9 +69,6 @@ export default function MediaContainer() {
 </div>`}
             </code>
           </pre>
-        </div>
-        <div className="wd-btn-container">
-          <button className="wd-copy-btn" onClick={handleCopyCode}>{buttonText}</button>
         </div>
       </div><br /><br />
       <h3>Without caption</h3>
@@ -92,6 +92,9 @@ export default function MediaContainer() {
             </div>
           </div>
         </div>
+        <div className="wd-btn-container">
+          <button className="wd-copy-btn" onClick={handleCopyCode}>{buttonText}</button>
+        </div>
         <div className="wd-html-code">
           <pre>
             <code className="language-html" ref={codeRef}>
@@ -102,9 +105,6 @@ export default function MediaContainer() {
 </div>`}
             </code>
           </pre>
-        </div>
-        <div className="wd-btn-container">
-          <button className="wd-copy-btn" onClick={handleCopyCode}>{buttonText}</button>
         </div>
       </div>
     </section>

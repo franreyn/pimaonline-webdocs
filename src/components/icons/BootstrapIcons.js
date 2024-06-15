@@ -32,8 +32,8 @@ export default function BootstrapIcons() {
 
   return (
     <>
-      <section className="wd-content" id="toc-bootstrap-icons">
-        <div class="flex-heading">
+      <section className="wd-content anchor" id="toc-bootstrap-icons">
+        <div className="flex-heading">
           <h3>Bootstrap Icons</h3>
           <Link href="https://icons.getbootstrap.com/" target="_blank" className="color-link fa-arrow-up-right-from-square"></Link>
         </div>
@@ -43,15 +43,15 @@ export default function BootstrapIcons() {
           <div className="wd-visual-ex">
             <h3 className="bi-pencil-fill">Week 1 Assignments</h3>
           </div>
+          <div className="wd-btn-container">
+            <button className="wd-copy-btn" onClick={handleCopyCode}>{buttonText}</button>
+          </div>
           <div className="wd-html-code">
             <pre>
               <code className="language-html" ref={codeRef}>
                 {String.raw`<h3 class="bi-pencil-fill">Week 1 Assignments</h3>`}
               </code>
             </pre>
-          </div>
-          <div className="wd-btn-container">
-            <button className="wd-copy-btn" onClick={handleCopyCode}>{buttonText}</button>
           </div>
         </div>
       </section>

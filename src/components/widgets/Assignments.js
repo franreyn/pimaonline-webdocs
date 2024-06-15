@@ -30,7 +30,7 @@ export default function Assignments() {
 
   return (
     <section className="wd-content" id="toc-assignments">
-      <h2 id="assignments" className="section-top">Assignments Widget</h2>
+      <h2 id="assignments" className="section-top anchor">Assignments Widget</h2>
       <p>Use <strong>Assignments Widget</strong> to display each assignment in a unit or module as a card.</p>
       <p>Use <span className="wd-monospace">&lt;ul class="assignments-widget"&gt;&lt;/ul&gt;</span> to wrap your content.</p>
       <div className="wd-window">
@@ -52,6 +52,9 @@ export default function Assignments() {
               <a className="btn" href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou=608068&amp;type=content&amp;rcode=PIMA-3639476" target="_blank">Join Discussion</a>
             </li>
           </ul>
+        </div>
+        <div className="wd-btn-container">
+          <button className="wd-copy-btn" onClick={handleCopyCode}>{buttonText}</button>
         </div>
         <div className="wd-html-code">
           <pre>
@@ -75,9 +78,6 @@ export default function Assignments() {
 </ul>`}
             </code>
           </pre>
-        </div>
-        <div className="wd-btn-container">
-          <button className="wd-copy-btn" onClick={handleCopyCode}>{buttonText}</button>
         </div>
       </div>
     </section>

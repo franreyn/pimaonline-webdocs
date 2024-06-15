@@ -23,11 +23,14 @@ export default function Monospace() {
   return (
     <>
       <section className="wd-content" id="toc-monospace">
-        <h3 id="monospace" className="section-top">Monospace</h3>
+        <h3 id="monospace" className="section-top anchor">Monospace</h3>
         <p>Add <span className="wd-monospace">.monospace</span> to any text element to create monospaced text. Note: Changes the text's font.</p>
         <div className="wd-window">
           <div className="wd-visual-ex">
             <p className="monospace">Some monospaced text.</p>
+          </div>
+          <div className="wd-btn-container">
+            <button className="wd-copy-btn" onClick={handleCopyCode}>{buttonText}</button>
           </div>
           <div className="wd-html-code">
             <pre>
@@ -35,9 +38,6 @@ export default function Monospace() {
                 {String.raw`<p class="monospace">Some monospaced text.</p>`}
               </code>
             </pre>
-          </div>
-          <div className="wd-btn-container">
-            <button className="wd-copy-btn" onClick={handleCopyCode}>{buttonText}</button>
           </div>
         </div>
       </section>

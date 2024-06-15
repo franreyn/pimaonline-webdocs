@@ -58,7 +58,7 @@ export default function FlipCard() {
 
   return (
     <section className="wd-content" id="toc-flip-card">
-      <h2 id="flip-card" className="section-top">
+      <h2 id="flip-card" className="section-top anchor">
         Flip Card
       </h2>
       <p>
@@ -88,6 +88,9 @@ export default function FlipCard() {
             </div>
           </div>
         </div>
+        <div className="wd-btn-container">
+          <button className="wd-copy-btn" onClick={handleCopyCode}>{buttonText}</button>
+        </div>
         <div className="wd-html-code">
           <pre>
             <code className="language-html" ref={codeRef}>
@@ -107,9 +110,6 @@ export default function FlipCard() {
 </div>`}
             </code>
           </pre>
-        </div>
-        <div className="wd-btn-container">
-          <button className="wd-copy-btn" onClick={handleCopyCode}>{buttonText}</button>
         </div>
       </div>
     </section>

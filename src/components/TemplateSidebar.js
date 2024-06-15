@@ -21,7 +21,7 @@ export default function TemplateSidebar() {
     <>
       <button className="toc-btn" onClick={toggleTOC}>
         <Image className="toc-icon" src="/images/toc.svg" alt="table of content open button" width={20} height={16} />
-        <p>Widget Content</p>
+        <p>Templates</p>
       </button>
       <button className={`close-btn ${tocOpen ? 'show-close-btn' : 'hide-close-btn'}`} onClick={closeSidebar}>
         <span></span>

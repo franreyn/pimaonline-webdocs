@@ -15,15 +15,13 @@ const Home = () => {
       <main>
       <section className="wd-side-by-side">
         <div className="wd-side-by-side-item">
-          <h2>Developing <br />online courses <br />just got easier</h2>
+          <h2>Developing online courses just got easier</h2>
           <Link className="wd-btn" href="/getting-started">Explore Themes</Link>
         </div>
         <div className="wd-side-by-side-item">
         <Carousel />
         </div>
       </section>
-      <br />
-      <br />
       <section className="wd-tricolumn">
         <div className="wd-tricolumn-item">
           <Image src="/images/improving-icon.png" alt="" width={100} height={100} />

@@ -31,11 +31,14 @@ export default function Caption() {
   return (
     <>
       <section className="wd-content" id="toc-caption">
-        <h3 id="caption" className="section-top">Caption</h3>
+        <h3 id="caption" className="section-top anchor">Caption</h3>
         <p>Use <span className="wd-monospace">.caption</span> to style text as a caption. This makes the text lighter, gray, and smaller.</p>
         <div className="wd-window">
           <div className="wd-visual-ex">
             <p className="caption">Some text to help display a caption</p>
+          </div>
+          <div className="wd-btn-container">
+            <button className="wd-copy-btn" onClick={handleCopyCode}>{buttonText}</button>
           </div>
           <div className="wd-html-code">
             <pre>
@@ -43,9 +46,6 @@ export default function Caption() {
                 {String.raw`<p class="caption">Some text to help display a caption</p>`}
               </code>
             </pre>
-          </div>
-          <div className="wd-btn-container">
-            <button className="wd-copy-btn" onClick={handleCopyCode}>{buttonText}</button>
           </div>
         </div>
       </section>

@@ -22,7 +22,7 @@ export default function VocabCards() {
 
   return (
     <section className="wd-content" id="toc-vocab-cards">
-      <h2 className="section-top" id="vocab-cards">Vocab Cards</h2>
+      <h2 className="section-top anchor" id="vocab-cards">Vocab Cards</h2>
       <p>
         Use the <strong>Vocab Cards Widget</strong> to create a set of flashcards with terms and definitions.
       </p>
@@ -62,6 +62,9 @@ export default function VocabCards() {
           </div>
         </dl>
         </div>
+        <div className="wd-btn-container">
+          <button className="wd-copy-btn" onClick={handleCopyCode}>{buttonText}</button>
+        </div>
         <div className="wd-html-code">
           <pre>
             <code className="language-html" ref={codeRef}>
@@ -97,9 +100,6 @@ export default function VocabCards() {
 </dl>`}
             </code>
           </pre>
-        </div>
-        <div className="wd-btn-container">
-          <button className="wd-copy-btn" onClick={handleCopyCode}>{buttonText}</button>
         </div>
       </div>
     </section>

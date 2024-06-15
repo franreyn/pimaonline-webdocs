@@ -77,7 +77,7 @@ export default function LockedContent() {
 
   return (
     <section className="wd-content" id="toc-locked-content">
-      <h2 id="locked-content" className="section-top">
+      <h2 id="locked-content" className="section-top anchor">
         Locked Content
       </h2>
       <p>
@@ -100,6 +100,9 @@ export default function LockedContent() {
             </div>
           </div>
         </div>
+        <div className="wd-btn-container">
+          <button className="wd-copy-btn" onClick={handleCopyCode}>{buttonText}</button>
+        </div>
         <div className="wd-html-code">
           <pre>
             <code className="language-html" ref={codeRef}>
@@ -114,9 +117,6 @@ export default function LockedContent() {
 </div>`}
             </code>
           </pre>
-        </div>
-        <div className="wd-btn-container">
-          <button className="wd-copy-btn" onClick={handleCopyCode}>{buttonText}</button>
         </div>
       </div>
     </section>

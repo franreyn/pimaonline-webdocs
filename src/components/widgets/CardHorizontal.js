@@ -22,7 +22,7 @@ export default function CardHorizontal() {
 
   return (
     <section className="wd-content" id="toc-card-horizontal">
-      <h2 id="card-horizontal" className="section-top">
+      <h2 id="card-horizontal" className="section-top anchor">
         Card Horizontal
       </h2>
       <p>
@@ -44,6 +44,9 @@ export default function CardHorizontal() {
             </div>
           </div>
         </div>
+        <div className="wd-btn-container">
+          <button className="wd-copy-btn" onClick={handleCopyCode}>{buttonText}</button>
+        </div>
         <div className="wd-html-code">
           <pre>
             <code className="language-html" ref={codeRef}>
@@ -57,9 +60,6 @@ export default function CardHorizontal() {
 </div>`}
             </code>
           </pre>
-        </div>
-        <div className="wd-btn-container">
-          <button className="wd-copy-btn" onClick={handleCopyCode}>{buttonText}</button>
         </div>
       </div>
     </section>
