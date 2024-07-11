@@ -7,11 +7,10 @@ import html from 'highlight.js/lib/languages/xml';
 import { useEffect, useRef, useState, useLayoutEffect } from 'react';
 import styles from "../styles/layouts.module.css"
 import Footer from "../components/Footer"
-import DocsIntro from "@/components/docsIntro";
+import DocsIntro from "@/components/DocsIntro";
 
 export default function Layouts() {
-
-
+  
   // Remove any existing theme link (required to keep theme styles just on the theme page)
   useLayoutEffect(() => {
     const existingLink = document.querySelector('link[data-theme-link]');

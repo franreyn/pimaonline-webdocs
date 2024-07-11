@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import Navbar from '@/components/Navbar';
-import Sidebar from '@/components/Sidebar';
 import Caption from '@/components/utilities/Caption';
 import Edit from '@/components/utilities/Edit';
 import FontSizes from '@/components/utilities/FontSizes';
@@ -9,8 +8,11 @@ import Labels from '@/components/utilities/Labels';
 import Lead from '@/components/utilities/Lead';
 import Monospace from '@/components/utilities/Monospace';
 import Footer from '@/components/Footer';
-import { useLayoutEffect } from 'react';
-import DocsIntro from '@/components/DocsIntro';
+import hljs from 'highlight.js/lib/core';
+import 'highlight.js/styles/night-owl.css';
+import html from 'highlight.js/lib/languages/xml';
+import { useEffect, useRef, useState, useLayoutEffect } from 'react';
+import UtilitiesSidebar from '@/components/UtilitiesSidebar';
 
 export default function Utilities() {
 
@@ -20,23 +22,59 @@ export default function Utilities() {
     if (existingLink) {
       document.head.removeChild(existingLink);
     }
-})
+  }, []);
+
+  hljs.registerLanguage('html', html);
+  useEffect(() => {
+    hljs.highlightAll();
+  }, []);
+
+  const codeRefs = [
+    useRef(null),
+    useRef(null),
+    useRef(null)
+  ];
+
+  const [buttonTexts, setButtonTexts] = useState([
+    'Copy code',
+    'Copy code',
+    'Copy code'
+  ]);
+
+  const handleCopyCode = (index) => {
+    const range = document.createRange();
+    range.selectNode(codeRefs[index].current);
+    window.getSelection().removeAllRanges();
+    window.getSelection().addRange(range);
+    document.execCommand('copy');
+    window.getSelection().removeAllRanges();
+
+    const newButtonTexts = [...buttonTexts];
+    newButtonTexts[index] = 'Copied!';
+    setButtonTexts(newButtonTexts);
+
+    setTimeout(() => {
+      newButtonTexts[index] = 'Copy code';
+      setButtonTexts(newButtonTexts);
+    }, 2000);
+  };  
 
   return (
     <>
-      <Head>
+     <Head>
         <title>Utilities</title>
       </Head>
       <header className="wd-header">
         <Navbar />
       </header>
       <div className="wd-intro">
-      <DocsIntro />
+      <h1>Utility Classes</h1>
+<p>Utility classes can quickly add extra visual interest to sections of text or elements. Easily format text as a label, highlight a sentence within a larger paragraph, or give headings a pop by pairing it with an icon.</p>
       </div>
       <div className="wd-grid">
         <main>
-          <h2>Utility Classes</h2>
-          <p className='wd-break'> Utility classes help you quickly style your elements as they override that element's native styles.</p>
+          <h2>Inline Classes</h2>
+        <p className='wd-break'>Use inline classes to seamlessly style text and other elements, overriding native styles.</p>
           <div className='wd-subitems'>
           <Caption />
           </div>
@@ -60,7 +98,7 @@ export default function Utilities() {
           </div>
         </main>
         <aside>
-          <Sidebar />
+          <UtilitiesSidebar />
         </aside>
         </div>
         <footer>
