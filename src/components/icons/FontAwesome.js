@@ -41,7 +41,7 @@ export default function FontAwesome() {
         <p>To use a Font Awesome Icon, add a class to a heading element. <em>Note: Instead of using the prefix "fa-", use the prefix "icon-".</em></p>
         <div className="wd-window">
           <div className="wd-visual-ex">
-            <h3 className="fa-book-open">Module Objectives</h3>
+            <h3 className="fa-bullhorn">Module Objectives</h3>
           </div>
           <div className="wd-btn-container">
             <button className="wd-copy-btn" onClick={handleCopyCode}>{buttonText}</button>
@@ -49,7 +49,7 @@ export default function FontAwesome() {
           <div className="wd-html-code">
             <pre>
               <code className="language-html" ref={codeRef}>
-                {String.raw`<h3 class="icon-book-open">Module Objectives</h3>`}
+                {String.raw`<h3 class="fa-bullhorn">Module Objectives</h3>`}
               </code>
             </pre>
           </div>

@@ -41,7 +41,7 @@ export default function RemixIcons() {
         <p>To use a Remix Icon, add a class to a heading element. <em>Note: These icons have a prefix of "ri-".</em></p>
         <div className="wd-window">
           <div className="wd-visual-ex">
-            <h3 className="ri-star-fill">Welcome to English 101!</h3>
+            <h3 className="ri-megaphone-fill">Welcome to English 101!</h3>
           </div>
           <div className="wd-btn-container">
             <button className="wd-copy-btn" onClick={handleCopyCode}>{buttonText}</button>
@@ -49,7 +49,7 @@ export default function RemixIcons() {
           <div className="wd-html-code">
             <pre>
               <code className="language-html" ref={codeRef}>
-                {String.raw`<h3 class="ri-star-fill">Welcome to English 101!</h3>`}
+                {String.raw`<h3 class="ri-megaphone-fill">Welcome to English 101!</h3>`}
               </code>
             </pre>
           </div>

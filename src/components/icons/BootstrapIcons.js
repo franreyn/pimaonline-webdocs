@@ -41,7 +41,7 @@ export default function BootstrapIcons() {
         <p>Like Font Awesome, you can add an icon's class to a heading. <em>Note: The prefix for Bootstrap icons is "bi-".</em></p>
         <div className="wd-window">
           <div className="wd-visual-ex">
-            <h3 className="bi-pencil-fill">Week 1 Assignments</h3>
+            <h3 className="bi-megaphone-fill">Week 1 Assignments</h3>
           </div>
           <div className="wd-btn-container">
             <button className="wd-copy-btn" onClick={handleCopyCode}>{buttonText}</button>
@@ -49,7 +49,7 @@ export default function BootstrapIcons() {
           <div className="wd-html-code">
             <pre>
               <code className="language-html" ref={codeRef}>
-                {String.raw`<h3 class="bi-pencil-fill">Week 1 Assignments</h3>`}
+                {String.raw`<h3 class="bi-megaphone-fill">Week 1 Assignments</h3>`}
               </code>
             </pre>
           </div>

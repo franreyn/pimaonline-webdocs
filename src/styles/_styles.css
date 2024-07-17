@@ -856,17 +856,17 @@ footer .wd-logo-wrapper .logo {
 }
 
 /* Icons page */
-.fa-book-open:before, .fa-arrow-up-right-from-square:before {
+.fa-bullhorn:before, .fa-arrow-up-right-from-square:before {
   font-family: "FontAwesome";
   margin-right: 10px;
 }
 
-.bi-pencil-fill:before {
+.bi-megaphone-fill:before {
   font-family: "bootstrap-icons";
   margin-right: 10px;
 }
 
-.ri-star-fill:before {
+.ri-megaphone-fill:before {
   font-family: "remixicon";
   margin-right: 10px;
 }
