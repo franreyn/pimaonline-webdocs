@@ -42,22 +42,11 @@ export default function Sidebar() {
             <li><Link href="layouts/#three-section-layout" className="toc-three-section-layout">Three Section</Link></li>
           </Scrollspy>
         </li>
-        <li className={router.pathname === '/icons' ? 'active-page' : ''}><Link href="/icons">Icons</Link>
-          <Scrollspy items={['toc-bootstrap-icons', 'toc-font-awesome', 'toc-remix-icons']} currentClassName="is-current" offset={-100}>
-            <li><Link href="icons/#toc-bootstrap-icons">Bootstrap Icons</Link></li>
-            <li><Link href="icons/#toc-font-awesome">Font Awesome Icons</Link></li>
-            <li><Link href="icons/#toc-remix-icons">Remix Icons</Link></li>
-          </Scrollspy>
-        </li>
-        <li className={router.pathname === '/utilities' ? 'active-page' : ''}><Link href="/utilities">Utilities</Link>
-          <Scrollspy items={['toc-caption', 'toc-edit', 'toc-font-sizes', 'toc-highlight', 'toc-labels', 'toc-lead', 'toc-monospace']} currentClassName="is-current" offset={-100}>
-            <li><Link href="utilities/#caption">Caption</Link></li>
-            <li><Link href="utilities/#edit">Edit</Link></li>
-            <li><Link href="utilities/#font-sizes">Font Sizes</Link></li>
-            <li><Link href="utilities/#highlight">Highlight</Link></li>
-            <li><Link href="utilities/#labels">Labels</Link></li>
-            <li><Link href="utilities/#lead">Lead</Link></li>
-            <li><Link href="utilities/#monospace">Monospace</Link></li>
+        <li className={router.pathname === '/tips' ? 'active-page' : ''}><Link href="/tips">Tips &amp; Tricks</Link>
+          <Scrollspy items={['toc-tip-1', 'toc-tip-2', 'toc-tip-3']} currentClassName="is-current" offset={-100}>
+            <li><Link href="tips/#tip-1" className="toc-tip-1">Tip One</Link></li>
+            <li><Link href="tips/#tip-2" className="toc-tip-2">Tip Two</Link></li>
+            <li><Link href="tips/#tip-3" className="toc-tip-3">Tip Three</Link></li>
           </Scrollspy>
         </li>
       </ul>

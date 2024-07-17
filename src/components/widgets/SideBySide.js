@@ -22,7 +22,7 @@ export default function SideBySide() {
 
   return (
     <section className="wd-content" id="toc-side-by-side">
-      <h2 id="side-by-side" className="section-top">
+      <h2 id="side-by-side" className="section-top anchor">
         Side-by-side
       </h2>
       <p>
@@ -46,6 +46,9 @@ export default function SideBySide() {
             </div>
           </div>
         </div>
+        <div className="wd-btn-container">
+          <button className="wd-copy-btn" onClick={handleCopyCode}>{buttonText}</button>
+        </div>
         <div className="wd-html-code">
           <pre>
             <code className="language-html" ref={codeRef}>
@@ -59,9 +62,6 @@ export default function SideBySide() {
 </div>`}
             </code>
           </pre>
-        </div>
-        <div className="wd-btn-container">
-          <button className="wd-copy-btn" onClick={handleCopyCode}>{buttonText}</button>
         </div>
       </div>
     </section>

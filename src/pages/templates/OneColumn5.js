@@ -42,6 +42,76 @@ export default function OneColumn5() {
     }
   }, []);
 
+    // Show the highlighted component
+    const [templateView, setTemplateView] = useState();
+  
+    // Change the url for the highlighted image
+    const [templateImage, setTemplateImage] = useState();
+    
+    useEffect(() => {
+      switch(templateView) {
+       
+        case "side-by-side":
+        setTemplateImage("/images/templates/onecolumn5-sidebyside.jpg");
+        break;
+        
+        case "border":
+        setTemplateImage("/images/templates/onecolumn5-border.jpg");
+        break;
+  
+        case "horizontal":
+        setTemplateImage("/images/templates/onecolumn5-horizontal.jpg");
+        break;
+  
+        case "table":
+        setTemplateImage("/images/templates/onecolumn5-table.jpg");
+        break;
+  
+        case "border-yellow":
+        setTemplateImage("/images/templates/onecolumn5-borderyellow.jpg");
+        break;
+        
+        default:
+        setTemplateImage("/images/templates/onecolumn5.jpg");
+        break;
+      }
+    }, [templateView]);
+  
+    const changeToBorder = () => {
+      if (templateView != "border") {
+        setTemplateView("border");
+      }
+      else {setTemplateView()};
+    };
+
+    const changeToSideBySide = () => {
+      if (templateView != "side-by-side") {
+        setTemplateView("side-by-side");
+      }
+      else {setTemplateView()};
+    };
+
+    const changeToHorizontal = () => {
+      if (templateView != "horizontal") {
+        setTemplateView("horizontal");
+      }
+      else {setTemplateView()};
+    };
+
+    const changeToTable = () => {
+      if (templateView != "table") {
+        setTemplateView("table");
+      }
+      else {setTemplateView()};
+    };
+
+    const changeToBorderYellow = () => {
+      if (templateView != "border-yellow") {
+        setTemplateView("border-yellow");
+      }
+      else {setTemplateView()};
+    };
+
   return (
     <>
       <Head>
@@ -55,37 +125,51 @@ export default function OneColumn5() {
       <p className='wd-break'>Premade templates to browse and inspire your course content layouts. Ready to grab and go!</p>
       </div>
       <div className="wd-grid">
-        <main id='one-column-5'>
+        <main className="anchor" id='one-column-5'>
           <h2>Detailed Intro</h2>
-          <p> Description TBD </p>
+          <p>Give your students every detail, expectation, and agenda item all in one place with this all-encompassing template. Break up text-heavy sections with border widgets to provide visual checkpoint for students as they work there way through the content.</p>
             <h3 className='spacer'>Template Preview</h3>
           <div className="template-preview">
-            <Image src="/images/templates/onecolumn5.jpg" alt="" width={292} height={280} />
+            <Image src={templateImage} alt="" width={292} height={280} />
             <div>
               <h4>Featured Widgets</h4>
               <div className='wd-border'>
               <h5>Side-by-Side</h5>
               <p>Display two horizontal containers that can contain any content.</p>
+              <br />
+              <button className="wd-btn thin" onClick={changeToSideBySide}>Toggle in Preview</button>
               </div>
               <div className='wd-border'>
               <h5>Border</h5>
               <p>Call out a main idea, draw attention to learning objectives or any other content that needs to stand out.</p>
+              <br />
+              <button className="wd-btn thin" onClick={changeToBorder}>Toggle in Preview</button>
               </div>
               <div className='wd-border'>
               <h5>Horizontal Display</h5>
               <p>Display any content in an inline fashion with the flexibility to make one column wider than the other.</p>
+              <br />
+              <button className="wd-btn thin" onClick={changeToHorizontal}>Toggle in Preview</button>
               </div>
               <div className='wd-border'>
               <h5>Table</h5>
               <p>Display tasks, due dates, and more in an organized and clear manner.</p>
+              <br />
+              <button className="wd-btn thin" onClick={changeToTable}>Toggle in Preview</button>
               </div>
               <div className='wd-border'>
               <h5>Border Yellow</h5>
               <p>Another means to call out a main idea with an extra pop of color.</p>
+              <br />
+              <button className="wd-btn thin" onClick={changeToBorderYellow}>Toggle in Preview</button>
               </div>
             </div>
           </div>
+          <br />
           <div className="wd-window">
+          <div className="wd-btn-container">
+              <button className="wd-copy-btn" onClick={handleCopyCode}>{buttonText}</button>
+            </div>
             <div className="wd-html-code">
               <pre>
                 <code className="language-html" ref={codeRef}>
@@ -226,9 +310,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut lacinia justo
 </html>`}
                 </code>
               </pre>
-            </div>
-            <div className="wd-btn-container">
-              <button className="wd-copy-btn" onClick={handleCopyCode}>{buttonText}</button>
             </div>
           </div>
         </main>

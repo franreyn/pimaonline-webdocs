@@ -42,6 +42,65 @@ export default function OneColumn6() {
     }
   }, []);
 
+      // Show the highlighted component
+      const [templateView, setTemplateView] = useState();
+  
+      // Change the url for the highlighted image
+      const [templateImage, setTemplateImage] = useState();
+      
+      useEffect(() => {
+        switch(templateView) {
+          
+          case "blockquote":
+          setTemplateImage("/images/templates/onecolumn6-blockquote.jpg");
+          break;
+    
+          case "horizontal":
+          setTemplateImage("/images/templates/onecolumn6-horizontal.jpg");
+          break;
+    
+          case "table":
+          setTemplateImage("/images/templates/onecolumn6-table.jpg");
+          break;
+    
+          case "border-yellow":
+          setTemplateImage("/images/templates/onecolumn6-borderyellow.jpg");
+          break;
+          
+          default:
+          setTemplateImage("/images/templates/onecolumn6.jpg");
+          break;
+        }
+      }, [templateView]);
+    
+      const changeToBorderYellow = () => {
+        if (templateView != "border-yellow") {
+          setTemplateView("border-yellow");
+        }
+        else {setTemplateView()};
+      };
+
+      const changeToHorizontal = () => {
+        if (templateView != "horizontal") {
+          setTemplateView("horizontal");
+        }
+        else {setTemplateView()};
+      };
+
+      const changeToBlockquote = () => {
+        if (templateView != "blockquote") {
+          setTemplateView("blockquote");
+        }
+        else {setTemplateView()};
+      };
+
+      const changeToTable = () => {
+        if (templateView != "table") {
+          setTemplateView("table");
+        }
+        else {setTemplateView()};
+      };
+
   return (
     <>
       <Head>
@@ -55,33 +114,45 @@ export default function OneColumn6() {
       <p className='wd-break'>Premade templates to browse and inspire your course content layouts. Ready to grab and go!</p>
       </div>
       <div className="wd-grid">
-        <main id='one-column-6'>
+        <main className="anchor" id='one-column-6'>
           <h2>Overview Basics</h2>
-          <p> Description TBD </p>
+          <p>Provide an easily-digestible snippet of the week's topic and relevant figures from the text, and follow up with a brief summary and task list for students to take actionable steps.</p>
             <h3 className='spacer'>Template Preview</h3>
           <div className="template-preview">
-            <Image src="/images/templates/onecolumn6.jpg" alt="" width={292} height={280} />
+            <Image src={templateImage} alt="" width={292} height={280} />
             <div>
               <h4>Featured Widgets</h4>
               <div className='wd-border'>
               <h5>Horizontal Display</h5>
               <p>Display any content in an inline fashion with the flexibility to make one column wider than the other.</p>
+              <br />
+              <button className="wd-btn thin" onClick={changeToHorizontal}>Toggle in Preview</button>
               </div>
               <div className='wd-border'>
               <h5>Blockquote</h5>
               <p>Separate any block of text along with supportive quotes. Call out phrases from the text or just relevant inspiration.</p>
+              <br />
+              <button className="wd-btn thin" onClick={changeToBlockquote}>Toggle in Preview</button>
               </div>
               <div className='wd-border'>
               <h5>Border Yellow</h5>
               <p>Another means to call out a main idea with an extra pop of color.</p>
+              <br />
+              <button className="wd-btn thin" onClick={changeToBorderYellow}>Toggle in Preview</button>
               </div>
               <div className='wd-border'>
               <h5>Table</h5>
               <p>Display tasks, due dates, and more in an organized and clear manner.</p>
+              <br />
+              <button className="wd-btn thin" onClick={changeToTable}>Toggle in Preview</button>
               </div>
             </div>
           </div>
+          <br />
           <div className="wd-window">
+          <div className="wd-btn-container">
+              <button className="wd-copy-btn" onClick={handleCopyCode}>{buttonText}</button>
+            </div>
             <div className="wd-html-code">
               <pre>
                 <code className="language-html" ref={codeRef}>
@@ -192,9 +263,6 @@ export default function OneColumn6() {
 </html>`}
                 </code>
               </pre>
-            </div>
-            <div className="wd-btn-container">
-              <button className="wd-copy-btn" onClick={handleCopyCode}>{buttonText}</button>
             </div>
           </div>
         </main>

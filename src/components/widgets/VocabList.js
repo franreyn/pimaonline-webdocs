@@ -35,7 +35,7 @@ export default function VocabList() {
 
   return (
     <section className="wd-content" id="toc-vocab-list">
-      <h2 className="section-top" id="vocab-list">Vocab List</h2>
+      <h2 className="section-top anchor" id="vocab-list">Vocab List</h2>
       <p>
         Use the <strong>Vocab List Widget</strong> to create a list of collapsible vocabulary items with terms and definitions.
       </p>
@@ -54,6 +54,9 @@ export default function VocabList() {
             <dd style={{ display: openIndexes.includes(2) ? 'block' : 'none' }}>Term Definition 3</dd>
           </dl>
         </div>
+        <div className="wd-btn-container">
+          <button className="wd-copy-btn" onClick={handleCopyCode}>{buttonText}</button>
+        </div>
         <div className="wd-html-code">
           <pre>
             <code className="language-html" ref={codeRef}>
@@ -68,9 +71,6 @@ export default function VocabList() {
 </dl>`}
             </code>
           </pre>
-        </div>
-        <div className="wd-btn-container">
-          <button className="wd-copy-btn" onClick={handleCopyCode}>{buttonText}</button>
         </div>
       </div>
     </section>

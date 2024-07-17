@@ -22,15 +22,9 @@ export default function Border() {
 
   return (
     <section className="wd-content" id="toc-border">
-      <h2 id="border" className="section-top">
-        Border
-      </h2>
-      <p>
-        Use <strong>Border</strong> to bring attention to any piece of learning content. The content is contained within a subtly-colored background, making it ideal for learning objectives or any other content that needs to stand out.
-      </p>
-      <p>
-        Use <span className="wd-monospace">.border</span> to wrap your content. You may use a single element or multiple.
-      </p>
+      <h2 id="border" className="section-top anchor">Border</h2>
+      <p>Use <strong>Border</strong> to bring attention to any piece of learning content. The content is contained within a subtly-colored background, making it ideal for learning objectives or any other content that needs to stand out.</p>
+      <p>Use <span className="wd-monospace">.border</span> to wrap your content. You may use a single element or multiple.</p>
       <div className="wd-window">
         <div className="wd-visual-ex">
           <div className="border">
@@ -39,6 +33,9 @@ export default function Border() {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
             </p>
           </div>
+        </div>
+        <div className="wd-btn-container">
+          <button className="wd-copy-btn" onClick={handleCopyCode}>{buttonText}</button>
         </div>
         <div className="wd-html-code">
           <pre>
@@ -49,9 +46,6 @@ export default function Border() {
 </div>`}
             </code>
           </pre>
-        </div>
-        <div className="wd-btn-container">
-          <button className="wd-copy-btn" onClick={handleCopyCode}>{buttonText}</button>
         </div>
       </div>
     </section>

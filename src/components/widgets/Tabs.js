@@ -22,7 +22,7 @@ export default function Tabs() {
 
   return (
     <section className="wd-content" id="toc-tabs">
-      <h2 id="tabs" className="section-top">
+      <h2 id="tabs" className="section-top anchor">
         Tabs
       </h2>
       <p>
@@ -72,6 +72,9 @@ export default function Tabs() {
             <div className="tab-panel hide-panel" tabIndex="0" aria-hidden="true" id="tabHeading4"></div>
           </div>
         </div>
+        <div className="wd-btn-container">
+          <button className="wd-copy-btn" onClick={handleCopyCode}>{buttonText}</button>
+        </div>
         <div className="wd-html-code">
           <pre>
             <code className="language-html" ref={codeRef}>
@@ -108,9 +111,6 @@ export default function Tabs() {
         </div>`}
             </code>
           </pre>
-        </div>
-        <div className="wd-btn-container">
-          <button className="wd-copy-btn" onClick={handleCopyCode}>{buttonText}</button>
         </div>
       </div>
     </section>

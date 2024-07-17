@@ -42,6 +42,44 @@ export default function TwoColumn6() {
     }
   }, []);
 
+
+        // Show the highlighted component
+        const [templateView, setTemplateView] = useState();
+  
+        // Change the url for the highlighted image
+        const [templateImage, setTemplateImage] = useState();
+        
+        useEffect(() => {
+          switch(templateView) {
+            
+            case "table":
+            setTemplateImage("/images/templates/twocolumn6-table.jpg");
+            break;
+      
+            case "blockquote":
+            setTemplateImage("/images/templates/twocolumn6-blockquote.jpg");
+            break;
+            
+            default:
+            setTemplateImage("/images/templates/twocolumn6.jpg");
+            break;
+          }
+        }, [templateView]);
+      
+        const changeToTable = () => {
+          if (templateView != "table") {
+            setTemplateView("table");
+          }
+          else {setTemplateView()};
+        };
+
+        const changeToBlockquote = () => {
+          if (templateView != "blockquote") {
+            setTemplateView("blockquote");
+          }
+          else {setTemplateView()};
+        };
+
   return (
     <>
       <Head>
@@ -55,27 +93,33 @@ export default function TwoColumn6() {
       <p className='wd-break'>Premade templates to browse and inspire your course content layouts. Ready to grab and go!</p>
       </div>
       <div className="wd-grid">
-        <main id='two-column-6'>
+        <main className="anchor" id='two-column-6'>
           <h2>Visual Overview</h2>
-          <p> Description TBD </p>
+          <p>Keep things concise with this template, providing a brief topic overview, neatly arranged tasks &amp; due dates, some relevant imagery, and a key quote from the text. Students will appreciate the direction, without being overwhelmed by information.</p>
             <h3 className='spacer'>Template Preview</h3>
           <div className="template-preview">
-            <Image src="/images/templates/twocolumn6.jpg" alt="" width={292} height={280} />
+            <Image src={templateImage} alt="" width={292} height={280} />
             <div>
               <h4>Featured Widgets</h4>
               <div className='wd-border'>
               <h5>Table</h5>
               <p>Display tasks, due dates, and more in an organized and clear manner.</p>
               <br />
+              <button className="wd-btn thin" onClick={changeToTable}>Toggle in Preview</button>
               </div>
               <div className='wd-border'>
-              <h5>Border</h5>
-              <p>Call out a main idea, draw attention to learning objectives or any other content that needs to stand out.</p>
+              <h5>Blockquote</h5>
+              <p>Separate any block of text with attention-grabbing key quotes</p>
               <br />
+              <button className="wd-btn thin" onClick={changeToBlockquote}>Toggle in Preview</button>
               </div>
             </div>
           </div>
+          <br />
           <div className="wd-window">
+          <div className="wd-btn-container">
+              <button className="wd-copy-btn" onClick={handleCopyCode}>{buttonText}</button>
+            </div>
             <div className="wd-html-code">
               <pre>
                 <code className="language-html" ref={codeRef}>
@@ -183,9 +227,6 @@ export default function TwoColumn6() {
 </html>`}
                 </code>
               </pre>
-            </div>
-            <div className="wd-btn-container">
-              <button className="wd-copy-btn" onClick={handleCopyCode}>{buttonText}</button>
             </div>
           </div>
         </main>

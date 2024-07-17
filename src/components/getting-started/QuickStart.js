@@ -31,9 +31,12 @@ export default function Caption() {
   return (
     <>
       <section className="wd-content" id="toc-quick-start">
-        <h2 id="quick-start" className="section-top">Quick Start</h2>
+        <h2 id="quick-start" className="section-top anchor">Quick Start</h2>
         <p>The easiest way to get started with our templates is to copy the code for the Starter Template and paste it into your course files.</p>
         <div className="wd-window">
+        <div className="wd-btn-container">
+            <button className="wd-copy-btn" onClick={handleCopyCode}>{buttonText}</button>
+          </div>
           <div className="wd-html-code">
             <pre>
               <code className="language-html" ref={codeRef}>
@@ -78,9 +81,6 @@ export default function Caption() {
 </html>`}
               </code>
             </pre>
-          </div>
-          <div className="wd-btn-container">
-            <button className="wd-copy-btn" onClick={handleCopyCode}>{buttonText}</button>
           </div>
         </div>
       </section>

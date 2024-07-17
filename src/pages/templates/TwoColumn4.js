@@ -42,6 +42,76 @@ export default function TwoColumn4() {
     }
   }, []);
 
+    // Show the highlighted component
+    const [templateView, setTemplateView] = useState();
+
+    // Change the url for the highlighted image
+    const [templateImage, setTemplateImage] = useState();
+    
+    useEffect(() => {
+      switch(templateView) {
+        
+        case "table":
+        setTemplateImage("/images/templates/twocolumn4-table.jpg");
+        break;
+  
+        case "side-by-side":
+        setTemplateImage("/images/templates/twocolumn4-sidebyside.jpg");
+        break;
+  
+        case "vocab-list":
+        setTemplateImage("/images/templates/twocolumn4-vocablist.jpg");
+        break;
+  
+        case "image-gallery":
+        setTemplateImage("/images/templates/twocolumn4-imagegallery.jpg");
+        break;
+
+        case "video-gallery":
+        setTemplateImage("/images/templates/twocolumn4-videogallery.jpg");
+        break;
+        
+        default:
+        setTemplateImage("/images/templates/twocolumn4.jpg");
+        break;
+      }
+    }, [templateView]);
+  
+    const changeToTable = () => {
+      if (templateView != "table") {
+        setTemplateView("table");
+      }
+      else {setTemplateView()};
+    };
+
+        const changeToSideBySide = () => {
+          if (templateView != "side-by-side") {
+            setTemplateView("side-by-side");
+          }
+          else {setTemplateView()};
+        };
+
+        const changeToVocabList = () => {
+          if (templateView != "vocab-list") {
+            setTemplateView("vocab-list");
+          }
+          else {setTemplateView()};
+        };
+
+        const changeToImageGallery = () => {
+          if (templateView != "image-gallery") {
+            setTemplateView("image-gallery");
+          }
+          else {setTemplateView()};
+        };
+
+        const changeToVideoGallery = () => {
+          if (templateView != "video-gallery") {
+            setTemplateView("video-gallery");
+          }
+          else {setTemplateView()};
+        };
+
   return (
     <>
       <Head>
@@ -55,40 +125,51 @@ export default function TwoColumn4() {
       <p className='wd-break'>Premade templates to browse and inspire your course content layouts. Ready to grab and go!</p>
       </div>
       <div className="wd-grid">
-        <main id='two-column-4'>
+        <main className="anchor" id='two-column-4'>
           <h2>Learning Medley</h2>
-          <p> Description TBD </p>
+          <p>Cater to a range of learning styles by implementing a variety of widgets for your students to interact with. Whether they prefer listed tasks, text to read through, dropdowns to engage with, images to connect with, or videos to absorb — it's all included in this helpful overview.</p>
             <h3 className='spacer'>Template Preview</h3>
           <div className="template-preview">
-            <Image src="/images/templates/twocolumn4.jpg" alt="" width={292} height={280} />
+            <Image src={templateImage} alt="" width={292} height={280} />
             <div>
               <h4>Featured Widgets</h4>
               <div className='wd-border'>
               <h5>Table</h5>
               <p>Display tasks, due dates, and more in an organized and clear manner.</p>
               <br />
+              <button className="wd-btn thin" onClick={changeToTable}>Toggle in Preview</button>
               </div>
               <div className='wd-border'>
               <h5>Side-by-Side</h5>
               <p>Display two horizontal containers that can contain any content.</p>
               <br />
+              <button className="wd-btn thin" onClick={changeToSideBySide}>Toggle in Preview</button>
               </div>
               <div className='wd-border'>
               <h5>Vocab List</h5>
               <p>Create a list of collapsible vocabulary items with terms and definitions.</p>
+              <br />
+              <button className="wd-btn thin" onClick={changeToVocabList}>Toggle in Preview</button>
               </div>
               <div className='wd-border'>
               <h5>Image Gallery</h5>
               <p>Break up large chunks of text or add some flair to your course shell with imagery.</p>
               <br />
+              <button className="wd-btn thin" onClick={changeToImageGallery}>Toggle in Preview</button>
               </div>
               <div className='wd-border'>
               <h5>Video Gallery</h5>
               <p>Create a grid-like video gallery, with general information like title and video duration.</p>
+              <br />
+              <button className="wd-btn thin" onClick={changeToVideoGallery}>Toggle in Preview</button>
               </div>
             </div>
           </div>
+          <br />
           <div className="wd-window">
+          <div className="wd-btn-container">
+              <button className="wd-copy-btn" onClick={handleCopyCode}>{buttonText}</button>
+            </div>
             <div className="wd-html-code">
               <pre>
                 <code className="language-html" ref={codeRef}>
@@ -257,9 +338,6 @@ export default function TwoColumn4() {
 </html>`}
                 </code>
               </pre>
-            </div>
-            <div className="wd-btn-container">
-              <button className="wd-copy-btn" onClick={handleCopyCode}>{buttonText}</button>
             </div>
           </div>
         </main>

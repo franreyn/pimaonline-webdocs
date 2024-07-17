@@ -32,8 +32,8 @@ export default function FontAwesome() {
 
   return (
     <>
-      <section className="wd-content" id="toc-font-awesome">
-        <div class="flex-heading">
+      <section className="wd-content anchor" id="toc-font-awesome">
+        <div className="flex-heading">
           <h3>Font Awesome</h3>
           <Link href="https://fontawesome.com/icons" target="_blank" className="color-link fa-arrow-up-right-from-square"></Link>
         </div>
@@ -41,17 +41,17 @@ export default function FontAwesome() {
         <p>To use a Font Awesome Icon, add a class to a heading element. <em>Note: Instead of using the prefix "fa-", use the prefix "icon-".</em></p>
         <div className="wd-window">
           <div className="wd-visual-ex">
-            <h3 className="fa-book-open">Module Objectives</h3>
+            <h3 className="fa-bullhorn">Module Objectives</h3>
+          </div>
+          <div className="wd-btn-container">
+            <button className="wd-copy-btn" onClick={handleCopyCode}>{buttonText}</button>
           </div>
           <div className="wd-html-code">
             <pre>
               <code className="language-html" ref={codeRef}>
-                {String.raw`<h3 class="icon-book-open">Module Objectives</h3>`}
+                {String.raw`<h3 class="fa-bullhorn">Module Objectives</h3>`}
               </code>
             </pre>
-          </div>
-          <div className="wd-btn-container">
-            <button className="wd-copy-btn" onClick={handleCopyCode}>{buttonText}</button>
           </div>
         </div>
       </section>

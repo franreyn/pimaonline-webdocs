@@ -22,7 +22,7 @@ export default function HorizontalDisplay() {
 
   return (
     <section className="wd-content" id="toc-horizontal-display">
-      <h2 id="horizontal-display" className="section-top">
+      <h2 id="horizontal-display" className="section-top anchor">
         Horizontal Display
       </h2>
       <p>
@@ -48,6 +48,9 @@ export default function HorizontalDisplay() {
             </div>
           </div>
         </div>
+        <div className="wd-btn-container">
+          <button className="wd-copy-btn" onClick={handleCopyCode}>{buttonText}</button>
+        </div>
         <div className="wd-html-code">
           <pre>
             <code className="language-html" ref={codeRef}>
@@ -67,9 +70,6 @@ export default function HorizontalDisplay() {
 </div>`}
             </code>
           </pre>
-        </div>
-        <div className="wd-btn-container">
-          <button className="wd-copy-btn" onClick={handleCopyCode}>{buttonText}</button>
         </div>
       </div>
     </section>

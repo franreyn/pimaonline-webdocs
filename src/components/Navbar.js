@@ -32,12 +32,11 @@ const Navbar = () => {
         <div className={`nav-container ${menuOpen ? 'show-menu' : 'hide-menu'}`}>
           <ul className="nav-links">
             <li className={router.pathname === '/getting-started' ? 'active-nav' : ''}>
-              <Link href="/getting-started">Docs</Link>
+              <Link href="/getting-started">Setup</Link>
               <ul className="sub-items">
                 <li><Link href="/getting-started">Getting Started</Link></li>
                 <li><Link href="/layouts">Layouts</Link></li>
-                <li><Link href="/icons">Icons</Link></li>
-                <li><Link href="/utilities">Utilities</Link></li>
+                <li><Link href="/tips">Tips</Link></li>
               </ul>
             </li>
             <li className={router.pathname === '/templates' ? 'active-nav' : ''}>
@@ -46,8 +45,11 @@ const Navbar = () => {
             <li className={router.pathname === '/themes' ? 'active-nav' : ''}>
               <Link href="/themes">Themes</Link>
             </li>
-            <li className={router.pathname === '/icons' ? 'active-nav' : ''}>
+            <li className={router.pathname === '/widgets' ? 'active-nav' : ''}>
               <Link href="/widgets">Widgets</Link>
+            </li>
+            <li className={router.pathname === '/utilities' ? 'active-nav' : ''}>
+              <Link href="/utilities">Utilities</Link>
             </li>
           </ul>
         </div>
