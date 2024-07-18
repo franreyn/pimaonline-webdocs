@@ -33,7 +33,7 @@ export default function Templates() {
           <h2 className="anchor" id='one-column-templates'>One Column Templates</h2>
           <section className="template-section">
             <div>
-              <Link href="/templates/OneColumn1"><Image src="/images/templates/onecolumn1.jpg" alt="" width={292} height={280}  /></Link>
+              <Link href="/templates/OneColumn1"><Image src="/images/templates/onecolumn1.jpg" alt="" width={292} height={280} priority="true"  /></Link>
               <div>
                 <h3>Inspirational Structure</h3>
                 <p>Communicate expectations, provide encouragement, and deliver support to students</p>
