@@ -43,10 +43,11 @@ export default function Sidebar() {
           </Scrollspy>
         </li>
         <li className={router.pathname === '/tips' ? 'active-page' : ''}><Link href="/tips">Tips &amp; Tricks</Link>
-          <Scrollspy items={['toc-tip-1', 'toc-tip-2', 'toc-tip-3']} currentClassName="is-current" offset={-100}>
-            <li><Link href="tips/#tip-1" className="toc-tip-1">Tip One</Link></li>
-            <li><Link href="tips/#tip-2" className="toc-tip-2">Tip Two</Link></li>
-            <li><Link href="tips/#tip-3" className="toc-tip-3">Tip Three</Link></li>
+          <Scrollspy items={['toc-tip-1', 'toc-tip-2', 'toc-tip-3', 'toc-tip-4']} currentClassName="is-current" offset={-100}>
+            <li><Link href="tips/#tip-1" className="toc-tip-1">Utilizing Templates</Link></li>
+            <li><Link href="tips/#tip-2" className="toc-tip-2">Page Titles</Link></li>
+            <li><Link href="tips/#tip-3" className="toc-tip-3">Creative Widgets</Link></li>
+            <li><Link href="tips/#tip-4" className="toc-tip-4">Custom Styles</Link></li>
           </Scrollspy>
         </li>
       </ul>
