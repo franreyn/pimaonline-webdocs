@@ -43,11 +43,11 @@ export default function TwoColumn6() {
   }, []);
 
 
-        // Show the highlighted component
-        const [templateView, setTemplateView] = useState();
-  
-        // Change the url for the highlighted image
-        const [templateImage, setTemplateImage] = useState();
+// Show the highlighted component
+const [templateView, setTemplateView] = useState();
+
+// Change the url for the highlighted image
+const [templateImage, setTemplateImage] = useState('/images/templates/twocolumn6.jpg');
         
         useEffect(() => {
           switch(templateView) {
@@ -98,7 +98,7 @@ export default function TwoColumn6() {
           <p>Keep things concise with this template, providing a brief topic overview, neatly arranged tasks &amp; due dates, some relevant imagery, and a key quote from the text. Students will appreciate the direction, without being overwhelmed by information.</p>
             <h3 className='spacer'>Template Preview</h3>
           <div className="template-preview">
-            <Image src={templateImage} alt="" width={292} height={280} />
+            <Image src={templateImage} alt="" width={292} height={280} priority/>
             <div>
               <h4>Featured Widgets</h4>
               <div className='wd-border'>

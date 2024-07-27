@@ -42,11 +42,12 @@ export default function OneColumn6() {
     }
   }, []);
 
-      // Show the highlighted component
-      const [templateView, setTemplateView] = useState();
-  
-      // Change the url for the highlighted image
-      const [templateImage, setTemplateImage] = useState();
+    // Show the highlighted component
+  const [templateView, setTemplateView] = useState();
+
+  // Change the url for the highlighted image
+  const [templateImage, setTemplateImage] = useState('/images/templates/onecolumn6.jpg');
+
       
       useEffect(() => {
         switch(templateView) {
@@ -119,7 +120,7 @@ export default function OneColumn6() {
           <p>Provide an easily-digestible snippet of the week's topic and relevant figures from the text, and follow up with a brief summary and task list for students to take actionable steps.</p>
             <h3 className='spacer'>Template Preview</h3>
           <div className="template-preview">
-            <Image src={templateImage} alt="" width={292} height={280} />
+            <Image src={templateImage} alt="" width={292} height={280} priority/>
             <div>
               <h4>Featured Widgets</h4>
               <div className='wd-border'>

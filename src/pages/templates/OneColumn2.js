@@ -42,75 +42,79 @@ export default function OneColumn2() {
     }
   }, []);
 
-   // Show the highlighted component
-   const [templateView, setTemplateView] = useState();
-  
-   // Change the url for the highlighted image
-   const [templateImage, setTemplateImage] = useState();
-   
-   useEffect(() => {
-     switch(templateView) {
-      
-       case "media":
-       setTemplateImage("/images/templates/onecolumn2-media.jpg");
-       break;
-       
-       case "table":
-       setTemplateImage("/images/templates/onecolumn2-table.jpg");
-       break;
- 
-       case "side-by-side":
-       setTemplateImage("/images/templates/onecolumn2-sidebyside.jpg");
-       break;
- 
-       case "accordion":
-       setTemplateImage("/images/templates/onecolumn2-accordion.jpg");
-       break;
- 
-       case "assignments":
-       setTemplateImage("/images/templates/onecolumn2-assignments.jpg");
-       break;
-       
-       default:
-       setTemplateImage("/images/templates/onecolumn2.jpg");
-       break;
-     }
-   }, [templateView]);
- 
-   const changeToMedia = () => {
-    if (templateView != "media") {
-      setTemplateView("media");
+  // Show the highlighted component
+  const [templateView, setTemplateView] = useState();
+
+  // Change the url for the highlighted image
+  const [templateImage, setTemplateImage] = useState('/images/templates/onecolumn2.jpg');
+
+  useEffect(() => {
+    switch (templateView) {
+      case 'media':
+        setTemplateImage('/images/templates/onecolumn2-media.jpg');
+        break;
+
+      case 'table':
+        setTemplateImage('/images/templates/onecolumn2-table.jpg');
+        break;
+
+      case 'side-by-side':
+        setTemplateImage('/images/templates/onecolumn2-sidebyside.jpg');
+        break;
+
+      case 'accordion':
+        setTemplateImage('/images/templates/onecolumn2-accordion.jpg');
+        break;
+
+      case 'assignments':
+        setTemplateImage('/images/templates/onecolumn2-assignments.jpg');
+        break;
+
+      default:
+        setTemplateImage('/images/templates/onecolumn2.jpg');
+        break;
     }
-    else {setTemplateView()};
-  }
+  }, [templateView]);
+
+  const changeToMedia = () => {
+    if (templateView !== 'media') {
+      setTemplateView('media');
+    } else {
+      setTemplateView();
+    }
+  };
 
   const changeToTable = () => {
-    if (templateView != "table") {
-      setTemplateView("table");
+    if (templateView !== 'table') {
+      setTemplateView('table');
+    } else {
+      setTemplateView();
     }
-    else {setTemplateView()};
-  }
+  };
 
   const changeToSideBySide = () => {
-    if (templateView != "side-by-side") {
-      setTemplateView("side-by-side");
+    if (templateView !== 'side-by-side') {
+      setTemplateView('side-by-side');
+    } else {
+      setTemplateView();
     }
-    else {setTemplateView()};
-  }
+  };
 
-  const changeToAccodion = () => {
-    if (templateView != "accordion") {
-      setTemplateView("accordion");
+  const changeToAccordion = () => {
+    if (templateView !== 'accordion') {
+      setTemplateView('accordion');
+    } else {
+      setTemplateView();
     }
-    else {setTemplateView()};
-  }
+  };
 
   const changeToAssignments = () => {
-    if (templateView != "assignments") {
-      setTemplateView("assignments");
+    if (templateView !== 'assignments') {
+      setTemplateView('assignments');
+    } else {
+      setTemplateView();
     }
-    else {setTemplateView()};
-  }
+  };
 
   return (
     <>
@@ -121,53 +125,60 @@ export default function OneColumn2() {
         <Navbar />
       </header>
       <div className="wd-intro">
-    <h1>Browse Course Templates</h1>
-      <p className='wd-break'>Premade templates to browse and inspire your course content layouts. Ready to grab and go!</p>
+        <h1>Browse Course Templates</h1>
+        <p className="wd-break">
+          Premade templates to browse and inspire your course content layouts. Ready to grab and go!
+        </p>
       </div>
       <div className="wd-grid">
-        <main className="anchor" id='one-column-2'>
+        <main className="anchor" id="one-column-2">
           <h2>Organized Welcome</h2>
-          <p>Invite students in with a personalized video from their instructor and some additional encouragement as they begin their course or module. You can provide students the expectations for the unit with organized clarity, using tables, accordions and assignment lists to help them prioritze tasks. </p>
-            <h3 className='spacer'>Template Preview</h3>
+          <p>
+            Invite students in with a personalized video from their instructor and some additional
+            encouragement as they begin their course or module. You can provide students the
+            expectations for the unit with organized clarity, using tables, accordions and
+            assignment lists to help them prioritize tasks.
+          </p>
+          <h3 className="spacer">Template Preview</h3>
           <div className="template-preview">
-            <Image src={templateImage} alt="" width={292} height={280} />
+            <Image src={templateImage} alt="" width={292} height={280} priority/>
             <div>
               <h4>Featured Widgets</h4>
-              <div className='wd-border'>
-              <h5>Media Container</h5>
-              <p>Welcome students with a introductory video and keep it responsive for any device.</p>
-              <br />
-              <button className="wd-btn thin" onClick={changeToMedia}>Toggle in Preview</button>
+              <div className="wd-border">
+                <h5>Media Container</h5>
+                <p>Welcome students with an introductory video and keep it responsive for any device.</p>
+                <br />
+                <button className="wd-btn thin" onClick={changeToMedia}>Toggle in Preview</button>
               </div>
-              <div className='wd-border'>
-              <h5>Table</h5>
-              <p>Display tasks, due dates, and more in an organized and clear manner.</p>
-              <br />
-              <button className="wd-btn thin" onClick={changeToTable}>Toggle in Preview</button>
+              <div className="wd-border">
+                <h5>Table</h5>
+                <p>Display tasks, due dates, and more in an organized and clear manner.</p>
+                <br />
+                <button className="wd-btn thin" onClick={changeToTable}>Toggle in Preview</button>
               </div>
-              <div className='wd-border'>
-              <h5>Side-by-Side</h5>
-              <p>Display two horizontal containers that can contain any content.</p>
-              <br />
-              <button className="wd-btn thin" onClick={changeToSideBySide}>Toggle in Preview</button>
+              <div className="wd-border">
+                <h5>Side-by-Side</h5>
+                <p>Display two horizontal containers that can contain any content.</p>
+                <br />
+                <button className="wd-btn thin" onClick={changeToSideBySide}>Toggle in Preview</button>
               </div>
-              <div className='wd-border'>
-              <h5>Accordion</h5>
-              <p>Provide larger chunks of content a little at a time and let the student interact with the information.</p>
-              <br />
-              <button className="wd-btn thin" onClick={changeToAccodion}>Toggle in Preview</button>
+              <div className="wd-border">
+                <h5>Accordion</h5>
+                <p>Provide larger chunks of content a little at a time and let the student interact with the information.</p>
+                <br />
+                <button className="wd-btn thin" onClick={changeToAccordion}>Toggle in Preview</button>
               </div>
-              <div className='wd-border'>
-              <h5>Assignments</h5>
-              <p>List out the week's tasks in organized, interactive cards.</p>
-              <br />
-              <button className="wd-btn thin" onClick={changeToAssignments}>Toggle in Preview</button>
+              <div className="wd-border">
+                <h5>Assignments</h5>
+                <p>List out the week's tasks in organized, interactive cards.</p>
+                <br />
+                <button className="wd-btn thin" onClick={changeToAssignments}>Toggle in Preview</button>
               </div>
             </div>
           </div>
           <br />
           <div className="wd-window">
-          <div className="wd-btn-container">
+            <div className="wd-btn-container">
               <button className="wd-copy-btn" onClick={handleCopyCode}>{buttonText}</button>
             </div>
             <div className="wd-html-code">
@@ -226,7 +237,7 @@ export default function OneColumn2() {
     </table>
   </div>
   <div class="content-body">
-    <h2>Course Ojectives</h2>
+    <h2>Course Objectives</h2>
     <p>Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus.</p>
     <h3>By the end of this course, you'll be able to:</h3>
     <div class="side-by-side">
@@ -257,7 +268,7 @@ export default function OneColumn2() {
             </ul>
           </div>
         </div>
-		</div>
+      </div>
       <div class="side-by-side-item">
         <div class="accordion">
           <div class="accordion-title arrow-down toggle-btn">Course Objective 4</div>
@@ -285,8 +296,8 @@ export default function OneColumn2() {
             </ul>
           </div>
         </div>
-		</div>
-		</div>
+      </div>
+    </div>
     <h4>How You'll Learn These Objectives</h4>
     <p>Vivamus suscipit tortor eget felis porttitor volutpat:
     <ul>
@@ -339,12 +350,12 @@ export default function OneColumn2() {
           </div>
         </main>
         <aside>
-            <TemplateSidebar />
-          </aside>
+          <TemplateSidebar />
+        </aside>
       </div>
       <footer>
-          <Footer />
-        </footer>
+        <Footer />
+      </footer>
     </>
-  )
+  );
 }

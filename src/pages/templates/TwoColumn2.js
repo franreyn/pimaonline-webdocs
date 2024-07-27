@@ -42,11 +42,11 @@ export default function TwoColumn2() {
     }
   }, []);
 
-    // Show the highlighted component
-    const [templateView, setTemplateView] = useState();
-  
-    // Change the url for the highlighted image
-    const [templateImage, setTemplateImage] = useState();
+// Show the highlighted component
+const [templateView, setTemplateView] = useState();
+
+// Change the url for the highlighted image
+const [templateImage, setTemplateImage] = useState('/images/templates/twocolumn2.jpg');
     
     useEffect(() => {
       switch(templateView) {
@@ -130,7 +130,7 @@ export default function TwoColumn2() {
           <p>Set students up for success with a warm video greeting, a clear path for the rest of the semester, the week's agenda, and some visual imagery and inspiration!</p>
             <h3 className='spacer'>Template Preview</h3>
           <div className="template-preview">
-            <Image src={templateImage} alt="" width={292} height={280} />
+            <Image src={templateImage} alt="" width={292} height={280} priority/>
             <div>
               <h4>Featured Widgets</h4>
               <div className='wd-border'>

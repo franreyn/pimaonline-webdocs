@@ -44,9 +44,10 @@ export default function OneColumn4() {
 
       // Show the highlighted component
       const [templateView, setTemplateView] = useState();
-  
+
       // Change the url for the highlighted image
-      const [templateImage, setTemplateImage] = useState();
+      const [templateImage, setTemplateImage] = useState('/images/templates/onecolumn4.jpg');
+
       
       useEffect(() => {
         switch(templateView) {
@@ -119,7 +120,7 @@ export default function OneColumn4() {
           <p>Provide some visual structure to your content with this template that leans into row- and column-based widgets. Include the weeks tasks in a table, provide key takeaways in card format, and offer supplemental video walkthroughs in a grid-like fashionl.</p>
             <h3 className='spacer'>Template Preview</h3>
           <div className="template-preview">
-            <Image src={templateImage} alt="" width={292} height={280} />
+            <Image src={templateImage} alt="" width={292} height={280} priority/>
             <div>
               <h4>Featured Widgets</h4>
               <div className='wd-border'>

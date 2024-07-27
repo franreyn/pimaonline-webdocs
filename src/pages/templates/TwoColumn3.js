@@ -42,11 +42,11 @@ export default function TwoColumn3() {
     }
   }, []);
 
-      // Show the highlighted component
-      const [templateView, setTemplateView] = useState();
-  
-      // Change the url for the highlighted image
-      const [templateImage, setTemplateImage] = useState();
+    // Show the highlighted component
+    const [templateView, setTemplateView] = useState();
+
+    // Change the url for the highlighted image
+    const [templateImage, setTemplateImage] = useState('/images/templates/twocolumn1.jpg');
       
       useEffect(() => {
         switch(templateView) {
@@ -119,7 +119,7 @@ export default function TwoColumn3() {
           <p>Focus on the headlines with this template. List learning objectives, brief overviews of main takeaways from the text, and an easy-to-follow assignmnet list that takes students exactly where they need to be.</p>
             <h3 className='spacer'>Template Preview</h3>
           <div className="template-preview">
-            <Image src={templateImage} alt="" width={292} height={280} />
+            <Image src={templateImage} alt="" width={292} height={280} priority/>
             <div>
               <h4>Featured Widgets</h4>
               <div className='wd-border'>

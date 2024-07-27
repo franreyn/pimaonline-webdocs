@@ -42,11 +42,11 @@ export default function TwoColumn5() {
     }
   }, []);
 
-   // Show the highlighted component
-   const [templateView, setTemplateView] = useState();
-  
-   // Change the url for the highlighted image
-   const [templateImage, setTemplateImage] = useState();
+// Show the highlighted component
+const [templateView, setTemplateView] = useState();
+
+// Change the url for the highlighted image
+const [templateImage, setTemplateImage] = useState('/images/templates/twocolumn5.jpg');
    
    useEffect(() => {
      switch(templateView) {
@@ -108,7 +108,7 @@ export default function TwoColumn5() {
           <p>Get down and detailed with this template: provide a welcome message, course overview, course structure, course learning objects, and set expectations for the major exams and assignments throughout the semester.</p>
             <h3 className='spacer'>Template Preview</h3>
           <div className="template-preview">
-            <Image src={templateImage} alt="" width={292} height={280} />
+            <Image src={templateImage} alt="" width={292} height={280} priority />
             <div>
               <h4>Featured Widgets</h4>
               <div className='wd-border'>

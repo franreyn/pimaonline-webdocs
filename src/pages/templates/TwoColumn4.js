@@ -42,11 +42,11 @@ export default function TwoColumn4() {
     }
   }, []);
 
-    // Show the highlighted component
-    const [templateView, setTemplateView] = useState();
+// Show the highlighted component
+const [templateView, setTemplateView] = useState();
 
-    // Change the url for the highlighted image
-    const [templateImage, setTemplateImage] = useState();
+// Change the url for the highlighted image
+const [templateImage, setTemplateImage] = useState('/images/templates/twocolumn4.jpg');
     
     useEffect(() => {
       switch(templateView) {
@@ -130,7 +130,7 @@ export default function TwoColumn4() {
           <p>Cater to a range of learning styles by implementing a variety of widgets for your students to interact with. Whether they prefer listed tasks, text to read through, dropdowns to engage with, images to connect with, or videos to absorb — it's all included in this helpful overview.</p>
             <h3 className='spacer'>Template Preview</h3>
           <div className="template-preview">
-            <Image src={templateImage} alt="" width={292} height={280} />
+            <Image src={templateImage} alt="" width={292} height={280} priority />
             <div>
               <h4>Featured Widgets</h4>
               <div className='wd-border'>

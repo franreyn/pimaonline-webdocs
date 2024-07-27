@@ -42,11 +42,12 @@ export default function TwoColumn1() {
     }
   }, []);
 
-  // Show the highlighted component
-  const [templateView, setTemplateView] = useState();
-  
-  // Change the url for the highlighted image
-  const [templateImage, setTemplateImage] = useState();
+    // Show the highlighted component
+    const [templateView, setTemplateView] = useState();
+
+    // Change the url for the highlighted image
+    const [templateImage, setTemplateImage] = useState('/images/templates/twocolumn1.jpg');
+
   
   useEffect(() => {
     switch(templateView) {
@@ -130,7 +131,7 @@ export default function TwoColumn1() {
           <p>Put some power in your students hands with this highly interactive template: with tabs to click through, images to connect with, clear course objectives and a list of upcoming assignments. Students will have a more dynamic experience with the page. </p>
             <h3 className='spacer'>Template Preview</h3>
           <div className="template-preview">
-            <Image src={templateImage} alt="" width={292} height={280} />
+            <Image src={templateImage} alt="" width={292} height={280} priority />
             <div>
               <h4>Featured Widgets</h4>
               <div className='wd-border'>

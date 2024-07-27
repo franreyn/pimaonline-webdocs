@@ -42,86 +42,91 @@ export default function OneColumn3() {
     }
   }, []);
 
-    // Show the highlighted component
-    const [templateView, setTemplateView] = useState();
-  
-    // Change the url for the highlighted image
-    const [templateImage, setTemplateImage] = useState();
-    
-    useEffect(() => {
-      switch(templateView) {
-       
-        case "border":
-        setTemplateImage("/images/templates/onecolumn3-border.jpg");
-        break;
-        
-        case "vocab-cards":
-        setTemplateImage("/images/templates/onecolumn3-vocabcards.jpg");
-        break;
-  
-        case "assignments":
-        setTemplateImage("/images/templates/onecolumn3-assignments.jpg");
-        break;
-  
-        case "callout":
-        setTemplateImage("/images/templates/onecolumn3-callout.jpg");
-        break;
-  
-        case "video-gallery":
-        setTemplateImage("/images/templates/onecolumn3-videogallery.jpg");
+  // Show the highlighted component
+  const [templateView, setTemplateView] = useState();
+
+  // Change the url for the highlighted image
+  const [templateImage, setTemplateImage] = useState('/images/templates/onecolumn3.jpg');
+
+  useEffect(() => {
+    switch (templateView) {
+      case 'border':
+        setTemplateImage('/images/templates/onecolumn3-border.jpg');
         break;
 
-        case "highlight":
-        setTemplateImage("/images/templates/onecolumn3-highlight.jpg");
+      case 'vocab-cards':
+        setTemplateImage('/images/templates/onecolumn3-vocabcards.jpg');
         break;
-        
-        default:
-        setTemplateImage("/images/templates/onecolumn3.jpg");
+
+      case 'assignments':
+        setTemplateImage('/images/templates/onecolumn3-assignments.jpg');
         break;
-      }
-    }, [templateView]);
-  
-    const changeToBorder = () => {
-      if (templateView != "border") {
-        setTemplateView("border");
-      }
-      else {setTemplateView()};
-    }
 
-    const changeToAssignments = () => {
-      if (templateView != "assignments") {
-        setTemplateView("assignments");
-      }
-      else {setTemplateView()};
-    }
+      case 'callout':
+        setTemplateImage('/images/templates/onecolumn3-callout.jpg');
+        break;
 
-    const changeToVocabCards = () => {
-      if (templateView != "vocab-cards") {
-        setTemplateView("vocab-cards");
-      }
-      else {setTemplateView()};
-    }
+      case 'video-gallery':
+        setTemplateImage('/images/templates/onecolumn3-videogallery.jpg');
+        break;
 
-    const changeToCallout = () => {
-      if (templateView != "callout") {
-        setTemplateView("callout");
-      }
-      else {setTemplateView()};
-    }
+      case 'highlight':
+        setTemplateImage('/images/templates/onecolumn3-highlight.jpg');
+        break;
 
-    const changeToVideoGallery = () => {
-      if (templateView != "video-gallery") {
-        setTemplateView("video-gallery");
-      }
-      else {setTemplateView()};
+      default:
+        setTemplateImage('/images/templates/onecolumn3.jpg');
+        break;
     }
+  }, [templateView]);
 
-    const changeToHighlight = () => {
-      if (templateView != "highlight") {
-        setTemplateView("highlight");
-      }
-      else {setTemplateView()};
+  const changeToBorder = () => {
+    if (templateView !== 'border') {
+      setTemplateView('border');
+    } else {
+      setTemplateView();
     }
+  };
+
+  const changeToAssignments = () => {
+    if (templateView !== 'assignments') {
+      setTemplateView('assignments');
+    } else {
+      setTemplateView();
+    }
+  };
+
+  const changeToVocabCards = () => {
+    if (templateView !== 'vocab-cards') {
+      setTemplateView('vocab-cards');
+    } else {
+      setTemplateView();
+    }
+  };
+
+  const changeToCallout = () => {
+    if (templateView !== 'callout') {
+      setTemplateView('callout');
+    } else {
+      setTemplateView();
+    }
+  };
+
+  const changeToVideoGallery = () => {
+    if (templateView !== 'video-gallery') {
+      setTemplateView('video-gallery');
+    } else {
+      setTemplateView();
+    }
+  };
+
+  const changeToHighlight = () => {
+    if (templateView !== 'highlight') {
+      setTemplateView('highlight');
+    } else {
+      setTemplateView();
+    }
+  };
 
   return (
     <>
@@ -141,7 +146,7 @@ export default function OneColumn3() {
           <p>Keep your students from getting lost in the coursework with this virtual content roadmap. Provide module learning goals, a list of items due in the next week, where they are in the overall course, and additional content &amp; resources to explore.</p>
             <h3 className='spacer'>Template Preview</h3>
           <div className="template-preview">
-            <Image src={templateImage} alt="" width={292} height={280} />
+            <Image src={templateImage} alt="" width={292} height={280} priority/>
             <div>
               <h4>Featured Widgets</h4>
               <div className='wd-border'>

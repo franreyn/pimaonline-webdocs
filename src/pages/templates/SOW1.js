@@ -43,10 +43,11 @@ export default function SOW1() {
   }, []);
 
       // Show the highlighted component
-      const [templateView, setTemplateView] = useState();
+  const [templateView, setTemplateView] = useState();
 
-      // Change the url for the highlighted image
-      const [templateImage, setTemplateImage] = useState();
+  // Change the url for the highlighted image
+  const [templateImage, setTemplateImage] = useState('/images/templates/sow1.jpg');
+
       
       useEffect(() => {
         switch(templateView) {
@@ -86,7 +87,7 @@ export default function SOW1() {
           <p>Give a broader overview of the courseload, focusing on larger assignment, discussion and exam due dates. Keep students from feeling overwhelmed by hitting the main points and avoiding the nitty-gritty.</p>
             <h3 className='spacer'>Template Preview</h3>
           <div className="template-preview">
-            <Image src={templateImage} alt="" width={292} height={280} />
+            <Image src={templateImage} alt="" width={292} height={280} priority/>
             <div>
               <h4>Featured Widgets</h4>
               <div className='wd-border'>
