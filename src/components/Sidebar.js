@@ -1,11 +1,39 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import Scrollspy from "react-scrollspy";
 import { useRouter } from "next/router";
 
 export default function Sidebar() {
   const [tocOpen, setTocOpen] = useState(false);
+  const [activeId, setActiveId] = useState('');
+  const router = useRouter();
+
+  const sections = useRef([]);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY + 150;
+
+      const currentSection = sections.current.find(section => {
+        const element = document.getElementById(section);
+        if (!element) return false;
+        const offsetTop = element.offsetTop;
+        const offsetBottom = offsetTop + element.offsetHeight;
+        return scrollPosition >= offsetTop && scrollPosition < offsetBottom;
+      });
+
+      if (currentSection !== activeId) {
+        setActiveId(currentSection);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll();
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [activeId]);
 
   const toggleTOC = () => {
     setTocOpen(!tocOpen);
@@ -14,8 +42,6 @@ export default function Sidebar() {
   const closeSidebar = () => {
     setTocOpen(false);
   };
-
-  const router = useRouter();
 
   return (
     <>
@@ -28,27 +54,51 @@ export default function Sidebar() {
         <span></span>
       </button>
       <ul className={`wd-sidebar ${tocOpen ? 'show-toc' : 'hide-toc'}`}>
-        <li className={router.pathname === '/getting-started' ? 'active-page' : ''}><Link href="/getting-started">Getting Started</Link>
-          <Scrollspy items={['toc-quick-start', 'toc-manual-setup', 'toc-community']} currentClassName="is-current" offset={-100}>
-            <li><Link href="getting-started/#quick-start">Quick Start</Link></li>
-            <li><Link href="getting-started/#manual-setup">Manual Setup</Link></li>
-            <li><Link href="getting-started/#community">Community</Link></li>
-          </Scrollspy>
+        <li className={router.pathname === '/getting-started' ? 'active-page' : ''}>
+          <Link href="/getting-started">Getting Started</Link>
+          <ul>
+            <li className={activeId === 'toc-quick-start' ? 'is-current' : ''}>
+              <Link href="getting-started/#quick-start">Quick Start</Link>
+            </li>
+            <li className={activeId === 'toc-manual-setup' ? 'is-current' : ''}>
+              <Link href="getting-started/#manual-setup">Manual Setup</Link>
+            </li>
+            <li className={activeId === 'toc-community' ? 'is-current' : ''}>
+              <Link href="getting-started/#community">Community</Link>
+            </li>
+          </ul>
         </li>
-        <li className={router.pathname === '/layouts' ? 'active-page' : ''}><Link href="/layouts">Layouts</Link>
-          <Scrollspy items={['toc-one-column-layout', 'toc-two-column-layout', 'toc-three-section-layout']} currentClassName="is-current" offset={-100}>
-            <li><Link href="layouts/#one-column-layout" className="toc-one-column-layout">One Column</Link></li>
-            <li><Link href="layouts/#two-column-layout" className="toc-two-column-layout">Two Column</Link></li>
-            <li><Link href="layouts/#three-section-layout" className="toc-three-section-layout">Three Section</Link></li>
-          </Scrollspy>
+        <li className={router.pathname === '/layouts' ? 'active-page' : ''}>
+          <Link href="/layouts">Layouts</Link>
+          <ul>
+            <li className={activeId === 'toc-one-column-layout' ? 'is-current' : ''}>
+              <Link href="layouts/#one-column-layout">One Column</Link>
+            </li>
+            <li className={activeId === 'toc-two-column-layout' ? 'is-current' : ''}>
+              <Link href="layouts/#two-column-layout">Two Column</Link>
+            </li>
+            <li className={activeId === 'toc-three-section-layout' ? 'is-current' : ''}>
+              <Link href="layouts/#three-section-layout">Three Section</Link>
+            </li>
+          </ul>
         </li>
-        <li className={router.pathname === '/tips' ? 'active-page' : ''}><Link href="/tips">Tips &amp; Tricks</Link>
-          <Scrollspy items={['toc-tip-1', 'toc-tip-2', 'toc-tip-3', 'toc-tip-4']} currentClassName="is-current" offset={-100}>
-            <li><Link href="tips/#tip-1" className="toc-tip-1">Utilizing Templates</Link></li>
-            <li><Link href="tips/#tip-2" className="toc-tip-2">Page Titles</Link></li>
-            <li><Link href="tips/#tip-3" className="toc-tip-3">Creative Widgets</Link></li>
-            <li><Link href="tips/#tip-4" className="toc-tip-4">Custom Styles</Link></li>
-          </Scrollspy>
+        <li className={router.pathname === '/tips' ? 'active-page' : ''}>
+          <Link href="/tips">Tips &amp; Tricks</Link>
+          <ul>
+            <li className={activeId === 'toc-tip-1' ? 'is-current' : ''}>
+              <Link href="tips/#tip-1">Utilizing Templates</Link>
+            </li>
+            <li className={activeId === 'toc-tip-2' ? 'is-current' : ''}>
+              <Link href="tips/#tip-2">Page Titles</Link>
+            </li>
+            <li className={activeId === 'toc-tip-3' ? 'is-current' : ''}>
+              <Link href="tips/#tip-3">Creative Widgets</Link>
+            </li>
+            <li className={activeId === 'toc-tip-4' ? 'is-current' : ''}>
+              <Link href="tips/#tip-4">Custom Styles</Link>
+            </li>
+         </ul>
+        </li>
         </li>
       </ul>
     </>
