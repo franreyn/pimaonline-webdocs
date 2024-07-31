@@ -99,7 +99,6 @@ export default function Sidebar() {
             </li>
          </ul>
         </li>
-        </li>
       </ul>
     </>
   )
