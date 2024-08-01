@@ -1,19 +1,19 @@
-import Head from 'next/head';
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
-import { useLayoutEffect } from 'react';
-import { useEffect, useRef, useState } from 'react';
-import hljs from 'highlight.js/lib/core';
-import 'highlight.js/styles/night-owl.css';
-import html from 'highlight.js/lib/languages/xml';
-import Image from 'next/image';
-import TemplateSidebar from '@/components/TemplateSidebar';
+import Head from "next/head";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import { useLayoutEffect } from "react";
+import { useEffect, useRef, useState } from "react";
+import hljs from "highlight.js/lib/core";
+import "highlight.js/styles/night-owl.css";
+import html from "highlight.js/lib/languages/xml";
+import Image from "next/image";
+import TemplateSidebar from "@/components/TemplateSidebar";
 
 export default function OneColumn3() {
   const codeRef = useRef(null);
-  const [buttonText, setButtonText] = useState('Copy code');
+  const [buttonText, setButtonText] = useState("Copy code");
 
-  hljs.registerLanguage('html', html);
+  hljs.registerLanguage("html", html);
   useEffect(() => {
     hljs.highlightAll();
   }, []);
@@ -24,19 +24,19 @@ export default function OneColumn3() {
     range.selectNode(codeElement);
     window.getSelection().removeAllRanges();
     window.getSelection().addRange(range);
-    document.execCommand('copy');
+    document.execCommand("copy");
     window.getSelection().removeAllRanges();
 
-    setButtonText('Copied!');
+    setButtonText("Copied!");
 
     setTimeout(() => {
-      setButtonText('Copy code');
+      setButtonText("Copy code");
     }, 2000);
   };
 
   // Remove any existing theme link (required to keep theme styles just on the theme page)
   useLayoutEffect(() => {
-    const existingLink = document.querySelector('link[data-theme-link]');
+    const existingLink = document.querySelector("link[data-theme-link]");
     if (existingLink) {
       document.head.removeChild(existingLink);
     }
@@ -46,83 +46,83 @@ export default function OneColumn3() {
   const [templateView, setTemplateView] = useState();
 
   // Change the url for the highlighted image
-  const [templateImage, setTemplateImage] = useState('/images/templates/onecolumn3.jpg');
+  const [templateImage, setTemplateImage] = useState("/images/templates/onecolumn3.jpg");
 
   useEffect(() => {
     switch (templateView) {
-      case 'border':
-        setTemplateImage('/images/templates/onecolumn3-border.jpg');
+      case "border":
+        setTemplateImage("/images/templates/onecolumn3-border.jpg");
         break;
 
-      case 'vocab-cards':
-        setTemplateImage('/images/templates/onecolumn3-vocabcards.jpg');
+      case "vocab-cards":
+        setTemplateImage("/images/templates/onecolumn3-vocabcards.jpg");
         break;
 
-      case 'assignments':
-        setTemplateImage('/images/templates/onecolumn3-assignments.jpg');
+      case "assignments":
+        setTemplateImage("/images/templates/onecolumn3-assignments.jpg");
         break;
 
-      case 'callout':
-        setTemplateImage('/images/templates/onecolumn3-callout.jpg');
+      case "callout":
+        setTemplateImage("/images/templates/onecolumn3-callout.jpg");
         break;
 
-      case 'video-gallery':
-        setTemplateImage('/images/templates/onecolumn3-videogallery.jpg');
+      case "video-gallery":
+        setTemplateImage("/images/templates/onecolumn3-videogallery.jpg");
         break;
 
-      case 'highlight':
-        setTemplateImage('/images/templates/onecolumn3-highlight.jpg');
+      case "highlight":
+        setTemplateImage("/images/templates/onecolumn3-highlight.jpg");
         break;
 
       default:
-        setTemplateImage('/images/templates/onecolumn3.jpg');
+        setTemplateImage("/images/templates/onecolumn3.jpg");
         break;
     }
   }, [templateView]);
 
   const changeToBorder = () => {
-    if (templateView !== 'border') {
-      setTemplateView('border');
+    if (templateView !== "border") {
+      setTemplateView("border");
     } else {
       setTemplateView();
     }
   };
 
   const changeToAssignments = () => {
-    if (templateView !== 'assignments') {
-      setTemplateView('assignments');
+    if (templateView !== "assignments") {
+      setTemplateView("assignments");
     } else {
       setTemplateView();
     }
   };
 
   const changeToVocabCards = () => {
-    if (templateView !== 'vocab-cards') {
-      setTemplateView('vocab-cards');
+    if (templateView !== "vocab-cards") {
+      setTemplateView("vocab-cards");
     } else {
       setTemplateView();
     }
   };
 
   const changeToCallout = () => {
-    if (templateView !== 'callout') {
-      setTemplateView('callout');
+    if (templateView !== "callout") {
+      setTemplateView("callout");
     } else {
       setTemplateView();
     }
   };
 
   const changeToVideoGallery = () => {
-    if (templateView !== 'video-gallery') {
-      setTemplateView('video-gallery');
+    if (templateView !== "video-gallery") {
+      setTemplateView("video-gallery");
     } else {
       setTemplateView();
     }
   };
 
   const changeToHighlight = () => {
-    if (templateView !== 'highlight') {
-      setTemplateView('highlight');
+    if (templateView !== "highlight") {
+      setTemplateView("highlight");
     } else {
       setTemplateView();
     }
@@ -138,47 +138,47 @@ export default function OneColumn3() {
       </header>
       <div className="wd-intro">
     <h1>Browse Course Templates</h1>
-      <p className='wd-break'>Premade templates to browse and inspire your course content layouts. Ready to grab and go!</p>
+      <p className="wd-break">Premade templates to browse and inspire your course content layouts. Ready to grab and go!</p>
       </div>
       <div className="wd-grid">
-        <main className="anchor" id='one-column-3'>
+        <main className="anchor" id="one-column-3">
           <h2>Content Roadmap</h2>
           <p>Keep your students from getting lost in the coursework with this virtual content roadmap. Provide module learning goals, a list of items due in the next week, where they are in the overall course, and additional content &amp; resources to explore.</p>
-            <h3 className='spacer'>Template Preview</h3>
+            <h3 className="spacer">Template Preview</h3>
           <div className="template-preview">
             <Image src={templateImage} alt="" width={292} height={280} priority/>
             <div>
               <h4>Featured Widgets</h4>
-              <div className='wd-border'>
+              <div className="wd-border">
               <h5>Border</h5>
               <p>Call out a main idea, draw attention to learning objectives or any other content that needs to stand out.</p>
               <br />
               <button className="wd-btn thin" onClick={changeToBorder}>Toggle in Preview</button>
               </div>
-              <div className='wd-border'>
+              <div className="wd-border">
               <h5>Assignments</h5>
               <p>List out the week's tasks in organized, interactive cards.</p>
               <br />
               <button className="wd-btn thin" onClick={changeToAssignments}>Toggle in Preview</button>
               </div>
-              <div className='wd-border'>
+              <div className="wd-border">
               <h5>Callout</h5>
               <p>Invite students to explore more resources on any given topic.</p>
               <br />
               <button className="wd-btn thin" onClick={changeToCallout}>Toggle in Preview</button>
-              </div><div className='wd-border'>
+              </div><div className="wd-border">
               <h5>Vocab Cards</h5>
               <p>Not just for vocabulary! A versatile, interactive tile layout to display your content.</p>
               <br />
               <button className="wd-btn thin" onClick={changeToVocabCards}>Toggle in Preview</button>
               </div>
-              <div className='wd-border'>
+              <div className="wd-border">
               <h5>Highlight</h5>
               <p>Use this utility class to draw attention to crucial information in any block of text.</p>
               <br />
               <button className="wd-btn thin" onClick={changeToHighlight}>Toggle in Preview</button>
               </div>
-              <div className='wd-border'>
+              <div className="wd-border">
               <h5>Video Gallery</h5>
               <p>Create a grid-like video gallery, with general information like title and video duration.</p>
               <br />

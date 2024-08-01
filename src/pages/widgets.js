@@ -1,32 +1,32 @@
-import Head from 'next/head';
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
-import Accordion from '@/components/widgets/Accordion';
+import Head from "next/head";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import Accordion from "@/components/widgets/Accordion";
 import Assignments from "@/components/widgets/Assignments";
-import Blockquote from '@/components/widgets/Blockquote';
-import Border from '@/components/widgets/Border';
-import CallOut from '@/components/widgets/CallOut';
-import CardHorizontal from '@/components/widgets/CardHorizontal';
-import FlipCard from '@/components/widgets/FlipCard';
-import HorizontalDisplay from '@/components/widgets/HorizontalDisplay';
-import ImageGallery from '@/components/widgets/ImageGallery';
-import LockedContent from '@/components/widgets/LockedContent';
-import MediaContainer from '@/components/widgets/MediaContainer';
-import SideBySide from '@/components/widgets/SideBySide';
-import Tables from '@/components/widgets/Tables';
-import Tabs from '@/components/widgets/Tabs';
-import VideoWidget from '@/components/widgets/VideoWidget';
-import VocabCards from '@/components/widgets/VocabCards';
-import VocabList from '@/components/widgets/VocabList';
-import { useLayoutEffect } from 'react';
-import WidgetSidebar from '@/components/WidgetSidebar';
+import Blockquote from "@/components/widgets/Blockquote";
+import Border from "@/components/widgets/Border";
+import CallOut from "@/components/widgets/CallOut";
+import CardHorizontal from "@/components/widgets/CardHorizontal";
+import FlipCard from "@/components/widgets/FlipCard";
+import HorizontalDisplay from "@/components/widgets/HorizontalDisplay";
+import ImageGallery from "@/components/widgets/ImageGallery";
+import LockedContent from "@/components/widgets/LockedContent";
+import MediaContainer from "@/components/widgets/MediaContainer";
+import SideBySide from "@/components/widgets/SideBySide";
+import Tables from "@/components/widgets/Tables";
+import Tabs from "@/components/widgets/Tabs";
+import VideoWidget from "@/components/widgets/VideoWidget";
+import VocabCards from "@/components/widgets/VocabCards";
+import VocabList from "@/components/widgets/VocabList";
+import { useLayoutEffect } from "react";
+import WidgetSidebar from "@/components/WidgetSidebar";
 
 
 export default function Widgets() {
 
   // Remove any existing theme link (required to keep theme styles just on the theme page)
   useLayoutEffect(() => {
-    const existingLink = document.querySelector('link[data-theme-link]');
+    const existingLink = document.querySelector("link[data-theme-link]");
     if (existingLink) {
       document.head.removeChild(existingLink);
     }

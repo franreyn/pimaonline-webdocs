@@ -1,19 +1,19 @@
-import Head from 'next/head';
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
-import { useLayoutEffect } from 'react';
-import { useEffect, useRef, useState } from 'react';
-import hljs from 'highlight.js/lib/core';
-import 'highlight.js/styles/night-owl.css';
-import html from 'highlight.js/lib/languages/xml';
-import Image from 'next/image';
-import TemplateSidebar from '@/components/TemplateSidebar';
+import Head from "next/head";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import { useLayoutEffect } from "react";
+import { useEffect, useRef, useState } from "react";
+import hljs from "highlight.js/lib/core";
+import "highlight.js/styles/night-owl.css";
+import html from "highlight.js/lib/languages/xml";
+import Image from "next/image";
+import TemplateSidebar from "@/components/TemplateSidebar";
 
 export default function OneColumn1() {
   const codeRef = useRef(null);
-  const [buttonText, setButtonText] = useState('Copy code');
+  const [buttonText, setButtonText] = useState("Copy code");
 
-  hljs.registerLanguage('html', html);
+  hljs.registerLanguage("html", html);
   useEffect(() => {
     hljs.highlightAll();
   }, []);
@@ -24,19 +24,19 @@ export default function OneColumn1() {
     range.selectNode(codeElement);
     window.getSelection().removeAllRanges();
     window.getSelection().addRange(range);
-    document.execCommand('copy');
+    document.execCommand("copy");
     window.getSelection().removeAllRanges();
 
-    setButtonText('Copied!');
+    setButtonText("Copied!");
 
     setTimeout(() => {
-      setButtonText('Copy code');
+      setButtonText("Copy code");
     }, 2000);
   };
 
   // Remove any existing theme link (required to keep theme styles just on the theme page)
   useLayoutEffect(() => {
-    const existingLink = document.querySelector('link[data-theme-link]');
+    const existingLink = document.querySelector("link[data-theme-link]");
     if (existingLink) {
       document.head.removeChild(existingLink);
     }
@@ -46,71 +46,71 @@ export default function OneColumn1() {
   const [templateView, setTemplateView] = useState();
 
   // Change the url for the highlighted image
-  const [templateImage, setTemplateImage] = useState('/images/templates/onecolumn1.jpg');
+  const [templateImage, setTemplateImage] = useState("/images/templates/onecolumn1.jpg");
 
   useEffect(() => {
     switch (templateView) {
-      case 'border':
-        setTemplateImage('/images/templates/onecolumn1-border.jpg');
+      case "border":
+        setTemplateImage("/images/templates/onecolumn1-border.jpg");
         break;
 
-      case 'vocab-cards':
-        setTemplateImage('/images/templates/onecolumn1-vocabcards.jpg');
+      case "vocab-cards":
+        setTemplateImage("/images/templates/onecolumn1-vocabcards.jpg");
         break;
 
-      case 'side-by-side':
-        setTemplateImage('/images/templates/onecolumn1-sidebyside.jpg');
+      case "side-by-side":
+        setTemplateImage("/images/templates/onecolumn1-sidebyside.jpg");
         break;
 
-      case 'blockquote':
-        setTemplateImage('/images/templates/onecolumn1-blockquote.jpg');
+      case "blockquote":
+        setTemplateImage("/images/templates/onecolumn1-blockquote.jpg");
         break;
 
-      case 'image-gallery':
-        setTemplateImage('/images/templates/onecolumn1-imagegallery.jpg');
+      case "image-gallery":
+        setTemplateImage("/images/templates/onecolumn1-imagegallery.jpg");
         break;
 
       default:
-        setTemplateImage('/images/templates/onecolumn1.jpg');
+        setTemplateImage("/images/templates/onecolumn1.jpg");
         break;
     }
   }, [templateView]);
 
   const changeToBorder = () => {
-    if (templateView !== 'border') {
-      setTemplateView('border');
+    if (templateView !== "border") {
+      setTemplateView("border");
     } else {
       setTemplateView();
     }
   };
 
   const changeToVocabCards = () => {
-    if (templateView !== 'vocab-cards') {
-      setTemplateView('vocab-cards');
+    if (templateView !== "vocab-cards") {
+      setTemplateView("vocab-cards");
     } else {
       setTemplateView();
     }
   };
 
   const changeToSideBySide = () => {
-    if (templateView !== 'side-by-side') {
-      setTemplateView('side-by-side');
+    if (templateView !== "side-by-side") {
+      setTemplateView("side-by-side");
     } else {
       setTemplateView();
     }
   };
 
   const changeToBlockquote = () => {
-    if (templateView !== 'blockquote') {
-      setTemplateView('blockquote');
+    if (templateView !== "blockquote") {
+      setTemplateView("blockquote");
     } else {
       setTemplateView();
     }
   };
 
   const changeToImgGal = () => {
-    if (templateView !== 'image-gallery') {
-      setTemplateView('image-gallery');
+    if (templateView !== "image-gallery") {
+      setTemplateView("image-gallery");
     } else {
       setTemplateView();
     }
@@ -126,42 +126,42 @@ export default function OneColumn1() {
       </header>
       <div className="wd-intro">
         <h1>Browse Course Templates</h1>
-        <p className='wd-break'>Premade templates to browse and inspire your course content layouts. Ready to grab and go!</p>
+        <p className="wd-break">Premade templates to browse and inspire your course content layouts. Ready to grab and go!</p>
       </div>
       <div className="wd-grid">
-        <main className="anchor" id='one-column-1'>
+        <main className="anchor" id="one-column-1">
           <h2>Inspirational Structure</h2>
           <p>Give students a clear idea of the course overview and objects, while also providing a bit of encouragement and support. With opportunities for images throughout, this layout will feel visually balanced rather than intimidating chunks of text. Plus, give them quick reference shortcuts to the resources they'll need throughout the semester.</p>
-          <h3 className='spacer'>Template Preview</h3>
+          <h3 className="spacer">Template Preview</h3>
           <div className="template-preview">
             <Image src={templateImage} alt="" width={292} height={280} priority />
             <div>
               <h4>Featured Widgets</h4>
-              <div className='wd-border'>
+              <div className="wd-border">
                 <h5>Border</h5>
                 <p>Call out a main idea, draw attention to learning objectives or any other content that needs to stand out.</p>
                 <br />
                 <button className="wd-btn thin" onClick={changeToBorder}>Toggle in Preview</button>
               </div>
-              <div className='wd-border'>
+              <div className="wd-border">
                 <h5>Vocab Cards</h5>
                 <p>More than just for vocab! Use these subtly-interactive cards to build on a standard list.</p>
                 <br />
                 <button className="wd-btn thin" onClick={changeToVocabCards}>Toggle in Preview</button>
               </div>
-              <div className='wd-border'>
+              <div className="wd-border">
                 <h5>Side-by-Side</h5>
                 <p>Display two horizontal containers that can contain any content.</p>
                 <br />
                 <button className="wd-btn thin" onClick={changeToSideBySide}>Toggle in Preview</button>
               </div>
-              <div className='wd-border'>
+              <div className="wd-border">
                 <h5>Blockquote</h5>
                 <p>Separate any block of text along with supportive quotes. Call out phrases from the text or just relevant inspiration.</p>
                 <br />
                 <button className="wd-btn thin" onClick={changeToBlockquote}>Toggle in Preview</button>
               </div>
-              <div className='wd-border'>
+              <div className="wd-border">
                 <h5>Image Gallery</h5>
                 <p>Break up large chunks of text or add some flair to your course shell with imagery.</p>
                 <br />

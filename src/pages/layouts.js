@@ -1,10 +1,10 @@
 import Head from "next/head";
 import Navbar from "@/components/Navbar";
 import Sidebar from "@/components/Sidebar";
-import hljs from 'highlight.js/lib/core';
-import 'highlight.js/styles/night-owl.css';
-import html from 'highlight.js/lib/languages/xml';
-import { useEffect, useRef, useState, useLayoutEffect } from 'react';
+import hljs from "highlight.js/lib/core";
+import "highlight.js/styles/night-owl.css";
+import html from "highlight.js/lib/languages/xml";
+import { useEffect, useRef, useState, useLayoutEffect } from "react";
 import styles from "../styles/layouts.module.css"
 import Footer from "../components/Footer"
 import DocsIntro from "@/components/DocsIntro";
@@ -13,13 +13,13 @@ export default function Layouts() {
   
   // Remove any existing theme link (required to keep theme styles just on the theme page)
   useLayoutEffect(() => {
-    const existingLink = document.querySelector('link[data-theme-link]');
+    const existingLink = document.querySelector("link[data-theme-link]");
     if (existingLink) {
       document.head.removeChild(existingLink);
     }
   }, []);
 
-  hljs.registerLanguage('html', html);
+  hljs.registerLanguage("html", html);
   useEffect(() => {
     hljs.highlightAll();
   }, []);
@@ -31,9 +31,9 @@ export default function Layouts() {
   ];
 
   const [buttonTexts, setButtonTexts] = useState([
-    'Copy code',
-    'Copy code',
-    'Copy code'
+    "Copy code",
+    "Copy code",
+    "Copy code"
   ]);
 
   const handleCopyCode = (index) => {
@@ -41,15 +41,15 @@ export default function Layouts() {
     range.selectNode(codeRefs[index].current);
     window.getSelection().removeAllRanges();
     window.getSelection().addRange(range);
-    document.execCommand('copy');
+    document.execCommand("copy");
     window.getSelection().removeAllRanges();
 
     const newButtonTexts = [...buttonTexts];
-    newButtonTexts[index] = 'Copied!';
+    newButtonTexts[index] = "Copied!";
     setButtonTexts(newButtonTexts);
 
     setTimeout(() => {
-      newButtonTexts[index] = 'Copy code';
+      newButtonTexts[index] = "Copy code";
       setButtonTexts(newButtonTexts);
     }, 2000);
   };  
@@ -69,7 +69,7 @@ export default function Layouts() {
       <div className="wd-grid">
       <main>
       <h2>Layouts</h2>
-          <p className='wd-break'>You may choose between three layout types.</p>
+          <p className="wd-break">You may choose between three layout types.</p>
           <section className="wd-content" id="toc-one-column-layout">
           <div className="wd-subitems">
           <h3 id="one-column-layout" className="section-top anchor">One Column Layout</h3>

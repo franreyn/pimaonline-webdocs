@@ -1,19 +1,19 @@
-import Head from 'next/head';
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
-import { useLayoutEffect } from 'react';
-import { useEffect, useRef, useState } from 'react';
-import hljs from 'highlight.js/lib/core';
-import 'highlight.js/styles/night-owl.css';
-import html from 'highlight.js/lib/languages/xml';
-import Image from 'next/image';
-import TemplateSidebar from '@/components/TemplateSidebar';
+import Head from "next/head";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import { useLayoutEffect } from "react";
+import { useEffect, useRef, useState } from "react";
+import hljs from "highlight.js/lib/core";
+import "highlight.js/styles/night-owl.css";
+import html from "highlight.js/lib/languages/xml";
+import Image from "next/image";
+import TemplateSidebar from "@/components/TemplateSidebar";
 
 export default function OneColumn2() {
   const codeRef = useRef(null);
-  const [buttonText, setButtonText] = useState('Copy code');
+  const [buttonText, setButtonText] = useState("Copy code");
 
-  hljs.registerLanguage('html', html);
+  hljs.registerLanguage("html", html);
   useEffect(() => {
     hljs.highlightAll();
   }, []);
@@ -24,19 +24,19 @@ export default function OneColumn2() {
     range.selectNode(codeElement);
     window.getSelection().removeAllRanges();
     window.getSelection().addRange(range);
-    document.execCommand('copy');
+    document.execCommand("copy");
     window.getSelection().removeAllRanges();
 
-    setButtonText('Copied!');
+    setButtonText("Copied!");
 
     setTimeout(() => {
-      setButtonText('Copy code');
+      setButtonText("Copy code");
     }, 2000);
   };
 
   // Remove any existing theme link (required to keep theme styles just on the theme page)
   useLayoutEffect(() => {
-    const existingLink = document.querySelector('link[data-theme-link]');
+    const existingLink = document.querySelector("link[data-theme-link]");
     if (existingLink) {
       document.head.removeChild(existingLink);
     }
@@ -46,71 +46,71 @@ export default function OneColumn2() {
   const [templateView, setTemplateView] = useState();
 
   // Change the url for the highlighted image
-  const [templateImage, setTemplateImage] = useState('/images/templates/onecolumn2.jpg');
+  const [templateImage, setTemplateImage] = useState("/images/templates/onecolumn2.jpg");
 
   useEffect(() => {
     switch (templateView) {
-      case 'media':
-        setTemplateImage('/images/templates/onecolumn2-media.jpg');
+      case "media":
+        setTemplateImage("/images/templates/onecolumn2-media.jpg");
         break;
 
-      case 'table':
-        setTemplateImage('/images/templates/onecolumn2-table.jpg');
+      case "table":
+        setTemplateImage("/images/templates/onecolumn2-table.jpg");
         break;
 
-      case 'side-by-side':
-        setTemplateImage('/images/templates/onecolumn2-sidebyside.jpg');
+      case "side-by-side":
+        setTemplateImage("/images/templates/onecolumn2-sidebyside.jpg");
         break;
 
-      case 'accordion':
-        setTemplateImage('/images/templates/onecolumn2-accordion.jpg');
+      case "accordion":
+        setTemplateImage("/images/templates/onecolumn2-accordion.jpg");
         break;
 
-      case 'assignments':
-        setTemplateImage('/images/templates/onecolumn2-assignments.jpg');
+      case "assignments":
+        setTemplateImage("/images/templates/onecolumn2-assignments.jpg");
         break;
 
       default:
-        setTemplateImage('/images/templates/onecolumn2.jpg');
+        setTemplateImage("/images/templates/onecolumn2.jpg");
         break;
     }
   }, [templateView]);
 
   const changeToMedia = () => {
-    if (templateView !== 'media') {
-      setTemplateView('media');
+    if (templateView !== "media") {
+      setTemplateView("media");
     } else {
       setTemplateView();
     }
   };
 
   const changeToTable = () => {
-    if (templateView !== 'table') {
-      setTemplateView('table');
+    if (templateView !== "table") {
+      setTemplateView("table");
     } else {
       setTemplateView();
     }
   };
 
   const changeToSideBySide = () => {
-    if (templateView !== 'side-by-side') {
-      setTemplateView('side-by-side');
+    if (templateView !== "side-by-side") {
+      setTemplateView("side-by-side");
     } else {
       setTemplateView();
     }
   };
 
   const changeToAccordion = () => {
-    if (templateView !== 'accordion') {
-      setTemplateView('accordion');
+    if (templateView !== "accordion") {
+      setTemplateView("accordion");
     } else {
       setTemplateView();
     }
   };
 
   const changeToAssignments = () => {
-    if (templateView !== 'assignments') {
-      setTemplateView('assignments');
+    if (templateView !== "assignments") {
+      setTemplateView("assignments");
     } else {
       setTemplateView();
     }

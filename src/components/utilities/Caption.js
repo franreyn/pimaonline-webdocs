@@ -1,13 +1,13 @@
-import { useEffect, useRef, useState } from 'react';
-import hljs from 'highlight.js/lib/core';
-import 'highlight.js/styles/night-owl.css';
-import html from 'highlight.js/lib/languages/xml';
+import { useEffect, useRef, useState } from "react";
+import hljs from "highlight.js/lib/core";
+import "highlight.js/styles/night-owl.css";
+import html from "highlight.js/lib/languages/xml";
 
 export default function Caption() {
   const codeRef = useRef(null);
-  const [buttonText, setButtonText] = useState('Copy code');
+  const [buttonText, setButtonText] = useState("Copy code");
 
-  hljs.registerLanguage('html', html);
+  hljs.registerLanguage("html", html);
   useEffect(() => {
     hljs.highlightAll();
   }, []);
@@ -18,13 +18,13 @@ export default function Caption() {
     range.selectNode(codeElement);
     window.getSelection().removeAllRanges();
     window.getSelection().addRange(range);
-    document.execCommand('copy');
+    document.execCommand("copy");
     window.getSelection().removeAllRanges();
 
-    setButtonText('Copied!');
+    setButtonText("Copied!");
 
     setTimeout(() => {
-      setButtonText('Copy code');
+      setButtonText("Copy code");
     }, 2000);
   };
 

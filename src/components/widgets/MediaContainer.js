@@ -1,8 +1,8 @@
-import { useRef, useState } from 'react';
+import { useRef, useState } from "react";
 
 export default function MediaContainer() {
   const codeRef = useRef(null);
-  const [buttonText, setButtonText] = useState('Copy code');
+  const [buttonText, setButtonText] = useState("Copy code");
 
   const handleCopyCode = () => {
     const codeElement = codeRef.current;
@@ -10,13 +10,13 @@ export default function MediaContainer() {
     range.selectNode(codeElement);
     window.getSelection().removeAllRanges();
     window.getSelection().addRange(range);
-    document.execCommand('copy');
+    document.execCommand("copy");
     window.getSelection().removeAllRanges();
 
-    setButtonText('Copied!');
+    setButtonText("Copied!");
 
     setTimeout(() => {
-      setButtonText('Copy code');
+      setButtonText("Copy code");
     }, 2000);
   };
 
@@ -30,8 +30,8 @@ export default function MediaContainer() {
       </p>
       <h3>With caption</h3>
       <p>
-        Use <span className="wd-monospace">.media-container</span> as the parent element of both{' '}
-        <span className="wd-monospace">.media-object</span> which will house your iframe and{' '}
+        Use <span className="wd-monospace">.media-container</span> as the parent element of both
+        <span className="wd-monospace">.media-object</span> which will house your iframe and
         <span className="wd-monospace">.media-info</span> which will house your video's caption.
       </p>
       <div className="wd-window">
@@ -73,7 +73,7 @@ export default function MediaContainer() {
       </div><br /><br />
       <h3>Without caption</h3>
       <p>
-        Use <span className="wd-monospace">.media-container</span> as the parent element of{' '}
+        Use <span className="wd-monospace">.media-container</span> as the parent element of
         <span className="wd-monospace">.media-object</span> which will house your iframe.
       </p>
       <div className="wd-window">

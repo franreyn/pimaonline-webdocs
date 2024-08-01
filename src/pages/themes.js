@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import { useState } from "react";
-import Head from 'next/head'
+import Head from "next/head"
 import GallerySidebar from "@/components/GallerySidebar";
 import Footer from "@/components/Footer";
 
@@ -27,7 +27,7 @@ export default function Themes({ onThemeSelect }) {
       </header>
       <div className="wd-intro">
     <h1>Browse Course Themes</h1>
-      <p className='wd-break'>Streamlined and responsive course themes for any subject matter. Ready to use with any combination of layout, widgets, and utilities. </p>
+      <p className="wd-break">Streamlined and responsive course themes for any subject matter. Ready to use with any combination of layout, widgets, and utilities. </p>
       </div>
       <div className={`${styles.themesGallery} wd-grid`}>
     <aside>

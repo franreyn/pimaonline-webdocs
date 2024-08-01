@@ -1,8 +1,8 @@
-import { useRef, useState } from 'react';
+import { useRef, useState } from "react";
 
 export default function SideBySide() {
   const codeRef = useRef(null);
-  const [buttonText, setButtonText] = useState('Copy code');
+  const [buttonText, setButtonText] = useState("Copy code");
 
   const handleCopyCode = () => {
     const codeElement = codeRef.current;
@@ -10,13 +10,13 @@ export default function SideBySide() {
     range.selectNode(codeElement);
     window.getSelection().removeAllRanges();
     window.getSelection().addRange(range);
-    document.execCommand('copy');
+    document.execCommand("copy");
     window.getSelection().removeAllRanges();
 
-    setButtonText('Copied!');
+    setButtonText("Copied!");
 
     setTimeout(() => {
-      setButtonText('Copy code');
+      setButtonText("Copy code");
     }, 2000);
   };
 
@@ -29,7 +29,7 @@ export default function SideBySide() {
         Use <strong>Side-by-side</strong> to display two horizontal containers that can contain any content.
       </p>
       <p>
-        Use <span className="wd-monospace">.side-by-side</span> as the parent element of two{' '}
+        Use <span className="wd-monospace">.side-by-side</span> as the parent element of two
         <span className="wd-monospace">.side-by-side-item</span>.
       </p>
       <div className="wd-window">

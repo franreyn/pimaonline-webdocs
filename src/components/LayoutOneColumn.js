@@ -1,5 +1,5 @@
 import styles from "../styles/themeLayout.module.css"
-import { useEffect,useState, useRef } from 'react';
+import { useEffect,useState, useRef } from "react";
 
 export default function LayoutOneColumn(props) {
 
@@ -11,7 +11,7 @@ export default function LayoutOneColumn(props) {
       const stylesheetUrl = `https://cdn.jsdelivr.net/npm/@pimaonline/pimaonline-themepack/dist/css/themes/${theme}/styles.css`;
 
       // Remove any existing theme link
-      const existingLink = document.querySelector('link[data-theme-link]');
+      const existingLink = document.querySelector("link[data-theme-link]");
       if (existingLink) {
         document.head.removeChild(existingLink);
       }
@@ -29,15 +29,15 @@ export default function LayoutOneColumn(props) {
     });
 
       // Adds the link to the head of the document
-      const link = document.createElement('link');
-      link.rel = 'stylesheet';
+      const link = document.createElement("link");
+      link.rel = "stylesheet";
       link.href = stylesheetUrl;
-      link.setAttribute('data-theme-link', ''); // Add a custom attribute to identify the theme link
+      link.setAttribute("data-theme-link", ""); // Add a custom attribute to identify the theme link
       document.head.appendChild(link);
 
-      const docBody = document.querySelector('body');
+      const docBody = document.querySelector("body");
       if (docBody) {
-      docBody.style.borderTop = 'none';
+      docBody.style.borderTop = "none";
       }
 
       // Gets the external stylesheet and parses it for matching styles
@@ -91,7 +91,7 @@ if (contentBodyStyleMatches && contentBodyStyleMatches.length > 0) {
   }
     })
       .catch((error) => {
-        console.error('Error fetching or parsing the stylesheet:', error);
+        console.error("Error fetching or parsing the stylesheet:", error);
       });
     }
 }, [theme]);

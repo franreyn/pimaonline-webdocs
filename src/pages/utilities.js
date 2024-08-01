@@ -1,30 +1,30 @@
-import Head from 'next/head';
-import Navbar from '@/components/Navbar';
-import Caption from '@/components/utilities/Caption';
-import Edit from '@/components/utilities/Edit';
-import FontSizes from '@/components/utilities/FontSizes';
-import Highlight from '@/components/utilities/Highlight';
-import Labels from '@/components/utilities/Labels';
-import Lead from '@/components/utilities/Lead';
-import Monospace from '@/components/utilities/Monospace';
-import Footer from '@/components/Footer';
-import hljs from 'highlight.js/lib/core';
-import 'highlight.js/styles/night-owl.css';
-import html from 'highlight.js/lib/languages/xml';
-import { useEffect, useRef, useState, useLayoutEffect } from 'react';
-import UtilitiesSidebar from '@/components/UtilitiesSidebar';
+import Head from "next/head";
+import Navbar from "@/components/Navbar";
+import Caption from "@/components/utilities/Caption";
+import Edit from "@/components/utilities/Edit";
+import FontSizes from "@/components/utilities/FontSizes";
+import Highlight from "@/components/utilities/Highlight";
+import Labels from "@/components/utilities/Labels";
+import Lead from "@/components/utilities/Lead";
+import Monospace from "@/components/utilities/Monospace";
+import Footer from "@/components/Footer";
+import hljs from "highlight.js/lib/core";
+import "highlight.js/styles/night-owl.css";
+import html from "highlight.js/lib/languages/xml";
+import { useEffect, useRef, useState, useLayoutEffect } from "react";
+import UtilitiesSidebar from "@/components/UtilitiesSidebar";
 
 export default function Utilities() {
 
   // Remove any existing theme link (required to keep theme styles just on the theme page)
   useLayoutEffect(() => {
-    const existingLink = document.querySelector('link[data-theme-link]');
+    const existingLink = document.querySelector("link[data-theme-link]");
     if (existingLink) {
       document.head.removeChild(existingLink);
     }
   }, []);
 
-  hljs.registerLanguage('html', html);
+  hljs.registerLanguage("html", html);
   useEffect(() => {
     hljs.highlightAll();
   }, []);
@@ -36,9 +36,9 @@ export default function Utilities() {
   ];
 
   const [buttonTexts, setButtonTexts] = useState([
-    'Copy code',
-    'Copy code',
-    'Copy code'
+    "Copy code",
+    "Copy code",
+    "Copy code"
   ]);
 
   const handleCopyCode = (index) => {
@@ -46,15 +46,15 @@ export default function Utilities() {
     range.selectNode(codeRefs[index].current);
     window.getSelection().removeAllRanges();
     window.getSelection().addRange(range);
-    document.execCommand('copy');
+    document.execCommand("copy");
     window.getSelection().removeAllRanges();
 
     const newButtonTexts = [...buttonTexts];
-    newButtonTexts[index] = 'Copied!';
+    newButtonTexts[index] = "Copied!";
     setButtonTexts(newButtonTexts);
 
     setTimeout(() => {
-      newButtonTexts[index] = 'Copy code';
+      newButtonTexts[index] = "Copy code";
       setButtonTexts(newButtonTexts);
     }, 2000);
   };  
@@ -74,8 +74,8 @@ export default function Utilities() {
       <div className="wd-grid">
         <main>
           <h2>Inline Classes</h2>
-        <p className='wd-break'>Use inline classes to seamlessly style text and other elements, overriding native styles.</p>
-          <div className='wd-subitems'>
+        <p className="wd-break">Use inline classes to seamlessly style text and other elements, overriding native styles.</p>
+          <div className="wd-subitems">
           <Caption />
           </div>
           <div className="wd-subitems">

@@ -1,19 +1,19 @@
-import Head from 'next/head';
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
-import { useLayoutEffect } from 'react';
-import { useEffect, useRef, useState } from 'react';
-import hljs from 'highlight.js/lib/core';
-import 'highlight.js/styles/night-owl.css';
-import html from 'highlight.js/lib/languages/xml';
-import Image from 'next/image';
-import TemplateSidebar from '@/components/TemplateSidebar';
+import Head from "next/head";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import { useLayoutEffect } from "react";
+import { useEffect, useRef, useState } from "react";
+import hljs from "highlight.js/lib/core";
+import "highlight.js/styles/night-owl.css";
+import html from "highlight.js/lib/languages/xml";
+import Image from "next/image";
+import TemplateSidebar from "@/components/TemplateSidebar";
 
 export default function OneColumn5() {
   const codeRef = useRef(null);
-  const [buttonText, setButtonText] = useState('Copy code');
+  const [buttonText, setButtonText] = useState("Copy code");
 
-  hljs.registerLanguage('html', html);
+  hljs.registerLanguage("html", html);
   useEffect(() => {
     hljs.highlightAll();
   }, []);
@@ -24,19 +24,19 @@ export default function OneColumn5() {
     range.selectNode(codeElement);
     window.getSelection().removeAllRanges();
     window.getSelection().addRange(range);
-    document.execCommand('copy');
+    document.execCommand("copy");
     window.getSelection().removeAllRanges();
 
-    setButtonText('Copied!');
+    setButtonText("Copied!");
 
     setTimeout(() => {
-      setButtonText('Copy code');
+      setButtonText("Copy code");
     }, 2000);
   };
 
   // Remove any existing theme link (required to keep theme styles just on the theme page)
   useLayoutEffect(() => {
-    const existingLink = document.querySelector('link[data-theme-link]');
+    const existingLink = document.querySelector("link[data-theme-link]");
     if (existingLink) {
       document.head.removeChild(existingLink);
     }
@@ -46,7 +46,7 @@ export default function OneColumn5() {
       const [templateView, setTemplateView] = useState();
 
       // Change the url for the highlighted image
-      const [templateImage, setTemplateImage] = useState('/images/templates/onecolumn5.jpg');
+      const [templateImage, setTemplateImage] = useState("/images/templates/onecolumn5.jpg");
 
     
     useEffect(() => {
@@ -123,42 +123,42 @@ export default function OneColumn5() {
       </header>
       <div className="wd-intro">
     <h1>Browse Course Templates</h1>
-      <p className='wd-break'>Premade templates to browse and inspire your course content layouts. Ready to grab and go!</p>
+      <p className="wd-break">Premade templates to browse and inspire your course content layouts. Ready to grab and go!</p>
       </div>
       <div className="wd-grid">
-        <main className="anchor" id='one-column-5'>
+        <main className="anchor" id="one-column-5">
           <h2>Detailed Intro</h2>
           <p>Give your students every detail, expectation, and agenda item all in one place with this all-encompassing template. Break up text-heavy sections with border widgets to provide visual checkpoint for students as they work there way through the content.</p>
-            <h3 className='spacer'>Template Preview</h3>
+            <h3 className="spacer">Template Preview</h3>
           <div className="template-preview">
             <Image src={templateImage} alt="" width={292} height={280} priority />
             <div>
               <h4>Featured Widgets</h4>
-              <div className='wd-border'>
+              <div className="wd-border">
               <h5>Side-by-Side</h5>
               <p>Display two horizontal containers that can contain any content.</p>
               <br />
               <button className="wd-btn thin" onClick={changeToSideBySide}>Toggle in Preview</button>
               </div>
-              <div className='wd-border'>
+              <div className="wd-border">
               <h5>Border</h5>
               <p>Call out a main idea, draw attention to learning objectives or any other content that needs to stand out.</p>
               <br />
               <button className="wd-btn thin" onClick={changeToBorder}>Toggle in Preview</button>
               </div>
-              <div className='wd-border'>
+              <div className="wd-border">
               <h5>Horizontal Display</h5>
               <p>Display any content in an inline fashion with the flexibility to make one column wider than the other.</p>
               <br />
               <button className="wd-btn thin" onClick={changeToHorizontal}>Toggle in Preview</button>
               </div>
-              <div className='wd-border'>
+              <div className="wd-border">
               <h5>Table</h5>
               <p>Display tasks, due dates, and more in an organized and clear manner.</p>
               <br />
               <button className="wd-btn thin" onClick={changeToTable}>Toggle in Preview</button>
               </div>
-              <div className='wd-border'>
+              <div className="wd-border">
               <h5>Border Yellow</h5>
               <p>Another means to call out a main idea with an extra pop of color.</p>
               <br />

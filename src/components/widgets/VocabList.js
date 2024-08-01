@@ -1,8 +1,8 @@
-import { useRef, useState } from 'react';
+import { useRef, useState } from "react";
 
 export default function VocabList() {
   const codeRef = useRef(null);
-  const [buttonText, setButtonText] = useState('Copy code');
+  const [buttonText, setButtonText] = useState("Copy code");
   const [openIndexes, setOpenIndexes] = useState([]);
 
   const handleCopyCode = () => {
@@ -11,13 +11,13 @@ export default function VocabList() {
     range.selectNode(codeElement);
     window.getSelection().removeAllRanges();
     window.getSelection().addRange(range);
-    document.execCommand('copy');
+    document.execCommand("copy");
     window.getSelection().removeAllRanges();
 
-    setButtonText('Copied!');
+    setButtonText("Copied!");
 
     setTimeout(() => {
-      setButtonText('Copy code');
+      setButtonText("Copy code");
     }, 2000);
   };
 
@@ -47,11 +47,11 @@ export default function VocabList() {
           <dl className="vocab-list">
             <button onClick={closeAll}>Close All</button>
             <dt tabIndex="0" onClick={() => toggleAccordion(0)}>Term 1</dt>
-            <dd style={{ display: openIndexes.includes(0) ? 'block' : 'none' }}>Term Definition 1</dd>
+            <dd style={{ display: openIndexes.includes(0) ? "block" : "none" }}>Term Definition 1</dd>
             <dt tabIndex="0" onClick={() => toggleAccordion(1)}>Term 2</dt>
-            <dd style={{ display: openIndexes.includes(1) ? 'block' : 'none' }}>Term Definition 2</dd>
+            <dd style={{ display: openIndexes.includes(1) ? "block" : "none" }}>Term Definition 2</dd>
             <dt tabIndex="0" onClick={() => toggleAccordion(2)}>Term 3</dt>
-            <dd style={{ display: openIndexes.includes(2) ? 'block' : 'none' }}>Term Definition 3</dd>
+            <dd style={{ display: openIndexes.includes(2) ? "block" : "none" }}>Term Definition 3</dd>
           </dl>
         </div>
         <div className="wd-btn-container">

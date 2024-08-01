@@ -1,6 +1,6 @@
-import { useState } from 'react';
-import Image from 'next/image';
-import themeArray from './themeData';
+import { useState } from "react";
+import Image from "next/image";
+import themeArray from "./themeData";
 
 export default function LayoutCarousel({ activeIndex }) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -22,7 +22,7 @@ export default function LayoutCarousel({ activeIndex }) {
       case 2:
         return themeArray[activeIndex].image3;
       default:
-        return '';
+        return "";
     }
   };
 
@@ -35,7 +35,7 @@ export default function LayoutCarousel({ activeIndex }) {
       case 2:
         return "Three Section";
       default:
-        return '';
+        return "";
     }
   };
 

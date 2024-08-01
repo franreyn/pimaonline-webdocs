@@ -29,9 +29,9 @@ const Navbar = () => {
           </label>
         </button>
         {/* nav links */}
-        <div className={`nav-container ${menuOpen ? 'show-menu' : 'hide-menu'}`}>
+        <div className={`nav-container ${menuOpen ? "show-menu" : "hide-menu"}`}>
           <ul className="nav-links">
-            <li className={router.pathname === '/getting-started' ? 'active-nav' : ''}>
+            <li className={router.pathname === "/getting-started" ? "active-nav" : ""}>
               <Link href="/getting-started">Setup</Link>
               <ul className="sub-items">
                 <li><Link href="/getting-started">Getting Started</Link></li>
@@ -39,16 +39,16 @@ const Navbar = () => {
                 <li><Link href="/tips">Tips</Link></li>
               </ul>
             </li>
-            <li className={router.pathname === '/templates' ? 'active-nav' : ''}>
+            <li className={router.pathname === "/templates" ? "active-nav" : ""}>
               <Link href="/templates">Templates</Link>
             </li>
-            <li className={router.pathname === '/themes' ? 'active-nav' : ''}>
+            <li className={router.pathname === "/themes" ? "active-nav" : ""}>
               <Link href="/themes">Themes</Link>
             </li>
-            <li className={router.pathname === '/widgets' ? 'active-nav' : ''}>
+            <li className={router.pathname === "/widgets" ? "active-nav" : ""}>
               <Link href="/widgets">Widgets</Link>
             </li>
-            <li className={router.pathname === '/utilities' ? 'active-nav' : ''}>
+            <li className={router.pathname === "/utilities" ? "active-nav" : ""}>
               <Link href="/utilities">Utilities</Link>
             </li>
           </ul>

@@ -1,19 +1,19 @@
-import Head from 'next/head';
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
-import { useLayoutEffect } from 'react';
-import { useEffect, useRef, useState } from 'react';
-import hljs from 'highlight.js/lib/core';
-import 'highlight.js/styles/night-owl.css';
-import html from 'highlight.js/lib/languages/xml';
-import Image from 'next/image';
-import TemplateSidebar from '@/components/TemplateSidebar';
+import Head from "next/head";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import { useLayoutEffect } from "react";
+import { useEffect, useRef, useState } from "react";
+import hljs from "highlight.js/lib/core";
+import "highlight.js/styles/night-owl.css";
+import html from "highlight.js/lib/languages/xml";
+import Image from "next/image";
+import TemplateSidebar from "@/components/TemplateSidebar";
 
 export default function OneColumn4() {
   const codeRef = useRef(null);
-  const [buttonText, setButtonText] = useState('Copy code');
+  const [buttonText, setButtonText] = useState("Copy code");
 
-  hljs.registerLanguage('html', html);
+  hljs.registerLanguage("html", html);
   useEffect(() => {
     hljs.highlightAll();
   }, []);
@@ -24,19 +24,19 @@ export default function OneColumn4() {
     range.selectNode(codeElement);
     window.getSelection().removeAllRanges();
     window.getSelection().addRange(range);
-    document.execCommand('copy');
+    document.execCommand("copy");
     window.getSelection().removeAllRanges();
 
-    setButtonText('Copied!');
+    setButtonText("Copied!");
 
     setTimeout(() => {
-      setButtonText('Copy code');
+      setButtonText("Copy code");
     }, 2000);
   };
 
   // Remove any existing theme link (required to keep theme styles just on the theme page)
   useLayoutEffect(() => {
-    const existingLink = document.querySelector('link[data-theme-link]');
+    const existingLink = document.querySelector("link[data-theme-link]");
     if (existingLink) {
       document.head.removeChild(existingLink);
     }
@@ -46,7 +46,7 @@ export default function OneColumn4() {
       const [templateView, setTemplateView] = useState();
 
       // Change the url for the highlighted image
-      const [templateImage, setTemplateImage] = useState('/images/templates/onecolumn4.jpg');
+      const [templateImage, setTemplateImage] = useState("/images/templates/onecolumn4.jpg");
 
       
       useEffect(() => {
@@ -112,36 +112,36 @@ export default function OneColumn4() {
       </header>
       <div className="wd-intro">
     <h1>Browse Course Templates</h1>
-      <p className='wd-break'>Premade templates to browse and inspire your course content layouts. Ready to grab and go!</p>
+      <p className="wd-break">Premade templates to browse and inspire your course content layouts. Ready to grab and go!</p>
       </div>
       <div className="wd-grid">
-        <main className="anchor" id='one-column-4'>
+        <main className="anchor" id="one-column-4">
           <h2>Clean Grids</h2>
           <p>Provide some visual structure to your content with this template that leans into row- and column-based widgets. Include the weeks tasks in a table, provide key takeaways in card format, and offer supplemental video walkthroughs in a grid-like fashionl.</p>
-            <h3 className='spacer'>Template Preview</h3>
+            <h3 className="spacer">Template Preview</h3>
           <div className="template-preview">
             <Image src={templateImage} alt="" width={292} height={280} priority/>
             <div>
               <h4>Featured Widgets</h4>
-              <div className='wd-border'>
+              <div className="wd-border">
               <h5>Table</h5>
               <p>Display tasks, due dates, and more in an organized and clear manner.</p>
               <br />
               <button className="wd-btn thin" onClick={changeToTable}>Toggle in Preview</button>
               </div>
-              <div className='wd-border'>
+              <div className="wd-border">
               <h5>Vocab Cards</h5>
               <p>Not just for vocabulary! A versatile, interactive tile layout to display your content.</p>
               <br />
               <button className="wd-btn thin" onClick={changeToVocabCards}>Toggle in Preview</button>
               </div>
-              <div className='wd-border'>
+              <div className="wd-border">
               <h5>Video Gallery</h5>
               <p>Create a grid-like video gallery, with general information like title and video duration.</p>
               <br />
               <button className="wd-btn thin" onClick={changeToVideoGallery}>Toggle in Preview</button>
               </div>
-              <div className='wd-border'>
+              <div className="wd-border">
               <h5>Callout</h5>
               <p>Invite students to explore more resources on any given topic.</p>
               <br />
