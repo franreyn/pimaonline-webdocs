@@ -121,7 +121,7 @@ const themeArray = [
   {
     theme: "cards",
     name: "Cards",
-    code: "",
+    code: "cards",
     description: "This theme takes things back to basics with a classic blue palette and standard type.",
     image1: "/images/themes/cards-01.jpg",
     image2: "/images/themes/cards-02.jpg",

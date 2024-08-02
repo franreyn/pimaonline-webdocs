@@ -1,8 +1,8 @@
-import { useRef, useState } from 'react';
+import { useRef, useState } from "react";
 
 export default function Edit() {
   const codeRef = useRef(null);
-  const [buttonText, setButtonText] = useState('Copy code');
+  const [buttonText, setButtonText] = useState("Copy code");
 
   const handleCopyCode = () => {
     const codeElement = codeRef.current;
@@ -10,13 +10,13 @@ export default function Edit() {
     range.selectNode(codeElement);
     window.getSelection().removeAllRanges();
     window.getSelection().addRange(range);
-    document.execCommand('copy');
+    document.execCommand("copy");
     window.getSelection().removeAllRanges();
 
-    setButtonText('Copied!');
+    setButtonText("Copied!");
 
     setTimeout(() => {
-      setButtonText('Copy code');
+      setButtonText("Copy code");
     }, 2000);
   };
 
@@ -25,7 +25,7 @@ export default function Edit() {
       <section className="wd-content" id="toc-manual-setup">
         <h2 id="manual-setup" className="section-top anchor">Manual Setup</h2>
         <p>For a more custom approach, follow these steps to manually install the template system.</p>
-        <div className='wd-subitems'>
+        <div className="wd-subitems">
         <h3>CSS</h3>
         <p>Include the stylesheet by copying the code below and adding it in <span className="wd-monospace">&lt;head&gt;</span> before all other stylesheets.</p>
         <div className="wd-window">

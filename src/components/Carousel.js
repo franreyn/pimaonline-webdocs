@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
-import Image from 'next/image';
+import { useState, useEffect } from "react";
+import Image from "next/image";
 
 export default function Carousel() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -44,7 +44,7 @@ export default function Carousel() {
         <button className="previous-button" onClick={handlePrevious}>
           <Image src="/images/arrow-left-solid.png" alt="Left arrow" width={30} height={30} />
         </button>
-        <Image src={images[activeIndex].src} alt={images[activeIndex].alt} width={400} height={200} />
+        <Image src={images[activeIndex].src} alt={images[activeIndex].alt} width={400} height={200} priority/>
         <button className="next-button" onClick={handleNext}>
           <Image src="/images/arrow-right-solid.png" alt="Right arrow" width={30} height={30} />
         </button>

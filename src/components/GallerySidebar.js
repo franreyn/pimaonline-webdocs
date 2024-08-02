@@ -29,11 +29,11 @@ export default function GallerySidebar({ onThemeSelect }) {
   };
 
   return (
-    <div className={styles.themeSidebarBody} style={{ fontSize: '16px' }}>
+    <div className={styles.themeSidebarBody} style={{ fontSize: "16px" }}>
       <button className="toc-btn" onClick={toggleTOC}>
         <Image className="toc-icon" src="/images/toc.svg" alt="table of content open button" width={20} height={16} />
       </button>
-      <button className={`${styles.closeBtn} close-btn ${tocOpen ? `${styles.showCloseBtn} show-close-btn` : 'hide-close-btn'}`} onClick={closeSidebar}>
+      <button className={`${styles.closeBtn} close-btn ${tocOpen ? `${styles.showCloseBtn} show-close-btn` : "hide-close-btn"}`} onClick={closeSidebar}>
         <span className={styles.firstSpan}></span>
         <span className={styles.secondSpan}></span>
       </button>

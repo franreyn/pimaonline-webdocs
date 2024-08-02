@@ -1,16 +1,16 @@
-import Head from 'next/head';
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
-import Image from 'next/image';
-import Link from 'next/link';
-import { useLayoutEffect } from 'react';
-import TemplateSidebar from '@/components/TemplateSidebar';
+import Head from "next/head";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import Image from "next/image";
+import Link from "next/link";
+import { useLayoutEffect } from "react";
+import TemplateSidebar from "@/components/TemplateSidebar";
 
 export default function Templates() {
 
   // Remove any existing theme link (required to keep theme styles just on the theme page)
   useLayoutEffect(() => {
-    const existingLink = document.querySelector('link[data-theme-link]');
+    const existingLink = document.querySelector("link[data-theme-link]");
     if (existingLink) {
       document.head.removeChild(existingLink);
     }
@@ -26,11 +26,11 @@ export default function Templates() {
       </header>
       <div className="wd-intro">
     <h1>Browse Course Templates</h1>
-      <p className='wd-break'>Premade templates to browse and inspire your course content layouts. Ready to grab and go!</p>
+      <p className="wd-break">Premade templates to browse and inspire your course content layouts. Ready to grab and go!</p>
       </div>
       <div className="wd-grid">
         <main>
-          <h2 className="anchor" id='one-column-templates'>One Column Templates</h2>
+          <h2 className="anchor" id="one-column-templates">One Column Templates</h2>
           <section className="template-section">
             <div>
               <Link href="/templates/OneColumn1"><Image src="/images/templates/onecolumn1.jpg" alt="" width={292} height={280} priority="true"  /></Link>
@@ -81,7 +81,7 @@ export default function Templates() {
               </div>
             </div>
           </section>
-          <h2 className="anchor" id='two-column-templates'>Two Column Templates</h2>
+          <h2 className="anchor" id="two-column-templates">Two Column Templates</h2>
           <section className="template-section">
           <div>
           <Link href="/templates/TwoColumn1"><Image src="/images/templates/twocolumn1.jpg" alt="" width={292} height={280} /></Link>
@@ -127,7 +127,7 @@ export default function Templates() {
             </div>
           </div>
           </section>
-          <h2 className="anchor" id='sow-templates'>SOW Templates</h2>
+          <h2 className="anchor" id="sow-templates">SOW Templates</h2>
           <section className="template-section">
           <div>
           <Link href="/templates/SOW1"><Image src="/images/templates/sow1.jpg" alt="" width={292} height={280} /></Link>            <div>
