@@ -485,7 +485,7 @@ section p {
 
 .wd-sidebar {
   line-height: 1.6rem;
-  height: 85vh;
+  height: min-content;
   overflow-y: scroll;
 
 }
