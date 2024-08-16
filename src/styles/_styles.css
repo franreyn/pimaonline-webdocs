@@ -244,12 +244,34 @@ h4.layout-type {
 
 /* Homepage content */
 .wd-home-main {
-  padding: 4rem 1rem;
+  padding: 10rem 1rem 6rem;
 }
 
 .wd-content-wrapper {
   max-width: var(--breakpoint-lg);
   margin: 0 auto;
+}
+
+.feature {
+  color: var(--color-wd-primary) !important;
+  font-weight: 800;
+  margin: 0;
+  margin-left: 30px;
+  font-size: 1.2rem;
+}
+
+.badge {
+  background: rgb(250, 86, 86);
+  border-radius: 25px;
+  color: white;
+  width: fit-content;
+  padding: 5px 10px;
+  text-align: center;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: .8rem;
+  margin: 0;
 }
 
 .wd-hero {
@@ -293,6 +315,7 @@ section p {
   width: 100%;
   height: auto;
   margin-bottom: 1rem;
+  border-radius: 25px;
 }
 
 .wd-btn {

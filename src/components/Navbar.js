@@ -2,6 +2,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import Announcement from "./Announcement";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -45,6 +46,9 @@ const Navbar = () => {
             <li className={router.pathname === "/themes" ? "active-nav" : ""}>
               <Link href="/themes">Themes</Link>
             </li>
+            <li className={router.pathname === "/plugins" ? "active-nav" : ""}>
+              <Link href="/plugins">Plugins</Link>
+            </li>
             <li className={router.pathname === "/widgets" ? "active-nav" : ""}>
               <Link href="/widgets">Widgets</Link>
             </li>
@@ -54,6 +58,7 @@ const Navbar = () => {
           </ul>
         </div>
       </nav>
+      <Announcement />
     </>
   )
 }
