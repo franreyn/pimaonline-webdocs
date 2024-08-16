@@ -6,7 +6,7 @@ import "highlight.js/styles/night-owl.css";
 import html from "highlight.js/lib/languages/xml";
 import { useEffect, useRef, useState, useLayoutEffect } from "react";
 import DarkMode from "@/components/plugins/DarkMode";
-import FocusReader from "@/components/plugins/FocusReader";
+import FocusText from "@/components/plugins/FocusText";
 import LargeText from "@/components/plugins/LargeText";
 import NarrowWidth from "@/components/plugins/NarrowWidth";
 import ViewOptions from "@/components/plugins/ViewOptions";
@@ -78,7 +78,7 @@ export default function Plugins() {
           <DarkMode />
           </div>
           <div className="wd-subitems">
-          <FocusReader />
+          <FocusText />
           </div>
           <div className="wd-subitems">
           <LargeText />

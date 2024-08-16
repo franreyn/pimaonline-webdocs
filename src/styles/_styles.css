@@ -257,7 +257,7 @@ h4.layout-type {
   font-weight: 800;
   margin: 0;
   margin-left: 30px;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
 }
 
 .badge {
@@ -272,6 +272,15 @@ h4.layout-type {
   letter-spacing: 1.5px;
   font-size: .8rem;
   margin: 0;
+  margin-right: 5px;
+}
+
+.navy {
+  color: var(--color-wd-primary);
+  font-size: .9rem;
+  font-weight: 700;
+  margin-top: 10px;
+  line-height: 1.3rem;
 }
 
 .wd-hero {

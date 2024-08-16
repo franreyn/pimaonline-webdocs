@@ -4,7 +4,7 @@ import "highlight.js/styles/night-owl.css";
 import html from "highlight.js/lib/languages/xml";
 import Image from "next/image";
 
-export default function FocusReader() {
+export default function FocusText() {
   const codeRef = useRef(null);
   const [buttonText, setButtonText] = useState("Copy code");
 
@@ -31,9 +31,9 @@ export default function FocusReader() {
 
   return (
     <>
-      <section className="wd-content" id="toc-focus-reader">
-        <h3 id="focus-reader" className="section-top anchor">Focus Reader</h3>
-        <p>Use <span className="wd-monospace">focus-reader</span> to add the focus reader view option to your course shell. This gives students the option to toggle on a view with larger line spacing and a dynamic highlighting feature.</p>
+      <section className="wd-content" id="toc-focus-text">
+        <h3 id="focus-text" className="section-top anchor">Focus Text</h3>
+        <p>Use <span className="wd-monospace">focus-text</span> to add the focus reader view option to your course shell. This gives students the option to toggle on a view with larger line spacing and a dynamic highlighting feature.</p>
         <div className="wd-visual-ex">
         <section className="wd-side-by-side">
         <div className="wd-side-by-side-item">
@@ -48,7 +48,7 @@ export default function FocusReader() {
           <div className="wd-html-code">
             <pre>
               <code className="language-html" ref={codeRef}>
-                {String.raw`<body focus-reader>`}
+                {String.raw`<body focus-text>`}
               </code>
             </pre>
           </div>

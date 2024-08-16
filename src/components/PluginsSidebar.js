@@ -9,7 +9,7 @@ export default function PluginsSidebar() {
   const router = useRouter();
 
   const sections = useRef([
-    "toc-dark-mode", "toc-focus-reader", "toc-large-text", "toc-narrow-width", "toc-custom-combos", "toc-view-options"
+    "toc-dark-mode", "toc-focus-text", "toc-large-text", "toc-narrow-width", "toc-custom-combos", "toc-view-options"
   ]);
 
   useEffect(() => {
@@ -61,8 +61,8 @@ export default function PluginsSidebar() {
             <li className={activeId === "toc-dark-mode" ? "is-current" : ""}>
               <Link href="/plugins/#dark-mode" className="toc-dark-mode">Dark Mode</Link>
             </li>
-            <li className={activeId === "toc-focus-reader" ? "is-current" : ""}>
-              <Link href="/plugins/#focus-reader" className="toc-focus-reader">Focus Reader</Link>
+            <li className={activeId === "toc-focus-text" ? "is-current" : ""}>
+              <Link href="/plugins/#focus-text" className="toc-focus-text">Focus Text</Link>
             </li>
             <li className={activeId === "toc-large-text" ? "is-current" : ""}>
               <Link href="/plugins/#large-text" className="toc-large-text">Large Text</Link>
