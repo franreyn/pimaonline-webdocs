@@ -3,7 +3,7 @@ import Navbar from "@/components/Navbar";
 import Sidebar from "@/components/Sidebar";
 import Footer from "@/components/Footer";
 import { useLayoutEffect } from "react";
-import Docs from "@/components/docsIntro";
+import DocsIntro from "@/components/DocsIntro";
 import Link from "next/link";
 
 export default function Tips() {
@@ -25,7 +25,7 @@ export default function Tips() {
         <Navbar />
       </header>
       <div className="wd-intro">
-      <Docs />
+      <DocsIntro />
       </div>
       <div className="wd-grid">
         <main>

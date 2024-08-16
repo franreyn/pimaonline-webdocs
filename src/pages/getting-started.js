@@ -6,7 +6,7 @@ import { useLayoutEffect } from "react";
 import QuickStart from "@/components/getting-started/QuickStart";
 import ManualSetup from "@/components/getting-started/ManualSetup";
 import Community from "@/components/getting-started/Community";
-import Docs from "@/components/DocsIntro";
+import DocsIntro from "@/components/DocsIntro";
 
 export default function GettingStarted() {
 
@@ -27,7 +27,7 @@ export default function GettingStarted() {
         <Navbar />
       </header>
       <div className="wd-intro">
-      <Docs />
+      <DocsIntro />
       </div>
       <div className="wd-grid">
         <main>

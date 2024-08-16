@@ -1,0 +1,20 @@
+.wd-announcement {
+  width: 100vw;
+  background: var(--color-wd-accent);
+  opacity: 95%;
+  vertical-align: middle;
+  max-height: fit-content;
+  padding: 5px;
+  position: absolute;
+  border-radius: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.wd-announcement-hidden {
+  opacity: 0;
+  transition: opacity .5s ease-out;
+  visibility: hidden;
+  position: absolute;
+  z-index: -1;
+}
