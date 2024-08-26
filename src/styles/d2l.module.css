@@ -1,0 +1,11 @@
+
+/* Class to add to lists to help with spacing between images and text for each step */
+
+.d2lInstructions li {
+	margin-bottom: 2.5rem;
+	list-style-type: decimal;
+}
+
+.d2lInstructions img {
+	max-width: 80%;
+}
