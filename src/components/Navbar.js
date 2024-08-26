@@ -55,6 +55,9 @@ const Navbar = () => {
             <li className={router.pathname === "/utilities" ? "active-nav" : ""}>
               <Link href="/utilities">Utilities</Link>
             </li>
+						<li className={router.pathname === "/d2l-help" ? "active-nav" : ""}>
+              <Link href="/d2l-help">D2L Help</Link>
+            </li>
           </ul>
         </div>
       </nav>
