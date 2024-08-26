@@ -10,6 +10,8 @@ export default function D2LHelpSidebar() {
 
   const sections = useRef([
     "toc-how-to-add-template",
+		"toc-how-to-edit-banner-image",
+		"toc-saving-templated-file",
   ]);
 
   useEffect(() => {
@@ -60,6 +62,12 @@ export default function D2LHelpSidebar() {
           <ul>
             <li className={activeId === "toc-how-to-add-template" ? "is-current" : ""}>
               <Link href="/d2l-help/#how-to-add-template" className="toc-caption">How to add a template</Link>
+            </li>
+						<li className={activeId === "toc-how-to-edit-banner-image" ? "is-current" : ""}>
+              <Link href="/d2l-help/#how-to-edit-banner-image" className="toc-caption">How to edit the banner image</Link>
+            </li>
+						<li className={activeId === "toc-saving-templated-file" ? "is-current" : ""}>
+              <Link href="/d2l-help/#saving-templated-file" className="toc-caption">Saving a templated file</Link> 
             </li>
           </ul>
         </li>
