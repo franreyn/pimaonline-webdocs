@@ -75,11 +75,11 @@ export default function WidgetSidebar() {
             <li className={activeId === "toc-call-out" ? "is-current" : ""}>
               <Link href="/widgets/#call-out" className="toc-call-out">Call Out</Link>
             </li>
-            <li className={activeId === "toc-flip-card" ? "is-current" : ""}>
-              <Link href="/widgets/#flip-card" className="toc-flip-card">Flip Card</Link>
-            </li>
             <li className={activeId === "toc-card-horizontal" ? "is-current" : ""}>
               <Link href="/widgets/#card-horizontal" className="toc-card-horizontal">Card Horizontal</Link>
+            </li>
+						<li className={activeId === "toc-flip-card" ? "is-current" : ""}>
+              <Link href="/widgets/#flip-card" className="toc-flip-card">Flip Card</Link>
             </li>
             <li className={activeId === "toc-horizontal-display" ? "is-current" : ""}>
               <Link href="/widgets/#horizontal-display" className="toc-horizontal-display">Horizontal Display</Link>
