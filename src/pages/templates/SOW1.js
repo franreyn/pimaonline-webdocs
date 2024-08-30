@@ -87,7 +87,7 @@ export default function SOW1() {
           <p>Give a broader overview of the courseload, focusing on larger assignment, discussion and exam due dates. Keep students from feeling overwhelmed by hitting the main points and avoiding the nitty-gritty.</p>
             <h3 className="spacer">Template Preview</h3>
           <div className="template-preview">
-            <Image src={templateImage} alt="" width={292} height={280} priority/>
+            <Image src={templateImage} alt="" width={800} height={1400} priority/>
             <div>
               <h4>Featured Widgets</h4>
               <div className="wd-border">
