@@ -1,10 +1,13 @@
 import { useRef, useState } from "react";
 
 export default function MediaContainer() {
-  const codeRef = useRef(null);
-  const [buttonText, setButtonText] = useState("Copy code");
+  const captionMediaWidgetRef = useRef(null);
+	const noCaptionMediaWidgetRef = useRef(null);
 
-  const handleCopyCode = () => {
+	const [captionMediaWidgetText, setCaptionMediaWidgetButtonText]  = useState("Copy code");
+	const [noCaptionMediaWidgetText, setNoCaptionMediaWidgetButtonText]  = useState("Copy code");
+
+  const handleCopyCode = (codeRef, setButtonText) => {
     const codeElement = codeRef.current;
     const range = document.createRange();
     range.selectNode(codeElement);
@@ -54,11 +57,11 @@ export default function MediaContainer() {
           </div>
         </div>
         <div className="wd-btn-container">
-          <button className="wd-copy-btn" onClick={handleCopyCode}>{buttonText}</button>
+          <button className="wd-copy-btn" onClick={() => handleCopyCode(captionMediaWidgetRef, setCaptionMediaWidgetButtonText)}>{captionMediaWidgetText}</button>
         </div>
         <div className="wd-html-code">
           <pre>
-            <code className="language-html" ref={codeRef}>
+            <code className="language-html" ref={captionMediaWidgetRef}>
               {String.raw`<div class="media-container">
   <div class="media-object">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/rFve845ScJ4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -93,11 +96,11 @@ export default function MediaContainer() {
           </div>
         </div>
         <div className="wd-btn-container">
-          <button className="wd-copy-btn" onClick={handleCopyCode}>{buttonText}</button>
+          <button className="wd-copy-btn" onClick={() => handleCopyCode(noCaptionMediaWidgetRef, setNoCaptionMediaWidgetButtonText)}>{noCaptionMediaWidgetText}</button>
         </div>
         <div className="wd-html-code">
           <pre>
-            <code className="language-html" ref={codeRef}>
+            <code className="language-html" ref={noCaptionMediaWidgetRef}>
               {String.raw`<div class="media-container">
   <div class="media-object">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/rFve845ScJ4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
