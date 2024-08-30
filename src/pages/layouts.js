@@ -24,33 +24,29 @@ export default function Layouts() {
     hljs.highlightAll();
   }, []);
 
-  const codeRefs = [
-    useRef(null),
-    useRef(null),
-    useRef(null)
-  ];
+	
 
-  const [buttonTexts, setButtonTexts] = useState([
-    "Copy code",
-    "Copy code",
-    "Copy code"
-  ]);
+  const oneColumnCodeRef = useRef(null);
+  const twoColumnCodeRef = useRef(null);
+	const threeColumnCodeRef = useRef(null);
 
-  const handleCopyCode = (index) => {
+  const [oneColumnButtonText, setOneColumnButtonText] = useState("Copy code");
+  const [twoColumnButtonText, setTwoColumnButtonText] = useState("Copy code");
+	const [threeColumnButtonText, setThreeColumnButtonText] = useState("Copy code");
+
+  const handleCopyCode = (codeRef, setButtonText) => {
+    const codeElement = codeRef.current;
     const range = document.createRange();
-    range.selectNode(codeRefs[index].current);
+    range.selectNode(codeElement);
     window.getSelection().removeAllRanges();
     window.getSelection().addRange(range);
     document.execCommand("copy");
     window.getSelection().removeAllRanges();
 
-    const newButtonTexts = [...buttonTexts];
-    newButtonTexts[index] = "Copied!";
-    setButtonTexts(newButtonTexts);
+    setButtonText("Copied!");
 
     setTimeout(() => {
-      newButtonTexts[index] = "Copy code";
-      setButtonTexts(newButtonTexts);
+      setButtonText("Copy code");
     }, 2000);
   };  
 
@@ -79,11 +75,11 @@ export default function Layouts() {
           <img className={styles.mockLayout} src="/images/1-column.jpg"/>
         </div>
         <div className="wd-btn-container">
-          <button className="wd-copy-btn" onClick={() => handleCopyCode(0)}>{buttonTexts[0]}</button>
+          <button className="wd-copy-btn" onClick={() => handleCopyCode(oneColumnCodeRef, setOneColumnButtonText)}>{oneColumnButtonText}</button>
         </div>
         <div className="wd-html-code">
           <pre>
-            <code className="language-html" ref={codeRefs[0]}>
+            <code className="language-html" ref={oneColumnCodeRef}>
             {String.raw`<!doctype html>
 <html>
 <head>
@@ -137,11 +133,11 @@ export default function Layouts() {
           <img className={styles.mockLayout} src="/images/2-column.jpg"/>
         </div>
         <div className="wd-btn-container">
-          <button className="wd-copy-btn" onClick={() => handleCopyCode(0)}>{buttonTexts[0]}</button>
+          <button className="wd-copy-btn" onClick={() => handleCopyCode(twoColumnCodeRef, setTwoColumnButtonText)}>{twoColumnButtonText}</button>
         </div>
         <div className="wd-html-code">
           <pre>
-            <code className="language-html" ref={codeRefs[1]}>
+            <code className="language-html" ref={twoColumnCodeRef}>
             {String.raw`<!doctype html>
 <html>
 <head>
@@ -202,11 +198,11 @@ export default function Layouts() {
           <img className={styles.mockLayout} src="/images/3-column.jpg"/>
         </div>
         <div className="wd-btn-container">
-          <button className="wd-copy-btn" onClick={() => handleCopyCode(0)}>{buttonTexts[0]}</button>
+          <button className="wd-copy-btn" onClick={() => handleCopyCode(threeColumnCodeRef, setThreeColumnButtonText)}>{threeColumnButtonText}</button>
         </div>
         <div className="wd-html-code">
           <pre>
-            <code className="language-html" ref={codeRefs[2]}>
+            <code className="language-html" ref={threeColumnCodeRef}>
             {String.raw`<!doctype html>
 <html>
 <head>
