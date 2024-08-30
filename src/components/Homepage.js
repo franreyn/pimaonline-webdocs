@@ -16,7 +16,7 @@ const Home = () => {
       <section className="wd-side-by-side">
         <div className="wd-side-by-side-item">
           <h2>Developing online courses just got easier</h2>
-          <Link className="wd-btn" href="/getting-started">Explore Themes</Link>
+          <Link className="wd-btn" href="/themes">Explore Themes</Link>
         </div>
         <div className="wd-side-by-side-item">
         <Carousel />
