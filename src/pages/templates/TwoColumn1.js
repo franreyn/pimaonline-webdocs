@@ -131,7 +131,7 @@ export default function TwoColumn1() {
           <p>Put some power in your students hands with this highly interactive template: with tabs to click through, images to connect with, clear course objectives and a list of upcoming assignments. Students will have a more dynamic experience with the page. </p>
             <h3 className="spacer">Template Preview</h3>
           <div className="template-preview">
-            <Image src={templateImage} alt="" width={292} height={280} priority />
+            <Image src={templateImage} alt="" width={800} height={1400} priority />
             <div>
               <h4>Featured Widgets</h4>
               <div className="wd-border">

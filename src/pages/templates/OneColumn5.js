@@ -131,7 +131,7 @@ export default function OneColumn5() {
           <p>Give your students every detail, expectation, and agenda item all in one place with this all-encompassing template. Break up text-heavy sections with border widgets to provide visual checkpoint for students as they work there way through the content.</p>
             <h3 className="spacer">Template Preview</h3>
           <div className="template-preview">
-            <Image src={templateImage} alt="" width={292} height={280} priority />
+            <Image src={templateImage} alt="" width={800} height={1400} priority />
             <div>
               <h4>Featured Widgets</h4>
               <div className="wd-border">
