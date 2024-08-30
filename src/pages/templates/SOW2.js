@@ -87,7 +87,7 @@ const [templateImage, setTemplateImage] = useState("/images/templates/sow2.jpg")
           <p>Break down the course schedule into module-by-module chunks, detailing exactly what's due and when. Students can have both an overview of the courseload, while still taking each week a section at a time.</p>
             <h3 className="spacer">Template Preview</h3>
           <div className="template-preview">
-            <Image src={templateImage} alt="" width={292} height={280} priority/>
+            <Image src={templateImage} alt="" width={800} height={1400} priority/>
             <div>
               <h4>Featured Widgets</h4>
               <div className="wd-border">
