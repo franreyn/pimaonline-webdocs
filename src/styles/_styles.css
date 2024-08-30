@@ -154,7 +154,7 @@ h4.layout-type {
    
   span:nth-of-type(2) {
     width: 50%;
-    margin-left: auto;
+    margin-left: 5px;
   }
    
    
@@ -256,8 +256,14 @@ h4.layout-type {
   color: var(--color-wd-primary) !important;
   font-weight: 800;
   margin: 0;
-  margin-left: 30px;
+  margin-left: 5px;
   font-size: 1.3rem;
+}
+
+@media screen and (max-width: 767px) {
+  .feature {
+    font-size: 1.2rem;
+  }
 }
 
 .badge {
@@ -281,6 +287,7 @@ h4.layout-type {
   font-weight: 700;
   margin-top: 10px;
   line-height: 1.3rem;
+  text-align: left !important;
 }
 
 .wd-hero {
