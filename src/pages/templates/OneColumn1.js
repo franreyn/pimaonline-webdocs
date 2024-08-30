@@ -134,7 +134,7 @@ export default function OneColumn1() {
           <p>Give students a clear idea of the course overview and objects, while also providing a bit of encouragement and support. With opportunities for images throughout, this layout will feel visually balanced rather than intimidating chunks of text. Plus, give them quick reference shortcuts to the resources they'll need throughout the semester.</p>
           <h3 className="spacer">Template Preview</h3>
           <div className="template-preview">
-            <Image src={templateImage} alt="" width={292} height={280} priority />
+            <Image src={templateImage} alt="" width={800} height={1400} priority />
             <div>
               <h4>Featured Widgets</h4>
               <div className="wd-border">

@@ -146,7 +146,7 @@ export default function OneColumn3() {
           <p>Keep your students from getting lost in the coursework with this virtual content roadmap. Provide module learning goals, a list of items due in the next week, where they are in the overall course, and additional content &amp; resources to explore.</p>
             <h3 className="spacer">Template Preview</h3>
           <div className="template-preview">
-            <Image src={templateImage} alt="" width={292} height={280} priority/>
+            <Image src={templateImage} alt="" width={800} height={1400} priority/>
             <div>
               <h4>Featured Widgets</h4>
               <div className="wd-border">

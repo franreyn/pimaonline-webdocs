@@ -119,7 +119,7 @@ export default function TwoColumn3() {
           <p>Focus on the headlines with this template. List learning objectives, brief overviews of main takeaways from the text, and an easy-to-follow assignmnet list that takes students exactly where they need to be.</p>
             <h3 className="spacer">Template Preview</h3>
           <div className="template-preview">
-            <Image src={templateImage} alt="" width={292} height={280} priority/>
+            <Image src={templateImage} alt="" width={800} height={1400} priority/>
             <div>
               <h4>Featured Widgets</h4>
               <div className="wd-border">

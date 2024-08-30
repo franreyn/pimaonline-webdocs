@@ -120,7 +120,7 @@ export default function OneColumn4() {
           <p>Provide some visual structure to your content with this template that leans into row- and column-based widgets. Include the weeks tasks in a table, provide key takeaways in card format, and offer supplemental video walkthroughs in a grid-like fashionl.</p>
             <h3 className="spacer">Template Preview</h3>
           <div className="template-preview">
-            <Image src={templateImage} alt="" width={292} height={280} priority/>
+            <Image src={templateImage} alt="" width={800} height={1400} priority/>
             <div>
               <h4>Featured Widgets</h4>
               <div className="wd-border">

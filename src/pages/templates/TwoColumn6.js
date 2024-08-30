@@ -98,7 +98,7 @@ const [templateImage, setTemplateImage] = useState("/images/templates/twocolumn6
           <p>Keep things concise with this template, providing a brief topic overview, neatly arranged tasks &amp; due dates, some relevant imagery, and a key quote from the text. Students will appreciate the direction, without being overwhelmed by information.</p>
             <h3 className="spacer">Template Preview</h3>
           <div className="template-preview">
-            <Image src={templateImage} alt="" width={292} height={280} priority/>
+            <Image src={templateImage} alt="" width={800} height={1400} priority/>
             <div>
               <h4>Featured Widgets</h4>
               <div className="wd-border">
