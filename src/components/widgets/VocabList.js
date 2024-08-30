@@ -61,7 +61,6 @@ export default function VocabList() {
           <pre>
             <code className="language-html" ref={codeRef}>
               {String.raw`<dl class="vocab-list">
-  <button>Close All</button>
   <dt tabIndex="0">Term 1</dt>
   <dd>Term Definition 1</dd>
   <dt tabIndex="0">Term 2</dt>
