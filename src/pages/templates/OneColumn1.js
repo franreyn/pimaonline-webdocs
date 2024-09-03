@@ -183,12 +183,13 @@ export default function OneColumn1() {
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@pimaonline/pimaonline-themepack/dist/css/themes/cards/styles.css">
-<link rel="stylesheet" type="text/css" href="/content/enforced/518911-fjreynoso_H5P_testing/Joslin/premade-templates/../css/custom.css">
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@pimaonline/pimaonline-themepack/dist/js/scripts2.js" defer=""></script>
+<link rel="stylesheet" type="text/css" href="../css/custom.css">
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js" defer></script> 
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@pimaonline/pimaonline-themepack/dist/js/scripts2.js" defer></script>
 <title>Starter Template</title>
 </head>
 <body>
-<header class="header"><img src="https://via.placeholder.com/1920X600" alt="">
+<header class="header"> <img src="https://via.placeholder.com/1920X600" alt="">
   <div class="text-container">
     <h1>Course Intro</h1>
     <p>Donec sollicitudin molestie malesuada. Nulla porttitor accumsan tincidunt. Proin eget tortor risus. Pellentesque in ipsum id orci porta.</p>
@@ -199,34 +200,49 @@ export default function OneColumn1() {
     <h2>Welcome to [course name here]</h2>
     <p>Curabitur aliquet quam id dui posuere blandit. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis lorem ut libero malesuada feugiat. Vivamus suscipit tortor eget felis porttitor volutpat. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Proin eget tortor risus. Donec rutrum congue leo eget malesuada.</p>
     <div class="border">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, eiusmod tempor incididunt ut labore et dolore magna aliqua.
       <ul>
         <li>Sub-item 1</li>
         <li>Sub-item 2</li>
       </ul>
+      </p>
     </div>
     <h3>What You Will Learn</h3>
     <p>Curabitur aliquet quam id dui posuere blandit. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis lorem ut libero malesuada feugiat. Vivamus suscipit tortor eget felis porttitor volutpat. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Proin eget tortor risus. Donec rutrum congue leo eget malesuada.</p>
-    <div class="vocab">[Course Objective]Lorem ipsum dolor sit amet, consectetur adipiscing elit, eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      <ul>
-        <li class="caption">Sub-item 1</li>
-        <li class="caption">Sub-item 2</li>
-      </ul>
-    </div>
-    <div class="vocab">[Course Objective]Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
-    <div class="vocab">[Course Objective]Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      <ul>
-        <li class="caption">Sub-item 1</li>
-      </ul>
-    </div>
-    <div class="vocab">[Course Objective]Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
-    <div class="vocab">[Course Objective]Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      <ul>
-        <li class="caption">Sub-item 1</li>
-        <li class="caption">Sub-item 2</li>
-        <li class="caption">Sub-item 3</li>
-      </ul>
-    </div>
+    <dl class="vocab-cards">
+      <div class="vocab">
+        <dt>[Course Objective]</dt>
+        <dd>Lorem ipsum dolor sit amet, consectetur adipiscing elit, eiusmod tempor incididunt ut labore et dolore magna aliqua.</dd>
+        <ul>
+          <li class="caption">Sub-item 1</li>
+          <li class="caption">Sub-item 2</li>
+        </ul>
+      </div>
+      <div class="vocab">
+        <dt>[Course Objective]</dt>
+        <dd>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</dd>
+      </div>
+      <div class="vocab">
+        <dt>[Course Objective]</dt>
+        <dd>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</dd>
+        <ul>
+          <li class="caption">Sub-item 1</li>
+        </ul>
+      </div>
+      <div class="vocab">
+        <dt>[Course Objective]</dt>
+        <dd>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</dd>
+      </div>
+      <div class="vocab">
+        <dt>[Course Objective]</dt>
+        <dd>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</dd>
+        <ul>
+          <li class="caption">Sub-item 1</li>
+          <li class="caption">Sub-item 2</li>
+          <li class="caption">Sub-item 3</li>
+        </ul>
+      </div>
+    </dl>
     <h4>And don't forget...</h4>
     <p>Nulla quis lorem ut libero malesuada feugiat. Vivamus suscipit tortor eget felis porttitor volutpat. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Proin eget tortor risus. Donec rutrum congue leo eget malesuada.</p>
   </div>
@@ -234,12 +250,12 @@ export default function OneColumn1() {
     <h2>Some inspiration as you begin</h2>
     <p>Curabitur aliquet quam id dui posuere blandit. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis lorem ut libero malesuada feugiat. Proin eget tortor risus:</p>
     <div class="side-by-side">
-      <div class="side-by-side-item"><img src="https://via.placeholder.com/300" alt=""></div>
+      <div class="side-by-side-item"> <img src="https://via.placeholder.com/300" alt="" /> </div>
       <div class="side-by-side-item">
         <hr>
         <blockquote class="text-center">Commit yourself to lifelong Learning. The most valuable asset you will ever have is your mind and what you put into it. <br>
           <br>
-          <span class="caption">– Albert Einstein </span></blockquote>
+          <span class="caption">–  Albert Einstein </span></blockquote>
         <hr>
       </div>
     </div>
@@ -247,11 +263,11 @@ export default function OneColumn1() {
   <div class="content-body">
     <div class="image-gallery">
       <div class="gallery-wrapper">
-        <div class="image-box"><img src="https://picsum.photos/id/1018/400/200" alt=""></div>
-        <div class="image-box"><img src="https://picsum.photos/id/1047/300/400" alt=""></div>
-        <div class="image-box"><img src="https://picsum.photos/id/1059/500/300" alt=""></div>
-        <div class="image-box"><img src="https://picsum.photos/id/119/500/300" alt=""></div>
-        <div class="image-box"><img src="https://picsum.photos/id/143/800/200" alt=""></div>
+        <div class="image-box"> <img src="https://picsum.photos/id/1018/400/200" alt="" /> </div>
+        <div class="image-box"> <img src="https://picsum.photos/id/1047/300/400" alt="" /> </div>
+        <div class="image-box"> <img src="https://picsum.photos/id/1059/500/300" alt="" /> </div>
+        <div class="image-box"> <img src="https://picsum.photos/id/119/500/300" alt="" /> </div>
+        <div class="image-box"> <img src="https://picsum.photos/id/143/800/200" alt="" /> </div>
       </div>
     </div>
   </div>

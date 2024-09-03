@@ -164,6 +164,7 @@ export default function OneColumn6() {
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@pimaonline/pimaonline-themepack/dist/css/themes/cards/styles.css">
 <link rel="stylesheet" type="text/css" href="../css/custom.css">
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js" defer></script> 
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@pimaonline/pimaonline-themepack/dist/js/scripts2.js" defer></script>
 <title>Starter Template</title>
 </head>
@@ -204,47 +205,47 @@ export default function OneColumn6() {
       </ul>
       </p>
     </div>
-	<table class="display-lg" cellpadding="5" cellspacing="0" width="100%">
-<thead>
-<tr>
-<th scope="col">Activity</th>
-<th scope="col">Where</th>
-<th scope="col">Estimated Time</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="">Lecture</a></td>
-<td>D2L</td>
-<td>10 min</td>
-</tr>
-<tr>
-<td><a href="">Reading</a></td>
-<td>Textbook</td>
-<td>30 min</td>
-</tr>
-<tr>
-<td><a href="">Discussion Topic</a></td>
-<td>D2L Discussion Board</td>
-<td>30 min</td>
-</tr>
-<tr>
-<td><a href="">Lab</a></td>
-<td>Lab Interactive</td>
-<td>30 min</td>
-</tr>
-<tr>
-<td><a href="">Assignment</a></td>
-<td>D2L</td>
-<td>30 min</td>
-</tr>
-<tr>
-<th>Total time</th>
-<th></th>
-<th>~3 hours</th>
-</tr>
-</tbody>
-</table>
+    <table class="display-lg" cellpadding="5" cellspacing="0" width="100%">
+      <thead>
+        <tr>
+          <th scope="col">Activity</th>
+          <th scope="col">Where</th>
+          <th scope="col">Estimated Time</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><a href="">Lecture</a></td>
+          <td>D2L</td>
+          <td>10 min</td>
+        </tr>
+        <tr>
+          <td><a href="">Reading</a></td>
+          <td>Textbook</td>
+          <td>30 min</td>
+        </tr>
+        <tr>
+          <td><a href="">Discussion Topic</a></td>
+          <td>D2L Discussion Board</td>
+          <td>30 min</td>
+        </tr>
+        <tr>
+          <td><a href="">Lab</a></td>
+          <td>Lab Interactive</td>
+          <td>30 min</td>
+        </tr>
+        <tr>
+          <td><a href="">Assignment</a></td>
+          <td>D2L</td>
+          <td>30 min</td>
+        </tr>
+        <tr>
+          <th>Total time</th>
+          <th></th>
+          <th>~3 hours</th>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </div>
 <footer>

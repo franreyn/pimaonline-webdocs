@@ -173,67 +173,67 @@ const [templateImage, setTemplateImage] = useState("/images/templates/twocolumn2
             <div className="wd-html-code">
               <pre>
                 <code className="language-html" ref={codeRef}>
-                  {String.raw`<!DOCTYPE html>
+                  {String.raw`<!doctype html>
 <html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@pimaonline/pimaonline-themepack/dist/css/themes/cards/styles.css">
 <link rel="stylesheet" type="text/css" href="../../css/custom.css">
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js" defer></script> 
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@pimaonline/pimaonline-themepack/dist/js/scripts2.js" defer></script>
 <title>Starter Template</title>
 </head>
-  <body>
-    <header class="header">
-      <img src="https://via.placeholder.com/1920X600" alt="">
-      <div class="text-container">
-        <h1>Course Intro</h1>
-        <p>Donec sollicitudin molestie malesuada. Nulla porttitor accumsan tincidunt. Proin eget tortor risus. Pellentesque in ipsum id orci porta.</p>
-      </div>
-    </header>
-    <div id="content-wrapper">
-      <div class="content-body">
-        <h2>Welcome to [course name here]</h2>
-        <p>Curabitur aliquet quam id dui posuere blandit. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis lorem ut libero malesuada feugiat. Vivamus suscipit tortor eget felis porttitor volutpat. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Proin eget tortor risus. Donec rutrum congue leo eget malesuada.</p>
-       <h3>A Quick Welcome from Your Course Instructor</h3>
+<body>
+<header class="header"> <img src="https://via.placeholder.com/1920X600" alt="">
+  <div class="text-container">
+    <h1>Course Intro</h1>
+    <p>Donec sollicitudin molestie malesuada. Nulla porttitor accumsan tincidunt. Proin eget tortor risus. Pellentesque in ipsum id orci porta.</p>
+  </div>
+</header>
+<div id="content-wrapper">
+  <div class="content-body">
+    <h2>Welcome to [course name here]</h2>
+    <p>Curabitur aliquet quam id dui posuere blandit. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis lorem ut libero malesuada feugiat. Vivamus suscipit tortor eget felis porttitor volutpat. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Proin eget tortor risus. Donec rutrum congue leo eget malesuada.</p>
+    <h3>A Quick Welcome from Your Course Instructor</h3>
     <div class="media-container">
       <div class="media-object">
         <iframe width="560" height="315" src="https://www.youtube.com/embed/rFve845ScJ4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
     </div>
-		        <h3>What You Will Learn</h3>
-      <p>Curabitur aliquet quam id dui posuere blandit. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis lorem ut libero malesuada feugiat. Vivamus suscipit tortor eget felis porttitor volutpat. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Proin eget tortor risus. Donec rutrum congue leo eget malesuada.</p>
-    <dl class="vocab-cards">
-      <div class="vocab">
+    <h3>What You Will Learn</h3>
+    <p>Curabitur aliquet quam id dui posuere blandit. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis lorem ut libero malesuada feugiat. Vivamus suscipit tortor eget felis porttitor volutpat. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Proin eget tortor risus. Donec rutrum congue leo eget malesuada.</p>
+    <ul class="vocab-cards">
+      <li class="vocab">
         <dt>[Course Objective]</dt>
         <dd>Lorem ipsum dolor sit amet, consectetur adipiscing elit, eiusmod tempor incididunt ut labore et dolore magna aliqua.</dd>
         <ul>
           <li class="caption">Sub-item 1</li>
           <li class="caption">Sub-item 2</li>
         </ul>
-      </div>
-      <div class="vocab">
+      </li>
+      <li class="vocab">
         <dt>[Course Objective]</dt>
         <dd>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</dd>
-      </div>
-      <div class="vocab">
+      </li>
+      <li class="vocab">
         <dt>[Course Objective]</dt>
         <dd>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</dd>
         <ul>
           <li class="caption">Sub-item 1</li>
         </ul>
-      </div>
-      <div class="vocab">
+      </li>
+      <li class="vocab">
         <dt>[Course Objective]</dt>
         <dd>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</dd>
-      </div>
-    </dl>
-		</div>
-    </div>
-    <div id="second-column">
-      <div class="content-body">
-        <h2>Weekly Agenda</h2>
-<p>Vivamus suscipit tortor eget felis porttitor volutpat. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Proin eget tortor risus. Donec rutrum congue leo eget malesuada.</p>
+      </li>
+    </ul>
+  </div>
+</div>
+<div id="second-column">
+  <div class="content-body">
+    <h2>Weekly Agenda</h2>
+    <p>Vivamus suscipit tortor eget felis porttitor volutpat. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Proin eget tortor risus. Donec rutrum congue leo eget malesuada.</p>
     <table class="display-lg">
       <thead>
         <tr>
@@ -255,43 +255,37 @@ const [templateImage, setTemplateImage] = useState("/images/templates/twocolumn2
         </tr>
       </tbody>
     </table>
-		  <h3>Lorem Ipsum</h3>
-<p>Vivamus suscipit tortor eget felis porttitor volutpat. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Proin eget tortor risus. Donec rutrum congue leo eget malesuada.</p>
-		  <div class="image-gallery">
-  <div class="gallery-wrapper">
-    <div class="image-box">
-      <img src="https://picsum.photos/id/1018/400/200" alt="" />
+    <h3>Lorem Ipsum</h3>
+    <p>Vivamus suscipit tortor eget felis porttitor volutpat. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Proin eget tortor risus. Donec rutrum congue leo eget malesuada.</p>
+    <div class="image-gallery">
+      <div class="gallery-wrapper">
+        <div class="image-box"> <img src="https://picsum.photos/id/1018/400/200" alt="" /> </div>
+        <div class="image-box"> <img src="https://picsum.photos/id/1047/300/400" alt="" /> </div>
+        <div class="image-box"> <img src="https://picsum.photos/id/1059/500/300" alt="" /> </div>
+        <div class="image-box"> <img src="https://picsum.photos/id/119/500/300" alt="" /> </div>
+        <div class="image-box"> <img src="https://picsum.photos/id/143/800/200" alt="" /> </div>
+      </div>
     </div>
-    <div class="image-box">
-      <img src="https://picsum.photos/id/1047/300/400" alt="" />
-    </div>
-    <div class="image-box">
-      <img src="https://picsum.photos/id/1059/500/300" alt="" />
-    </div>
-    <div class="image-box">
-      <img src="https://picsum.photos/id/119/500/300" alt="" />
-    </div>
-    <div class="image-box">
-      <img src="https://picsum.photos/id/143/800/200" alt="" />
-    </div>
+    <p>Vivamus suscipit tortor eget felis porttitor volutpat. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Proin eget tortor risus. Donec rutrum congue leo eget malesuada.</p>
+    <br>
+    <br>
+    <hr>
+    <blockquote class="text-center">Some text used to help display a blockquote</blockquote>
+    <hr>
   </div>
 </div>
-		  <p>Vivamus suscipit tortor eget felis porttitor volutpat. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Proin eget tortor risus. Donec rutrum congue leo eget malesuada.</p><br><br>
-		 <hr> <blockquote class="text-center">Some text used to help display a blockquote</blockquote><hr>
-      </div>
+<footer>
+  <div id="footer">
+    <p class="text-center toggle-footnotes">[Show Footnotes]</p>
+    <div class="footnotes">
+      <p>Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus.</p>
+      <ul>
+        <li>Lorem culim ghus.</li>
+        <li>Ipsum guar havana.</li>
+      </ul>
     </div>
-    <footer>
-      <div id="footer">
-        <p class="text-center toggle-footnotes">[Show Footnotes]</p>
-        <div class="footnotes">
-          <p>Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus.</p>
-          <ul>
-            <li>Lorem culim ghus.</li>
-            <li>Ipsum guar havana.</li>
-          </ul>
-        </div>
-      </div>
-    </footer>
+  </div>
+</footer>
 </body>
 </html>`}
                 </code>

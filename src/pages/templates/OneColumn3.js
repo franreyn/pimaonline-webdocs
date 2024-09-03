@@ -201,6 +201,7 @@ export default function OneColumn3() {
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@pimaonline/pimaonline-themepack/dist/css/themes/cards/styles.css">
 <link rel="stylesheet" type="text/css" href="../css/custom.css">
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js" defer></script> 
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@pimaonline/pimaonline-themepack/dist/js/scripts2.js" defer></script>
 <title>Starter Template</title>
 </head>
@@ -215,15 +216,18 @@ export default function OneColumn3() {
   <div class="content-body">
     <h2>Topic Overview</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque in enim quis sem placerat viverra id eget mauris. Proin tempor, eros et efficitur tincidunt, sem felis pharetra tellus, a fermentum mauris tellus sed nisi. Nunc ex metus, porttitor sed ante eget, tempus scelerisque metus. Maecenas imperdiet dictum euismod. Duis sed semper mi. Vestibulum consequat nisl ut felis viverra hendrerit. Nunc vitae bibendum felis.</p>
-<div class="image-gallery">
-	  <div class="border"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    <div class="image-gallery">
+      <div class="border">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, eiusmod tempor incididunt ut labore et dolore magna aliqua.
         <ul>
           <li>Sub-item 1</li>
           <li>Sub-item 2</li>
-        </ul></p></div>
-</div>
-      <p>Donec interdum hendrerit viverra. Praesent sit amet feugiat nunc. Pellentesque vitae egestas sapien, volutpat suscipit urna. Maecenas porta, mi vitae hendrerit molestie, libero dolor gravida mi, vel maximus risus dolor sed nulla. Vestibulum malesuada velit nec urna molestie vestibulum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec elementum justo id metus suscipit, ut semper massa fringilla. Vestibulum finibus commodo nisi, non congue arcu. Integer sollicitudin rhoncus felis ac laoreet. Curabitur varius sagittis orci vitae dapibus. Morbi congue blandit dolor, sit amet auctor neque ornare et. Morbi vulputate erat urna, vitae varius urna accumsan ac. Curabitur purus turpis, ullamcorper nec lorem et, tincidunt tempus odio. Etiam sit amet luctus lectus.</p>
-      <p>Donec a sapien vitae lacus aliquam rhoncus vel in dui. Ut scelerisque leo in arcu lobortis, ut accumsan sem fringilla. Vestibulum id lectus sagittis, malesuada ex non, ultrices leo. Praesent sollicitudin nisl tellus, eget sodales dui cursus gravida. Integer felis ex, iaculis nec pulvinar eget, condimentum at lectus. Phasellus ultricies, nulla ut aliquet aliquet, risus massa molestie risus, vitae ultrices nunc ipsum eget justo. Nulla quis sapien vel ligula feugiat interdum. Fusce elit purus, tincidunt vel ante et, efficitur feugiat elit.</p>
+        </ul>
+        </p>
+      </div>
+    </div>
+    <p>Donec interdum hendrerit viverra. Praesent sit amet feugiat nunc. Pellentesque vitae egestas sapien, volutpat suscipit urna. Maecenas porta, mi vitae hendrerit molestie, libero dolor gravida mi, vel maximus risus dolor sed nulla. Vestibulum malesuada velit nec urna molestie vestibulum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec elementum justo id metus suscipit, ut semper massa fringilla. Vestibulum finibus commodo nisi, non congue arcu. Integer sollicitudin rhoncus felis ac laoreet. Curabitur varius sagittis orci vitae dapibus. Morbi congue blandit dolor, sit amet auctor neque ornare et. Morbi vulputate erat urna, vitae varius urna accumsan ac. Curabitur purus turpis, ullamcorper nec lorem et, tincidunt tempus odio. Etiam sit amet luctus lectus.</p>
+    <p>Donec a sapien vitae lacus aliquam rhoncus vel in dui. Ut scelerisque leo in arcu lobortis, ut accumsan sem fringilla. Vestibulum id lectus sagittis, malesuada ex non, ultrices leo. Praesent sollicitudin nisl tellus, eget sodales dui cursus gravida. Integer felis ex, iaculis nec pulvinar eget, condimentum at lectus. Phasellus ultricies, nulla ut aliquet aliquet, risus massa molestie risus, vitae ultrices nunc ipsum eget justo. Nulla quis sapien vel ligula feugiat interdum. Fusce elit purus, tincidunt vel ante et, efficitur feugiat elit.</p>
     <h3>Here's what's due this week:</h3>
     <p>Complete the reading, review activity, discussion, lab, and quiz by August 30th.</p>
     <br>
@@ -257,8 +261,8 @@ export default function OneColumn3() {
   <div class="content-body">
     <h2>Course Roadmap</h2>
     <p>In the overall course, you are here:</p>
-    <dl class="vocab-cards">
-      <div class="vocab">
+    <ul class="vocab-cards">
+      <li class="vocab">
         <dt>Unit One</dt>
         <dd>
           <ul>
@@ -267,8 +271,8 @@ export default function OneColumn3() {
             <li>Module Three: Proin tempor</li>
           </ul>
         </dd>
-      </div>
-      <div class="vocab">
+      </li>
+      <li class="vocab">
         <dt>Unit Two</dt>
         <dd>
           <ul>
@@ -278,8 +282,8 @@ export default function OneColumn3() {
             <li>Module Seven: Tempor metus</li>
           </ul>
         </dd>
-      </div>
-      <div class="vocab">
+      </li>
+      <li class="vocab">
         <dt>Unit Three</dt>
         <dd>
           <ul>
@@ -288,53 +292,51 @@ export default function OneColumn3() {
             <li>Module Ten: Tempor metus</li>
           </ul>
         </dd>
-      </div>
-    </dl>
+      </li>
+    </ul>
   </div>
-	<div class="content-body">
-	<h2>More Food For Thought</h2>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque in enim quis sem placerat viverra id eget mauris. Proin tempor, eros et efficitur tincidunt, sem felis pharetra tellus, a fermentum mauris tellus sed nisi. Nunc ex metus, porttitor sed ante eget, tempus scelerisque metus. </p>
-	<div class="video-widget">
-  <div class="video-card">
-    <h3>Supplementary Video</h3>
-    <div class="card-content">
-      <h4>Il faut</h4>
-      <p>(Video length: 3:50 minutes)</p>
-      <div class="media-container">
-        <div class="media-object">
-          <iframe src="https://www.youtube.com/embed/rKV0Yl1Ir2g" title="YouTube video player?wmode=opaque" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen="" width="560" height="315" frameBorder="0"></iframe>
-        </div>
+  <div class="content-body">
+    <h2>More Food For Thought</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque in enim quis sem placerat viverra id eget mauris. Proin tempor, eros et efficitur tincidunt, sem felis pharetra tellus, a fermentum mauris tellus sed nisi. Nunc ex metus, porttitor sed ante eget, tempus scelerisque metus. </p>
+    <div class="video-widget">
+      <div class="video-card">
+        <h3>Supplementary Video</h3>
+        <div class="card-content">
+          <h4>Il faut</h4>
+          <p>(Video length: 3:50 minutes)</p>
+          <div class="media-container">
+            <div class="media-object">
+              <iframe src="https://www.youtube.com/embed/rKV0Yl1Ir2g" title="YouTube video player?wmode=opaque" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen="" width="560" height="315" frameBorder="0"></iframe>
+            </div>
+          </div>
+          <a class="btn ext" href="https://www.youtube.com/embed/rKV0Yl1Ir2g" target="_blank" rel="nonopener noopener">Watch on Youtube</a> </div>
       </div>
-      <a class="btn ext" href="https://www.youtube.com/embed/rKV0Yl1Ir2g" target="_blank" rel="nonopener noopener">Watch on Youtube</a>
+      <div class="video-card">
+        <h3>Supplementary Video</h3>
+        <div class="card-content">
+          <h4>Comparisons</h4>
+          <p>(Video length: 2:34 minutes)</p>
+          <div class="media-container">
+            <div class="media-object">
+              <iframe src="https://www.youtube.com/embed/dkCWThe7RuI" title="YouTube video player?wmode=opaque" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen="" width="560" height="315" frameBorder="0"></iframe>
+            </div>
+          </div>
+          <a class="btn ext" href="https://www.youtube.com/embed/dkCWThe7RuI" target="_blank" rel="nonopener noopener">Watch on Youtube</a> </div>
+      </div>
+      <div class="video-card">
+        <h3>Supplementary Video</h3>
+        <div class="card-content">
+          <h4>Pronominal Verbs</h4>
+          <p>(Video length: 5:14 minutes)</p>
+          <div class="media-container">
+            <div class="media-object">
+              <iframe src="https://www.youtube.com/embed/7wUXSXZgNlU" title="YouTube video player?wmode=opaque" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen="" width="560" height="315" frameBorder="0"></iframe>
+            </div>
+          </div>
+          <a class="btn ext" href="https://www.youtube.com/embed/7wUXSXZgNlU" target="_blank" rel="nonopener noopener">Watch on Youtube</a> </div>
+      </div>
     </div>
   </div>
-  <div class="video-card">
-    <h3>Supplementary Video</h3>
-    <div class="card-content">
-      <h4>Comparisons</h4>
-      <p>(Video length: 2:34 minutes)</p>
-      <div class="media-container">
-        <div class="media-object">
-          <iframe src="https://www.youtube.com/embed/dkCWThe7RuI" title="YouTube video player?wmode=opaque" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen="" width="560" height="315" frameBorder="0"></iframe>
-        </div>
-      </div>
-      <a class="btn ext" href="https://www.youtube.com/embed/dkCWThe7RuI" target="_blank" rel="nonopener noopener">Watch on Youtube</a>
-    </div>
-  </div>
-  <div class="video-card">
-    <h3>Supplementary Video</h3>
-    <div class="card-content">
-      <h4>Pronominal Verbs</h4>
-      <p>(Video length: 5:14 minutes)</p>
-      <div class="media-container">
-        <div class="media-object">
-          <iframe src="https://www.youtube.com/embed/7wUXSXZgNlU" title="YouTube video player?wmode=opaque" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen="" width="560" height="315" frameBorder="0"></iframe>
-        </div>
-      </div>
-      <a class="btn ext" href="https://www.youtube.com/embed/7wUXSXZgNlU" target="_blank" rel="nonopener noopener">Watch on Youtube</a>
-    </div>
-  </div>
-</div></div>
 </div>
 <footer>
   <div id="footer">

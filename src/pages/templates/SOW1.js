@@ -107,210 +107,248 @@ export default function SOW1() {
               <pre>
                 <code className="language-html" ref={codeRef}>
                   {String.raw`<!DOCTYPE html>
-
 <html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@pimaonline/pimaonline-themepack/dist/css/themes/cards/styles.css">
 <link rel="stylesheet" type="text/css" href="../css/custom.css">
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js" defer></script> 
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@pimaonline/pimaonline-themepack/dist/js/scripts2.js" defer></script>
 <title>Course Schedule Template</title>
-</head><body><div id="main">
-<div class="content-body">
-<h2>Schedule of Work</h2>
-<p></p>
-<p>Suspendisse porttitor ut orci quis venenatis. Sed orci dui, pellentesque ut ex id, malesuada laoreet nulla. Nullam eleifend mattis tellus et ultrices. Fusce gravida vulputate eros, non bibendum eros sagittis id. Mauris ultrices ante risus, aliquet accumsan libero cursus vitae.</p>
-<p>
-Nunc sit amet venenatis mauris, eget vulputate mi. Phasellus euismod libero non nisi sagittis bibendum. Sed auctor nisi ut ultrices tincidunt. Maecenas odio mi, maximus nec velit vel, pharetra ultrices lorem. Nam finibus velit libero, at malesuada sem tincidunt in. Aliquam ut nibh in nisi pellentesque elementum. Sed eget dui ac urna semper cursus ultricies nec leo.</p>
-<table width="100%" style="height: 2011px; width: 100%;">
-<thead>
-<tr>
-<th scope="col">Date</th>
-<th scope="col">Module Due</th>
-<th scope="col">Other</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Date</td>
-<td>Lorem Ipsum</td>
-<td>Vivamus blandit aliquet neque</td>
-</tr>
-<tr>
-<td>Date</td>
-<td>Lorem Ipsum</td>
-<td>Vivamus blandit aliquet neque</td>
-</tr>
-<tr>
-<td>Date</td>
-<td>Lorem Ipsum</td>
-<td>Vivamus blandit aliquet neque</td>
-</tr>
-<tr>
-<td>Date</td>
-<td>Lorem Ipsum</td>
-<td></td>
-</tr>
-<tr>
-<td>Date</td>
-<td>Lorem Ipsum</td>
-<td>Vivamus blandit aliquet neque<br>Vivamus blandit aliquet neque</td>
-</tr>
-<tr>
-<td>Date</td>
-<td>Lorem Ipsum</td>
-<td>&nbsp;</td>
-</tr>
-<tr>
-<td>Date</td>
-<td>Lorem Ipsum</td>
-<td>&nbsp;</td>
-</tr>
-<tr>
-<td>Date</td>
-<td>Lorem Ipsum</td>
-<td>Vivamus blandit aliquet neque</td>
-</tr>
-<tr>
-<td>Date</td>
-<td>Lorem Ipsum</td>
-<td>Vivamus blandit aliquet neque</td>
-</tr>
-<tr>
-<td>Date</td>
-<td>Lorem Ipsum</td>
-<td>&nbsp;</td>
-</tr>
-<tr>
-<td>Date</td>
-<td>Lorem Ipsum</td>
-<td>Vivamus blandit aliquet neque</td>
-</tr>
-<tr style="background-color: rgba(24,91,118,0.1);">
-<td>Date</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>Date</td>
-<td>Lorem Ipsum</td>
-<td>Vivamus blandit aliquet neque</td>
-</tr>
-<tr>
-<td>Date</td>
-<td>Lorem Ipsum</td>
-<td>Vivamus blandit aliquet neque</td>
-</tr>
-<tr>
-<td>Date</td>
-<td>Lorem Ipsum</td>
-<td>Vivamus blandit aliquet neque</td>
-</tr>
-<tr>
-<td>Date</td>
-<td>Lorem Ipsum</td>
-<td></td>
-</tr>
-<tr>
-<td>Date</td>
-<td>Lorem Ipsum</td>
-<td>Vivamus blandit aliquet neque<br>Vivamus blandit aliquet neque</td>
-</tr>
-<tr>
-<td>Date</td>
-<td>Lorem Ipsum</td>
-<td>&nbsp;</td>
-</tr>
-<tr>
-<td>Date</td>
-<td>Lorem Ipsum</td>
-<td>&nbsp;</td>
-</tr>
-<tr>
-<td>Date</td>
-<td>Lorem Ipsum</td>
-<td>Vivamus blandit aliquet neque</td>
-</tr>
-<tr>
-<td>Date</td>
-<td>Lorem Ipsum</td>
-<td>Vivamus blandit aliquet neque</td>
-</tr>
-<tr>
-<td>Date</td>
-<td>Lorem Ipsum</td>
-<td>&nbsp;</td>
-</tr>
-<tr>
-<td>Date</td>
-<td>Lorem Ipsum</td>
-<td>Vivamus blandit aliquet neque</td>
-</tr>
-<tr>
-<td>Date</td>
-<td>Lorem Ipsum</td>
-<td>Vivamus blandit aliquet neque</td>
-</tr>
-<tr>
-<td>Date</td>
-<td>Lorem Ipsum</td>
-<td>Vivamus blandit aliquet neque</td>
-</tr>
-<tr>
-<td>Date</td>
-<td>Lorem Ipsum</td>
-<td>Vivamus blandit aliquet neque</td>
-</tr>
-<tr>
-<td>Date</td>
-<td>Lorem Ipsum</td>
-<td></td>
-</tr>
-<tr>
-<td>Date</td>
-<td>Lorem Ipsum</td>
-<td>Vivamus blandit aliquet neque<br>Vivamus blandit aliquet neque</td>
-</tr>
-<tr>
-<td>Date</td>
-<td>Lorem Ipsum</td>
-<td>&nbsp;</td>
-</tr>
-<tr>
-<td>Date</td>
-<td>Lorem Ipsum</td>
-<td>&nbsp;</td>
-</tr>
-<tr>
-<td>Date</td>
-<td>Lorem Ipsum</td>
-<td>Vivamus blandit aliquet neque</td>
-</tr>
-<tr>
-<td>Date</td>
-<td>Lorem Ipsum</td>
-<td>Vivamus blandit aliquet neque</td>
-</tr>
-<tr>
-<td>Date</td>
-<td>Lorem Ipsum</td>
-<td>&nbsp;</td>
-</tr>
-<tr>
-<td>Date</td>
-<td>Lorem Ipsum</td>
-<td>Vivamus blandit aliquet neque</td>
-</tr>
-<tr style="height: 43px;">
-<td style="height: 43px;">Date</td>
-<td style="height: 43px;">&nbsp;</td>
-<td style="height: 43px;"><strong>Final Exam are due</strong> (Vivamus blandit aliquet neque, vel rutrum justo volutpat ac)&nbsp;&nbsp;</td>
-</tr>
-</tbody>
-</table>
+</head>
+<body>
+<div id="main">
+  <div class="content-body">
+    <h2>Schedule of Work</h2>
+    <p>Suspendisse porttitor ut orci quis venenatis. Sed orci dui, pellentesque ut ex id, malesuada laoreet nulla. Nullam eleifend mattis tellus et ultrices. Fusce gravida vulputate eros, non bibendum eros sagittis id. Mauris ultrices ante risus, aliquet accumsan libero cursus vitae.</p>
+    <p> Nunc sit amet venenatis mauris, eget vulputate mi. Phasellus euismod libero non nisi sagittis bibendum. Sed auctor nisi ut ultrices tincidunt. Maecenas odio mi, maximus nec velit vel, pharetra ultrices lorem. Nam finibus velit libero, at malesuada sem tincidunt in. Aliquam ut nibh in nisi pellentesque elementum. Sed eget dui ac urna semper cursus ultricies nec leo.</p>
+    <table width="100%">
+      <thead>
+        <tr>
+          <th scope="col">Date</th>
+          <th scope="col">Module Due</th>
+          <th scope="col">Other</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Date</td>
+          <td>Lorem Ipsum</td>
+          <td>Vivamus blandit aliquet neque</td>
+        </tr>
+        <tr>
+          <td>Date</td>
+          <td>Lorem Ipsum</td>
+          <td>Vivamus blandit aliquet neque</td>
+        </tr>
+        <tr>
+          <td>Date</td>
+          <td>Lorem Ipsum</td>
+          <td>Vivamus blandit aliquet neque</td>
+        </tr>
+        <tr>
+          <td>Date</td>
+          <td>Lorem Ipsum</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Date</td>
+          <td>Lorem Ipsum</td>
+          <td>Vivamus blandit aliquet neque<br>Vivamus blandit aliquet neque</td>
+        </tr>
+        <tr>
+          <td>Date</td>
+          <td>Lorem Ipsum</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>Date</td>
+          <td>Lorem Ipsum</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>Date</td>
+          <td>Lorem Ipsum</td>
+          <td>Vivamus blandit aliquet neque</td>
+        </tr>
+        <tr>
+          <td>Date</td>
+          <td>Lorem Ipsum</td>
+          <td>Vivamus blandit aliquet neque</td>
+        </tr>
+        <tr>
+          <td>Date</td>
+          <td>Lorem Ipsum</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>Date</td>
+          <td>Lorem Ipsum</td>
+          <td>Vivamus blandit aliquet neque</td>
+        </tr>
+        <tr style="background-color: rgba(24,91,118,0.1);">
+          <td>Date</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Date</td>
+          <td>Lorem Ipsum</td>
+          <td>Vivamus blandit aliquet neque</td>
+        </tr>
+        <tr>
+          <td>Date</td>
+          <td>Lorem Ipsum</td>
+          <td>Vivamus blandit aliquet neque</td>
+        </tr>
+        <tr>
+          <td>Date</td>
+          <td>Lorem Ipsum</td>
+          <td>Vivamus blandit aliquet neque</td>
+        </tr>
+        <tr>
+          <td>Date</td>
+          <td>Lorem Ipsum</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Date</td>
+          <td>Lorem Ipsum</td>
+          <td>Vivamus blandit aliquet neque<br>Vivamus blandit aliquet neque</td>
+        </tr>
+        <tr>
+          <td>Date</td>
+          <td>Lorem Ipsum</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>Date</td>
+          <td>Lorem Ipsum</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>Date</td>
+          <td>Lorem Ipsum</td>
+          <td>Vivamus blandit aliquet neque</td>
+        </tr>
+        <tr>
+          <td>Date</td>
+          <td>Lorem Ipsum</td>
+          <td>Vivamus blandit aliquet neque</td>
+        </tr>
+        <tr>
+          <td>Date</td>
+          <td>Lorem Ipsum</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>Date</td>
+          <td>Lorem Ipsum</td>
+          <td>Vivamus blandit aliquet neque</td>
+        </tr>
+        <tr>
+          <td>Date</td>
+          <td>Lorem Ipsum</td>
+          <td>Vivamus blandit aliquet neque</td>
+        </tr>
+        <tr>
+          <td>Date</td>
+          <td>Lorem Ipsum</td>
+          <td>Vivamus blandit aliquet neque</td>
+        </tr>
+        <tr>
+          <td>Date</td>
+          <td>Lorem Ipsum</td>
+          <td>Vivamus blandit aliquet neque</td>
+        </tr>
+        <tr>
+          <td>Date</td>
+          <td>Lorem Ipsum</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Date</td>
+          <td>Lorem Ipsum</td>
+          <td>Vivamus blandit aliquet neque<br>Vivamus blandit aliquet neque</td>
+        </tr>
+        <tr>
+          <td>Date</td>
+          <td>Lorem Ipsum</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>Date</td>
+          <td>Lorem Ipsum</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>Date</td>
+          <td>Lorem Ipsum</td>
+          <td>Vivamus blandit aliquet neque</td>
+        </tr>
+        <tr>
+          <td>Date</td>
+          <td>Lorem Ipsum</td>
+          <td>Vivamus blandit aliquet neque</td>
+        </tr>
+        <tr>
+          <td>Date</td>
+          <td>Lorem Ipsum</td>
+          <td>Vivamus blandit aliquet neque</td>
+        </tr>
+        <tr>
+          <td>Date</td>
+          <td>Lorem Ipsum</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>Date</td>
+          <td>Lorem Ipsum</td>
+          <td>Vivamus blandit aliquet neque<br>Vivamus blandit aliquet neque</td>
+        </tr>
+        <tr>
+          <td>Date</td>
+          <td>Lorem Ipsum</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>Date</td>
+          <td>Lorem Ipsum</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>Date</td>
+          <td>Lorem Ipsum</td>
+          <td>Vivamus blandit aliquet neque</td>
+        </tr>
+        <tr>
+          <td>Date</td>
+          <td>Lorem Ipsum</td>
+          <td>Vivamus blandit aliquet neque</td>
+        </tr>
+        <tr>
+          <td>Date</td>
+          <td>Lorem Ipsum</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>Date</td>
+          <td>Lorem Ipsum</td>
+          <td>Vivamus blandit aliquet neque</td>
+        </tr>
+        <tr>
+          <td>Date</td>
+          <td>&nbsp;</td>
+          <td><strong>Final Exam are due</strong> (Vivamus blandit aliquet neque, vel rutrum justo volutpat ac)&nbsp;&nbsp;</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </div>
-</div></body></html>`}
+</body>
+</html>
+`}
                 </code>
               </pre>
             </div>
