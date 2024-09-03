@@ -191,6 +191,7 @@ export default function OneColumn2() {
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@pimaonline/pimaonline-themepack/dist/css/themes/cards/styles.css">
 <link rel="stylesheet" type="text/css" href="custom.css">
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js" defer></script> 
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@pimaonline/pimaonline-themepack/dist/js/scripts2.js" defer></script>
 <title>Starter Template</title>
 </head>
@@ -236,7 +237,7 @@ export default function OneColumn2() {
     </table>
   </div>
   <div class="content-body">
-    <h2>Course Objectives</h2>
+    <h2>Course Ojectives</h2>
     <p>Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus.</p>
     <h3>By the end of this course, you'll be able to:</h3>
     <div class="side-by-side">

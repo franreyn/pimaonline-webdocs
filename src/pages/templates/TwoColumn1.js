@@ -175,13 +175,13 @@ export default function TwoColumn1() {
               <pre>
                 <code className="language-html" ref={codeRef}>
                   {String.raw`<!DOCTYPE html>
-
 <html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@pimaonline/pimaonline-themepack/dist/css/themes/cards/styles.css">
 <link rel="stylesheet" type="text/css" href="../css/custom.css">
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js" defer></script> 
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@pimaonline/pimaonline-themepack/dist/js/scripts2.js" defer></script>
 <title>Starter Template</title>
 </head>
@@ -259,45 +259,45 @@ export default function TwoColumn1() {
       <div> <img src="https://via.placeholder.com/200" alt="" /> </div>
     </div>
     <p>Vitae purus faucibus ornare suspendisse sed. Molestie ac feugiat sed lectus vestibulum mattis ullamcorper. Eget lorem dolor sed viverra ipsum nunc. Blandit aliquam etiam erat velit scelerisque in dictum non. Morbi tristique senectus et netus et. Scelerisque in dictum non consectetur a erat. Eu augue ut lectus arcu bibendum at varius vel pharetra.</p>
-	  <div class="horizontal-display">
+    <div class="horizontal-display">
       <div>
-		      <div class="border">
-        <h4><strong>Objective 1</strong></h4>
-        <p>
-        <ul>
-          <li>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos</li>
-          <li>Conubia nostra, per inceptos himenaeos</li>
-          <li>Litora torquent per conubia nostra, per inceptos himenaeos</li>
-        </ul>
-        </p>
-		</div>
-	  </div>
+        <div class="border">
+          <h4><strong>Objective 1</strong></h4>
+          <p>
+          <ul>
+            <li>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos</li>
+            <li>Conubia nostra, per inceptos himenaeos</li>
+            <li>Litora torquent per conubia nostra, per inceptos himenaeos</li>
+          </ul>
+          </p>
+        </div>
+      </div>
       <div>
-		      <div class="border">
-        <h4><strong>Objective 2</strong></h4>
-        <p>
-        <ul>
-          <li>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos</li>
-          <li>Conubia nostra, per inceptos himenaeos</li>
-          <li>Litora torquent per conubia nostra, per inceptos himenaeos</li>
-        </ul>
-        </p>
-		</div>
-	  </div>
-	     <div>
-		      <div class="border">
-        <h4><strong>Objective 3</strong></h4>
-        <p>
-        <ul>
-          <li>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos</li>
-          <li>Conubia nostra, per inceptos himenaeos</li>
-          <li>Litora torquent per conubia nostra, per inceptos himenaeos</li>
-        </ul>
-        </p>
-		</div>
-	  </div>
+        <div class="border">
+          <h4><strong>Objective 2</strong></h4>
+          <p>
+          <ul>
+            <li>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos</li>
+            <li>Conubia nostra, per inceptos himenaeos</li>
+            <li>Litora torquent per conubia nostra, per inceptos himenaeos</li>
+          </ul>
+          </p>
+        </div>
+      </div>
+      <div>
+        <div class="border">
+          <h4><strong>Objective 3</strong></h4>
+          <p>
+          <ul>
+            <li>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos</li>
+            <li>Conubia nostra, per inceptos himenaeos</li>
+            <li>Litora torquent per conubia nostra, per inceptos himenaeos</li>
+          </ul>
+          </p>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
 </div>
 <div id="second-column">
   <div class="content-body">
@@ -317,9 +317,10 @@ export default function TwoColumn1() {
         <p>Reading Fables</p>
         <a class="btn ext" href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou=608068&amp;type=content&amp;rcode=PIMA-3639476" target="_blank">Join Discussion</a> </li>
     </ul>
-	  <br><hr>
+    <br>
+    <hr>
     <blockquote class="text-center">Donec interdum hendrerit viverra. Praesent sit amet feugiat nunc. Polutpat suscipit urna. Maecenas porta, mi vitae hendrerit molestie, vel maximus risus dolor sed nulla.</blockquote>
-	  <hr>
+    <hr>
   </div>
 </div>
 <footer>
