@@ -189,14 +189,14 @@ export default function OneColumn5() {
 <header class="header"> <img src="https://via.placeholder.com/1920X600" alt="">
   <div class="text-container">
     <h1>Course Intro</h1>
-    <p>Donec sollicitudin molestie malesuada. Nulla porttitor accumsan tincidunt. Proin eget tortor risus. Pellentesque in ipsum id orci porta.</p>
+    <p>Donec sollicitudin misit malesuada. Nulla porttitor accumsan tincidunt. Proin eget tortor risus. Pellentesque in ipsum id orci porta.</p>
   </div>
 </header>
 <div id="content-wrapper">
   <div class="content-body">
     <h2>Welcome to [course name here]</h2>
     <p>Curabitur aliquet quam id dui posuere blandit. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis lorem ut libero malesuada feugiat. Vivamus suscipit tortor eget felis porttitor volutpat. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Proin eget tortor risus. Donec rutrum congue leo eget malesuada.</p>
-    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut lacinia justo. Aliquam vulputate a urna id congue. Vivamus sagittis velit ut est lobortis, ac pharetra lorem euismod. Suspendisse blandit ligula sagittis facilisis facilisis. Nam finibus imperdiet enim, id ullamcorper orci laoreet vel. Suspendisse lobortis tristique nisl. Aliquam a justo elit. Nam vitae nibh quis erat porta pharetra. Mauris nisl nibh, pharetra et ligula tincidunt, viverra accumsan quam. Donec non molestie est. Donec ut sem elementum, ultrices ex vitae, consectetur leo. Suspendisse elementum vehicula mi. Vestibulum sed sodales risus. Quisque accumsan, ex vitae eleifend lobortis, elit odio venenatis sapien, et faucibus nunc mi in tellus.</p>
+    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut lacinia justo. Aliquam vulputate a urna id congue. Vivamus sagittis velit ut est lobortis, ac pharetra lorem euismod. Suspendisse blandit ligula sagittis facilisis facilisis. Nam finibus imperdiet enim, id ullamcorper orci laoreet vel. Suspendisse lobortis tristique nisl. Aliquam a justo elit. Nam vitae nibh quis erat porta pharetra. Mauris nisl nibh, pharetra et ligula tincidunt, viverra accumsan quam. Donec non misit est. Donec ut sem elementum, ultrices ex vitae, consectetur leo. Suspendisse elementum vehicula mi. Vestibulum sed sodales risus. Quisque accumsan, ex vitae eleifend lobortis, elit odio venenatis sapien, et faucibus nunc mi in tellus.</p>
     <h2>Course Overview and Goals</h2>
     <div class="side-by-side">
       <div class="side-by-side-item">
@@ -216,7 +216,7 @@ export default function OneColumn5() {
           <li>Goal 6</li>
         </ol>
         </p>
-        <p>Fusce luctus elementum lacus ut lobortis. Aenean consequat diam eget consectetur vulputate. Nam at laoreet ligula, ac bibendum sapien. Aenean tristique metus a metus interdum varius. Quisque id nisi nec ligula sodales semper. Suspendisse at molestie felis. Duis interdum dignissim suscipit. </p>
+        <p>Fusce luctus elementum lacus ut lobortis. Aenean consequat diam eget consectetur vulputate. Nam at laoreet ligula, ac bibendum sapien. Aenean tristique metus a metus interdum varius. Quisque id nisi nec ligula sodales semper. Suspendisse at misit felis. Duis interdum dignissim suscipit. </p>
       </div>
     </div>
     <div class="border">
@@ -294,7 +294,7 @@ export default function OneColumn5() {
       <br>
     </div>
     <br>
-    <p> Suspendisse lobortis tristique nisl. Aliquam a justo elit. Nam vitae nibh quis erat porta pharetra. Mauris nisl nibh, pharetra et ligula tincidunt, viverra accumsan quam. Donec non molestie est. Donec ut sem elementum, ultrices ex vitae, consectetur leo. Suspendisse elementum vehicula mi. Vestibulum sed sodales risus. Quisque accumsan, ex vitae eleifend lobortis, elit odio venenatis sapien, et faucibus nunc mi in tellus.</p>
+    <p> Suspendisse lobortis tristique nisl. Aliquam a justo elit. Nam vitae nibh quis erat porta pharetra. Mauris nisl nibh, pharetra et ligula tincidunt, viverra accumsan quam. Donec non misit est. Donec ut sem elementum, ultrices ex vitae, consectetur leo. Suspendisse elementum vehicula mi. Vestibulum sed sodales risus. Quisque accumsan, ex vitae eleifend lobortis, elit odio venenatis sapien, et faucibus nunc mi in tellus.</p>
     <div class="border border-yellow"><br>
       <h3 class="font-size-h4">Foundational Knowledge</h3>
       <p>Ut erat nulla, vulputate ac ultricies eu, vehicula at leo. Nunc tristique ipsum urna, eu convallis sem imperdiet sagittis. Sed malesuada odio id eros mollis luctus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>

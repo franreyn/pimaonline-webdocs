@@ -209,7 +209,7 @@ export default function OneColumn3() {
 <header class="header"> <img src="https://via.placeholder.com/1920X600" alt="">
   <div class="text-container">
     <h1>Module One</h1>
-    <p>Donec sollicitudin molestie malesuada. Nulla porttitor accumsan tincidunt. Proin eget tortor risus. Pellentesque in ipsum id orci porta.</p>
+    <p>Donec sollicitudin misit malesuada. Nulla porttitor accumsan tincidunt. Proin eget tortor risus. Pellentesque in ipsum id orci porta.</p>
   </div>
 </header>
 <div id="content-wrapper">
@@ -226,8 +226,8 @@ export default function OneColumn3() {
         </p>
       </div>
     </div>
-    <p>Donec interdum hendrerit viverra. Praesent sit amet feugiat nunc. Pellentesque vitae egestas sapien, volutpat suscipit urna. Maecenas porta, mi vitae hendrerit molestie, libero dolor gravida mi, vel maximus risus dolor sed nulla. Vestibulum malesuada velit nec urna molestie vestibulum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec elementum justo id metus suscipit, ut semper massa fringilla. Vestibulum finibus commodo nisi, non congue arcu. Integer sollicitudin rhoncus felis ac laoreet. Curabitur varius sagittis orci vitae dapibus. Morbi congue blandit dolor, sit amet auctor neque ornare et. Morbi vulputate erat urna, vitae varius urna accumsan ac. Curabitur purus turpis, ullamcorper nec lorem et, tincidunt tempus odio. Etiam sit amet luctus lectus.</p>
-    <p>Donec a sapien vitae lacus aliquam rhoncus vel in dui. Ut scelerisque leo in arcu lobortis, ut accumsan sem fringilla. Vestibulum id lectus sagittis, malesuada ex non, ultrices leo. Praesent sollicitudin nisl tellus, eget sodales dui cursus gravida. Integer felis ex, iaculis nec pulvinar eget, condimentum at lectus. Phasellus ultricies, nulla ut aliquet aliquet, risus massa molestie risus, vitae ultrices nunc ipsum eget justo. Nulla quis sapien vel ligula feugiat interdum. Fusce elit purus, tincidunt vel ante et, efficitur feugiat elit.</p>
+    <p>Donec interdum hendrerit viverra. Praesent sit amet feugiat nunc. Pellentesque vitae egestas sapien, volutpat suscipit urna. Maecenas porta, mi vitae hendrerit misit, libero dolor gravida mi, vel maximus risus dolor sed nulla. Vestibulum malesuada velit nec urna misit vestibulum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec elementum justo id metus suscipit, ut semper massa fringilla. Vestibulum finibus commodo nisi, non congue arcu. Integer sollicitudin rhoncus felis ac laoreet. Curabitur varius sagittis orci vitae dapibus. Morbi congue blandit dolor, sit amet auctor neque ornare et. Morbi vulputate erat urna, vitae varius urna accumsan ac. Curabitur purus turpis, ullamcorper nec lorem et, tincidunt tempus odio. Etiam sit amet luctus lectus.</p>
+    <p>Donec a sapien vitae lacus aliquam rhoncus vel in dui. Ut scelerisque leo in arcu lobortis, ut accumsan sem fringilla. Vestibulum id lectus sagittis, malesuada ex non, ultrices leo. Praesent sollicitudin nisl tellus, eget sodales dui cursus gravida. Integer felis ex, iaculis nec pulvinar eget, condimentum at lectus. Phasellus ultricies, nulla ut aliquet aliquet, risus massa misit risus, vitae ultrices nunc ipsum eget justo. Nulla quis sapien vel ligula feugiat interdum. Fusce elit purus, tincidunt vel ante et, efficitur feugiat elit.</p>
     <h3>Here's what's due this week:</h3>
     <p>Complete the reading, review activity, discussion, lab, and quiz by August 30th.</p>
     <br>

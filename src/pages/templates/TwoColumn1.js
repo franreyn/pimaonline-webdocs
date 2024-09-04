@@ -189,7 +189,7 @@ export default function TwoColumn1() {
 <header class="header"> <img src="https://via.placeholder.com/1920X600" alt="">
   <div class="text-container">
     <h1>Course Intro</h1>
-    <p>Donec sollicitudin molestie malesuada. Nulla porttitor accumsan tincidunt. Proin eget tortor risus. Pellentesque in ipsum id orci porta.</p>
+    <p>Donec sollicitudin misit malesuada. Nulla porttitor accumsan tincidunt. Proin eget tortor risus. Pellentesque in ipsum id orci porta.</p>
   </div>
 </header>
 <div id="content-wrapper">
@@ -251,14 +251,14 @@ export default function TwoColumn1() {
       <label> <span>Hide</span> </label>
     </div>
     <h3>Course Goals</h3>
-    <p>Vitae purus faucibus ornare suspendisse sed. Molestie ac feugiat sed lectus vestibulum mattis ullamcorper. Eget lorem dolor sed viverra ipsum nunc. Blandit aliquam etiam erat velit scelerisque in dictum non. Morbi tristique senectus et netus et. Scelerisque in dictum non consectetur a erat. Eu augue ut lectus arcu bibendum at varius vel pharetra.</p>
+    <p>Vitae purus faucibus ornare suspendisse sed. Misit ac feugiat sed lectus vestibulum mattis ullamcorper. Eget lorem dolor sed viverra ipsum nunc. Blandit aliquam etiam erat velit scelerisque in dictum non. Morbi tristique senectus et netus et. Scelerisque in dictum non consectetur a erat. Eu augue ut lectus arcu bibendum at varius vel pharetra.</p>
     <div class="horizontal-display">
       <div> <img src="https://via.placeholder.com/200" alt="" /> </div>
       <div> <img src="https://via.placeholder.com/200" alt="" /> </div>
       <div> <img src="https://via.placeholder.com/200" alt="" /> </div>
       <div> <img src="https://via.placeholder.com/200" alt="" /> </div>
     </div>
-    <p>Vitae purus faucibus ornare suspendisse sed. Molestie ac feugiat sed lectus vestibulum mattis ullamcorper. Eget lorem dolor sed viverra ipsum nunc. Blandit aliquam etiam erat velit scelerisque in dictum non. Morbi tristique senectus et netus et. Scelerisque in dictum non consectetur a erat. Eu augue ut lectus arcu bibendum at varius vel pharetra.</p>
+    <p>Vitae purus faucibus ornare suspendisse sed. Misit ac feugiat sed lectus vestibulum mattis ullamcorper. Eget lorem dolor sed viverra ipsum nunc. Blandit aliquam etiam erat velit scelerisque in dictum non. Morbi tristique senectus et netus et. Scelerisque in dictum non consectetur a erat. Eu augue ut lectus arcu bibendum at varius vel pharetra.</p>
     <div class="horizontal-display">
       <div>
         <div class="border">
@@ -302,7 +302,7 @@ export default function TwoColumn1() {
 <div id="second-column">
   <div class="content-body">
     <h2>Getting Started</h2>
-    <p>Vitae purus faucibus ornare suspendisse sed. Molestie ac feugiat sed lectus vestibulum mattis ullamcorper. Eget lorem dolor sed viverra ipsum nunc. Blandit aliquam etiam erat velit scelerisque in dictum non. Morbi tristique senectus et netus et. Scelerisque in dictum non consectetur a erat. Eu augue ut lectus arcu bibendum at varius vel pharetra.</p>
+    <p>Vitae purus faucibus ornare suspendisse sed. Misit ac feugiat sed lectus vestibulum mattis ullamcorper. Eget lorem dolor sed viverra ipsum nunc. Blandit aliquam etiam erat velit scelerisque in dictum non. Morbi tristique senectus et netus et. Scelerisque in dictum non consectetur a erat. Eu augue ut lectus arcu bibendum at varius vel pharetra.</p>
     <ul class="assignments-widget">
       <li class="assignment">
         <h3>Module 1 Readings</h3>
@@ -319,7 +319,7 @@ export default function TwoColumn1() {
     </ul>
     <br>
     <hr>
-    <blockquote class="text-center">Donec interdum hendrerit viverra. Praesent sit amet feugiat nunc. Polutpat suscipit urna. Maecenas porta, mi vitae hendrerit molestie, vel maximus risus dolor sed nulla.</blockquote>
+    <blockquote class="text-center">Donec interdum hendrerit viverra. Praesent sit amet feugiat nunc. Polutpat suscipit urna. Maecenas porta, mi vitae hendrerit misit, vel maximus risus dolor sed nulla.</blockquote>
     <hr>
   </div>
 </div>

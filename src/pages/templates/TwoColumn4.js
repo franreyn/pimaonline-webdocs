@@ -188,7 +188,7 @@ const [templateImage, setTemplateImage] = useState("/images/templates/twocolumn4
 <header class="header"> <img src="https://via.placeholder.com/1920X600" alt="">
   <div class="text-container">
     <h1>Module One</h1>
-    <p>Donec sollicitudin molestie malesuada. Nulla porttitor accumsan tincidunt. Proin eget tortor risus. Pellentesque in ipsum id orci porta.</p>
+    <p>Donec sollicitudin misit malesuada. Nulla porttitor accumsan tincidunt. Proin eget tortor risus. Pellentesque in ipsum id orci porta.</p>
   </div>
 </header>
 <div id="content-wrapper">
@@ -228,7 +228,7 @@ const [templateImage, setTemplateImage] = useState("/images/templates/twocolumn4
       </tbody>
     </table>
     <h3>Key Takeaways</h3>
-    <p>Vitae purus faucibus ornare suspendisse sed. Molestie ac feugiat sed lectus vestibulum mattis ullamcorper. Eget lorem dolor sed viverra ipsum nunc. Blandit aliquam etiam erat velit scelerisque in dictum non. Morbi tristique senectus et netus et. Scelerisque in dictum non consectetur a erat. Eu augue ut lectus arcu bibendum at varius vel pharetra.</p>
+    <p>Vitae purus faucibus ornare suspendisse sed. Misit ac feugiat sed lectus vestibulum mattis ullamcorper. Eget lorem dolor sed viverra ipsum nunc. Blandit aliquam etiam erat velit scelerisque in dictum non. Morbi tristique senectus et netus et. Scelerisque in dictum non consectetur a erat. Eu augue ut lectus arcu bibendum at varius vel pharetra.</p>
     <div class="side-by-side">
       <div class="side-by-side-item">
         <h3 class="font-size-h4">Lorem ipsum</h3>
@@ -266,7 +266,7 @@ const [templateImage, setTemplateImage] = useState("/images/templates/twocolumn4
 <div id="second-column">
   <div class="content-body">
     <h2>More Resources</h2>
-    <p>Vitae purus faucibus ornare suspendisse sed. Molestie ac feugiat sed lectus vestibulum mattis ullamcorper. Eget lorem dolor sed viverra ipsum nunc. Blandit aliquam etiam erat velit scelerisque in dictum non. Morbi tristique senectus et netus et. Scelerisque in dictum non consectetur a erat. Eu augue ut lectus arcu bibendum at varius vel pharetra.</p>
+    <p>Vitae purus faucibus ornare suspendisse sed. Misit ac feugiat sed lectus vestibulum mattis ullamcorper. Eget lorem dolor sed viverra ipsum nunc. Blandit aliquam etiam erat velit scelerisque in dictum non. Morbi tristique senectus et netus et. Scelerisque in dictum non consectetur a erat. Eu augue ut lectus arcu bibendum at varius vel pharetra.</p>
     <div class="video-widget">
       <div class="video-card">
         <h3 class="font-size-h4">Review Video 01</h3>
