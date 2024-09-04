@@ -20,6 +20,13 @@ export default function Tabs() {
     }, 2000);
   };
 
+	// Functionality for tabs widget 
+	const [selectedTab, setSelectedTab] = useState('tab4'); // Default to 'tab4'
+
+	const handleTabChange = (event) => {
+		setSelectedTab(event.target.id); // Update state when the user selects a different tab
+	};
+
   return (
     <section className="wd-content" id="toc-tabs">
       <h2 id="tabs" className="section-top anchor">
@@ -35,7 +42,7 @@ export default function Tabs() {
       <div className="wd-window">
         <div className="wd-visual-ex">
           <div className="tabs" role="region" aria-label="tab group 1">
-            <input className="tab-input" type="radio" id="tab1" name="hint-group-1" aria-describedby="tabHeading1" />
+            <input className="tab-input" type="radio" id="tab1" name="hint-group-1" aria-describedby="tabHeading1" checked={selectedTab === 'tab1'} onChange={handleTabChange} />
             <label className="tab-header" htmlFor="tab1">
               <span>Tab Title 1</span>
             </label>
@@ -45,7 +52,7 @@ export default function Tabs() {
                 Some long text to demonstrate a tab widget. This text can be something as long as multiple paragraphs or as short as a couple of sentences.
               </p>
             </div>
-            <input className="tab-input" type="radio" id="tab2" name="hint-group-1" aria-describedby="tabHeading2" />
+            <input className="tab-input" type="radio" id="tab2" name="hint-group-1" aria-describedby="tabHeading2"  checked={selectedTab === 'tab2'} onChange={handleTabChange}/>
             <label className="tab-header" htmlFor="tab2">
               <span>Tab Title 2</span>
             </label>
@@ -55,7 +62,7 @@ export default function Tabs() {
                 Some long text to demonstrate a tab widget. This text can be something as long as multiple paragraphs or as short as a couple of sentences.
               </p>
             </div>
-            <input className="tab-input" type="radio" id="tab3" name="hint-group-1" aria-describedby="tabHeading3" />
+            <input className="tab-input" type="radio" id="tab3" name="hint-group-1" aria-describedby="tabHeading3"  checked={selectedTab === 'tab3'} onChange={handleTabChange}/>
             <label className="tab-header" htmlFor="tab3">
               <span>Tab Title 3</span>
             </label>
@@ -65,7 +72,7 @@ export default function Tabs() {
                 Some long text to demonstrate a tab widget. This text can be something as long as multiple paragraphs or as short as a couple of sentences.
               </p>
             </div>
-            <input type="radio" id="tab4" name="hint-group-1" aria-describedby="tabHeading4" checked readOnly />
+            <input type="radio" id="tab4" name="hint-group-1" aria-describedby="tabHeading4"  checked={selectedTab === 'tab4'} onChange={handleTabChange} />
             <label className="tab-header hide-tab" htmlFor="tab4" title="Hide Panel">
               <span>Hide</span>
             </label>
