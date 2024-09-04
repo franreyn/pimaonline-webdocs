@@ -55,7 +55,7 @@ export default function Caption() {
     <img src="https://via.placeholder.com/1920X600" alt="">
   <div class="text-container">
     <h1>Course Intro</h1>
-    <p>Donec sollicitudin molestie malesuada. Nulla porttitor accumsan tincidunt. Proin eget tortor risus. Pellentesque in ipsum id orci porta.</p>
+    <p>Donec sollicitudin misit malesuada. Nulla porttitor accumsan tincidunt. Proin eget tortor risus. Pellentesque in ipsum id orci porta.</p>
   </div>
   </header>
   <div id="content-wrapper">
