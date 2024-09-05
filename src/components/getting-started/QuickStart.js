@@ -48,30 +48,30 @@ export default function Caption() {
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@pimaonline/pimaonline-themepack/dist/css/themes/cards/styles.css">
 <link rel="stylesheet" type="text/css" href="../css/custom.css">
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@pimaonline/pimaonline-themepack/dist/js/scripts2.js" defer></script>
-<title>Starter Template</title>
+<title>Course Introduction</title>
 </head>
 <body>
   <header class="header">
     <img src="https://via.placeholder.com/1920X600" alt="">
   <div class="text-container">
-    <h1>Course Intro</h1>
-    <p>Donec sollicitudin misit malesuada. Nulla porttitor accumsan tincidunt. Proin eget tortor risus. Pellentesque in ipsum id orci porta.</p>
+    <h1>Course Introduction</h1>
+    <p>Effective writing is a vital skill...</p>
   </div>
   </header>
   <div id="content-wrapper">
     <div class="content-body">
       <h2>Welcome to [course name here]</h2>
-      <p>Curabitur aliquet quam id dui posuere blandit. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis lorem ut libero malesuada feugiat. Vivamus suscipit tortor eget felis porttitor volutpat. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Proin eget tortor risus. Donec rutrum congue leo eget malesuada.</p>
+      <p>This course will...</p>
     </div>
   </div>
   <footer>
     <div id="footer">
       <p class="text-center toggle-footnotes">[Show Footnotes]</p>
       <div class="footnotes">
-        <p>Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus.</p>
+        <p>Writing is not just about expressing ideas but also about shaping them in a way that resonates with readers...</p>
         <ul>
-          <li>Lorem culim ghus.</li>
-          <li>Ipsum guar havana.</li>
+          <li>Understand the importance of...</li>
+          <li>Practice clear and...</li>
         </ul>
       </div>
     </div>
