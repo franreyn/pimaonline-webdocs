@@ -183,91 +183,91 @@ export default function TwoColumn1() {
 <link rel="stylesheet" type="text/css" href="../css/custom.css">
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js" defer></script> 
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@pimaonline/pimaonline-themepack/dist/js/scripts2.js" defer></script>
-<title>Starter Template</title>
+<title>Course Introduction</title>
 </head>
 <body>
 <header class="header"> <img src="https://via.placeholder.com/1920X600" alt="">
   <div class="text-container">
-    <h1>Course Intro</h1>
-    <p>Donec sollicitudin misit malesuada. Nulla porttitor accumsan tincidunt. Proin eget tortor risus. Pellentesque in ipsum id orci porta.</p>
+    <h1>Course Introduction</h1>
+    <p>Writing is an essential skill across all disciplines. This course will help you...</p>
   </div>
 </header>
 <div id="content-wrapper">
   <div class="content-body">
-    <h2>Welcome to [course name here]</h2>
-    <p>Curabitur aliquet quam id dui posuere blandit. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis lorem ut libero malesuada feugiat. Vivamus suscipit tortor eget felis porttitor volutpat. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Proin eget tortor risus. Donec rutrum congue leo eget malesuada.</p>
+    <h2>Welcome to Writing 101</h2>
+    <p>This course introduces you to the fundamentals of academic writing, from forming a...</p>
     <h3>Module Overviews</h3>
-    <p>Vivamus suscipit tortor eget felis porttitor volutpat. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Proin eget tortor risus. Donec rutrum congue leo eget malesuada.</p>
+    <p>Each module will guide you through different stages of the...</p>
     <div class="tabs">
       <input/>
       <label> <span>Module 1</span> </label>
       <div>
-        <h4>Tab 1 Heading Inside</h4>
-        <p>Some long text to demonstrate a tab widget. This text can be something as long as multiple paragraphs or as short as a couple of sentences.</p>
+        <h4>Introduction to Writing</h4>
+        <p>In Module 1, we’ll cover the basics of writing, including...</p>
       </div>
       <input/>
       <label> <span>Module 2</span> </label>
       <div>
-        <h4>Tab 2 Heading Inside</h4>
-        <p>Some long text to demonstrate a tab widget. This text can be something as long as multiple paragraphs or as short as a couple of sentences.</p>
+        <h4>Developing a Thesis</h4>
+        <p>Module 2 will help you develop a clear thesis statement, the...</p>
       </div>
       <input/>
       <label> <span>Module 3</span> </label>
       <div>
-        <h4>Tab 3 Heading Inside</h4>
-        <p>Some long text to demonstrate a tab widget. This text can be something as long as multiple paragraphs or as short as a couple of sentences.</p>
+        <h4>Supporting Arguments</h4>
+        <p>Building on your thesis, Module 3 focuses on supporting your...</p>
       </div>
       <input/>
       <label> <span>Module 4</span> </label>
       <div>
-        <h4>Tab 4 Heading Inside</h4>
-        <p>Some long text to demonstrate a tab widget. This text can be something as long as multiple paragraphs or as short as a couple of sentences.</p>
+        <h4>Revising and Editing</h4>
+        <p>Revision is a crucial step in the writing process. In Module 4, you’ll...</p>
       </div>
       <input/>
       <label> <span>Module 5</span> </label>
       <div>
-        <h4>Tab 5 Heading Inside</h4>
-        <p>Some long text to demonstrate a tab widget. This text can be something as long as multiple paragraphs or as short as a couple of sentences.</p>
+        <h4>Peer Review</h4>
+        <p>Module 5 involves peer feedback. You’ll learn how to...</p>
       </div>
       <input/>
       <label> <span>Module 6</span> </label>
       <div>
-        <h4>Tab 6 Heading Inside</h4>
-        <p>Some long text to demonstrate a tab widget. This text can be something as long as multiple paragraphs or as short as a couple of sentences.</p>
+        <h4>Final Draft</h4>
+        <p>In this final module, you will polish your essays for submission. Focus on...</p>
       </div>
       <input/>
       <label> <span>Module 7</span> </label>
       <div>
-        <h4>Tab 7 Heading Inside</h4>
-        <p>Some long text to demonstrate a tab widget. This text can be something as long as multiple paragraphs or as short as a couple of sentences.</p>
+        <h4>Reflection on Writing</h4>
+        <p>Reflect on your progress throughout the course and...</p>
       </div>
       <input/>
       <label> <span>Module 8</span> </label>
       <div>
-        <h4>Tab 8 Heading Inside</h4>
-        <p>Some long text to demonstrate a tab widget. This text can be something as long as multiple paragraphs or as short as a couple of sentences.</p>
+        <h4>Looking Forward</h4>
+        <p>Module 8 focuses on how you can apply the skills you’ve...</p>
       </div>
       <input/>
       <label> <span>Hide</span> </label>
     </div>
     <h3>Course Goals</h3>
-    <p>Vitae purus faucibus ornare suspendisse sed. Misit ac feugiat sed lectus vestibulum mattis ullamcorper. Eget lorem dolor sed viverra ipsum nunc. Blandit aliquam etiam erat velit scelerisque in dictum non. Morbi tristique senectus et netus et. Scelerisque in dictum non consectetur a erat. Eu augue ut lectus arcu bibendum at varius vel pharetra.</p>
+    <p>By the end of this course, you will be able to write coherent, well-structured essays with...</p>
     <div class="horizontal-display">
       <div> <img src="https://via.placeholder.com/200" alt="" /> </div>
       <div> <img src="https://via.placeholder.com/200" alt="" /> </div>
       <div> <img src="https://via.placeholder.com/200" alt="" /> </div>
       <div> <img src="https://via.placeholder.com/200" alt="" /> </div>
     </div>
-    <p>Vitae purus faucibus ornare suspendisse sed. Misit ac feugiat sed lectus vestibulum mattis ullamcorper. Eget lorem dolor sed viverra ipsum nunc. Blandit aliquam etiam erat velit scelerisque in dictum non. Morbi tristique senectus et netus et. Scelerisque in dictum non consectetur a erat. Eu augue ut lectus arcu bibendum at varius vel pharetra.</p>
+    <p>Writing is a key skill that you will use throughout your academic career. This course will...</p>
     <div class="horizontal-display">
       <div>
         <div class="border">
           <h4><strong>Objective 1</strong></h4>
           <p>
           <ul>
-            <li>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos</li>
-            <li>Conubia nostra, per inceptos himenaeos</li>
-            <li>Litora torquent per conubia nostra, per inceptos himenaeos</li>
+            <li>Understand the components of...</li>
+            <li>Analyze and construct well-organized...</li>
+            <li>Use feedback to revise and improve your...</li>
           </ul>
           </p>
         </div>
@@ -277,9 +277,9 @@ export default function TwoColumn1() {
           <h4><strong>Objective 2</strong></h4>
           <p>
           <ul>
-            <li>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos</li>
-            <li>Conubia nostra, per inceptos himenaeos</li>
-            <li>Litora torquent per conubia nostra, per inceptos himenaeos</li>
+            <li>Craft thesis-driven arguments with...</li>
+            <li>Engage in critical reflection on your...</li>
+            <li>Utilize peer review for...</li>
           </ul>
           </p>
         </div>
@@ -289,9 +289,9 @@ export default function TwoColumn1() {
           <h4><strong>Objective 3</strong></h4>
           <p>
           <ul>
-            <li>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos</li>
-            <li>Conubia nostra, per inceptos himenaeos</li>
-            <li>Litora torquent per conubia nostra, per inceptos himenaeos</li>
+            <li>Learn effective revision strategies for clarity and style...</li>
+            <li>Apply rhetorical techniques in various writing tasks...</li>
+            <li>Communicate ideas persuasively across different contexts...</li>
           </ul>
           </p>
         </div>
@@ -302,39 +302,34 @@ export default function TwoColumn1() {
 <div id="second-column">
   <div class="content-body">
     <h2>Getting Started</h2>
-    <p>Vitae purus faucibus ornare suspendisse sed. Misit ac feugiat sed lectus vestibulum mattis ullamcorper. Eget lorem dolor sed viverra ipsum nunc. Blandit aliquam etiam erat velit scelerisque in dictum non. Morbi tristique senectus et netus et. Scelerisque in dictum non consectetur a erat. Eu augue ut lectus arcu bibendum at varius vel pharetra.</p>
+    <p>The first step in Writing 101 is to familiarize yourself with the...</p>
     <ul class="assignments-widget">
       <li class="assignment">
         <h3>Module 1 Readings</h3>
-        <p>The readings in the list have interactive exercises that will help you determine if you are fully understanding the material.</p>
+        <p>The readings introduce key concepts in writing, such as...</p>
         <a class="btn" href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou=608068&amp;type=content&amp;rcode=PIMA-3596885" target="_blank">Go to Readings</a> </li>
       <li class="assignment">
         <h3>Reading Review Activity</h3>
-        <p>Rhetorical Analysis Review Activity</p>
+        <p>Complete this activity to test your understanding of the...</p>
         <a class="btn ext" href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou=608068&amp;type=content&amp;rcode=PIMA-3596885" target="_blank">Go to Activity</a> </li>
       <li class="assignment">
         <h3>Reading Discussion 1</h3>
-        <p>Reading Fables</p>
+        <p>Engage with your peers in a discussion about...</p>
         <a class="btn ext" href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou=608068&amp;type=content&amp;rcode=PIMA-3639476" target="_blank">Join Discussion</a> </li>
     </ul>
     <br>
     <hr>
-    <blockquote class="text-center">Donec interdum hendrerit viverra. Praesent sit amet feugiat nunc. Polutpat suscipit urna. Maecenas porta, mi vitae hendrerit misit, vel maximus risus dolor sed nulla.</blockquote>
-    <hr>
+    <blockquote class="text-center">"Writing is thinking on paper..." – William Zinsser. As you begin this journey, remember that...</blockquote>
   </div>
 </div>
-<footer>
-  <div id="footer">
-    <p class="text-center toggle-footnotes">[Show Footnotes]</p>
-    <div class="footnotes">
-      <p>Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus.</p>
-      <ul>
-        <li>Lorem culim ghus.</li>
-        <li>Ipsum guar havana.</li>
-      </ul>
+  <footer>
+    <div id="footer">
+      <p class="text-center toggle-footnotes">[Show Footnotes]</p>
+      <div class="footnotes">
+        <p>In this final module, you will polish your essays for submission. Focus on...</p>
+      </div>
     </div>
-  </div>
-</footer>
+  </footer>
 </body>
 </html>`}
                 </code>

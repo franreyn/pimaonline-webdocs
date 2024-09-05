@@ -166,42 +166,42 @@ export default function OneColumn6() {
 <link rel="stylesheet" type="text/css" href="../css/custom.css">
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js" defer></script> 
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@pimaonline/pimaonline-themepack/dist/js/scripts2.js" defer></script>
-<title>Starter Template</title>
+<title>Module One: Topic</title>
 </head>
 <body>
 <header class="header"> <img src="https://via.placeholder.com/1920X600" alt="">
   <div class="text-container">
     <h1>Module One: Topic</h1>
-    <p>Donec sollicitudin misit malesuada. Nulla porttitor accumsan tincidunt. Proin eget tortor risus. Pellentesque in ipsum id orci porta.</p>
+    <p>In this module, we will explore foundational writing principles that...</p>
   </div>
 </header>
 <div id="content-wrapper">
   <div class="content-body">
     <h2 class="icon-bolt">Topic Overview</h2>
-    <p>Curabitur aliquet quam id dui posuere blandit. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis lorem ut libero malesuada feugiat. Vivamus suscipit tortor eget felis porttitor volutpat. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Proin eget tortor risus. Donec rutrum congue leo eget malesuada.</p>
+    <p>Effective writing begins with understanding your purpose and audience. Whether you're writing a narrative, expository, or argumentative essay, knowing why...</p>
     <div class="card-horizontal">
       <div class="card-body">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut lacinia justo. Aliquam vulputate a urna id congue. Vivamus sagittis velit ut est lobortis, ac pharetra lorem euismod. Suspendisse blandit ligula sagittis facilisis facilisis. Nam finibus imperdiet enim, id ullamcorper orci laoreet vel. Suspendisse lobortis tristique nisl. Aliquam a justo elit. Nam vitae nibh quis erat porta pharetra. Mauris nisl nibh, pharetra et ligula tincidunt, viverra accumsan quam. Donec non misit est. Donec ut sem elementum, ultrices ex vitae, consectetur leo. Suspendisse elementum vehicula mi. Vestibulum sed sodales risus. Quisque accumsan, ex vitae eleifend!</p>
+        <p>The writing process involves brainstorming, organizing ideas into a cohesive outline, and creating a first draft. Each stage of the process requires reflection and...</p>
+        <p> As you write, consider the importance of transitions and how they help guide your reader through your argument. Smooth transitions create flow and ensure that...</p>
       </div>
       <div class="card-img"> <img src="https://via.placeholder.com/300" alt="" />
-        <figcaption class="caption">Figure 1.1: Suspendisse elementum vehicula mi. Vestibulum sed sodales risus.</figcaption>
+        <figcaption class="caption">Figure 1.1: An example of a well-organized outline for an academic essay.</figcaption>
       </div>
     </div>
-    <p>In sollicitudin dui ut ante accumsan, ut consectetur magna congue. Morbi posuere sodales ligula vitae dictum. Pellentesque maximus lacinia gravida. Praesent fringilla commodo metus a vestibulum. Ut cursus rhoncus sapien a pulvinar. Sed nec velit et lacus rutrum auctor ac sed purus. Fusce in diam placerat ex tincidunt consequat sed et ipsum. Suspendisse potenti. Ut ac pellentesque erat, interdum vehicula ante.</p>
+    <p>Organization is key in any form of writing. Start by identifying the main points you want to convey, then arrange these points logically. Using a clear structure helps...</p>
     <hr>
-    <blockquote class="text-center">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</blockquote>
+    <blockquote class="text-center">"Writing is an exploration. You start from nothing and learn as you go..." — E.L. Doctorow</blockquote>
     <hr>
   </div>
   <div class="content-body">
     <h2 class="icon-list">Learning Activities</h2>
     <div class="border border-yellow">
-      <p class="icon-lightbulb">Sed nec velit et lacus rutrum auctor ac sed purus. Fusce in diam placerat ex tincidunt consequat sed et ipsum. Suspendisse potenti. Ut ac pellentesque erat, interdum vehicula ante:
+      <p class="icon-lightbulb">As you work through the activities below, focus on practicing the writing strategies we discussed:
       <ul>
-        <li>Ut cursus rhoncus sapien a pulvinar</li>
-        <li>Quisque accumsan, ex vitae eleifend</li>
-        <li>Interdum vehicula ante</li>
-        <li>Aenean ut lacinia justo</li>
+        <li>Create an outline for your...</li>
+        <li>Write the first draft of your...</li>
+        <li>Practice transitioning between...</li>
+        <li>Revise your draft for clarity and...</li>
       </ul>
       </p>
     </div>
@@ -252,17 +252,16 @@ export default function OneColumn6() {
   <div id="footer">
     <p class="text-center toggle-footnotes">[Show Footnotes]</p>
     <div class="footnotes">
-      <p>Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus.</p>
+      <p>In academic writing, always ensure that you properly cite your...</p>
       <ul>
-        <li>Lorem culim ghus.</li>
-        <li>Ipsum guar havana.</li>
+        <li>Smith, J. (2020). *Writing Fundamentals*. University Press...</li>
+        <li>Jones, L. (2019). *Academic Writing for Beginners*. Academic Publishing...</li>
       </ul>
     </div>
   </div>
 </footer>
 </body>
-</html>`}
-                </code>
+</html>`}</code>
               </pre>
             </div>
           </div>
