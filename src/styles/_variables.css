@@ -2,6 +2,8 @@
   /* Colors */
   --color-wd-primary: rgba(30, 33, 47, 1);
   --color-wd-secondary: rgba(235, 235, 235, 1);
+	--color-wd-grey: rgba(195, 195, 195, 1);
+	--color-wd-gray: rgba(195, 195, 195, 1);
   --color-wd-overlay: rgba(235, 235, 235, .05);
   --color-wd-accent: rgba(105, 197, 249, 1);
   --color-wd-bg-alt: rgba(18, 20, 31, 1);
