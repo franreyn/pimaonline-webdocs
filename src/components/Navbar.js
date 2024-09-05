@@ -58,6 +58,7 @@ const Navbar = () => {
 						<li className={router.pathname === "/d2l-help" ? "active-nav" : ""}>
               <Link href="/d2l-help">D2L Help</Link>
             </li>
+						<li className="version-number">v3.0</li>
           </ul>
         </div>
       </nav>
