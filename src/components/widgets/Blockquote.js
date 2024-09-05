@@ -28,7 +28,7 @@ export default function Blockquote() {
         <p>Use <span className="wd-monospace">&lt;blockquote&gt;&lt;/blockquote&gt;</span> to wrap your content.</p>
         <div className="wd-window">
           <div className="wd-visual-ex">
-            <blockquote className="text-center">Some text used to help display a blockquote</blockquote>
+            <blockquote className="text-center">Some text used to help display a blockquote...</blockquote>
           </div>
           <div className="wd-btn-container">
           <button className="wd-copy-btn" onClick={handleCopyCode}>{buttonText}</button>
@@ -36,7 +36,7 @@ export default function Blockquote() {
           <div className="wd-html-code">
             <pre>
               <code className="language-html" ref={codeRef}>
-                {String.raw`<blockquote class="text-center">Some text used to help display a blockquote</blockquote>`}
+                {String.raw`<blockquote class="text-center">Some text used to help display a blockquote...</blockquote>`}
               </code>
             </pre>
           </div>
