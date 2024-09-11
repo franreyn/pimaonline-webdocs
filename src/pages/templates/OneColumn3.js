@@ -302,10 +302,10 @@ export default function OneColumn3() {
           <p>(Video length: 4:12 minutes)</p>
           <div class="media-container">
             <div class="media-object">
-              <iframe src="https://www.youtube.com/embed/XYZ12345678" title="YouTube video player?wmode=opaque" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen="" width="560" height="315" frameBorder="0"></iframe>
+              <iframe src="https://www.youtube.com/embed/rKV0Yl1Ir2g" title="YouTube video player?wmode=opaque" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen="" width="560" height="315" frameBorder="0"></iframe>
             </div>
           </div>
-          <a class="btn ext" href="https://www.youtube.com/embed/XYZ12345678" target="_blank" rel="noopener noreferrer">Watch on YouTube</a> </div>
+          <a class="btn ext" href="https://www.youtube.com/embed/rKV0Yl1Ir2g" target="_blank" rel="noopener noreferrer">Watch on YouTube</a> </div>
       </div>
       <div class="video-card">
         <h3>Supplementary Video</h3>
@@ -314,10 +314,10 @@ export default function OneColumn3() {
           <p>(Video length: 3:22 minutes)</p>
           <div class="media-container">
             <div class="media-object">
-              <iframe src="https://www.youtube.com/embed/ABC87654321" title="YouTube video player?wmode=opaque" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen="" width="560" height="315" frameBorder="0"></iframe>
+              <iframe src="https://www.youtube.com/embed/dkCWThe7RuI" title="YouTube video player?wmode=opaque" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen="" width="560" height="315" frameBorder="0"></iframe>
             </div>
           </div>
-          <a class="btn ext" href="https://www.youtube.com/embed/ABC87654321" target="_blank" rel="noopener noreferrer">Watch on YouTube</a> </div>
+          <a class="btn ext" href="https://www.youtube.com/embed/dkCWThe7RuI" target="_blank" rel="noopener noreferrer">Watch on YouTube</a> </div>
       </div>
       <div class="video-card">
         <h3>Supplementary Video</h3>
