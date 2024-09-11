@@ -268,7 +268,6 @@ const [templateImage, setTemplateImage] = useState("/images/templates/twocolumn2
     </div>
     <p>Use the images and resources provided to support your writing journey and...</p>
     <br>
-    <br>
     <hr>
     <blockquote class="text-center">"The art of writing is the art of discovering what you believe..." – Gustave Flaubert</blockquote>
     <hr>
