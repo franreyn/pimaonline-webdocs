@@ -43,12 +43,12 @@ export default function Assignments() {
             </li>
             <li className="assignment">
               <h3>Reading Review Activity</h3>
-              <p>Rhetorical Analysis Review Activity</p>
+              <p>Rhetorical Analysis Review Activity...</p>
               <a className="btn" href="javascript:void(0);">Go to Activity</a>
             </li>
             <li className="assignment">
               <h3>Mindful Reading Discussion 1A</h3>
-              <p>Reading Fables</p>
+              <p>Reading Fables...</p>
               <a className="btn" href="javascript:void(0);">Join Discussion</a>
             </li>
           </ul>
@@ -62,17 +62,17 @@ export default function Assignments() {
             {String.raw`<ul class="assignments-widget">
   <li class="assignment">
     <h3>Module 1 Readings</h3>
-    <p>The readings in the list have interactive exercises that will help you determine if you are fully understanding the material.</p>
+    <p>The readings in the list have interactive exercises that will help you...</p>
     <a class="btn" href="#">Go to Readings</a>
   </li>
   <li class="assignment">
     <h3>Reading Review Activity</h3>
-    <p>Rhetorical Analysis Review Activity</p>
+    <p>Rhetorical Analysis Review Activity...</p>
     <a class="btn" href="#">Go to Activity</a>
   </li>
   <li class="assignment">
     <h3>Mindful Reading Discussion 1A</h3>
-    <p>Reading Fables</p>
+    <p>Reading Fables...</p>
     <a class="btn" href="#">Join Discussion</a>
   </li>
 </ul>`}

@@ -36,7 +36,7 @@ export default function CardHorizontal() {
           <div className="card-horizontal">
             <div className="card-body">
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+							Writing an effective essay requires clear organization and purpose. The introduction presents the topic, while body paragraphs develop key points with supporting evidence. Finally, the conclusion ties everything together, reaffirming the thesis. Proper transitions between sections ensure a logical flow of ideas, guiding the reader through the argument.
               </p>
             </div>
             <div className="card-img">
@@ -52,7 +52,7 @@ export default function CardHorizontal() {
             <code className="language-html" ref={codeRef}>
               {String.raw`<div class="card-horizontal">
   <div class="card-body">
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+    <p>Writing an effective essay requires clear organization and purpose. The introduction presents the topic, while...</p>
   </div>
   <div class="card-img">
     <img src="https://via.placeholder.com/300" alt="" />
