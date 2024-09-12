@@ -166,124 +166,124 @@ export default function OneColumn4() {
 <link rel="stylesheet" type="text/css" href="../css/custom.css">
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js" defer></script> 
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@pimaonline/pimaonline-themepack/dist/js/scripts2.js" defer></script>
-<title>Starter Template</title>
+<title>Writing 101: Introduction</title>
 </head>
 <body>
 <header class="header"> <img src="https://via.placeholder.com/1920X600" alt="">
   <div class="text-container">
-    <h1>Module One</h1>
-    <p>Donec sollicitudin misit malesuada. Nulla porttitor accumsan tincidunt. Proin eget tortor risus. Pellentesque in ipsum id orci porta.</p>
+    <h1>Writing 101: Introduction</h1>
+    <p>Welcome to Writing 101! In this course, you'll explore the...</p>
   </div>
 </header>
 <div id="content-wrapper">
   <div class="content-body">
-    <h2>Module 1 Topic</h2>
-    <p>Curabitur aliquet quam id dui posuere blandit. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis lorem ut libero malesuada feugiat. Vivamus suscipit tortor eget felis porttitor volutpat. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Proin eget tortor risus. Donec rutrum congue leo eget malesuada.</p>
-    <h3>Module One Agenda</h3>
+    <h2>Week 1: Getting Started</h2>
+    <p>This week, we'll dive into the essentials of academic writing. You'll...</p>
+    <h3>Weekly Agenda</h3>
     <table class="display-lg">
       <thead>
         <tr>
-          <th>Assignments</th>
+          <th>Task</th>
           <th>Points</th>
-          <th>Due Dates</th>
+          <th>Deadline</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>Read Chapters 1 and 2</td>
+          <td>Read Chapter 1: The Writing Process</td>
           <td>5</td>
-          <td>Feb 1</td>
+          <td>Sept 4</td>
         </tr>
         <tr>
-          <td>Complete Reading Assignment 1</td>
+          <td>Complete Essay Outline Assignment</td>
+          <td>15</td>
+          <td>Sept 4</td>
+        </tr>
+        <tr>
+          <td>Participate in Discussion Forum</td>
+          <td>10</td>
+          <td>Sept 6</td>
+        </tr>
+        <tr>
+          <td>Submit Essay Draft</td>
           <td>20</td>
-          <td>Feb 1</td>
-        </tr>
-        <tr>
-          <td>Contribute to Discussion 1</td>
-          <td>5</td>
-          <td>Feb 3</td>
-        </tr>
-        <tr>
-          <td>Module 1 Quiz</td>
-          <td>30</td>
-          <td>Feb 5</td>
+          <td>Sept 8</td>
         </tr>
       </tbody>
     </table>
-    <h3>Key Takeaways</h3>
-    <p>Curabitur aliquet quam id dui posuere blandit. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis lorem ut libero malesuada feugiat. Vivamus suscipit tortor eget felis porttitor volutpat. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Proin eget tortor risus. Donec rutrum congue leo eget malesuada.</p>
-    <p>Curabitur aliquet quam id dui posuere blandit. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis lorem ut libero malesuada feugiat. Vivamus suscipit tortor eget felis porttitor volutpat. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Proin eget tortor risus. Donec rutrum congue leo eget malesuada.</p>
+    <h3>Key Points</h3>
+    <p>This week's focus is on the basics of essay writing. Pay attention to how...</p>
+    <p>Be sure to review the chapter thoroughly and complete all...</p>
     <ul class="vocab-cards">
       <li class="vocab">
-        <dt>Perennial</dt>
-        <dd>Perennial is used to describe things that exist or continue in the same way or state for a long time, as well as things that happen again and again.</dd>
+        <dt>Thesis Statement</dt>
+        <dd>A statement that presents the main argument or point of...</dd>
       </li>
       <li class="vocab">
-        <dt>Evergreen</dt>
-        <dd>Refers to plants that retain their green leaves throughout the year, regardless of the changing seasons. These plants are often associated with perennials due to their continuous growth and appearance.</dd>
+        <dt>Topic Sentence</dt>
+        <dd>The first sentence in a paragraph that introduces the...</dd>
       </li>
       <li class="vocab">
-        <dt>Sustained</dt>
-        <dd>Maintained or continued over an extended period of time. Perennials are known for their sustained growth and presence in a garden or landscape.</dd>
+        <dt>Evidence</dt>
+        <dd>Information, facts, or details that support the claims made in...</dd>
       </li>
       <li class="vocab">
-        <dt>Cyclical</dt>
-        <dd>Recurring in cycles or periods, often following a regular pattern. Perennials are part of the cyclical nature of plants, coming back each year as part of their life cycle.</dd>
+        <dt>Transition</dt>
+        <dd>Words or phrases used to link ideas and paragraphs together. Effective transitions help...</dd>
       </li>
       <li class="vocab">
-        <dt>Enduring</dt>
-        <dd>Something that is able to last or persist for a long time, showing resilience and lasting quality. Perennial plants are often seen as enduring due to their ability to return year after year.</dd>
+        <dt>Conclusion</dt>
+        <dd>The final paragraph of an essay that summarizes the main points and...</dd>
       </li>
       <li class="vocab">
-        <dt>Unfading</dt>
-        <dd>Something that does not lose its color, brilliance, or quality; remaining constant and vibrant. Perennials can be considered unfading due to their consistent return and appearance.</dd>
+        <dt>Revision</dt>
+        <dd>The process of reviewing and making changes to a...</dd>
       </li>
     </ul>
   </div>
   <div class="content-body">
-    <h2>Supplemental Resources</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque in enim quis sem placerat viverra id eget mauris. Proin tempor, eros et efficitur tincidunt, sem felis pharetra tellus, a fermentum mauris tellus sed nisi. Nunc ex metus, porttitor sed ante eget, tempus scelerisque metus. Maecenas imperdiet dictum euismod. Duis sed semper mi. Vestibulum consequat nisl ut felis viverra hendrerit. Nunc vitae bibendum felis.</p>
+    <h2>Additional Resources</h2>
+    <p>This section includes extra materials to enhance your understanding of...</p>
     <div class="video-widget">
       <div class="video-card">
-        <h3 class="font-size-h4">Review Video 01</h3>
+        <h3 class="font-size-h4">Introduction to Essay Writing</h3>
         <hr>
         <div class="card-content">
-          <p>(Video length: 3:50 minutes)</p>
+          <p>(Video length: 4:00 minutes)</p>
           <div class="media-container">
             <div class="media-object">
-              <iframe src="https://www.youtube.com/embed/rKV0Yl1Ir2g" title="YouTube video player?wmode=opaque" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen="" width="560" height="315" frameBorder="0"></iframe>
+              <iframe src="https://www.youtube.com/embed/XzU8abGv9A4" title="YouTube video player?wmode=opaque" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen="" width="560" height="315" frameBorder="0"></iframe>
             </div>
           </div>
-          <a class="btn ext" href="https://www.youtube.com/embed/rKV0Yl1Ir2g" target="_blank" rel="nonopener noopener">Watch on Youtube</a> </div>
+          <a class="btn ext" href="https://www.youtube.com/embed/XzU8abGv9A4" target="_blank" rel="nonopener noopener">Watch on YouTube</a> </div>
       </div>
       <div class="video-card">
-        <h3 class="font-size-h4">Review Video 02</h3>
+        <h3 class="font-size-h4">Developing Strong Arguments</h3>
         <hr>
         <div class="card-content">
-          <p>(Video length: 2:34 minutes)</p>
+          <p>(Video length: 3:20 minutes)</p>
           <div class="media-container">
             <div class="media-object">
-              <iframe src="https://www.youtube.com/embed/dkCWThe7RuI" title="YouTube video player?wmode=opaque" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen="" width="560" height="315" frameBorder="0"></iframe>
+              <iframe src="https://www.youtube.com/embed/3FThZG38K6c" title="YouTube video player?wmode=opaque" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen="" width="560" height="315" frameBorder="0"></iframe>
             </div>
           </div>
-          <a class="btn ext" href="https://www.youtube.com/embed/dkCWThe7RuI" target="_blank" rel="nonopener noopener">Watch on Youtube</a> </div>
+          <a class="btn ext" href="https://www.youtube.com/embed/3FThZG38K6c" target="_blank" rel="nonopener noopener">Watch on YouTube</a> </div>
       </div>
       <div class="video-card">
-        <h3 class="font-size-h4">Review Video 03</h3>
+        <h3 class="font-size-h4">Effective Editing Techniques</h3>
         <hr>
         <div class="card-content">
-          <p>(Video length: 5:14 minutes)</p>
+          <p>(Video length: 5:00 minutes)</p>
           <div class="media-container">
             <div class="media-object">
-              <iframe src="https://www.youtube.com/embed/7wUXSXZgNlU" title="YouTube video player?wmode=opaque" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen="" width="560" height="315" frameBorder="0"></iframe>
+              <iframe src="https://www.youtube.com/embed/N0v99Ew0Z6Y" title="YouTube video player?wmode=opaque" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen="" width="560" height="315" frameBorder="0"></iframe>
             </div>
           </div>
-          <a class="btn ext" href="https://www.youtube.com/embed/7wUXSXZgNlU" target="_blank" rel="nonopener noopener">Watch on Youtube</a> </div>
+          <a class="btn ext" href="https://www.youtube.com/embed/N0v99Ew0Z6Y" target="_blank" rel="nonopener noopener">Watch on YouTube</a> </div>
       </div>
     </div>
     <div class="call-out">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque in enim quis sem placerat viverra id eget mauris. Proin tempor, eros et efficitur tincidunt, sem felis pharetra tellus, a fermentum mauris tellus sed nisi. Nunc ex metus, porttitor sed ante eget, tempus scelerisque metus. Maecenas imperdiet dictum euismod. Duis sed semper mi. Vestibulum consequat nisl ut felis viverra hendrerit. Nunc vitae bibendum felis.</p>
+      <p>Utilize these supplementary materials to further develop your...</p>
     </div>
   </div>
 </div>
@@ -291,17 +291,16 @@ export default function OneColumn4() {
   <div id="footer">
     <p class="text-center toggle-footnotes">[Show Footnotes]</p>
     <div class="footnotes">
-      <p>Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus.</p>
+      <p>Explore the various aspects of academic writing through our...</p>
       <ul>
-        <li>Lorem culim ghus.</li>
-        <li>Ipsum guar havana.</li>
+        <li>Introduction to Writing...</li>
+        <li>Essay Structure Fundamentals...</li>
       </ul>
     </div>
   </div>
 </footer>
 </body>
-</html>`}
-                </code>
+</html>`}</code>
               </pre>
             </div>
           </div>

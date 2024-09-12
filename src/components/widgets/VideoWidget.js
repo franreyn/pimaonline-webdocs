@@ -37,7 +37,7 @@ export default function VideoWidget() {
             <div className="video-card">
               <h2>Review Video 01</h2>
               <div className="card-content">
-                <h3>Il faut</h3>
+                <h3>Learn French</h3>
                 <p>(Video length: 3:50 minutes)</p>
                 <div className="media-container">
                   <div className="media-object">
@@ -85,7 +85,7 @@ export default function VideoWidget() {
   <div class="video-card">
     <h2>Review Video 01</h2>
     <div class="card-content">
-      <h3>Il faut</h3>
+      <h3>Learn French</h3>
       <p>(Video length: 3:50 minutes)</p>
       <div class="media-container">
         <div class="media-object">

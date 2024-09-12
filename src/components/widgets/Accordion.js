@@ -56,10 +56,10 @@ export default function Accordion() {
         <div className="wd-visual-ex">
           <div className="accordion">
           <AccordionItem title="Read">
-            <p>Making News, March/April 2018. By Deb Venasse, Reporter, <em>IBPA Independent</em> magazine</p>
+					<p>Making News, March/April 2018. By Deb Venasse, Reporter, <em>IBPA Independent</em> magazine</p>
           </AccordionItem>
           <AccordionItem title="Discuss">
-            <p>Adweek is a well-known organization that covers media and communication people, places, and things. Some of its popular elements with journalists, creatives, and media workers are the newsletters with news about the actual people doing the media work.</p>
+					<p>Adweek is a well-known organization that covers media and communication people, places, and things. Some of its popular elements with journalists, creatives, and media workers are the newsletters with news about the actual people doing the media work.</p>
           </AccordionItem>
           </div>
         </div>
@@ -70,20 +70,19 @@ export default function Accordion() {
           <pre>
             <code className="language-html" ref={codeRef}>
             {String.raw`<div class="accordion">
-  <div class="accordion-item">
-    <h3 class="accordion-title arrow-down toggle-btn">Read</h3>
-    <div class="accordion-content toggle-btn-content">
-      <p>Making News, March/April 2018. By Deb Venasse, Reporter, <em>IBPA Independent</em> magazine</p>
-    </div>
-  </div>
-  <div class="accordion-item">
-    <h3 class="accordion-title arrow-down toggle-btn">Discuss</h3>
+   <div class="accordion-item">
+      <h3 class="accordion-title arrow-down toggle-btn">Read</h3>
       <div class="accordion-content toggle-btn-content">
-        <p>Adweek is a well-known organization that covers media and communication people, places, and things. Some of its popular elements with journalists, creatives, and media workers are the newsletters with news about the actual people doing the media work.</p>
+         <p>Making News, March/April 2018. By Deb Venasse...</p>
       </div>
-  </div>
-</div>`}
-            </code>
+   </div>
+   <div class="accordion-item">
+      <h3 class="accordion-title arrow-down toggle-btn">Discuss</h3>
+      <div class="accordion-content toggle-btn-content">
+         <p>Adweek is a well-known organization that...</p>
+      </div>
+   </div>
+</div>`}</code>
           </pre>
         </div>
       </div>

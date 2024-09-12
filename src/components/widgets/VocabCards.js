@@ -33,32 +33,32 @@ export default function VocabCards() {
         <div className="wd-visual-ex">
         <ul className="vocab-cards">
           <li className="vocab">
-            <dt>Perennial</dt>
-            <dd>Perennial is used to describe things that exist or continue in the same way or state for a long time, as well as things that happen again and again.</dd>
+            <dt>Thesis Statement</dt>
+            <dd>A thesis statement is a concise summary of the main point or claim of an essay or research paper. It presents the central argument or purpose of the paper and is usually located at the end of the introduction.</dd>
           </li>
           <li className="vocab">
-            <dt>Evergreen</dt>
-            <dd>Refers to plants that retain their green leaves throughout the year, regardless of the changing seasons. These plants are often associated with perennials due to their continuous growth and appearance.</dd>
+            <dt>Topic Sentence</dt>
+            <dd>A topic sentence is the first sentence in a paragraph that introduces the main idea or theme of the paragraph. It sets the tone for the content that follows and helps to organize the paragraph’s structure.</dd>
           </li>
           <li className="vocab">
-            <dt>Sustained</dt>
-            <dd>Maintained or continued over an extended period of time. Perennials are known for their sustained growth and presence in a garden or landscape.</dd>
+            <dt>Transition</dt>
+            <dd>Transitions are words or phrases used to connect ideas and ensure a smooth flow between sentences and paragraphs. They help guide the reader through the text by indicating relationships between concepts and maintaining coherence.</dd>
           </li>
           <li className="vocab">
-            <dt>Cyclical</dt>
-            <dd>Recurring in cycles or periods, often following a regular pattern. Perennials are part of the cyclical nature of plants, coming back each year as part of their life cycle.</dd>
+            <dt>Evidence</dt>
+            <dd>Evidence refers to the facts, examples, or data used to support claims and arguments within a paper. It can include statistics, quotations, and research findings that substantiate the writer's position and strengthen their argument.</dd>
           </li>
           <li className="vocab">
-            <dt>Enduring</dt>
-            <dd>Something that is able to last or persist for a long time, showing resilience and lasting quality. Perennial plants are often seen as enduring due to their ability to return year after year.</dd>
+            <dt>Counterargument</dt>
+            <dd>A counterargument is an opposing viewpoint or objection to the main argument presented in an essay. Addressing counterarguments helps to demonstrate a thorough understanding of the topic and strengthens the credibility of the writer’s position.</dd>
           </li>
           <li className="vocab">
-            <dt>Unfading</dt>
-            <dd>Something that does not lose its color, brilliance, or quality; remaining constant and vibrant. Perennials can be considered unfading due to their consistent return and appearance.</dd>
+            <dt>Conclusion</dt>
+            <dd>The conclusion is the final section of an essay or paper that summarizes the main points, restates the thesis, and provides closure. It often reflects on the significance of the argument and may suggest implications or future areas of research.</dd>
           </li>
           <li className="vocab">
-            <dt>Perpetual</dt>
-            <dd>Continuing indefinitely or indefinitely recurring. The concept of perennials aligns with the idea of perpetuality, as these plants come back year after year in an ongoing cycle.</dd>
+            <dt>Coherence</dt>
+            <dd>The quality of being logical and consistent in writing, where ideas are clearly connected and flow smoothly from one to the next.</dd>
           </li>
         </ul>
         </div>
@@ -70,32 +70,32 @@ export default function VocabCards() {
             <code className="language-html" ref={codeRef}>
               {String.raw`<ul class="vocab-cards">
   <li class="vocab">
-    <dt>Perennial</dt>
-    <dd>Perennial is used to describe things that exist or continue in the same way or state for a long time, as well as things that happen again and again.</dd>
+    <dt>Thesis Statement</dt>
+    <dd>A thesis statement is a concise summary of the main point or claim of an essay or...</dd>
   </li>
   <li class="vocab">
-    <dt>Evergreen</dt>
-    <dd>Refers to plants that retain their green leaves throughout the year, regardless of the changing seasons. These plants are often associated with perennials due to their continuous growth and appearance.</dd>
+    <dt>Topic Sentence</dt>
+    <dd>A topic sentence is the first sentence in a paragraph that...</dd>
   </li>
   <li class="vocab">
-    <dt>Sustained</dt>
-    <dd>Maintained or continued over an extended period of time. Perennials are known for their sustained growth and presence in a garden or landscape.</dd>
+    <dt>Transition</dt>
+    <dd>Transitions are words or phrases used to connect ideas and...</dd>
   </li>
   <li class="vocab">
-    <dt>Cyclical</dt>
-    <dd>Recurring in cycles or periods, often following a regular pattern. Perennials are part of the cyclical nature of plants, coming back each year as part of their life cycle.</dd>
+    <dt>Evidence</dt>
+    <dd>Evidence refers to the facts, examples, or data used to...</dd>
   </li>
   <li class="vocab">
-    <dt>Enduring</dt>
-    <dd>Something that is able to last or persist for a long time, showing resilience and lasting quality. Perennial plants are often seen as enduring due to their ability to return year after year.</dd>
+    <dt>Counterargument</dt>
+    <dd>A counterargument is an opposing viewpoint or objection to...</dd>
   </li>
   <li class="vocab">
-    <dt>Unfading</dt>
-    <dd>Something that does not lose its color, brilliance, or quality; remaining constant and vibrant. Perennials can be considered unfading due to their consistent return and appearance.</dd>
+    <dt>Conclusion</dt>
+    <dd>The conclusion is the final section of an essay or paper that...</dd>
   </li>
   <li class="vocab">
-    <dt>Perpetual</dt>
-    <dd>Continuing indefinitely or indefinitely recurring. The concept of perennials aligns with the idea of perpetuality, as these plants come back year after year in an ongoing cycle.</dd>
+    <dt>Coherence</dt>
+    <dd>The quality of being logical and consistent in writing, where...</dd>
   </li>
 </ul>`}
             </code>
