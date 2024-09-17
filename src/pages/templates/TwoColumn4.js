@@ -130,7 +130,7 @@ const [templateImage, setTemplateImage] = useState("/images/templates/twocolumn4
           <p>Cater to a range of learning styles by implementing a variety of widgets for your students to interact with. Whether they prefer listed tasks, text to read through, dropdowns to engage with, images to connect with, or videos to absorb — it's all included in this helpful overview.</p>
             <h3 className="spacer">Template Preview</h3>
           <div className="template-preview">
-            <Image src={templateImage} alt="" width={292} height={280} priority />
+            <Image src={templateImage} alt="" width={800} height={1400} priority />
             <div>
               <h4>Featured Widgets</h4>
               <div className="wd-border">
@@ -180,159 +180,145 @@ const [templateImage, setTemplateImage] = useState("/images/templates/twocolumn4
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@pimaonline/pimaonline-themepack/dist/css/themes/cards/styles.css">
 <link rel="stylesheet" type="text/css" href="../css/custom.css">
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js" defer></script> 
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@pimaonline/pimaonline-themepack/dist/js/scripts2.js" defer></script>
-<title>Starter Template</title>
+<title>Module One</title>
 </head>
-  <body>
-    <header class="header">
-      <img src="https://via.placeholder.com/1920X600" alt="">
-      <div class="text-container">
-        <h1>Module One</h1>
-        <p>Donec sollicitudin molestie malesuada. Nulla porttitor accumsan tincidunt. Proin eget tortor risus. Pellentesque in ipsum id orci porta.</p>
-      </div>
-    </header>
-    <div id="content-wrapper">
-      <div class="content-body">
-        <h2>Module One Topic</h2>
-      <p>Curabitur aliquet quam id dui posuere blandit. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis lorem ut libero malesuada feugiat. Vivamus suscipit tortor eget felis porttitor volutpat. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Proin eget tortor risus. Donec rutrum congue leo eget malesuada.</p>
-		<h3>Tasks and Due Dates</h3>
-	  <table class="display-lg">
-  <thead>
-    <tr>
-      <th>Assignments</th>
-      <th>Points</th>
-      <th>Due Dates</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><a href="url">Read Chapters 1 and 2</a></td>
-      <td>5</td>
-      <td>Feb 1</td>
-    </tr>
-    <tr>
-		<td><a href="url">Complete Reading Assignment 1</a></td>
-      <td>20</td>
-      <td>Feb 1</td>
-    </tr>
-	      <tr>
-			  <td><a href="url">Contribute to Discussion 1</a></td>
-      <td>5</td>
-      <td>Feb 3</td>
-    </tr>
-	      <tr>
-			  <td><a href="url">Module 1 Quiz</a></td>
-      <td>30</td>
-      <td>Feb 5</td>
-    </tr>
-  </tbody>
-</table>
-		  <h3>Key Takeaways</h3>
-		  <p>Vitae purus faucibus ornare suspendisse sed. Molestie ac feugiat sed lectus vestibulum mattis ullamcorper. Eget lorem dolor sed viverra ipsum nunc. Blandit aliquam etiam erat velit scelerisque in dictum non. Morbi tristique senectus et netus et. Scelerisque in dictum non consectetur a erat. Eu augue ut lectus arcu bibendum at varius vel pharetra.</p>
-		  	    <div class="side-by-side">
-  <div class="side-by-side-item">
-	  <h3 class="font-size-h4">Lorem ipsum</h3>
-       <p>Curabitur aliquet quam id dui posuere blandit. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis lorem ut libero malesuada feugiat. Vivamus suscipit tortor eget felis porttitor volutpat. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Proin eget tortor risus. Donec rutrum congue leo eget malesuada.</p>
+<body>
+<header class="header"> <img src="https://via.placeholder.com/1920X600" alt="">
+  <div class="text-container">
+    <h1>Module One</h1>
+    <p>Welcome to Module One of our writing course. In this module, we will...</p>
   </div>
-  <div class="side-by-side-item">
-	   <h3 class="font-size-h4">Class aptent</h3>
-       <p>Curabitur aliquet quam id dui posuere blandit. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis lorem ut libero malesuada feugiat. Vivamus suscipit tortor eget felis porttitor volutpat. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Proin eget tortor risus. Donec rutrum congue leo eget malesuada.</p>
-  </div>
-</div>
-		  <h3>Essential Vocab</h3>
-		  <dl class="vocab-list">
-  <button>Close All</button>
-  <dt tabIndex="0">Term 1</dt>
-  <dd>Term Definition 1</dd>
-  <dt tabIndex="0">Term 2</dt>
-  <dd>Term Definition 2</dd>
-  <dt tabIndex="0">Term 3</dt>
-  <dd>Term Definition 3</dd>
-			    <dt tabIndex="0">Term 4</dt>
-  <dd>Term Definition 4</dd>
-</dl>
+</header>
+<div id="content-wrapper">
+  <div class="content-body">
+    <h2>Introduction to Essay Writing</h2>
+    <p>In this section, we will discuss the essential components of a well-written essay. These include...</p>
+    <h3>Assignments and Deadlines</h3>
+    <table class="display-lg">
+      <thead>
+        <tr>
+          <th>Assignment</th>
+          <th>Points</th>
+          <th>Due Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><a href="url">Read Chapter 1: Introduction to Essay Writing</a></td>
+          <td>10</td>
+          <td>Mar 1</td>
+        </tr>
+        <tr>
+          <td><a href="url">Complete Exercise 1: Identifying Thesis Statements</a></td>
+          <td>15</td>
+          <td>Mar 3</td>
+        </tr>
+        <tr>
+          <td><a href="url">Participate in Discussion 1: Thesis Development</a></td>
+          <td>10</td>
+          <td>Mar 5</td>
+        </tr>
+        <tr>
+          <td><a href="url">Essay Draft 1 Submission</a></td>
+          <td>30</td>
+          <td>Mar 7</td>
+        </tr>
+      </tbody>
+    </table>
+    <h3>Key Concepts</h3>
+    <p>Understanding the structure of an essay is vital. The introduction should...</p>
+    <div class="side-by-side">
+      <div class="side-by-side-item">
+        <h3 class="font-size-h4">Understanding Thesis Statements</h3>
+        <p>A thesis statement is a crucial part of an...</p>
       </div>
-		  <div class="content-body">
-		  <div class="image-gallery">
-  <div class="gallery-wrapper">
-    <div class="image-box">
-      <img src="https://picsum.photos/id/1018/400/200" alt="" />
+      <div class="side-by-side-item">
+        <h3 class="font-size-h4">Effective Argumentation</h3>
+        <p>Building a strong argument involves presenting evidence and...</p>
+      </div>
     </div>
-    <div class="image-box">
-      <img src="https://picsum.photos/id/1047/300/400" alt="" />
-    </div>
-    <div class="image-box">
-      <img src="https://picsum.photos/id/1059/500/300" alt="" />
-    </div>
-    <div class="image-box">
-      <img src="https://picsum.photos/id/119/500/300" alt="" />
-    </div>
-    <div class="image-box">
-      <img src="https://picsum.photos/id/143/800/200" alt="" />
+    <h3>Essential Terms</h3>
+    <dl class="vocab-list">
+      <dt tabIndex="0">Thesis Statement</dt>
+      <dd>A statement that presents the main argument or point of an...</dd>
+      <dt tabIndex="0">Topic Sentence</dt>
+      <dd>The first sentence of a paragraph that introduces the...</dd>
+      <dt tabIndex="0">Evidence</dt>
+      <dd>Data or information used to support a claim or...</dd>
+      <dt tabIndex="0">Conclusion</dt>
+      <dd>The final part of an essay that summarizes the main points and...</dd>
+    </dl>
+  </div>
+  <div class="content-body">
+    <div class="image-gallery">
+      <div class="gallery-wrapper">
+        <div class="image-box"> <img src="https://picsum.photos/id/1018/400/200" alt="" /> </div>
+        <div class="image-box"> <img src="https://picsum.photos/id/1047/300/400" alt="" /> </div>
+        <div class="image-box"> <img src="https://picsum.photos/id/1059/500/300" alt="" /> </div>
+        <div class="image-box"> <img src="https://picsum.photos/id/119/500/300" alt="" /> </div>
+        <div class="image-box"> <img src="https://picsum.photos/id/143/800/200" alt="" /> </div>
+      </div>
     </div>
   </div>
 </div>
-  </div>
-    </div>
-    <div id="second-column">
-      <div class="content-body">
-        <h2>More Resources</h2>
-        <p>Vitae purus faucibus ornare suspendisse sed. Molestie ac feugiat sed lectus vestibulum mattis ullamcorper. Eget lorem dolor sed viverra ipsum nunc. Blandit aliquam etiam erat velit scelerisque in dictum non. Morbi tristique senectus et netus et. Scelerisque in dictum non consectetur a erat. Eu augue ut lectus arcu bibendum at varius vel pharetra.</p>
-		  	  <div class="video-widget">
-  <div class="video-card">
-    <h3 class="font-size-h4">Review Video 01</h3>
-	  <hr>
-    <div class="card-content">
-      <p>(Video length: 3:50 minutes)</p>
-      <div class="media-container">
-        <div class="media-object">
-          <iframe src="https://www.youtube.com/embed/rKV0Yl1Ir2g" title="YouTube video player?wmode=opaque" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen="" width="560" height="315" frameBorder="0"></iframe>
-        </div>
+<div id="second-column">
+  <div class="content-body">
+    <h2>Additional Resources</h2>
+    <p>For further reading, explore the following resources on...</p>
+    <div class="video-widget">
+      <div class="video-card">
+        <h3 class="font-size-h4">Essay Structure Overview</h3>
+        <hr>
+        <div class="card-content">
+          <p>(Video length: 4:00 minutes)</p>
+          <div class="media-container">
+            <div class="media-object">
+              <iframe src="https://www.youtube.com/embed/rKV0Yl1Ir2g" title="YouTube video player?wmode=opaque" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen="" width="560" height="315" frameBorder="0"></iframe>
+            </div>
+          </div>
+          <a class="btn ext" href="https://www.youtube.com/embed/rKV0Yl1Ir2g" target="_blank" rel="nonopener noopener">Watch on Youtube</a> </div>
       </div>
-      <a class="btn ext" href="https://www.youtube.com/embed/rKV0Yl1Ir2g" target="_blank" rel="nonopener noopener">Watch on Youtube</a>
-    </div>
-  </div>
-  <div class="video-card">
-    <h3 class="font-size-h4">Review Video 02</h3>
-	  <hr>
-    <div class="card-content">
-      <p>(Video length: 2:34 minutes)</p>
-      <div class="media-container">
-        <div class="media-object">
-          <iframe src="https://www.youtube.com/embed/dkCWThe7RuI" title="YouTube video player?wmode=opaque" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen="" width="560" height="315" frameBorder="0"></iframe>
-        </div>
+      <div class="video-card">
+        <h3 class="font-size-h4">Developing Strong Thesis Statements</h3>
+        <hr>
+        <div class="card-content">
+          <p>(Video length: 3:00 minutes)</p>
+          <div class="media-container">
+            <div class="media-object">
+              <iframe src="https://www.youtube.com/embed/dkCWThe7RuI" title="YouTube video player?wmode=opaque" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen="" width="560" height="315" frameBorder="0"></iframe>
+            </div>
+          </div>
+          <a class="btn ext" href="https://www.youtube.com/embed/dkCWThe7RuI" target="_blank" rel="nonopener noopener">Watch on Youtube</a> </div>
       </div>
-      <a class="btn ext" href="https://www.youtube.com/embed/dkCWThe7RuI" target="_blank" rel="nonopener noopener">Watch on Youtube</a>
-    </div>
-  </div>
-  <div class="video-card">
-    <h3 class="font-size-h4">Review Video 03</h3>
-	  <hr>
-    <div class="card-content">
-      <p>(Video length: 5:14 minutes)</p>
-      <div class="media-container">
-        <div class="media-object">
-          <iframe src="https://www.youtube.com/embed/7wUXSXZgNlU" title="YouTube video player?wmode=opaque" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen="" width="560" height="315" frameBorder="0"></iframe>
-        </div>
+      <div class="video-card">
+        <h3 class="font-size-h4">Crafting Effective Arguments</h3>
+        <hr>
+        <div class="card-content">
+          <p>(Video length: 5:00 minutes)</p>
+          <div class="media-container">
+            <div class="media-object">
+              <iframe src="https://www.youtube.com/embed/7wUXSXZgNlU" title="YouTube video player?wmode=opaque" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen="" width="560" height="315" frameBorder="0"></iframe>
+            </div>
+          </div>
+          <a class="btn ext" href="https://www.youtube.com/embed/7wUXSXZgNlU" target="_blank" rel="nonopener noopener">Watch on Youtube</a> </div>
       </div>
-      <a class="btn ext" href="https://www.youtube.com/embed/7wUXSXZgNlU" target="_blank" rel="nonopener noopener">Watch on Youtube</a>
     </div>
   </div>
 </div>
-      </div>
+<footer>
+  <div id="footer">
+    <p class="text-center toggle-footnotes">[Show Footnotes]</p>
+    <div class="footnotes">
+      <p>For additional support, consult your instructor or refer to...</p>
+      <ul>
+        <li>Writing Center...</li>
+        <li>Additional Reading...l</li>
+      </ul>
     </div>
-    <footer>
-      <div id="footer">
-        <p class="text-center toggle-footnotes">[Show Footnotes]</p>
-        <div class="footnotes">
-          <p>Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus.</p>
-          <ul>
-            <li>Lorem culim ghus.</li>
-            <li>Ipsum guar havana.</li>
-          </ul>
-        </div>
-      </div>
-    </footer>
+  </div>
+</footer>
 </body>
 </html>`}
                 </code>

@@ -46,12 +46,12 @@ export default function VocabList() {
         <div className="wd-visual-ex">
           <dl className="vocab-list">
             <button onClick={closeAll}>Close All</button>
-            <dt tabIndex="0" onClick={() => toggleAccordion(0)}>Term 1</dt>
-            <dd style={{ display: openIndexes.includes(0) ? "block" : "none" }}>Term Definition 1</dd>
-            <dt tabIndex="0" onClick={() => toggleAccordion(1)}>Term 2</dt>
-            <dd style={{ display: openIndexes.includes(1) ? "block" : "none" }}>Term Definition 2</dd>
-            <dt tabIndex="0" onClick={() => toggleAccordion(2)}>Term 3</dt>
-            <dd style={{ display: openIndexes.includes(2) ? "block" : "none" }}>Term Definition 3</dd>
+            <dt tabIndex="0" onClick={() => toggleAccordion(0)}>Thesis Statement</dt>
+            <dd style={{ display: openIndexes.includes(0) ? "block" : "none" }}>A sentence that states the main argument or point of an essay.</dd>
+            <dt tabIndex="0" onClick={() => toggleAccordion(1)}>Topic Sentence</dt>
+            <dd style={{ display: openIndexes.includes(1) ? "block" : "none" }}>The first sentence in a paragraph that introduces its main idea.</dd>
+            <dt tabIndex="0" onClick={() => toggleAccordion(2)}>Transition</dt>
+            <dd style={{ display: openIndexes.includes(2) ? "block" : "none" }}>Words or phrases that connect ideas and ensure smooth flow between sentences and paragraphs.</dd>
           </dl>
         </div>
         <div className="wd-btn-container">
@@ -61,13 +61,12 @@ export default function VocabList() {
           <pre>
             <code className="language-html" ref={codeRef}>
               {String.raw`<dl class="vocab-list">
-  <button>Close All</button>
-  <dt tabIndex="0">Term 1</dt>
-  <dd>Term Definition 1</dd>
-  <dt tabIndex="0">Term 2</dt>
-  <dd>Term Definition 2</dd>
-  <dt tabIndex="0">Term 3</dt>
-  <dd>Term Definition 3</dd>
+  <dt tabIndex="0">Thesis Statement</dt>
+  <dd>A sentence that states the main argument or point of an essay...</dd>
+  <dt tabIndex="0">Topic Sentence</dt>
+  <dd>The first sentence in a paragraph that introduces its main idea...</dd>
+  <dt tabIndex="0">Transition</dt>
+  <dd>Words or phrases that connect ideas and ensure smooth flow between sentences and paragraphs...</dd>
 </dl>`}
             </code>
           </pre>

@@ -146,7 +146,7 @@ export default function OneColumn3() {
           <p>Keep your students from getting lost in the coursework with this virtual content roadmap. Provide module learning goals, a list of items due in the next week, where they are in the overall course, and additional content &amp; resources to explore.</p>
             <h3 className="spacer">Template Preview</h3>
           <div className="template-preview">
-            <Image src={templateImage} alt="" width={292} height={280} priority/>
+            <Image src={templateImage} alt="" width={800} height={1400} priority/>
             <div>
               <h4>Featured Widgets</h4>
               <div className="wd-border">
@@ -201,156 +201,157 @@ export default function OneColumn3() {
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@pimaonline/pimaonline-themepack/dist/css/themes/cards/styles.css">
 <link rel="stylesheet" type="text/css" href="../css/custom.css">
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js" defer></script> 
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@pimaonline/pimaonline-themepack/dist/js/scripts2.js" defer></script>
-<title>Starter Template</title>
+<title>Introduction to Writing</title>
 </head>
 <body>
 <header class="header"> <img src="https://via.placeholder.com/1920X600" alt="">
   <div class="text-container">
-    <h1>Module One</h1>
-    <p>Donec sollicitudin molestie malesuada. Nulla porttitor accumsan tincidunt. Proin eget tortor risus. Pellentesque in ipsum id orci porta.</p>
+    <h1>Introduction to Writing</h1>
+    <p>Welcome to the first module of our writing course. Here, we will cover the...</p>
   </div>
 </header>
 <div id="content-wrapper">
   <div class="content-body">
-    <h2>Topic Overview</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque in enim quis sem placerat viverra id eget mauris. Proin tempor, eros et efficitur tincidunt, sem felis pharetra tellus, a fermentum mauris tellus sed nisi. Nunc ex metus, porttitor sed ante eget, tempus scelerisque metus. Maecenas imperdiet dictum euismod. Duis sed semper mi. Vestibulum consequat nisl ut felis viverra hendrerit. Nunc vitae bibendum felis.</p>
-<div class="image-gallery">
-	  <div class="border"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    <h2>Lesson Overview</h2>
+    <p>This module introduces essential writing concepts and practices. You will learn about different types of essays, how to structure...</p>
+    <div class="image-gallery">
+      <div class="border">
+        <p>Understanding the basics of writing is crucial. This section covers...
         <ul>
-          <li>Sub-item 1</li>
-          <li>Sub-item 2</li>
-        </ul></p></div>
-</div>
-      <p>Donec interdum hendrerit viverra. Praesent sit amet feugiat nunc. Pellentesque vitae egestas sapien, volutpat suscipit urna. Maecenas porta, mi vitae hendrerit molestie, libero dolor gravida mi, vel maximus risus dolor sed nulla. Vestibulum malesuada velit nec urna molestie vestibulum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec elementum justo id metus suscipit, ut semper massa fringilla. Vestibulum finibus commodo nisi, non congue arcu. Integer sollicitudin rhoncus felis ac laoreet. Curabitur varius sagittis orci vitae dapibus. Morbi congue blandit dolor, sit amet auctor neque ornare et. Morbi vulputate erat urna, vitae varius urna accumsan ac. Curabitur purus turpis, ullamcorper nec lorem et, tincidunt tempus odio. Etiam sit amet luctus lectus.</p>
-      <p>Donec a sapien vitae lacus aliquam rhoncus vel in dui. Ut scelerisque leo in arcu lobortis, ut accumsan sem fringilla. Vestibulum id lectus sagittis, malesuada ex non, ultrices leo. Praesent sollicitudin nisl tellus, eget sodales dui cursus gravida. Integer felis ex, iaculis nec pulvinar eget, condimentum at lectus. Phasellus ultricies, nulla ut aliquet aliquet, risus massa molestie risus, vitae ultrices nunc ipsum eget justo. Nulla quis sapien vel ligula feugiat interdum. Fusce elit purus, tincidunt vel ante et, efficitur feugiat elit.</p>
-    <h3>Here's what's due this week:</h3>
-    <p>Complete the reading, review activity, discussion, lab, and quiz by August 30th.</p>
+          <li>Concept 1...</li>
+          <li>Concept 2...</li>
+        </ul>
+        </p>
+      </div>
+    </div>
+    <p>Writing well is a key skill in academic and professional settings. By mastering these fundamentals, you will be able to...</p>
+    <p>As you progress, you will encounter various writing assignments that will...</p>
+    <h3>Assignments for This Week:</h3>
+    <p>Complete the readings, engage in the discussion forum, and submit the writing exercise...</p>
     <br>
     <ul class="assignments-widget">
       <li class="assignment">
-        <h3>Module One Readings</h3>
-        <p>Nulla quis lorem ut libero malesuada feugiat. Vivamus suscipit tortor eget felis porttitor volutpat. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus.</p>
-        <a class="btn" href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou=608068&amp;type=content&amp;rcode=PIMA-3596885" target="_blank">Go to Readings</a> </li>
+        <h3>Reading Material</h3>
+        <p>Read the provided materials and take notes. These readings will...</p>
+        <a class="btn" href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou=608068&amp;type=content&amp;rcode=PIMA-3596885" target="_blank">Access Reading Material</a> </li>
       <li class="assignment">
-        <h3>Reading Review Activity</h3>
-        <p>Nulla quis lorem ut libero malesuada feugiat. Vivamus suscipit tortor eget felis porttitor volutpat. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus.</p>
-        <a class="btn ext" href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou=608068&amp;type=content&amp;rcode=PIMA-3596885" target="_blank">Go to Activity</a> </li>
+        <h3>Writing Exercise</h3>
+        <p>Complete the exercise based on the reading material. This will...</p>
+        <a class="btn ext" href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou=608068&amp;type=content&amp;rcode=PIMA-3596885" target="_blank">Submit Exercise</a> </li>
       <li class="assignment">
-        <h3>Discussion Topic</h3>
-        <p>Nulla quis lorem ut libero malesuada feugiat. Vivamus suscipit tortor eget felis porttitor volutpat. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus.</p>
+        <h3>Discussion Participation</h3>
+        <p>Engage in the discussion forum by posting your thoughts and...</p>
         <a class="btn ext" href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou=608068&amp;type=content&amp;rcode=PIMA-3639476" target="_blank">Join Discussion</a> </li>
       <li class="assignment">
-        <h3>Interactive Lab</h3>
-        <p>Nulla quis lorem ut libero malesuada feugiat. Vivamus suscipit tortor eget felis porttitor volutpat. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus.</p>
-        <a class="btn ext" href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou=608068&amp;type=content&amp;rcode=PIMA-3596885" target="_blank">Begin Lab</a> </li>
-      <li class="assignment">
-        <h3>Module One Quiz</h3>
-        <p>Nulla quis lorem ut libero malesuada feugiat. Vivamus suscipit tortor eget felis porttitor volutpat. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus.</p>
-        <a class="btn ext" href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou=608068&amp;type=content&amp;rcode=PIMA-3639476" target="_blank">Take the Quiz</a> </li>
+        <h3>Grammar Quiz</h3>
+        <p>Take the quiz to test your understanding of grammar rules and...</p>
+        <a class="btn ext" href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou=608068&amp;type=content&amp;rcode=PIMA-3596885" target="_blank">Start Quiz</a> </li>
     </ul>
     <div class="call-out">
-      <h4>Want more on this subject?</h4>
-      <p>Curabitur aliquet quam id dui posuere blandit. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis lorem ut libero malesuada feugiat. Vivamus suscipit tortor eget felis porttitor volutpat. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Proin eget tortor risus. Donec rutrum congue leo eget malesuada.</p>
-      <a class="btn ext" href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou=608068&amp;type=content&amp;rcode=PIMA-3639476" target="_blank">Optional Resources</a> </div>
+      <h4>Need Additional Resources?</h4>
+      <p>Explore further readings and resources to expand your...</p>
+      <a class="btn ext" href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou=608068&amp;type=content&amp;rcode=PIMA-3639476" target="_blank">View Resources</a> </div>
   </div>
   <div class="content-body">
-    <h2>Course Roadmap</h2>
-    <p>In the overall course, you are here:</p>
-    <dl class="vocab-cards">
-      <div class="vocab">
+    <h2>Course Structure</h2>
+    <p>Here’s an overview of the course modules:</p>
+    <ul class="vocab-cards">
+      <li class="vocab">
         <dt>Unit One</dt>
         <dd>
           <ul>
-            <li><span class="highlight"> Module One: Lorem ipsum dolor sit</span></li>
-            <li>Module Two: Quisque in enim</li>
-            <li>Module Three: Proin tempor</li>
+            <li><span class="highlight"> Module One: Introduction to Writing</span></li>
+            <li>Module Two: Writing Fundamentals...</li>
+            <li>Module Three: Structuring Essays...</li>
           </ul>
         </dd>
-      </div>
-      <div class="vocab">
+      </li>
+      <li class="vocab">
         <dt>Unit Two</dt>
         <dd>
           <ul>
-            <li>Module Four: Nunc ex metus</li>
-            <li>Module Five: Lorem ipsum</li>
-            <li>Module Six: Dolor sit</li>
-            <li>Module Seven: Tempor metus</li>
+            <li>Module Four: Research Techniques...</li>
+            <li>Module Five: Academic Writing...</li>
+            <li>Module Six: Critical Analysis...</li>
+            <li>Module Seven: Revision Strategies...</li>
           </ul>
         </dd>
-      </div>
-      <div class="vocab">
+      </li>
+      <li class="vocab">
         <dt>Unit Three</dt>
         <dd>
           <ul>
-            <li>Module Eight: Lorem ipsum</li>
-            <li>Module Nine: Dolor sit</li>
-            <li>Module Ten: Tempor metus</li>
+            <li>Module Eight: Creative Writing...</li>
+            <li>Module Nine: Technical Writing...</li>
+            <li>Module Ten: Final Projects...</li>
           </ul>
         </dd>
-      </div>
-    </dl>
+      </li>
+    </ul>
   </div>
-	<div class="content-body">
-	<h2>More Food For Thought</h2>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque in enim quis sem placerat viverra id eget mauris. Proin tempor, eros et efficitur tincidunt, sem felis pharetra tellus, a fermentum mauris tellus sed nisi. Nunc ex metus, porttitor sed ante eget, tempus scelerisque metus. </p>
-	<div class="video-widget">
-  <div class="video-card">
-    <h3>Supplementary Video</h3>
-    <div class="card-content">
-      <h4>Il faut</h4>
-      <p>(Video length: 3:50 minutes)</p>
-      <div class="media-container">
-        <div class="media-object">
-          <iframe src="https://www.youtube.com/embed/rKV0Yl1Ir2g" title="YouTube video player?wmode=opaque" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen="" width="560" height="315" frameBorder="0"></iframe>
-        </div>
+  <div class="content-body">
+    <h2>Additional Learning Resources</h2>
+    <p>Explore these supplementary materials to gain deeper insights into...</p>
+    <div class="video-widget">
+      <div class="video-card">
+        <h3>Supplementary Video</h3>
+        <div class="card-content">
+          <h4>Effective Writing</h4>
+          <p>(Video length: 4:12 minutes)</p>
+          <div class="media-container">
+            <div class="media-object">
+              <iframe src="https://www.youtube.com/embed/rKV0Yl1Ir2g" title="YouTube video player?wmode=opaque" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen="" width="560" height="315" frameBorder="0"></iframe>
+            </div>
+          </div>
+          <a class="btn ext" href="https://www.youtube.com/embed/rKV0Yl1Ir2g" target="_blank" rel="noopener noreferrer">Watch on YouTube</a> </div>
       </div>
-      <a class="btn ext" href="https://www.youtube.com/embed/rKV0Yl1Ir2g" target="_blank" rel="nonopener noopener">Watch on Youtube</a>
+      <div class="video-card">
+        <h3>Supplementary Video</h3>
+        <div class="card-content">
+          <h4>Writing Techniques</h4>
+          <p>(Video length: 3:22 minutes)</p>
+          <div class="media-container">
+            <div class="media-object">
+              <iframe src="https://www.youtube.com/embed/dkCWThe7RuI" title="YouTube video player?wmode=opaque" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen="" width="560" height="315" frameBorder="0"></iframe>
+            </div>
+          </div>
+          <a class="btn ext" href="https://www.youtube.com/embed/dkCWThe7RuI" target="_blank" rel="noopener noreferrer">Watch on YouTube</a> </div>
+      </div>
+      <div class="video-card">
+        <h3>Supplementary Video</h3>
+        <div class="card-content">
+          <h4>Grammar Basics</h4>
+          <p>(Video length: 5:45 minutes)</p>
+          <div class="media-container">
+            <div class="media-object">
+              <iframe src="https://www.youtube.com/embed/DEF98765432" title="YouTube video player?wmode=opaque" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen="" width="560" height="315" frameBorder="0"></iframe>
+            </div>
+          </div>
+          <a class="btn ext" href="https://www.youtube.com/embed/DEF98765432" target="_blank" rel="noopener noreferrer">Watch on YouTube</a> </div>
+      </div>
     </div>
   </div>
-  <div class="video-card">
-    <h3>Supplementary Video</h3>
-    <div class="card-content">
-      <h4>Comparisons</h4>
-      <p>(Video length: 2:34 minutes)</p>
-      <div class="media-container">
-        <div class="media-object">
-          <iframe src="https://www.youtube.com/embed/dkCWThe7RuI" title="YouTube video player?wmode=opaque" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen="" width="560" height="315" frameBorder="0"></iframe>
-        </div>
-      </div>
-      <a class="btn ext" href="https://www.youtube.com/embed/dkCWThe7RuI" target="_blank" rel="nonopener noopener">Watch on Youtube</a>
-    </div>
-  </div>
-  <div class="video-card">
-    <h3>Supplementary Video</h3>
-    <div class="card-content">
-      <h4>Pronominal Verbs</h4>
-      <p>(Video length: 5:14 minutes)</p>
-      <div class="media-container">
-        <div class="media-object">
-          <iframe src="https://www.youtube.com/embed/7wUXSXZgNlU" title="YouTube video player?wmode=opaque" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen="" width="560" height="315" frameBorder="0"></iframe>
-        </div>
-      </div>
-      <a class="btn ext" href="https://www.youtube.com/embed/7wUXSXZgNlU" target="_blank" rel="nonopener noopener">Watch on Youtube</a>
-    </div>
-  </div>
-</div></div>
 </div>
 <footer>
   <div id="footer">
     <p class="text-center toggle-footnotes">[Show Footnotes]</p>
     <div class="footnotes">
-      <p>Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus.</p>
-      <ul>
-        <li>Lorem culim ghus.</li>
-        <li>Ipsum guar havana.</li>
+      <div class="footer-logos">
+        <img src="https://via.placeholder.com/200X60" alt="Footer Logo">
+      </div>
+      <ul class="footer-links">
+        <li><a href="#">Course Page</a></li>
+        <li><a href="#">Discussion Forum</a></li>
       </ul>
+      <p class="footer-notice">© 2024 Pima Community College. All rights reserved.</p>
     </div>
   </div>
 </footer>
 </body>
-</html>`}
-                </code>
+</html>
+`}</code>
               </pre>
             </div>
           </div>

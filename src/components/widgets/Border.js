@@ -27,12 +27,12 @@ export default function Border() {
       <p>Use <span className="wd-monospace">.border</span> to wrap your content. You may use a single element or multiple.</p>
       <div className="wd-window">
         <div className="wd-visual-ex">
-          <div className="border">
-            <h3>Some heading</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            </p>
-          </div>
+				<div className="border">
+					<h3>Essay Structure</h3>
+					<p>
+					Effective essays are organized into a clear introduction, body paragraphs, and conclusion. Each section has a purpose: the introduction introduces the topic and thesis, body paragraphs support the thesis with evidence, and the conclusion summarizes key points while reinforcing the argument.
+					</p>
+				</div>
         </div>
         <div className="wd-btn-container">
           <button className="wd-copy-btn" onClick={handleCopyCode}>{buttonText}</button>
@@ -41,8 +41,8 @@ export default function Border() {
           <pre>
             <code className="language-html" ref={codeRef}>
             {String.raw`<div class="border">
-  <h3>Some heading</h3>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+   <h3>Essay Structure</h3>
+   <p>Effective essays are organized into a clear introduction, body paragraphs, and...</p>
 </div>`}
             </code>
           </pre>

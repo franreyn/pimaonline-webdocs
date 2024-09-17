@@ -98,7 +98,7 @@ const [templateImage, setTemplateImage] = useState("/images/templates/twocolumn6
           <p>Keep things concise with this template, providing a brief topic overview, neatly arranged tasks &amp; due dates, some relevant imagery, and a key quote from the text. Students will appreciate the direction, without being overwhelmed by information.</p>
             <h3 className="spacer">Template Preview</h3>
           <div className="template-preview">
-            <Image src={templateImage} alt="" width={292} height={280} priority/>
+            <Image src={templateImage} alt="" width={800} height={1400} priority/>
             <div>
               <h4>Featured Widgets</h4>
               <div className="wd-border">
@@ -123,105 +123,107 @@ const [templateImage, setTemplateImage] = useState("/images/templates/twocolumn6
             <div className="wd-html-code">
               <pre>
                 <code className="language-html" ref={codeRef}>
-                  {String.raw`<!DOCTYPE html>
+                  {String.raw`<!doctype html>
 <html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@pimaonline/pimaonline-themepack/dist/css/themes/cards/styles.css">
 <link rel="stylesheet" type="text/css" href="../css/custom.css">
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js" defer></script> 
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@pimaonline/pimaonline-themepack/dist/js/scripts2.js" defer></script>
-<title>Starter Template</title>
+<title>Module One: Introduction</title>
 </head>
-  <body>
-    <header class="header">
-      <img src="https://via.placeholder.com/1920X600" alt="">
-      <div class="text-container">
-        <h1>Module One: Topic</h1>
-        <p>Donec sollicitudin molestie malesuada. Nulla porttitor accumsan tincidunt. Proin eget tortor risus. Pellentesque in ipsum id orci porta.</p>
-      </div>
-    </header>
-    <div id="content-wrapper">
-      <div class="content-body">
-    <h2 class="icon-bolt">Topic Overview</h2>
-    <p>Curabitur aliquet quam id dui posuere blandit. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis lorem ut libero malesuada feugiat. Vivamus suscipit tortor eget felis porttitor volutpat. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Proin eget tortor risus. Donec rutrum congue leo eget malesuada.</p>
-        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut lacinia justo. Aliquam vulputate a urna id congue. Vivamus sagittis velit ut est lobortis, ac pharetra lorem euismod. Suspendisse blandit ligula sagittis facilisis facilisis. Nam finibus imperdiet enim, id ullamcorper orci laoreet vel. Suspendisse lobortis tristique nisl. Aliquam a justo elit. Nam vitae nibh quis erat porta pharetra. Mauris nisl nibh, pharetra et ligula tincidunt, viverra accumsan quam. Donec non molestie est. Donec ut sem elementum, ultrices ex vitae, consectetur leo. Suspendisse elementum vehicula mi. Vestibulum sed sodales risus. Quisque accumsan, ex vitae eleifend!</p>
-		  <h2 class="icon-list">Learning Activities</h2>
-      <p class="icon-lightbulb">Sed nec velit et lacus rutrum auctor ac sed purus. Fusce in diam placerat ex tincidunt consequat sed et ipsum. Suspendisse potenti. Ut ac pellentesque erat, interdum vehicula ante:
+<body>
+<header class="header"> <img src="https://via.placeholder.com/1920X600" alt="">
+  <div class="text-container">
+    <h1>Module One: Introduction</h1>
+    <p>Welcome to the beginning of our exploration into fundamental concepts. This...</p>
+  </div>
+</header>
+<div id="content-wrapper">
+  <div class="content-body">
+    <h2 class="icon-bolt">Overview of Module</h2>
+    <p>In this module, we will delve into core concepts that form the basis...</p>
+    <p> Throughout this module, you'll be exposed to...</p>
+    <h2 class="icon-list">Learning Objectives</h2>
+    <p class="icon-lightbulb">In this section, we will outline the goals of this module. By the end, you should be able to:
+    <ul>
+      <li>Understand fundamental...</li>
+      <li>Apply theories to...</li>
+      <li>Participate in discussions and...</li>
+    </ul>
+    </p>
+    <table class="display-lg" cellpadding="5" cellspacing="0" width="100%">
+      <thead>
+        <tr>
+          <th scope="col">Activity</th>
+          <th scope="col">Location</th>
+          <th scope="col">Estimated Time</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><a href="">Lecture</a></td>
+          <td>Online Platform</td>
+          <td>15 min</td>
+        </tr>
+        <tr>
+          <td><a href="">Reading</a></td>
+          <td>Course Text</td>
+          <td>45 min</td>
+        </tr>
+        <tr>
+          <td><a href="">Discussion Forum</a></td>
+          <td>Course Forum</td>
+          <td>30 min</td>
+        </tr>
+        <tr>
+          <td><a href="">Workshop</a></td>
+          <td>Interactive Lab</td>
+          <td>40 min</td>
+        </tr>
+        <tr>
+          <td><a href="">Assignment</a></td>
+          <td>Online Submission</td>
+          <td>25 min</td>
+        </tr>
+        <tr>
+          <th>Total Time</th>
+          <th></th>
+          <th>~3 hours 35 min</th>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<div id="second-column">
+  <div class="content-body">
+    <div class="card-img"> <img src="https://via.placeholder.com/300" alt="" />
+      <figcaption class="caption">Figure 1.1: Visual representation of...</figcaption>
+    </div>
+  </div>
+  <div class="content-body">
+    <div class="card-img"> <img src="https://via.placeholder.com/300" alt="" />
+      <figcaption class="caption">Figure 1.2: Example of application. Here we see...</figcaption>
+    </div>
+  </div>
+  <div class="content-body">
+    <blockquote class="text-center">The best way to predict the future is...</blockquote>
+  </div>
+</div>
+<footer>
+  <div id="footer">
+    <p class="text-center toggle-footnotes">[Show Footnotes]</p>
+    <div class="footnotes">
+      <p>As we advance, remember that...</p>
       <ul>
-        <li>Ut cursus rhoncus sapien a pulvinar</li>
-        <li>Quisque accumsan, ex vitae eleifend</li>
-        <li>Interdum vehicula ante</li>
+        <li>Concepts explained in...</li>
+        <li>Examples and...</li>
       </ul>
-      </p>
-	<table class="display-lg" cellpadding="5" cellspacing="0" width="100%">
-<thead>
-<tr>
-<th scope="col">Activity</th>
-<th scope="col">Where</th>
-<th scope="col">Estimated Time</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="">Lecture</a></td>
-<td>D2L</td>
-<td>10 min</td>
-</tr>
-<tr>
-<td><a href="">Reading</a></td>
-<td>Textbook</td>
-<td>30 min</td>
-</tr>
-<tr>
-<td><a href="">Discussion Topic</a></td>
-<td>D2L Discussion Board</td>
-<td>30 min</td>
-</tr>
-<tr>
-<td><a href="">Lab</a></td>
-<td>Lab Interactive</td>
-<td>30 min</td>
-</tr>
-<tr>
-<td><a href="">Assignment</a></td>
-<td>D2L</td>
-<td>30 min</td>
-</tr>
-<tr>
-<th>Total time</th>
-<th></th>
-<th>~3 hours</th>
-</tr>
-</tbody>
-</table>
-      </div>
     </div>
-    <div id="second-column">
-      <div class="content-body">
-      <div class="card-img"> <img src="https://via.placeholder.com/300" alt="" />
-        <figcaption class="caption">Figure 1.1: Suspendisse elementum vehicula mi. Vestibulum sed sodales risus.</figcaption>
-      </div>
-    </div>
-		      <div class="content-body">
-      <div class="card-img"> <img src="https://via.placeholder.com/300" alt="" />
-        <figcaption class="caption">Figure 1.2: Aliquam vulputate a urna id congue. Vivamus sagittis velit ut est lobortis.</figcaption>
-      </div>
-    </div>
-		<div class="content-body">
-    <blockquote class="text-center">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</blockquote></div></div>
-    <footer>
-      <div id="footer">
-        <p class="text-center toggle-footnotes">[Show Footnotes]</p>
-        <div class="footnotes">
-          <p>Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus.</p>
-          <ul>
-            <li>Lorem culim ghus.</li>
-            <li>Ipsum guar havana.</li>
-          </ul>
-        </div>
-      </div>
-    </footer>
+  </div>
+</footer>
 </body>
 </html>`}
                 </code>

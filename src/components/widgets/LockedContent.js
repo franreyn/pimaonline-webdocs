@@ -91,13 +91,14 @@ export default function LockedContent() {
       <div className="wd-window">
         <div className="wd-visual-ex">
           <div className="white-background">
-            <div className="locked-content">
-              <h2>Partially Visible Area</h2>
-              <p>This is some of the text and the beginning of the area that is hidden through the widget. As you continue the content becomes less and less visible. All the way until you can't really see what is underneath it forcing the student to have to unlock the content</p>
-            </div>
-            <div className="instructions"><p>Instructions here.</p>
-              <a className="btn unlock-btn">I have read X, Y, and Z</a>
-            </div>
+					<div className="locked-content">
+					<h2>Visible Content Section</h2>
+					<p>This section displays the initial part of the content that is only partially revealed. As you scroll or interact with the widget, more of the content gradually becomes visible. This mechanism encourages engagement by requiring the user to reveal additional information, enhancing their learning experience.</p>
+				</div>
+				<div className="instructions">
+					<p>Please follow the steps below.</p>
+					<a className="btn unlock-btn">Confirm Completion of Steps A, B, and C</a>
+				</div>
           </div>
         </div>
         <div className="wd-btn-container">
@@ -107,13 +108,14 @@ export default function LockedContent() {
           <pre>
             <code className="language-html" ref={codeRef}>
               {String.raw`<div class="content-body">
-  <div class="locked-content">
-  <p>Some text used to describe the media object on the left hand side. Side-by-side is multipurpose, so feel free to mix and match text, videos and images.</p>
-  </div>
-  <div class="instructions">
-  Instructions here.
-   <a class="unlock-btn">I have read X, Y, and Z</a>
-  </div>
+   <div class="locked-content">
+      <h2>Visible Content Section</h2>
+      <p>This section displays the initial part of the content that is only...</p>
+   </div>
+   <div class="instructions">
+      <p>Please follow the steps below.</p>
+      <a class="unlock-btn">Confirm Completion of Steps A, B, and C</a>
+   </div>
 </div>`}
             </code>
           </pre>

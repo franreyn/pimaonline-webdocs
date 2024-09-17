@@ -24,33 +24,29 @@ export default function Layouts() {
     hljs.highlightAll();
   }, []);
 
-  const codeRefs = [
-    useRef(null),
-    useRef(null),
-    useRef(null)
-  ];
+	
 
-  const [buttonTexts, setButtonTexts] = useState([
-    "Copy code",
-    "Copy code",
-    "Copy code"
-  ]);
+  const oneColumnCodeRef = useRef(null);
+  const twoColumnCodeRef = useRef(null);
+	const threeColumnCodeRef = useRef(null);
 
-  const handleCopyCode = (index) => {
+  const [oneColumnButtonText, setOneColumnButtonText] = useState("Copy code");
+  const [twoColumnButtonText, setTwoColumnButtonText] = useState("Copy code");
+	const [threeColumnButtonText, setThreeColumnButtonText] = useState("Copy code");
+
+  const handleCopyCode = (codeRef, setButtonText) => {
+    const codeElement = codeRef.current;
     const range = document.createRange();
-    range.selectNode(codeRefs[index].current);
+    range.selectNode(codeElement);
     window.getSelection().removeAllRanges();
     window.getSelection().addRange(range);
     document.execCommand("copy");
     window.getSelection().removeAllRanges();
 
-    const newButtonTexts = [...buttonTexts];
-    newButtonTexts[index] = "Copied!";
-    setButtonTexts(newButtonTexts);
+    setButtonText("Copied!");
 
     setTimeout(() => {
-      newButtonTexts[index] = "Copy code";
-      setButtonTexts(newButtonTexts);
+      setButtonText("Copy code");
     }, 2000);
   };  
 
@@ -79,11 +75,11 @@ export default function Layouts() {
           <img className={styles.mockLayout} src="/images/1-column.jpg"/>
         </div>
         <div className="wd-btn-container">
-          <button className="wd-copy-btn" onClick={() => handleCopyCode(0)}>{buttonTexts[0]}</button>
+          <button className="wd-copy-btn" onClick={() => handleCopyCode(oneColumnCodeRef, setOneColumnButtonText)}>{oneColumnButtonText}</button>
         </div>
         <div className="wd-html-code">
           <pre>
-            <code className="language-html" ref={codeRefs[0]}>
+            <code className="language-html" ref={oneColumnCodeRef}>
             {String.raw`<!doctype html>
 <html>
 <head>
@@ -92,37 +88,37 @@ export default function Layouts() {
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@pimaonline/pimaonline-themepack/dist/css/themes/cards/styles.css">
 <link rel="stylesheet" type="text/css" href="../css/custom.css">
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@pimaonline/pimaonline-themepack/dist/js/scripts2.js" defer></script>
-<title>Starter Template</title>
+<title>Course Introduction</title>
 </head>
 <body>
   <header class="header">
     <img src="https://via.placeholder.com/1920X600" alt="">
   <div class="text-container">
-    <h1>Course Intro</h1>
-    <p>Donec sollicitudin molestie malesuada. Nulla porttitor accumsan tincidunt. Proin eget tortor risus. Pellentesque in ipsum id orci porta.</p>
+    <h1>Course Introduction</h1>
+    <p>In this course, we will delve into the principles of...</p>
   </div>
   </header>
   <div id="content-wrapper">
     <div class="content-body">
       <h2>Welcome to [course name here]</h2>
-      <p>Curabitur aliquet quam id dui posuere blandit. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis lorem ut libero malesuada feugiat. Vivamus suscipit tortor eget felis porttitor volutpat. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Proin eget tortor risus. Donec rutrum congue leo eget malesuada.</p>
+      <p>Throughout this course, you will learn how to develop your writing process, from initial brainstorming to...</p>
     </div>
   </div>
   <footer>
     <div id="footer">
       <p class="text-center toggle-footnotes">[Show Footnotes]</p>
       <div class="footnotes">
-        <p>Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus.</p>
+        <p>As we progress, remember that...</p>
         <ul>
-          <li>Lorem culim ghus.</li>
-          <li>Ipsum guar havana.</li>
+          <li>Engage in structured revision...</li>
+          <li>Practice editing for clarity and...</li>
         </ul>
       </div>
     </div>
   </footer>
 </body>
-</html>`}
-            </code>
+</html>
+`}</code>
           </pre>
         </div>
       </div>
@@ -137,11 +133,11 @@ export default function Layouts() {
           <img className={styles.mockLayout} src="/images/2-column.jpg"/>
         </div>
         <div className="wd-btn-container">
-          <button className="wd-copy-btn" onClick={() => handleCopyCode(0)}>{buttonTexts[0]}</button>
+          <button className="wd-copy-btn" onClick={() => handleCopyCode(twoColumnCodeRef, setTwoColumnButtonText)}>{twoColumnButtonText}</button>
         </div>
         <div className="wd-html-code">
           <pre>
-            <code className="language-html" ref={codeRefs[1]}>
+            <code className="language-html" ref={twoColumnCodeRef}>
             {String.raw`<!doctype html>
 <html>
 <head>
@@ -150,43 +146,42 @@ export default function Layouts() {
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@pimaonline/pimaonline-themepack/dist/css/themes/cards/styles.css">
 <link rel="stylesheet" type="text/css" href="../css/custom.css">
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@pimaonline/pimaonline-themepack/dist/js/scripts2.js" defer></script>
-<title>Starter Template</title>
+<title>Course Introduction</title>
 </head>
   <body>
     <header class="header">
       <img src="https://via.placeholder.com/1920X600" alt="">
       <div class="text-container">
-        <h1>Course Intro</h1>
-        <p>Donec sollicitudin molestie malesuada. Nulla porttitor accumsan tincidunt. Proin eget tortor risus. Pellentesque in ipsum id orci porta.</p>
+        <h1>Course Introduction</h1>
+        <p>This course will cover essential writing skills that will...</p>
       </div>
     </header>
     <div id="content-wrapper">
       <div class="content-body">
         <h2>Welcome to [course name here]</h2>
-        <p>Curabitur aliquet quam id dui posuere blandit. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis lorem ut libero malesuada feugiat. Vivamus suscipit tortor eget felis porttitor volutpat. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Proin eget tortor risus. Donec rutrum congue leo eget malesuada.</p>
+        <p>In this course, you’ll explore various writing techniques designed to enhance your academic writing. From understanding the importance of...</p>
       </div>
     </div>
     <div id="second-column">
       <div class="content-body">
         <h2>Assignments</h2>
-        <p>Vitae purus faucibus ornare suspendisse sed. Molestie ac feugiat sed lectus vestibulum mattis ullamcorper. Eget lorem dolor sed viverra ipsum nunc. Blandit aliquam etiam erat velit scelerisque in dictum non. Morbi tristique senectus et netus et. Scelerisque in dictum non consectetur a erat. Eu augue ut lectus arcu bibendum at varius vel pharetra.</p>
+        <p>Each week, you’ll be assigned a series of tasks designed to build on the skills you’ve learned. These assignments will...</p>
       </div>
     </div>
     <footer>
       <div id="footer">
         <p class="text-center toggle-footnotes">[Show Footnotes]</p>
         <div class="footnotes">
-          <p>Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus.</p>
+          <p>Remember that writing is a process. Be sure to allocate enough time for...</p>
           <ul>
-            <li>Lorem culim ghus.</li>
-            <li>Ipsum guar havana.</li>
+            <li>Engage actively in...</li>
+            <li>Revise your drafts thoroughly before...</li>
           </ul>
         </div>
       </div>
     </footer>
 </body>
-</html>`}
-            </code>
+</html>`}</code>
           </pre>
         </div>
     </div>
@@ -202,11 +197,11 @@ export default function Layouts() {
           <img className={styles.mockLayout} src="/images/3-column.jpg"/>
         </div>
         <div className="wd-btn-container">
-          <button className="wd-copy-btn" onClick={() => handleCopyCode(0)}>{buttonTexts[0]}</button>
+          <button className="wd-copy-btn" onClick={() => handleCopyCode(threeColumnCodeRef, setThreeColumnButtonText)}>{threeColumnButtonText}</button>
         </div>
         <div className="wd-html-code">
           <pre>
-            <code className="language-html" ref={codeRefs[2]}>
+            <code className="language-html" ref={threeColumnCodeRef}>
             {String.raw`<!doctype html>
 <html>
 <head>
@@ -215,49 +210,48 @@ export default function Layouts() {
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@pimaonline/pimaonline-themepack/dist/css/themes/cards/styles.css">
 <link rel="stylesheet" type="text/css" href="../css/custom.css">
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@pimaonline/pimaonline-themepack/dist/js/scripts2.js" defer></script>
-<title>Starter Template</title>
+<title>Course Introduction</title>
 </head>
   <body>
     <header class="header">
       <img src="https://via.placeholder.com/1920X600" alt="">
       <div class="text-container">
-        <h1>Course Intro</h1>
-        <p>Donec sollicitudin molestie malesuada. Nulla porttitor accumsan tincidunt. Proin eget tortor risus. Pellentesque in ipsum id orci porta.</p>
+        <h1>Course Introduction</h1>
+        <p>This introductory writing course will...</p>
       </div>
     </header>
     <div id="content-wrapper">
       <div class="content-body">
         <h2>Welcome to [course name here]</h2>
-        <p>Curabitur aliquet quam id dui posuere blandit. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis lorem ut libero malesuada feugiat. Vivamus suscipit tortor eget felis porttitor volutpat. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Proin eget tortor risus. Donec rutrum congue leo eget malesuada.</p>
+        <p>In this course, we’ll cover topics such as developing a strong thesis statement, organizing your...</p>
       </div>
     </div>
     <div id="second-column">
       <div class="content-body">
         <h2>Assignments</h2>
-        <p>Vitae purus faucibus ornare suspendisse sed. Molestie ac feugiat sed lectus vestibulum mattis ullamcorper. Eget lorem dolor sed viverra ipsum nunc. Blandit aliquam etiam erat velit scelerisque in dictum non. Morbi tristique senectus et netus et. Scelerisque in dictum non consectetur a erat. Eu augue ut lectus arcu bibendum at varius vel pharetra.</p>
+        <p>Each week, you’ll have assignments that build on previous lessons...</p>
       </div>
     </div>
     <div id="third-column">
       <div class="content-body">
-       <h2>Readings for this week</h2>
-       <p>Proin gravida hendrerit lectus a. Pulvinar neque laoreet suspendisse interdum. Et egestas quis ipsum suspendisse ultrices gravida dictum fusce. Congue nisi vitae suscipit tellus mauris a. Eget aliquet nibh praesent tristique magna sit amet purus.</p>
+       <h2>Readings for this Week</h2>
+       <p>This week’s readings will introduce you to key writing principles, such as...</p>
       </div>
     </div>
     <footer>
       <div id="footer">
         <p class="text-center toggle-footnotes">[Show Footnotes]</p>
         <div class="footnotes">
-          <p>Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus.</p>
+          <p>Writing is a recursive process. Remember to...</p>
           <ul>
-            <li>Lorem culim ghus.</li>
-            <li>Ipsum guar havana.</li>
+            <li>Take time to review your peers' essays and provide...</li>
+            <li>Ensure each essay has a clear...</li>
           </ul>
         </div>
       </div>
     </footer>
 </body>
-</html>`}
-            </code>
+</html>`}</code>
           </pre>
         </div>
       </div>

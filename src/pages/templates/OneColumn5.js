@@ -131,7 +131,7 @@ export default function OneColumn5() {
           <p>Give your students every detail, expectation, and agenda item all in one place with this all-encompassing template. Break up text-heavy sections with border widgets to provide visual checkpoint for students as they work there way through the content.</p>
             <h3 className="spacer">Template Preview</h3>
           <div className="template-preview">
-            <Image src={templateImage} alt="" width={292} height={280} priority />
+            <Image src={templateImage} alt="" width={800} height={1400} priority />
             <div>
               <h4>Featured Widgets</h4>
               <div className="wd-border">
@@ -175,140 +175,146 @@ export default function OneColumn5() {
               <pre>
                 <code className="language-html" ref={codeRef}>
                   {String.raw`<!DOCTYPE html>
-
 <html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@pimaonline/pimaonline-themepack/dist/css/themes/cards/styles.css">
 <link rel="stylesheet" type="text/css" href="../css/custom.css">
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js" defer></script> 
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@pimaonline/pimaonline-themepack/dist/js/scripts2.js" defer></script>
-<title>Starter Template</title>
+<title>Course Intro</title>
 </head>
 <body>
-<header class="header">
-  <img src="https://via.placeholder.com/1920X600" alt="">
+<header class="header"> <img src="https://via.placeholder.com/1920X600" alt="">
   <div class="text-container">
     <h1>Course Intro</h1>
-    <p>Donec sollicitudin molestie malesuada. Nulla porttitor accumsan tincidunt. Proin eget tortor risus. Pellentesque in ipsum id orci porta.</p>
+    <p>Writing well requires practice, structure, and feedback. This course focuses on...</p>
   </div>
 </header>
-  <div id="content-wrapper">
-    <div class="content-body">
-      <h2>Welcome to [course name here]</h2>
-      <p>Curabitur aliquet quam id dui posuere blandit. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis lorem ut libero malesuada feugiat. Vivamus suscipit tortor eget felis porttitor volutpat. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Proin eget tortor risus. Donec rutrum congue leo eget malesuada.</p>
-		<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut lacinia justo. Aliquam vulputate a urna id congue. Vivamus sagittis velit ut est lobortis, ac pharetra lorem euismod. Suspendisse blandit ligula sagittis facilisis facilisis. Nam finibus imperdiet enim, id ullamcorper orci laoreet vel. Suspendisse lobortis tristique nisl. Aliquam a justo elit. Nam vitae nibh quis erat porta pharetra. Mauris nisl nibh, pharetra et ligula tincidunt, viverra accumsan quam. Donec non molestie est. Donec ut sem elementum, ultrices ex vitae, consectetur leo. Suspendisse elementum vehicula mi. Vestibulum sed sodales risus. Quisque accumsan, ex vitae eleifend lobortis, elit odio venenatis sapien, et faucibus nunc mi in tellus.</p>
-		<h2>Course Overview and Goals</h2>
-		<div class="side-by-side">
-  <div class="side-by-side-item">
-    <h3>Overview</h3>
-	  <p>In sollicitudin dui ut ante accumsan, ut consectetur magna congue. Morbi posuere sodales ligula vitae dictum. Pellentesque maximus lacinia gravida. Praesent fringilla commodo metus a vestibulum. Ut cursus rhoncus sapien a pulvinar. Sed nec velit et lacus rutrum auctor ac sed purus. Fusce in diam placerat ex tincidunt consequat sed et ipsum. Suspendisse potenti. Ut ac pellentesque erat, interdum vehicula ante.</p>
-	  <p>Duis blandit nisi et tortor consequat porttitor. Aenean ullamcorper leo vitae orci facilisis, sed pretium nibh bibendum. Aliquam sagittis felis at mauris faucibus ornare. Proin eget mauris ac ex faucibus aliquet sed nec nibh. Interdum et malesuada fames ac ante ipsum primis in faucibus. Ut erat nulla, vulputate ac ultricies eu, vehicula at leo. Nunc tristique ipsum urna, eu convallis sem imperdiet sagittis. Sed malesuada odio id eros mollis luctus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
-  </div>
-  <div class="side-by-side-item">
-	  <h3>Goals</h3>
-    <p>Some text used to describe the media object on the left hand side. Side-by-side is multipurpose, so feel free to mix and match text, videos and images.
-	  <ol class="custom-counter">
-	  <li>Goal 1</li>
-		  <li>Goal 2</li>
-		  <li>Goal 3</li>
-		  <li>Goal 4</li>
-		  <li>Goal 5</li>
-		  <li>Goal 6</li>
-	  </ol></p>
-			<p>Fusce luctus elementum lacus ut lobortis. Aenean consequat diam eget consectetur vulputate. Nam at laoreet ligula, ac bibendum sapien. Aenean tristique metus a metus interdum varius. Quisque id nisi nec ligula sodales semper. Suspendisse at molestie felis. Duis interdum dignissim suscipit. </p>
-  </div>
-</div>
-	  <div class="border">
-		  <div class="blockquote"><br>Commit yourself to lifelong learning. The most valuable asset you will ever have is your mind and what you put into it. <br>
-			  <span class="caption">–  Albert Einstein</span><br><br>
-		  </div></div>
-	  <div class="card-horizontal">
-  <div class="card-body">
-	  <h2>Course Structure</h2>
-	  	  <h3><strong>Each Module:</strong></h3>
-	  <h4>Textbook Readings &amp; Assignments</h4>
-	  	  <p>Pellentesque maximus lacinia gravida. Praesent fringilla commodo metus a vestibulum. Ut cursus rhoncus sapien a pulvinar.</p>	  
-	  <h4>Topical Discussion Boards</h4>
-	  <p>Duis blandit nisi et tortor consequat porttitor. Aenean ullamcorper leo vitae orci facilisis, sed pretium nibh bibendum.</p>
-	  <h4>Interactive Labs</h4> 
-	  <p>In sollicitudin dui ut ante accumsan, ut consectetur magna congue.</p>
-	  <h4>Module Quizzes</h4>
-	  <p>Ut erat nulla, vulputate ac ultricies eu, vehicula at leo.  Class aptent taciti sociosqu ad litora torquent per conubia nostra.</p>
-	  	  	  	  <h3><strong>Each Unit:</strong></h3>
-	  <h4>Proctored Tests</h4>
-	  	  <p>Pellentesque maximus lacinia gravida. Praesent fringilla commodo metus a vestibulum. Ut cursus rhoncus sapien a pulvinar. Sed nec velit et lacus rutrum auctor ac sed purus.</p>
-	  	  	  <h3><strong>Final Exam</strong></h3>
-	  	  <p>In sollicitudin dui ut ante accumsan, ut consectetur magna congue. Morbi posuere sodales ligula vitae dictum. Pellentesque maximus lacinia gravida. Praesent fringilla commodo metus a vestibulum. Ut cursus rhoncus sapien a pulvinar.</p>
-  </div>
-  <div class="card-img">
-        <a class="btn ext" href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou=608068&amp;type=content&amp;rcode=PIMA-3639476" target="_blank">View Course Schedule</a>
-<br><br><br>
-	  <h4>Tasks and Point Weight</h4>
-	  <table class="display-lg">
-  <thead>
-    <tr>
-      <th>Assignment</th>
-      <th>Points</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Textbook Readings &amp; Assignments</td>
-      <td>50 each</td>
-    </tr>
-    <tr>
-      <td>Discussion Participation</td>
-      <td>10 each</td>
-    </tr>
-	      <tr>
-      <td>Interactive Labs</td>
-      <td>50 each</td>
-    </tr>
-	      <tr>
-      <td>Module Quizzes</td>
-      <td>20 each</td>
-    </tr>
-	      <tr>
-      <td>Unit Exams</td>
-      <td>50 each</td>
-    </tr>
-	      <tr>
-      <td>Final Exam</td>
-      <td>100</td>
-    </tr>
-  </tbody>
-</table>
-  </div>
-</div>
-    </div>
-	<div class="content-body">
-	<h2>Before You Begin</h2>
-				<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut lacinia justo. Aliquam vulputate a urna id congue. Vivamus sagittis velit ut est lobortis, ac pharetra lorem euismod. Suspendisse blandit ligula sagittis facilisis facilisis. Nam finibus imperdiet enim, id ullamcorper orci laoreet vel. Suspendisse lobortis tristique nisl. Aliquam a justo elit.</p>
-	  <div class="border border-yellow"><br><h3 class="font-size-h4">Time Commitment</h3><p>Duis blandit nisi et tortor consequat porttitor. Aenean ullamcorper leo vitae orci facilisis, sed pretium nibh bibendum. Aliquam sagittis felis at mauris faucibus ornare. Proin eget mauris ac ex faucibus aliquet sed nec nibh. Interdum et malesuada fames ac ante ipsum primis in faucibus. Ut erat nulla, vulputate ac ultricies eu, vehicula at leo.</p><br>
-		</div><br>
-						<p> Suspendisse lobortis tristique nisl. Aliquam a justo elit. Nam vitae nibh quis erat porta pharetra. Mauris nisl nibh, pharetra et ligula tincidunt, viverra accumsan quam. Donec non molestie est. Donec ut sem elementum, ultrices ex vitae, consectetur leo. Suspendisse elementum vehicula mi. Vestibulum sed sodales risus. Quisque accumsan, ex vitae eleifend lobortis, elit odio venenatis sapien, et faucibus nunc mi in tellus.</p>
-	  <div class="border border-yellow"><br><h3 class="font-size-h4">Foundational Knowledge</h3><p>Ut erat nulla, vulputate ac ultricies eu, vehicula at leo. Nunc tristique ipsum urna, eu convallis sem imperdiet sagittis. Sed malesuada odio id eros mollis luctus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
-		<br></div>
-	</div>
-  </div>
-<footer>
-    <div id="footer">
-      <p class="text-center toggle-footnotes">[Show Footnotes]</p>
-      <div class="footnotes">
-        <p>Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus.</p>
-        <ul>
-          <li>Lorem culim ghus.</li>
-          <li>Ipsum guar havana.</li>
-        </ul>
+<div id="content-wrapper">
+  <div class="content-body">
+    <h2>Welcome to [course name here]</h2>
+    <p>In this course, you’ll learn the fundamentals of writing, from developing a clear thesis to crafting structured arguments. Each module will build on...</p>
+    <h2>Course Overview and Goals</h2>
+    <div class="side-by-side">
+      <div class="side-by-side-item">
+        <h3>Overview</h3>
+        <p>This course is divided into multiple units, each focusing on...</p>
+        <p>Each unit is designed to challenge you and help develop your voice as...</p>
+      </div>
+      <div class="side-by-side-item">
+        <h3>Goals</h3>
+        <p>By the end of this course, you will be able to:
+        <ol class="custom-counter">
+          <li>Develop strong thesis statements...</li>
+          <li>Support your arguments with credible evidence...</li>
+          <li>Understand the writing process from brainstorming to revision...</li>
+          <li>Write in a clear, concise, and organized manner...</li>
+          <li>Conduct research and integrate sources properly...</li>
+          <li>Use feedback to improve your writing...</li>
+        </ol>
+        </p>
       </div>
     </div>
+    <div class="border">
+      <div class="blockquote"><br>
+        "Writing is thinking on paper..." <br>
+        <span class="caption">– William Zinsser</span><br>
+        <br>
+      </div>
+    </div>
+    <div class="card-horizontal">
+      <div class="card-body">
+        <h2>Course Structure</h2>
+        <h3><strong>Each Module:</strong></h3>
+        <h4>Readings &amp; Writing Assignments</h4>
+        <p>You will complete assigned readings and...</p>
+        <h4>Discussion Boards</h4>
+        <p>Engage with peers in discussion boards to...</p>
+        <h4>Workshops</h4>
+        <p>Participate in writing workshops where you will receive feedback and...</p>
+        <h4>Quizzes</h4>
+        <p>Quizzes will assess your understanding of key writing concepts, such as...</p>
+        <h3><strong>Each Unit:</strong></h3>
+        <h4>Essays</h4>
+        <p>Each unit culminates in a major writing assignment where you will apply...</p>
+        <h3><strong>Final Paper</strong></h3>
+        <p>Your final assignment will be a research paper that synthesizes the...</p>
+      </div>
+      <div class="card-img"> <a class="btn ext" href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou=608068&amp;type=content&amp;rcode=PIMA-3639476" target="_blank">View Course Schedule</a> <br>
+        <br>
+        <br>
+        <h4>Tasks and Point Weight</h4>
+        <table class="display-lg">
+          <thead>
+            <tr>
+              <th>Assignment</th>
+              <th>Points</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Reading &amp; Writing Assignments</td>
+              <td>100 each</td>
+            </tr>
+            <tr>
+              <td>Discussion Participation</td>
+              <td>50 each</td>
+            </tr>
+            <tr>
+              <td>Workshops</td>
+              <td>75 each</td>
+            </tr>
+            <tr>
+              <td>Quizzes</td>
+              <td>50 each</td>
+            </tr>
+            <tr>
+              <td>Essays</td>
+              <td>150 each</td>
+            </tr>
+            <tr>
+              <td>Final Paper</td>
+              <td>200</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="content-body">
+    <h2>Before You Begin</h2>
+    <p>To succeed in this course, be prepared to dedicate time to reading, writing, and...</p>
+    <div class="border border-yellow"><br>
+      <h3 class="font-size-h4">Time Commitment</h3>
+      <p>Expect to spend several hours each week on readings, writing assignments, and...</p>
+      <br>
+    </div>
+    <br>
+    <p>Each week will require active engagement with the course material. Make sure to...</p>
+    <div class="border border-yellow"><br>
+      <h3 class="font-size-h4">Foundational Knowledge</h3>
+      <p>This course assumes no prior writing experience, but a willingness to learn and...</p>
+      <br>
+    </div>
+  </div>
+</div>
+<footer>
+  <div id="footer">
+    <p class="text-center toggle-footnotes">[Show Footnotes]</p>
+    <div class="footnotes">
+      <p>Writing is an iterative process. Don't be afraid to revise and seek feedback to...</p>
+      <ul>
+        <li>Draft, revise, and...</li>
+        <li>Participate actively in discussions and...</li>
+      </ul>
+    </div>
+  </div>
 </footer>
 </body>
-</html>`}
-                </code>
+</html>
+`}</code>
               </pre>
             </div>
           </div>

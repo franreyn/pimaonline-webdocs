@@ -5,6 +5,10 @@ import { useRouter } from "next/router";
 import Announcement from "./Announcement";
 
 const Navbar = () => {
+
+  // Use two digits only
+  const currentVersion = "5.0"
+
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -58,6 +62,7 @@ const Navbar = () => {
 						<li className={router.pathname === "/d2l-help" ? "active-nav" : ""}>
               <Link href="/d2l-help">D2L Help</Link>
             </li>
+						<li className="version-number">v{currentVersion}</li>
           </ul>
         </div>
       </nav>

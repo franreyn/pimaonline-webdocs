@@ -141,7 +141,7 @@ export default function OneColumn2() {
           </p>
           <h3 className="spacer">Template Preview</h3>
           <div className="template-preview">
-            <Image src={templateImage} alt="" width={292} height={280} priority/>
+            <Image src={templateImage} alt="" width={800} height={1400} priority/>
             <div>
               <h4>Featured Widgets</h4>
               <div className="wd-border">
@@ -191,20 +191,21 @@ export default function OneColumn2() {
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@pimaonline/pimaonline-themepack/dist/css/themes/cards/styles.css">
 <link rel="stylesheet" type="text/css" href="custom.css">
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js" defer></script> 
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@pimaonline/pimaonline-themepack/dist/js/scripts2.js" defer></script>
-<title>Starter Template</title>
+<title>Course Intro</title>
 </head>
 <body>
 <header class="header"> <img src="https://via.placeholder.com/1920X600" alt="">
   <div class="text-container">
     <h1>Course Intro</h1>
-    <p>Donec sollicitudin molestie malesuada. Nulla porttitor accumsan tincidunt. Proin eget tortor risus. Pellentesque in ipsum id orci porta.</p>
+    <p>This course introduces students to...</p>
   </div>
 </header>
 <div id="content-wrapper">
   <div class="content-body">
-    <h2>Welcome to [course name here]</h2>
-    <p>Curabitur aliquet quam id dui posuere blandit. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis lorem ut libero malesuada feugiat. Vivamus suscipit tortor eget felis porttitor volutpat. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Proin eget tortor risus. Donec rutrum congue leo eget malesuada.</p>
+    <h2>Welcome to Writing 101</h2>
+    <p>In Writing 101, you will learn to articulate ideas clearly and effectively in...</p>
     <h3>A Quick Welcome from Your Course Instructor</h3>
     <div class="media-container">
       <div class="media-object">
@@ -212,7 +213,7 @@ export default function OneColumn2() {
       </div>
     </div>
     <h4>This Week's Schedule</h4>
-    <p>Vivamus suscipit tortor eget felis porttitor volutpat. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Proin eget tortor risus. Donec rutrum congue leo eget malesuada.</p>
+    <p>This week, we will begin by exploring the principles of...</p>
     <table class="display-lg">
       <thead>
         <tr>
@@ -223,47 +224,47 @@ export default function OneColumn2() {
       </thead>
       <tbody>
         <tr>
-          <td>Read Start Here Module</td>
+          <td>Read Chapter 1: The Writing Process</td>
           <td>--</td>
-          <td>May 1st</td>
+          <td>January 10th</td>
         </tr>
         <tr>
-          <td>Course Contract Quiz</td>
-          <td>5</td>
-          <td>May 7th</td>
+          <td>Personal Narrative Draft</td>
+          <td>10</td>
+          <td>January 12th</td>
         </tr>
       </tbody>
     </table>
   </div>
   <div class="content-body">
     <h2>Course Objectives</h2>
-    <p>Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus.</p>
+    <p>By the end of this course, you will be able to identify key elements of...</p>
     <h3>By the end of this course, you'll be able to:</h3>
     <div class="side-by-side">
       <div class="side-by-side-item">
         <div class="accordion">
           <div class="accordion-title arrow-down toggle-btn">Course Objective 1</div>
-          <div class="accordion-content toggle-btn-content">More information about objective
+          <div class="accordion-content toggle-btn-content">Compose well-organized essays that present a clear argument...
             <ul>
-              <li>Sub-objective 1</li>
-              <li>Sub-objective 2</li>
-              <li>Sub-objective 3</li>
+              <li>Thesis Development...</li>
+              <li>Essay Structure...</li>
+              <li>Support and Evidence...</li>
             </ul>
           </div>
           <div class="accordion-title arrow-down toggle-btn">Course Objective 2</div>
-          <div class="accordion-content toggle-btn-content">More information about objective
+          <div class="accordion-content toggle-btn-content">Analyze and critique various types of texts...
             <ul>
-              <li>Sub-objective 1</li>
-              <li>Sub-objective 2</li>
-              <li>Sub-objective 3</li>
+              <li>Textual Analysis...</li>
+              <li>Critical Thinking...</li>
+              <li>Argument Evaluation...</li>
             </ul>
           </div>
           <div class="accordion-title arrow-down toggle-btn">Course Objective 3</div>
-          <div class="accordion-content toggle-btn-content">More information about objective
+          <div class="accordion-content toggle-btn-content">Conduct academic research and integrate sources effectively...
             <ul>
-              <li>Sub-objective 1</li>
-              <li>Sub-objective 2</li>
-              <li>Sub-objective 3</li>
+              <li>Library Resources...</li>
+              <li>Citation Styles...</li>
+              <li>Source Integration...</li>
             </ul>
           </div>
         </div>
@@ -271,61 +272,53 @@ export default function OneColumn2() {
       <div class="side-by-side-item">
         <div class="accordion">
           <div class="accordion-title arrow-down toggle-btn">Course Objective 4</div>
-          <div class="accordion-content toggle-btn-content">More information about objective
+          <div class="accordion-content toggle-btn-content">Revise and edit written work for clarity and coherence...
             <ul>
-              <li>Sub-objective 1</li>
-              <li>Sub-objective 2</li>
-              <li>Sub-objective 3</li>
+              <li>Revising for Structure...</li>
+              <li>Editing for Grammar...</li>
+              <li>Proofreading Techniques...</li>
             </ul>
           </div>
           <div class="accordion-title arrow-down toggle-btn">Course Objective 5</div>
-          <div class="accordion-content toggle-btn-content">More information about objective
+          <div class="accordion-content toggle-btn-content">Develop a personal writing process that...
             <ul>
-              <li>Sub-objective 1</li>
-              <li>Sub-objective 2</li>
-              <li>Sub-objective 3</li>
-            </ul>
-          </div>
-          <div class="accordion-title arrow-down toggle-btn">Course Objective 6</div>
-          <div class="accordion-content toggle-btn-content">More information about objective
-            <ul>
-              <li>Sub-objective 1</li>
-              <li>Sub-objective 2</li>
-              <li>Sub-objective 3</li>
+              <li>Brainstorming Techniques...</li>
+              <li>Outlining...</li>
+              <li>Time Management...</li>
             </ul>
           </div>
         </div>
       </div>
     </div>
     <h4>How You'll Learn These Objectives</h4>
-    <p>Vivamus suscipit tortor eget felis porttitor volutpat:
+    <p>We will use a variety of methods to reach these goals, including:
     <ul>
-      <li>Textbook Readings</li>
-      <li>Guided Class Discussions</li>
-      <li>Instructional Videos</li>
-      <li>Practice Assignments</li>
-      <li>Virtual Lectures</li>
+      <li>Assigned Readings from the Textbook...</li>
+      <li>Group Discussion...</li>
+      <li>Writing Workshops...</li>
+      <li>Peer Review Sessions...</li>
+      <li>Instructor Feedback...</li>
     </ul>
     </p>
   </div>
   <div class="content-body">
     <h2>Helpful Resources</h2>
-    <p>Nulla quis lorem ut libero malesuada feugiat. Vivamus suscipit tortor eget felis porttitor volutpat. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Proin eget tortor risus.</p>
+    <p>If you need additional help, there are several...</p>
     <ul class="assignments-widget">
       <li class="assignment">
         <h3>Instructor Contact</h3>
         <p><u><strong>Email</strong></u><br>
-          xxxxxxxxx@pima.edu</p>
-        <a class="btn" href="" target="_blank">Email Instructor</a><br>
-        <a class="btn" href="" target="_blank">Make an Appointment</a> </li>
+          writing101instructor@college.edu</p>
+        <a class="btn" href="" target="_blank">Email Instructor...</a><br>
+        <a class="btn" href="" target="_blank">Make an Appointment...</a> </li>
       <li class="assignment">
-        <h3>D2L Support Services</h3>
-        <p>Nulla quis lorem ut libero malesuada feugiat. Vivamus suscipit tortor eget felis porttitor volutpat</p>
-        <a class="btn" href="" target="_blank">Browse Knowledgebase</a> <a class="btn" href="" target="_blank">Submit a Ticket</a> </li>
+        <h3>Writing Center</h3>
+        <p>The Writing Center offers free tutoring and...</p>
+        <a class="btn" href="" target="_blank">Visit Writing Center</a> <a class="btn" href="" target="_blank">Make an Appointment</a> </li>
       <li class="assignment">
-        <h3>Virtual Tutoring</h3>
-        <p>Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Proin eget tortor risus</p>
-        <a class="btn" href="" target="_blank">Find a Tutor</a> </li>
+        <h3>Library Resources</h3>
+        <p>Our library provides access to a wide range of...</p>
+        <a class="btn" href="" target="_blank">Browse the Library</a> </li>
     </ul>
   </div>
 </div>
@@ -333,17 +326,17 @@ export default function OneColumn2() {
   <div id="footer">
     <p class="text-center toggle-footnotes">[Show Footnotes]</p>
     <div class="footnotes">
-      <p>Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus.</p>
+      <p>For more details on citation styles...</p>
       <ul>
-        <li>Lorem culim ghus.</li>
-        <li>Ipsum guar havana.</li>
+        <li>MLA Formatting and Style Guide...</li>
+        <li>APA Citation Basics...</li>
       </ul>
     </div>
   </div>
 </footer>
 </body>
-</html>`}
-                </code>
+</html>
+`}</code>
               </pre>
             </div>
           </div>

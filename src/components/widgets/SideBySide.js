@@ -40,8 +40,7 @@ export default function SideBySide() {
             </div>
             <div className="side-by-side-item">
               <p>
-                Some text used to describe the media object on the left hand side. Side-by-side is multipurpose, so
-                feel free to mix and match text, videos and images.
+							In academic writing, clarity and coherence are crucial for effectively communicating ideas. Start each paragraph with a clear topic sentence that introduces the main idea, followed by supporting sentences that elaborate on this idea. It is important to use transitional phrases to guide the reader through your argument and maintain a logical flow. Always revise your drafts to eliminate any grammatical errors and ensure that your writing meets the assignment’s requirements.
               </p>
             </div>
           </div>
@@ -57,10 +56,9 @@ export default function SideBySide() {
     <img src="https://via.placeholder.com/300" alt="" />
   </div>
   <div class="side-by-side-item">
-    <p>Some text used to describe the media object on the left hand side. Side-by-side is multipurpose, so feel free to mix and match text, videos and images.</p>
+    <p>In academic writing, clarity and coherence are crucial for effectively communicating ideas. Start each paragraph with a clear topic sentence that introduces the...</p>
   </div>
-</div>`}
-            </code>
+</div>`}</code>
           </pre>
         </div>
       </div>

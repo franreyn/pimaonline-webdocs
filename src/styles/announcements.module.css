@@ -4,7 +4,7 @@
   opacity: 95%;
   vertical-align: middle;
   max-height: fit-content;
-  padding: 5px;
+  padding: 5px 10%;
   position: absolute;
   border-radius: 0;
   display: flex;
@@ -17,4 +17,16 @@
   visibility: hidden;
   position: absolute;
   z-index: -1;
+}
+
+@media (max-width:1024px) {
+  .wd-announcement {
+    padding: 5px 2%;
+  }
+}
+
+@media (max-width:850px) {
+  .wd-announcement {
+    padding: 15px 5px;
+  }
 }

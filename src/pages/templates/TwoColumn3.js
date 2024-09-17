@@ -119,7 +119,7 @@ export default function TwoColumn3() {
           <p>Focus on the headlines with this template. List learning objectives, brief overviews of main takeaways from the text, and an easy-to-follow assignmnet list that takes students exactly where they need to be.</p>
             <h3 className="spacer">Template Preview</h3>
           <div className="template-preview">
-            <Image src={templateImage} alt="" width={292} height={280} priority/>
+            <Image src={templateImage} alt="" width={800} height={1400} priority/>
             <div>
               <h4>Featured Widgets</h4>
               <div className="wd-border">
@@ -163,123 +163,112 @@ export default function TwoColumn3() {
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@pimaonline/pimaonline-themepack/dist/css/themes/cards/styles.css">
 <link rel="stylesheet" type="text/css" href="../css/custom.css">
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js" defer></script> 
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@pimaonline/pimaonline-themepack/dist/js/scripts2.js" defer></script>
-<title>Starter Template</title>
+<title>Module One</title>
 </head>
-  <body>
-    <header class="header">
-      <img src="https://via.placeholder.com/1920X600" alt="">
-      <div class="text-container">
-        <h1>Module One</h1>
-        <p>Donec sollicitudin molestie malesuada. Nulla porttitor accumsan tincidunt. Proin eget tortor risus. Pellentesque in ipsum id orci porta.</p>
+<body>
+<header class="header"> <img src="https://via.placeholder.com/1920X600" alt="">
+  <div class="text-container">
+    <h1>Module One</h1>
+    <p>Welcome to the first module of our course. In this section, we'll explore...</p>
+  </div>
+</header>
+<div id="content-wrapper">
+  <div class="content-body">
+    <h2>Overview of Key Concepts</h2>
+    <p>This module provides an introduction to key concepts in writing. We'll discuss the...</p>
+    <div class="border">
+      <p>Understanding the basics of writing is crucial. Key elements include:</p>
+      <ul>
+        <li>Structure and organization...</li>
+        <li>Clarity of expression...</li>
+      </ul>
+      <p>These elements will be explored in...</p>
+    </div>
+    <p>Effective writing requires practice and understanding. This module will guide you...</p>
+    <div class="side-by-side">
+      <div class="side-by-side-item">
+        <h3 class="font-size-h4">Introduction to Essay Writing</h3>
+        <p>Essay writing is a key skill in academic success. In this section, we will cover the basics of essay structure, including...</p>
       </div>
-    </header>
-    <div id="content-wrapper">
-      <div class="content-body">
-        <h2>Topic Overview</h2>
-        <p>Curabitur aliquet quam id dui posuere blandit. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis lorem ut libero malesuada feugiat. Vivamus suscipit tortor eget felis porttitor volutpat. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Proin eget tortor risus. Donec rutrum congue leo eget malesuada.</p>
-	  <div class="border"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        <ul>
-          <li>Sub-item 1</li>
-          <li>Sub-item 2</li>
-        </ul></p></div>
-		          <p>Curabitur aliquet quam id dui posuere blandit. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis lorem ut libero malesuada feugiat. Vivamus suscipit tortor eget felis porttitor volutpat. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Proin eget tortor risus. Donec rutrum congue leo eget malesuada:</p>
-	    <div class="side-by-side">
-  <div class="side-by-side-item">
-	  <h3 class="font-size-h4">Lorem ipsum</h3>
-       <p>Curabitur aliquet quam id dui posuere blandit. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis lorem ut libero malesuada feugiat. Vivamus suscipit tortor eget felis porttitor volutpat. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Proin eget tortor risus. Donec rutrum congue leo eget malesuada.</p>
-  </div>
-  <div class="side-by-side-item">
-	   <h3 class="font-size-h4">Class aptent</h3>
-       <p>Curabitur aliquet quam id dui posuere blandit. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis lorem ut libero malesuada feugiat. Vivamus suscipit tortor eget felis porttitor volutpat. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Proin eget tortor risus. Donec rutrum congue leo eget malesuada.</p>
-  </div>
-</div>
-		  <h3 class="font-size-h4">Quisque in enim</h3>
-		     <p>Curabitur aliquet quam id dui posuere blandit. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis lorem ut libero malesuada feugiat. Vivamus suscipit tortor eget felis porttitor volutpat. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Proin eget tortor risus. Donec rutrum congue leo eget malesuada.</p>
-		  <h3>Key Takeaways</h3>
-		  <div class="tabs">
-  <input/>
-  <label>
-    <span>Key Concept 1</span>
-  </label>
-  <div>
-    <h4>Tab 1 Heading Inside</h4>
-    <p>Some long text to demonstrate a tab widget. This text can be something as long as multiple paragraphs or as short as a couple of sentences.</p>
-  </div>
-  <input/>
-  <label>
-    <span>Key Concept 2</span>
-  </label>
-  <div>
-    <h4>Tab 2 Heading Inside</h4>
-    <p>Some long text to demonstrate a tab widget. This text can be something as long as multiple paragraphs or as short as a couple of sentences.</p>
-  </div>
-  <input/>
-  <label>
-    <span>Key Concept 3</span>
-  </label>
-  <div>
-    <h4>Tab 3 Heading Inside</h4>
-    <p>Some long text to demonstrate a tab widget. This text can be something as long as multiple paragraphs or as short as a couple of sentences.</p>
-  </div>
-			   <input/>
-  <label>
-    <span>Key Concept 4</span>
-  </label>
-  <div>
-    <h4>Tab 4 Heading Inside</h4>
-    <p>Some long text to demonstrate a tab widget. This text can be something as long as multiple paragraphs or as short as a couple of sentences.</p>
-  </div>
-  <input/>
-  <label>
-    <span>Hide</span>
-  </label>
-</div>
+      <div class="side-by-side-item">
+        <h3 class="font-size-h4">Developing Arguments</h3>
+        <p>Crafting strong arguments is essential for...</p>
       </div>
     </div>
-    <div id="second-column">
-      <div class="content-body">
-        <h2>Due This Week</h2>
-<ul class="assignments-widget">
-  <li class="assignment">
-    <h3>Module 1 Readings</h3>
-	  <p class="monospace"><strong>Due Date: Aug 26</strong></p>
-    <p>The readings in the list have interactive exercises that will help you determine if you are fully understanding the material.</p>
-    <a class="btn" href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou=608068&amp;type=content&amp;rcode=PIMA-3596885" target="_blank">Go to Readings</a>
-  </li>
-  <li class="assignment">
-    <h3>Reading Review Activity</h3>
-	  	  <p class="monospace"><strong>Due Date: Aug 28</strong></p>
-    <p>Rhetorical Analysis Review Activity</p>
-    <a class="btn ext" href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou=608068&amp;type=content&amp;rcode=PIMA-3596885" target="_blank">Go to Activity</a>
-  </li>
-  <li class="assignment">
-    <h3>Reading Discussion 1A</h3>
-	  	  <p class="monospace"><strong>Due Date: Aug 30</strong></p>
-    <p>Reading Fables</p>
-    <a class="btn ext" href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou=608068&amp;type=content&amp;rcode=PIMA-3639476" target="_blank">Join Discussion</a>
-  </li>
-	  <li class="assignment">
-    <h3>Module 1 Quiz</h3>
-	  	  <p class="monospace"><strong>Due Date: Aug 30</strong></p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis lorem ut libero malesuada feugiat.</p>
-    <a class="btn ext" href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou=608068&amp;type=content&amp;rcode=PIMA-3639476" target="_blank">Take Quiz</a>
-  </li>
-</ul>
+    <h3 class="font-size-h4">Writing Strategies</h3>
+    <p>Applying effective writing strategies can...</p>
+    <h3>Key Takeaways</h3>
+    <div class="tabs">
+      <input/>
+      <label> <span>Writing Structure</span> </label>
+      <div>
+        <h4>Structure of Essays</h4>
+        <p>Understanding the basic structure of essays is...</p>
       </div>
+      <input/>
+      <label> <span>Developing Arguments</span> </label>
+      <div>
+        <h4>Creating Effective Arguments</h4>
+        <p>Learn how to develop strong arguments supported by...</p>
+      </div>
+      <input/>
+      <label> <span>Writing Techniques</span> </label>
+      <div>
+        <h4>Effective Writing Techniques</h4>
+        <p>Explore various writing techniques to improve clarity and...</p>
+      </div>
+      <input/>
+      <label> <span>Revision Strategies</span> </label>
+      <div>
+        <h4>Revising Your Work</h4>
+        <p>Revising is a critical part of the writing process...</p>
+      </div>
+      <input/>
+      <label> <span>Hide</span> </label>
     </div>
-    <footer>
-      <div id="footer">
-        <p class="text-center toggle-footnotes">[Show Footnotes]</p>
-        <div class="footnotes">
-          <p>Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus.</p>
-          <ul>
-            <li>Lorem culim ghus.</li>
-            <li>Ipsum guar havana.</li>
-          </ul>
-        </div>
-      </div>
-    </footer>
+  </div>
+</div>
+<div id="second-column">
+  <div class="content-body">
+    <h2>Assignments for This Week</h2>
+    <ul class="assignments-widget">
+      <li class="assignment">
+        <h3>Read Chapter 1</h3>
+        <p class="monospace"><strong>Due Date: Sep 5</strong></p>
+        <p>Complete the reading assigned for this...</p>
+        <a class="btn" href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou=608068&amp;type=content&amp;rcode=PIMA-3596885" target="_blank">Access Reading</a> </li>
+      <li class="assignment">
+        <h3>Writing Exercise 1</h3>
+        <p class="monospace"><strong>Due Date: Sep 7</strong></p>
+        <p>Submit your first writing exercise based on...</p>
+        <a class="btn ext" href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou=608068&amp;type=content&amp;rcode=PIMA-3596885" target="_blank">Submit Exercise</a> </li>
+      <li class="assignment">
+        <h3>Discussion Post 1</h3>
+        <p class="monospace"><strong>Due Date: Sep 9</strong></p>
+        <p>Participate in the online discussion forum by posting your...</p>
+        <a class="btn ext" href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou=608068&amp;type=content&amp;rcode=PIMA-3639476" target="_blank">Join Discussion</a> </li>
+      <li class="assignment">
+        <h3>Peer Review Assignment</h3>
+        <p class="monospace"><strong>Due Date: Sep 11</strong></p>
+        <p>Review a peer's writing exercise and...</p>
+        <a class="btn ext" href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou=608068&amp;type=content&amp;rcode=PIMA-3639476" target="_blank">Complete Review</a> </li>
+    </ul>
+  </div>
+</div>
+<footer>
+  <div id="footer">
+    <p class="text-center toggle-footnotes">[Show Footnotes]</p>
+    <div class="footnotes">
+      <p>For further information and resources on writing, refer to...</p>
+      <ul>
+        <li>Additional reading material...</li>
+        <li>Visit the writing center for...</li>
+      </ul>
+    </div>
+  </div>
+</footer>
 </body>
 </html>`}
                 </code>

@@ -87,7 +87,7 @@ const [templateImage, setTemplateImage] = useState("/images/templates/sow2.jpg")
           <p>Break down the course schedule into module-by-module chunks, detailing exactly what's due and when. Students can have both an overview of the courseload, while still taking each week a section at a time.</p>
             <h3 className="spacer">Template Preview</h3>
           <div className="template-preview">
-            <Image src={templateImage} alt="" width={292} height={280} priority/>
+            <Image src={templateImage} alt="" width={800} height={1400} priority/>
             <div>
               <h4>Featured Widgets</h4>
               <div className="wd-border">
@@ -113,19 +113,20 @@ const [templateImage, setTemplateImage] = useState("/images/templates/sow2.jpg")
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@pimaonline/pimaonline-themepack/dist/css/themes/cards/styles.css">
 <link rel="stylesheet" type="text/css" href="../css/custom.css">
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js" defer></script> 
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@pimaonline/pimaonline-themepack/dist/js/scripts2.js" defer></script>
-<title>Course Schedule Template</title>
+<title>Course Introduction</title>
 </head>
   <body>
     <header class="header"><img src="https://via.placeholder.com/1920X600" alt="decorative image of a woman's hand typing on a computer">
       <div class="text-container">
-        <h1>Course Intro</h1>
-        <p>Donec sollicitudin molestie malesuada. Nulla porttitor accumsan tincidunt. Proin eget tortor risus. Pellentesque in ipsum id orci porta.</p>
+        <h1>Course Introduction</h1>
+        <p>This course will introduce you to essential concepts in...</p>
       </div>
     </header>
     <div id="content-wrapper">
       <div class="content-body">
-        <h2>Module 1: Lorem Ipsum</h2>
+        <h2>Module 1: Understanding the Writing Process</h2>
         <table class="display-lg">
           <thead>
             <tr>
@@ -136,28 +137,28 @@ const [templateImage, setTemplateImage] = useState("/images/templates/sow2.jpg")
           </thead>
           <tbody>
             <tr>
-              <td>Assignment 1</td>
-              <td>--</td>
+              <td>Reflection Essay</td>
+              <td>50</td>
               <td>[Insert Due Date]</td>
             </tr>
             <tr>
-              <td>Assignment 2</td>
-              <td>--</td>
+              <td>Peer Review 1</td>
+              <td>20</td>
               <td>[Insert Due Date]</td>
             </tr>
             <tr>
-              <td>Assignment 3</td>
-              <td>--</td>
+              <td>Research Proposal</td>
+              <td>30</td>
               <td>[Insert Due Date]</td>
             </tr>
             <tr>
-              <td>Assignment 4</td>
-              <td>--</td>
+              <td>Outline of Argument</td>
+              <td>20</td>
               <td>[Insert Due Date]</td>
             </tr>
           </tbody>
         </table>
-        <h2>Module 2: Lorem Ipsum</h2>
+        <h2>Module 2: Developing an Argument</h2>
         <table class="display-lg">
           <thead>
             <tr>
@@ -168,28 +169,28 @@ const [templateImage, setTemplateImage] = useState("/images/templates/sow2.jpg")
           </thead>
           <tbody>
             <tr>
-              <td>Assignment 1</td>
-              <td>--</td>
+              <td>Argumentative Essay</td>
+              <td>100</td>
               <td>[Insert Due Date]</td>
             </tr>
             <tr>
-              <td>Assignment 2</td>
-              <td>--</td>
+              <td>Peer Review 2</td>
+              <td>20</td>
               <td>[Insert Due Date]</td>
             </tr>
             <tr>
-              <td>Assignment 3</td>
-              <td>--</td>
+              <td>Final Draft</td>
+              <td>50</td>
               <td>[Insert Due Date]</td>
             </tr>
             <tr>
-              <td>Assignment 4</td>
-              <td>--</td>
+              <td>In-Class Discussion</td>
+              <td>20</td>
               <td>[Insert Due Date]</td>
             </tr>
           </tbody>
         </table>
-        <h2>Module 3: Lorem Ipsum</h2>
+        <h2>Module 3: Integrating Research</h2>
         <table class="display-lg">
           <thead>
             <tr>
@@ -200,23 +201,23 @@ const [templateImage, setTemplateImage] = useState("/images/templates/sow2.jpg")
           </thead>
           <tbody>
             <tr>
-              <td>Assignment 1</td>
-              <td>--</td>
+              <td>Annotated Bibliography</td>
+              <td>50</td>
               <td>[Insert Due Date]</td>
             </tr>
             <tr>
-              <td>Assignment 2</td>
-              <td>--</td>
+              <td>Research Essay Draft</td>
+              <td>80</td>
               <td>[Insert Due Date]</td>
             </tr>
             <tr>
-              <td>Assignment 3</td>
-              <td>--</td>
+              <td>Final Research Essay</td>
+              <td>100</td>
               <td>[Insert Due Date]</td>
             </tr>
             <tr>
-              <td>Assignment 4</td>
-              <td>--</td>
+              <td>Oral Presentation</td>
+              <td>40</td>
               <td>[Insert Due Date]</td>
             </tr>
           </tbody>
@@ -233,28 +234,28 @@ const [templateImage, setTemplateImage] = useState("/images/templates/sow2.jpg")
           </thead>
           <tbody>
             <tr>
-              <td>Quizzes</td>
-              <td>--</td>
-              <td>--</td>
-              <td>--</td>
+              <td>Essays</td>
+              <td>4</td>
+              <td>100</td>
+              <td>400</td>
+            </tr>
+            <tr>
+              <td>Peer Reviews</td>
+              <td>2</td>
+              <td>20</td>
+              <td>40</td>
             </tr>
             <tr>
               <td>Discussions</td>
-              <td>--</td>
-              <td>--</td>
-              <td>--</td>
-            </tr>
-            <tr>
-              <td>Video Assignments</td>
-              <td>--</td>
-              <td>--</td>
-              <td>--</td>
+              <td>3</td>
+              <td>20</td>
+              <td>60</td>
             </tr>
             <tr>
               <td>Final Exam</td>
-              <td>--</td>
-              <td>--</td>
-              <td>--</td>
+              <td>1</td>
+              <td>100</td>
+              <td>100</td>
             </tr>
           </tbody>
         </table>
@@ -271,27 +272,27 @@ const [templateImage, setTemplateImage] = useState("/images/templates/sow2.jpg")
             <tr>
               <td>A</td>
               <td>90.00% and above</td>
-              <td>--</td>
+              <td>540 and above</td>
             </tr>
             <tr>
               <td>B</td>
               <td>80.00 - 89.99%</td>
-              <td>--</td>
+              <td>480 - 539</td>
             </tr>
             <tr>
               <td>C</td>
               <td>70.00 - 79.99%</td>
-              <td>--</td>
+              <td>420 - 479</td>
             </tr>
             <tr>
               <td>D</td>
               <td>60.00 - 69.99%</td>
-              <td>--</td>
+              <td>360 - 419</td>
             </tr>
             <tr>
               <td>F</td>
               <td>59% and below</td>
-              <td>--</td>
+              <td>359 and below</td>
             </tr>
           </tbody>
         </table>
@@ -301,18 +302,17 @@ const [templateImage, setTemplateImage] = useState("/images/templates/sow2.jpg")
       <div id="footer">
         <p class="text-center toggle-footnotes" tabindex="0">[Show Footnotes]</p>
         <div class="footnotes">
-          <p>Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus.</p>
+          <p>Writing is a process that requires careful planning, revision, and...</p>
           <ul>
-            <li>Lorem culim ghus.</li>
-            <li>Ipsum guar havana.</li>
-            <li>Doloret kava chec.</li>
+            <li>Writing allows us to...</li>
+            <li>Revising drafts is key to...</li>
+            <li>Proper citations avoid...</li>
           </ul>
         </div>
       </div>
     </footer>
   </body>
-</html>`}
-                </code>
+</html>`}</code>
               </pre>
             </div>
           </div>

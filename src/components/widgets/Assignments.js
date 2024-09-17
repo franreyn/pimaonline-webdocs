@@ -39,17 +39,17 @@ export default function Assignments() {
             <li className="assignment">
               <h3>Module 1 Readings</h3>
               <p>The readings in the list have interactive exercises that will help you determine if you are fully understanding the material.</p>
-              <a className="btn" href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou=608068&amp;type=content&amp;rcode=PIMA-3638367" target="_blank" rel="noopener">Go to Readings</a>
+              <a className="btn" href="javascript:void(0);" rel="noopener">Go to Readings</a>
             </li>
             <li className="assignment">
               <h3>Reading Review Activity</h3>
-              <p>Rhetorical Analysis Review Activity</p>
-              <a className="btn" href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou=608068&amp;type=content&amp;rcode=PIMA-3596885" target="_blank">Go to Activity</a>
+              <p>Rhetorical Analysis Review Activity...</p>
+              <a className="btn" href="javascript:void(0);">Go to Activity</a>
             </li>
             <li className="assignment">
               <h3>Mindful Reading Discussion 1A</h3>
-              <p>Reading Fables</p>
-              <a className="btn" href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou=608068&amp;type=content&amp;rcode=PIMA-3639476" target="_blank">Join Discussion</a>
+              <p>Reading Fables...</p>
+              <a className="btn" href="javascript:void(0);">Join Discussion</a>
             </li>
           </ul>
         </div>
@@ -62,18 +62,18 @@ export default function Assignments() {
             {String.raw`<ul class="assignments-widget">
   <li class="assignment">
     <h3>Module 1 Readings</h3>
-    <p>The readings in the list have interactive exercises that will help you determine if you are fully understanding the material.</p>
-    <a class="btn" href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou=608068&amp;type=content&amp;rcode=PIMA-3596885" target="_blank">Go to Readings</a>
+    <p>The readings in the list have interactive exercises that will help you...</p>
+    <a class="btn" href="#">Go to Readings</a>
   </li>
   <li class="assignment">
     <h3>Reading Review Activity</h3>
-    <p>Rhetorical Analysis Review Activity</p>
-    <a class="btn ext" href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou=608068&amp;type=content&amp;rcode=PIMA-3596885" target="_blank">Go to Activity</a>
+    <p>Rhetorical Analysis Review Activity...</p>
+    <a class="btn" href="#">Go to Activity</a>
   </li>
   <li class="assignment">
     <h3>Mindful Reading Discussion 1A</h3>
-    <p>Reading Fables</p>
-    <a class="btn ext" href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou=608068&amp;type=content&amp;rcode=PIMA-3639476" target="_blank">Join Discussion</a>
+    <p>Reading Fables...</p>
+    <a class="btn" href="#">Join Discussion</a>
   </li>
 </ul>`}
             </code>
