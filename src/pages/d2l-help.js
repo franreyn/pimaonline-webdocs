@@ -69,7 +69,6 @@ export default function d2lHelp() {
       <div className="wd-grid">
         <main>
 					<HowToAddTemplate />
-					<HowToAddContentBody />
         </main>
         <aside>
           <D2LHelpSidebar />
