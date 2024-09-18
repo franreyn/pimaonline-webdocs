@@ -29,8 +29,10 @@ export default function HowToAddYouTube() {
           <img src="/images/d2l-help/how-to-add-youtube/step9.png" alt="Step 9"></img></li>
           <li><p>With the code that you copied from YouTube, select the &lt;iframe&gt; code and copy and paste it in.</p>
           <img src="/images/d2l-help/how-to-add-youtube/step10.png" alt="Step 10"></img></li>
-          <li><p>After the &lt;iframe&gt; content has been replaced, save your changes.</p>
+					<li><p>After the &lt;iframe&gt; content has been replaced, be sure to edit the "title" attribute.</p>
           <img src="/images/d2l-help/how-to-add-youtube/step11.png" alt="Step 11"></img></li>
+					<li><p>Save your changes.</p>
+          <img src="/images/d2l-help/how-to-add-youtube/step12.png" alt="Step 12"></img></li>
         </ol>
       </section>
     </>
