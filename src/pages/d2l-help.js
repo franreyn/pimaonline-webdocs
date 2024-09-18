@@ -70,6 +70,8 @@ export default function d2lHelp() {
       <div className="wd-grid">
         <main>
 					<HowToAddTemplate />
+					<HowToAddYouTube />
+					<HowToAccessCourseFiles />
         </main>
         <aside>
           <D2LHelpSidebar />
