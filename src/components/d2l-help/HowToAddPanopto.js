@@ -64,7 +64,7 @@ export default function HowToAddPanopto() {
 						<img src="/images/d2l-help/how-to-add-panopto/step14.png"></img>
 					</li>
 					<li>
-					<p>Save your changes</p>
+					<p>Save your changes.</p>
 						<img src="/images/d2l-help/how-to-add-panopto/step15.png"></img>
 					</li>
 			</ol>
