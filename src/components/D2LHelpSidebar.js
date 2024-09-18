@@ -62,6 +62,9 @@ export default function D2LHelpSidebar() {
             <li className={activeId === "toc-how-to-add-template" ? "is-current" : ""}>
               <Link href="/d2l-help/#how-to-add-template" className="toc-caption">How to add a template</Link>
             </li>
+						<li className={activeId === "toc-how-to-add-youtube" ? "is-current" : ""}>
+              <Link href="/d2l-help/#how-to-add-youtube" className="toc-caption">How to add a YouTube video</Link>
+            </li>
             <li className={activeId === "toc-how-to-access-course-files" ? "is-current" : ""}>
               <Link href="/d2l-help/#how-to-access-course-files" className="toc-caption">How to access course files</Link>
             </li>
