@@ -61,6 +61,9 @@ export default function D2LHelpSidebar() {
             <li className={activeId === "toc-how-to-add-template" ? "is-current" : ""}>
               <Link href="/d2l-help/#how-to-add-template" className="toc-caption">How to add a template</Link>
             </li>
+						<li className={activeId === "toc-how-to-add-content-body" ? "is-current" : ""}>
+              <Link href="/d2l-help/#how-to-add-content-body" className="toc-caption">How to add a content body</Link>
+            </li>
           </ul>
         </li>
       </ul>
