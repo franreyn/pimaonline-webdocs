@@ -3,7 +3,7 @@ import styles from "../../styles/d2l.module.css";
 export default function HowToAccessCourseFiles() {
   return (
     <>
-      <section id="toc-how-to-access-course-files">
+      <section id="toc-how-to-access-course-files" className="mb-8">
         <h2 id="how-to-access-course-files" className="section-top anchor">How To Access Course Files</h2>
         <p className="mb-4">Access course files to edit the content of a course.</p>
 				<h3>Change your role of a course to Developer in D2L</h3>
