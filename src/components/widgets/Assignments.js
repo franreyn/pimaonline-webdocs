@@ -7,11 +7,6 @@ export default function Assignments() {
   const codeRef = useRef(null);
   const [buttonText, setButtonText] = useState("Copy code");
 
-  hljs.registerLanguage("html", html);
-  useEffect(() => {
-    hljs.highlightAll();
-  }, []);
-
   const handleCopyCode = () => {
     const codeElement = codeRef.current;
     const range = document.createRange();
@@ -39,17 +34,17 @@ export default function Assignments() {
             <li className="assignment">
               <h3>Module 1 Readings</h3>
               <p>The readings in the list have interactive exercises that will help you determine if you are fully understanding the material.</p>
-              <a className="btn" href="javascript:void(0);" rel="noopener">Go to Readings</a>
+              <a className="btn" href="#" rel="noopener">Go to Readings</a>
             </li>
             <li className="assignment">
               <h3>Reading Review Activity</h3>
               <p>Rhetorical Analysis Review Activity</p>
-              <a className="btn" href="javascript:void(0);">Go to Activity</a>
+              <a className="btn" href="#">Go to Activity</a>
             </li>
             <li className="assignment">
               <h3>Mindful Reading Discussion 1A</h3>
               <p>Reading Fables</p>
-              <a className="btn" href="javascript:void(0);">Join Discussion</a>
+              <a className="btn" href="#">Join Discussion</a>
             </li>
           </ul>
         </div>
