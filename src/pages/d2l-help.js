@@ -8,7 +8,6 @@ import { useEffect, useRef, useState, useLayoutEffect } from "react";
 import D2LHelpSidebar from "@/components/D2LHelpSidebar";
 import HowToAddTemplate from "@/components/d2l-help/HowToAddTemplate";
 import HowToAddYouTube from "@/components/d2l-help/HowToAddYouTube";
-import HowToAccessCourseFiles from "@/components/d2l-help/HowToAccessCourseFiles";
 
 export default function d2lHelp() {
 
@@ -71,7 +70,6 @@ export default function d2lHelp() {
         <main>
 					<HowToAddTemplate />
 					<HowToAddYouTube />
-					<HowToAccessCourseFiles />
         </main>
         <aside>
           <D2LHelpSidebar />
