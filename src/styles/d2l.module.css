@@ -10,6 +10,11 @@
 	max-width: 80%;
 }
 
+.d2lInstructions ul li {
+	list-style: disc;
+	margin-left: 1rem;
+}
+
 .d2lInstructions .codeBlock {
 	max-width: 80%;
 }

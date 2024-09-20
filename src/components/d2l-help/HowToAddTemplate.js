@@ -3,9 +3,9 @@ import styles from "../../styles/d2l.module.css";
 export default function HowToAddTemplate() {
   return (
     <>
-      <section id="toc-how-to-add-template">
+      <section id="toc-how-to-add-template" className="mb-8">
         <h2 id="how-to-add-template" className="section-top anchor">How To Add A Template</h2>
-        <p className="mb-8">Learn how to add a page to your course with the right theme and placeholder content.</p>
+        <p className="mb-4">Learn how to add a page to your course with the right theme and placeholder content.</p>
 				<ol className={styles.d2lInstructions}>
 					<li><p>Go to the module where you want to add the page, and then click the "Upload/Create" button.</p>
 						<img src="/images/d2l-help/how-to-add-template/step1.png"></img>
