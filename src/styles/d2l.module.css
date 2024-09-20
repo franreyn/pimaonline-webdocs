@@ -1,13 +1,51 @@
 
 /* Class to add to lists to help with spacing between images and text for each step */
 
+.d2lInstructions {
+  counter-reset: step-counter;
+}
+
 .d2lInstructions li {
 	margin-bottom: 2.5rem;
-	list-style-type: decimal;
+	list-style-type: none;
+	background-color: var(--color-wd-overlay);
+	padding: 80px 40px 30px;
+	border-radius: 20px;
+	counter-increment: step-counter;
+  position: relative;
+	display: grid;
+	grid-template-columns: 40% 60%;
+	gap: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+  .d2lInstructions li {
+    grid-template-columns: 1fr;
+    padding-right: 50px;
+  }
+}
+
+.d2lInstructions li::before {
+  content: "STEP " counter(step-counter);
+  position: absolute;
+  top: 50px;
+  left: 0;
+  font-weight: 800;
+	letter-spacing: 0.1rem;
+  color: var(--color-wd-accent);
+  padding-left: 40px;
+	border-radius: 5px;
+  display: inline-block;
 }
 
 .d2lInstructions img {
-	max-width: 80%;
+	max-width: 400px;
+	max-height: 300px;
+	object-fit: cover;
+	border-radius: 15px;
+	text-align: right;
+	align-items: end;
+	margin-top: -30px;
 }
 
 .d2lInstructions .codeBlock {
