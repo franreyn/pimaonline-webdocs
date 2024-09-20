@@ -9,3 +9,7 @@
 .d2lInstructions img {
 	max-width: 80%;
 }
+
+.d2lInstructions .codeBlock {
+	max-width: 80%;
+}

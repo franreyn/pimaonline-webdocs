@@ -8,6 +8,7 @@ import { useEffect, useRef, useState, useLayoutEffect } from "react";
 import D2LHelpSidebar from "@/components/D2LHelpSidebar";
 import HowToAddTemplate from "@/components/d2l-help/HowToAddTemplate";
 import HowToAddYouTube from "@/components/d2l-help/HowToAddYouTube";
+import HowToAddPanopto from "@/components/d2l-help/HowToAddPanopto";
 
 export default function d2lHelp() {
 
