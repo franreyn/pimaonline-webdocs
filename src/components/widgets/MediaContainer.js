@@ -67,7 +67,7 @@ export default function MediaContainer() {
     <iframe width="560" height="315" src="https://www.youtube.com/embed/rFve845ScJ4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div>
   <div class="media-info">
-    <p>Some text used to describe the media object.</p>
+    <p>Some text used to describe...</p>
   </div>
 </div>`}
             </code>

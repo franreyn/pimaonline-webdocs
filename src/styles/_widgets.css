@@ -1000,7 +1000,8 @@ dl.vocab-list dd {
   width: 100%;
   text-align: center;
   transition: .5s;
-  color: var(--color-pcc-white)
+  color: var(--color-pcc-white);
+	padding: 2px;
 }
 .tabs label.hide-tab {
   background-color: transparent !important;

@@ -182,58 +182,58 @@ const [templateImage, setTemplateImage] = useState("/images/templates/twocolumn2
 <link rel="stylesheet" type="text/css" href="../../css/custom.css">
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js" defer></script> 
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@pimaonline/pimaonline-themepack/dist/js/scripts2.js" defer></script>
-<title>Starter Template</title>
+<title>Course Overview</title>
 </head>
 <body>
 <header class="header"> <img src="https://via.placeholder.com/1920X600" alt="">
   <div class="text-container">
-    <h1>Course Intro</h1>
-    <p>Donec sollicitudin misit malesuada. Nulla porttitor accumsan tincidunt. Proin eget tortor risus. Pellentesque in ipsum id orci porta.</p>
+    <h1>Course Overview</h1>
+    <p>Welcome to Writing 101. This course will...</p>
   </div>
 </header>
 <div id="content-wrapper">
   <div class="content-body">
-    <h2>Welcome to [course name here]</h2>
-    <p>Curabitur aliquet quam id dui posuere blandit. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis lorem ut libero malesuada feugiat. Vivamus suscipit tortor eget felis porttitor volutpat. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Proin eget tortor risus. Donec rutrum congue leo eget malesuada.</p>
-    <h3>A Quick Welcome from Your Course Instructor</h3>
+    <h2>Introduction to Academic Writing</h2>
+    <p>In this course, you will learn the key elements of academic writing. We will...</p>
+    <h3>Message from Your Instructor</h3>
     <div class="media-container">
       <div class="media-object">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/rFve845ScJ4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/rFve845ScJ4" title="Course Introduction Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
     </div>
-    <h3>What You Will Learn</h3>
-    <p>Curabitur aliquet quam id dui posuere blandit. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis lorem ut libero malesuada feugiat. Vivamus suscipit tortor eget felis porttitor volutpat. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Proin eget tortor risus. Donec rutrum congue leo eget malesuada.</p>
+    <h3>Course Objectives</h3>
+    <p>Throughout this course, you will master the basics of writing, including...</p>
     <ul class="vocab-cards">
       <li class="vocab">
-        <dt>[Course Objective]</dt>
-        <dd>Lorem ipsum dolor sit amet, consectetur adipiscing elit, eiusmod tempor incididunt ut labore et dolore magna aliqua.</dd>
+        <dt>Understanding Thesis Statements</dt>
+        <dd>Learn how to craft a clear and concise thesis statement that...</dd>
         <ul>
-          <li class="caption">Sub-item 1</li>
-          <li class="caption">Sub-item 2</li>
+          <li class="caption">Developing a strong argument</li>
+          <li class="caption">Providing relevant evidence</li>
         </ul>
       </li>
       <li class="vocab">
-        <dt>[Course Objective]</dt>
-        <dd>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</dd>
+        <dt>Essay Structure</dt>
+        <dd>Explore the different components of an....</dd>
       </li>
       <li class="vocab">
-        <dt>[Course Objective]</dt>
-        <dd>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</dd>
+        <dt>Evidence and Support</dt>
+        <dd>Understand how to incorporate evidence from sources to support your...</dd>
         <ul>
-          <li class="caption">Sub-item 1</li>
+          <li class="caption">Using credible sources</li>
         </ul>
       </li>
       <li class="vocab">
-        <dt>[Course Objective]</dt>
-        <dd>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</dd>
+        <dt>Revision Techniques</dt>
+        <dd>Practice strategies for revising and editing your work to...</dd>
       </li>
     </ul>
   </div>
 </div>
 <div id="second-column">
   <div class="content-body">
-    <h2>Weekly Agenda</h2>
-    <p>Vivamus suscipit tortor eget felis porttitor volutpat. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Proin eget tortor risus. Donec rutrum congue leo eget malesuada.</p>
+    <h2>Weekly Schedule</h2>
+    <p>Follow the weekly schedule to stay on track with your...</p>
     <table class="display-lg">
       <thead>
         <tr>
@@ -244,33 +244,32 @@ const [templateImage, setTemplateImage] = useState("/images/templates/twocolumn2
       </thead>
       <tbody>
         <tr>
-          <td>Read Start Here Module</td>
+          <td>Read Introduction Module</td>
           <td>--</td>
-          <td>May 1st</td>
+          <td>Week 1</td>
         </tr>
         <tr>
-          <td>Course Contract Quiz</td>
-          <td>5</td>
-          <td>May 7th</td>
+          <td>Submit Thesis Statement</td>
+          <td>10</td>
+          <td>Week 2</td>
         </tr>
       </tbody>
     </table>
-    <h3>Lorem Ipsum</h3>
-    <p>Vivamus suscipit tortor eget felis porttitor volutpat. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Proin eget tortor risus. Donec rutrum congue leo eget malesuada.</p>
+    <h3>Additional Resources</h3>
+    <p>Refer to the additional resources provided to deepen your understanding of...</p>
     <div class="image-gallery">
       <div class="gallery-wrapper">
-        <div class="image-box"> <img src="https://picsum.photos/id/1018/400/200" alt="" /> </div>
-        <div class="image-box"> <img src="https://picsum.photos/id/1047/300/400" alt="" /> </div>
-        <div class="image-box"> <img src="https://picsum.photos/id/1059/500/300" alt="" /> </div>
-        <div class="image-box"> <img src="https://picsum.photos/id/119/500/300" alt="" /> </div>
-        <div class="image-box"> <img src="https://picsum.photos/id/143/800/200" alt="" /> </div>
+        <div class="image-box"> <img src="https://picsum.photos/id/1018/400/200" alt="Writing Tools" /> </div>
+        <div class="image-box"> <img src="https://picsum.photos/id/1047/300/400" alt="Academic Books" /> </div>
+        <div class="image-box"> <img src="https://picsum.photos/id/1059/500/300" alt="Study Space" /> </div>
+        <div class="image-box"> <img src="https://picsum.photos/id/119/500/300" alt="Writing Desk" /> </div>
+        <div class="image-box"> <img src="https://picsum.photos/id/143/800/200" alt="Research Materials" /> </div>
       </div>
     </div>
-    <p>Vivamus suscipit tortor eget felis porttitor volutpat. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Proin eget tortor risus. Donec rutrum congue leo eget malesuada.</p>
-    <br>
+    <p>Use the images and resources provided to support your writing journey and...</p>
     <br>
     <hr>
-    <blockquote class="text-center">Some text used to help display a blockquote</blockquote>
+    <blockquote class="text-center">"The art of writing is the art of discovering what you believe..." – Gustave Flaubert</blockquote>
     <hr>
   </div>
 </div>
@@ -278,16 +277,17 @@ const [templateImage, setTemplateImage] = useState("/images/templates/twocolumn2
   <div id="footer">
     <p class="text-center toggle-footnotes">[Show Footnotes]</p>
     <div class="footnotes">
-      <p>Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus.</p>
+      <p>For further information on academic writing, refer to the course materials and...</p>
       <ul>
-        <li>Lorem culim ghus.</li>
-        <li>Ipsum guar havana.</li>
+        <li>Readings on...</li>
+        <li>Guides on...</li>
       </ul>
     </div>
   </div>
 </footer>
 </body>
-</html>`}
+</html>
+`}
                 </code>
               </pre>
             </div>

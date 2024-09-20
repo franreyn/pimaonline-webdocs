@@ -115,14 +115,20 @@ export default function SOW1() {
 <link rel="stylesheet" type="text/css" href="../css/custom.css">
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js" defer></script> 
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@pimaonline/pimaonline-themepack/dist/js/scripts2.js" defer></script>
-<title>Course Schedule Template</title>
+<title>Course Intro</title>
 </head>
 <body>
+    <header class="header"><img src="https://via.placeholder.com/1920X600" alt="decorative image of a woman's hand typing on a computer">
+      <div class="text-container">
+        <h1>Course Intro</h1>
+        <p>In academic writing, clarity and conciseness are crucial for...</p>
+      </div>
+    </header>
 <div id="main">
   <div class="content-body">
     <h2>Schedule of Work</h2>
-    <p>Suspendisse porttitor ut orci quis venenatis. Sed orci dui, pellentesque ut ex id, malesuada laoreet nulla. Nullam eleifend mattis tellus et ultrices. Fusce gravida vulputate eros, non bibendum eros sagittis id. Mauris ultrices ante risus, aliquet accumsan libero cursus vitae.</p>
-    <p> Nunc sit amet venenatis mauris, eget vulputate mi. Phasellus euismod libero non nisi sagittis bibendum. Sed auctor nisi ut ultrices tincidunt. Maecenas odio mi, maximus nec velit vel, pharetra ultrices lorem. Nam finibus velit libero, at malesuada sem tincidunt in. Aliquam ut nibh in nisi pellentesque elementum. Sed eget dui ac urna semper cursus ultricies nec leo.</p>
+    <p>In academic writing, clarity and...</p>
+    <p>Paragraphs should be well-structured, containing a...</p>
     <table width="100%">
       <thead>
         <tr>
@@ -134,221 +140,50 @@ export default function SOW1() {
       <tbody>
         <tr>
           <td>Date</td>
-          <td>Lorem Ipsum</td>
-          <td>Vivamus blandit aliquet neque</td>
+          <td>Module 1: Introduction to Writing</td>
+          <td>Review thesis statements and outlines</td>
         </tr>
         <tr>
           <td>Date</td>
-          <td>Lorem Ipsum</td>
-          <td>Vivamus blandit aliquet neque</td>
+          <td>Module 2: Crafting Paragraphs</td>
+          <td>Submit draft of first essay</td>
         </tr>
         <tr>
           <td>Date</td>
-          <td>Lorem Ipsum</td>
-          <td>Vivamus blandit aliquet neque</td>
+          <td>Module 3: Argumentation</td>
+          <td>Peer review sessions</td>
         </tr>
         <tr>
           <td>Date</td>
-          <td>Lorem Ipsum</td>
-          <td></td>
+          <td>Module 4: Research Skills</td>
+          <td>Library research workshop</td>
         </tr>
         <tr>
           <td>Date</td>
-          <td>Lorem Ipsum</td>
-          <td>Vivamus blandit aliquet neque<br>Vivamus blandit aliquet neque</td>
+          <td>Module 5: Citation Styles</td>
+          <td>Submit annotated bibliography</td>
         </tr>
         <tr>
           <td>Date</td>
-          <td>Lorem Ipsum</td>
-          <td>&nbsp;</td>
+          <td>Module 6: Revising and Editing</td>
+          <td>Revision strategies workshop</td>
         </tr>
         <tr>
           <td>Date</td>
-          <td>Lorem Ipsum</td>
-          <td>&nbsp;</td>
-        </tr>
-        <tr>
-          <td>Date</td>
-          <td>Lorem Ipsum</td>
-          <td>Vivamus blandit aliquet neque</td>
-        </tr>
-        <tr>
-          <td>Date</td>
-          <td>Lorem Ipsum</td>
-          <td>Vivamus blandit aliquet neque</td>
-        </tr>
-        <tr>
-          <td>Date</td>
-          <td>Lorem Ipsum</td>
-          <td>&nbsp;</td>
-        </tr>
-        <tr>
-          <td>Date</td>
-          <td>Lorem Ipsum</td>
-          <td>Vivamus blandit aliquet neque</td>
-        </tr>
-        <tr style="background-color: rgba(24,91,118,0.1);">
-          <td>Date</td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>Date</td>
-          <td>Lorem Ipsum</td>
-          <td>Vivamus blandit aliquet neque</td>
-        </tr>
-        <tr>
-          <td>Date</td>
-          <td>Lorem Ipsum</td>
-          <td>Vivamus blandit aliquet neque</td>
-        </tr>
-        <tr>
-          <td>Date</td>
-          <td>Lorem Ipsum</td>
-          <td>Vivamus blandit aliquet neque</td>
-        </tr>
-        <tr>
-          <td>Date</td>
-          <td>Lorem Ipsum</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>Date</td>
-          <td>Lorem Ipsum</td>
-          <td>Vivamus blandit aliquet neque<br>Vivamus blandit aliquet neque</td>
-        </tr>
-        <tr>
-          <td>Date</td>
-          <td>Lorem Ipsum</td>
-          <td>&nbsp;</td>
-        </tr>
-        <tr>
-          <td>Date</td>
-          <td>Lorem Ipsum</td>
-          <td>&nbsp;</td>
-        </tr>
-        <tr>
-          <td>Date</td>
-          <td>Lorem Ipsum</td>
-          <td>Vivamus blandit aliquet neque</td>
-        </tr>
-        <tr>
-          <td>Date</td>
-          <td>Lorem Ipsum</td>
-          <td>Vivamus blandit aliquet neque</td>
-        </tr>
-        <tr>
-          <td>Date</td>
-          <td>Lorem Ipsum</td>
-          <td>&nbsp;</td>
-        </tr>
-        <tr>
-          <td>Date</td>
-          <td>Lorem Ipsum</td>
-          <td>Vivamus blandit aliquet neque</td>
-        </tr>
-        <tr>
-          <td>Date</td>
-          <td>Lorem Ipsum</td>
-          <td>Vivamus blandit aliquet neque</td>
-        </tr>
-        <tr>
-          <td>Date</td>
-          <td>Lorem Ipsum</td>
-          <td>Vivamus blandit aliquet neque</td>
-        </tr>
-        <tr>
-          <td>Date</td>
-          <td>Lorem Ipsum</td>
-          <td>Vivamus blandit aliquet neque</td>
-        </tr>
-        <tr>
-          <td>Date</td>
-          <td>Lorem Ipsum</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>Date</td>
-          <td>Lorem Ipsum</td>
-          <td>Vivamus blandit aliquet neque<br>Vivamus blandit aliquet neque</td>
-        </tr>
-        <tr>
-          <td>Date</td>
-          <td>Lorem Ipsum</td>
-          <td>&nbsp;</td>
-        </tr>
-        <tr>
-          <td>Date</td>
-          <td>Lorem Ipsum</td>
-          <td>&nbsp;</td>
-        </tr>
-        <tr>
-          <td>Date</td>
-          <td>Lorem Ipsum</td>
-          <td>Vivamus blandit aliquet neque</td>
-        </tr>
-        <tr>
-          <td>Date</td>
-          <td>Lorem Ipsum</td>
-          <td>Vivamus blandit aliquet neque</td>
-        </tr>
-        <tr>
-          <td>Date</td>
-          <td>Lorem Ipsum</td>
-          <td>Vivamus blandit aliquet neque</td>
-        </tr>
-        <tr>
-          <td>Date</td>
-          <td>Lorem Ipsum</td>
-          <td>&nbsp;</td>
-        </tr>
-        <tr>
-          <td>Date</td>
-          <td>Lorem Ipsum</td>
-          <td>Vivamus blandit aliquet neque<br>Vivamus blandit aliquet neque</td>
-        </tr>
-        <tr>
-          <td>Date</td>
-          <td>Lorem Ipsum</td>
-          <td>&nbsp;</td>
-        </tr>
-        <tr>
-          <td>Date</td>
-          <td>Lorem Ipsum</td>
-          <td>&nbsp;</td>
-        </tr>
-        <tr>
-          <td>Date</td>
-          <td>Lorem Ipsum</td>
-          <td>Vivamus blandit aliquet neque</td>
-        </tr>
-        <tr>
-          <td>Date</td>
-          <td>Lorem Ipsum</td>
-          <td>Vivamus blandit aliquet neque</td>
-        </tr>
-        <tr>
-          <td>Date</td>
-          <td>Lorem Ipsum</td>
-          <td>&nbsp;</td>
-        </tr>
-        <tr>
-          <td>Date</td>
-          <td>Lorem Ipsum</td>
-          <td>Vivamus blandit aliquet neque</td>
+          <td>Module 7: Final Draft Preparation</td>
+          <td>Submit final essay for grading</td>
         </tr>
         <tr>
           <td>Date</td>
           <td>&nbsp;</td>
-          <td><strong>Final Exam are due</strong> (Vivamus blandit aliquet neque, vel rutrum justo volutpat ac)&nbsp;&nbsp;</td>
+          <td><strong>Final Exam due</strong> (Essay writing techniques and strategies)</td>
         </tr>
       </tbody>
     </table>
   </div>
 </div>
 </body>
-</html>
-`}
+</html>`}
                 </code>
               </pre>
             </div>

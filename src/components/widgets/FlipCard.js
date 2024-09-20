@@ -75,16 +75,16 @@ export default function FlipCard() {
         <div className="wd-visual-ex">
           <div className="flip-card-group">
             <div className="flip-card">
-              <div className="inner-card">
-                <div className="front">This is the term. The term has a brief description of the thing or it is simply one word.<div className="overlay">Your front text here</div></div>
-                <div className="back">This is the definition. The definition can be long or short it just depends on what it is defining. This is an extra long definition of something important and we don't want it to get cut off so we're going to make this a large flip card and give it a special class to helps resize it. If it does go past this certain size we can make it full widget even.  But I can't type enough to breka the smaller one so it must be a pretty big definition.          <div className="overlay">Your back text here</div></div>
-              </div>
+						<div className="inner-card">
+						<div className="front">Alliteration<div className="overlay">Your front text here</div></div>
+						<div className="back">Alliteration is the repetition of the same consonant sound at the beginning of closely connected words. It is often used to create rhythm, emphasize particular phrases, or enhance the musical quality of language. An example is "She sells seashells by the seashore," where the "s" sound is repeated at the start of several words.<div className="overlay">Your back text here</div></div>
+					</div>
             </div>
             <div className="flip-card">
-              <div className="inner-card">
-                <div className="front">This is the term. The term has a brief description of the thing or it is simply one word.<div className="overlay">Your front text here</div></div>
-                <div className="back">This is the definition. The definition can be long or short it just depends on what it is defining. This is an extra long definition of something important and we don't want it to get cut off so we're going to make this a large flip card and give it a special class to helps resize it. If it does go past this certain size we can make it full widget even.  But I can't type enough to breka the smaller one so it must be a pretty big definition.          <div className="overlay">Your back text here</div></div>
-              </div>
+						<div className="inner-card">
+						<div className="front">Metaphor<div className="overlay">Your front text here</div></div>
+						<div className="back">A metaphor is a figure of speech that directly compares one thing to another, suggesting they are alike in some way. Unlike similes, metaphors do not use "like" or "as" for the comparison. For example, in the phrase "time is a thief," time is compared to a thief, implying it steals moments from our lives.<div className="overlay">Your back text here</div></div>
+					</div>
             </div>
           </div>
         </div>
@@ -97,14 +97,14 @@ export default function FlipCard() {
               {String.raw`<div class="flip-card-group">
   <div class="flip-card">
     <div class="inner-card">
-      <div class="front">This is the term. The term has a brief description of the thing or it is simply one word.<div class="overlay">Your front text here</div></div>
-      <div class="back">This is the definition. The definition can be long or short it just depends on what it is defining.            <div class="overlay">Your back text here</div></div>
+      <div class="front">Alliteration<div class="overlay">Your front text here</div></div>
+      <div class="back">Alliteration is the repetition of the same consonant sound at the beginning of closely connected words. It is often used to create...<div class="overlay">Your back text here</div></div>
     </div>
   </div>
   <div class="flip-card">
     <div class="inner-card">
-      <div class="front">This is the term. The term has a brief description of the thing or it is simply one word.<div class="overlay">Your front text here</div></div>
-      <div class="back">This is the definition. The definition can be long or short it just depends on what it is defining.            <div class="overlay">Your back text here</div></div>
+      <div class="front">Metaphor.<div class="overlay">Your front text here</div></div>
+      <div class="back"> A metaphor is a figure of speech that directly compares one thing to another, suggesting they are...<div class="overlay">Your back text here</div></div>
     </div>
   </div>
 </div>`}

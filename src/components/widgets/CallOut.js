@@ -34,7 +34,7 @@ export default function CallOut() {
       <div className="wd-window">
         <div className="wd-visual-ex">
           <div className="call-out">
-            <p>Some text to help display a caption.</p>
+            <p>In academic writing, a strong thesis statement is essential to guide the reader through your argument. It should be clear, concise, and take a definitive stance on the topic.</p>
           </div>
         </div>
         <div className="wd-btn-container">
@@ -44,7 +44,7 @@ export default function CallOut() {
           <pre>
             <code className="language-html" ref={codeRef}>
               {String.raw`<div class="call-out">
-  <p>Some text to help display a caption.</p>
+  <p>In academic writing, a strong thesis statement is...</p>
 </div>`}
             </code>
           </pre>
