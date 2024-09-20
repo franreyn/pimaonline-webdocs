@@ -7,8 +7,7 @@ import html from "highlight.js/lib/languages/xml";
 import { useEffect, useRef, useState, useLayoutEffect } from "react";
 import D2LHelpSidebar from "@/components/D2LHelpSidebar";
 import HowToAddTemplate from "@/components/d2l-help/HowToAddTemplate";
-import HowToEditBannerImage from "@/components/d2l-help/HowToEditBannerImage";
-import SavingTemplatedFile from "@/components/d2l-help/SavingTemplatedFile";
+import HowToAddYouTube from "@/components/d2l-help/HowToAddYouTube";
 
 export default function d2lHelp() {
 
@@ -70,8 +69,7 @@ export default function d2lHelp() {
       <div className="wd-grid">
         <main>
 					<HowToAddTemplate />
-					<HowToEditBannerImage />
-					<SavingTemplatedFile />
+					<HowToAddYouTube />
         </main>
         <aside>
           <D2LHelpSidebar />
