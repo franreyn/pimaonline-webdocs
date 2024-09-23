@@ -18,9 +18,11 @@ import Tabs from "@/components/widgets/Tabs";
 import VideoWidget from "@/components/widgets/VideoWidget";
 import VocabCards from "@/components/widgets/VocabCards";
 import VocabList from "@/components/widgets/VocabList";
-import { useLayoutEffect } from "react";
+import { useEffect,useLayoutEffect } from "react";
 import WidgetSidebar from "@/components/WidgetSidebar";
-
+import hljs from "highlight.js/lib/core";
+import "highlight.js/styles/night-owl.css";
+import html from "highlight.js/lib/languages/xml";
 
 export default function Widgets() {
 
@@ -30,6 +32,18 @@ export default function Widgets() {
     if (existingLink) {
       document.head.removeChild(existingLink);
     }
+  }, []);
+
+	hljs.registerLanguage("html", html);
+  useEffect(() => {
+		  // Iterate over each code block and check if it's already highlighted
+			document.querySelectorAll('pre code').forEach((block) => {
+				if (!block.dataset.highlighted) {
+					// If not highlighted, highlight it and set the dataset attribute
+					hljs.highlightElement(block);
+					block.dataset.highlighted = true;  // Mark the element as highlighted
+				}
+			});
   }, []);
 
   return (
