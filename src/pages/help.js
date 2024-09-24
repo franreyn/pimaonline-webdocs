@@ -50,6 +50,11 @@ export default function Help() {
                 <p>Learn how to add a content body to your page in D2L.</p>
                 <Link className="wd-btn" href="/help/AddingContentBody">View Steps</Link>
             </div>
+            <div>
+              <h3>Accessing Course Files</h3>
+                <p>Learn how to access files to edit the content of a course.</p>
+                <Link className="wd-btn" href="/help/AccessingCourseFiles">View Steps</Link>
+            </div>
           </section>
         </main>
         <aside>

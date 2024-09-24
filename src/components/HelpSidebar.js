@@ -70,6 +70,9 @@ export default function HelpSidebar() {
             <li className={activeId === "toc-adding-content-body" ? "is-current" : ""}>
               <Link href="/help/AddingContentBody" className="toc-caption">Adding a Content Body</Link>
             </li>
+            <li className={activeId === "toc-accessing-course-files" ? "is-current" : ""}>
+              <Link href="/help/AccessingCourseFiles" className="toc-caption">Accessing Course Files</Link>
+            </li>
           </ul>
         </li>
       </ul>
