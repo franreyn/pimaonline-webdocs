@@ -26,11 +26,6 @@ export default function Accordion() {
   const codeRef = useRef(null);
   const [buttonText, setButtonText] = useState("Copy code");
 
-  hljs.registerLanguage("html", html);
-  useEffect(() => {
-    hljs.highlightAll();
-  }, []);
-
   const handleCopyCode = () => {
     const codeElement = codeRef.current;
     const range = document.createRange();
