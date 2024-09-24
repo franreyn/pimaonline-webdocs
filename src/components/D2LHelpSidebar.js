@@ -10,6 +10,8 @@ export default function D2LHelpSidebar() {
 
   const sections = useRef([
     "toc-how-to-add-template",
+		"toc-how-to-edit-banner-image",
+		"toc-saving-templated-file",
   ]);
 
   useEffect(() => {
