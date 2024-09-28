@@ -11,6 +11,7 @@ import LargeText from "@/components/plugins/LargeText";
 import NarrowWidth from "@/components/plugins/NarrowWidth";
 import ViewOptions from "@/components/plugins/ViewOptions";
 import CustomCombos from "@/components/plugins/CustomCombos";
+import AnimationLibrary from "@/components/plugins/AnimationLibrary";
 import PluginsSidebar from "@/components/PluginsSidebar";
 
 export default function Plugins() {
@@ -72,6 +73,11 @@ export default function Plugins() {
       </div>
       <div className="wd-grid">
         <main>
+          <h2>Animation Library</h2>
+          <p>Add animation classes to content you'd like to animate.</p>
+          <div className="wd-subitems">
+          <AnimationLibrary />
+          </div>
           <h2>View Options</h2>
         <p className="wd-break">Quickly offer view option features by adding just a single attribute to your <span className="wd-monospace">&lt;body&gt;</span> element</p>
           <div className="wd-subitems">
