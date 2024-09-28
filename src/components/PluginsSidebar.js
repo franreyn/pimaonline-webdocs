@@ -9,7 +9,7 @@ export default function PluginsSidebar() {
   const router = useRouter();
 
   const sections = useRef([
-    "toc-dark-mode", "toc-focus-text", "toc-large-text", "toc-narrow-width", "toc-custom-combos", "toc-view-options"
+    "toc-animation-library", "toc-custom-combos", "toc-dark-mode", "toc-focus-text", "toc-large-text", "toc-narrow-width", "toc-view-options"
   ]);
 
   useEffect(() => {
@@ -56,6 +56,12 @@ export default function PluginsSidebar() {
         <span></span>
       </button>
       <ul className={`wd-sidebar ${tocOpen ? "show-toc" : "hide-toc"}`}>
+        <li className={`
+          ${activeId === "toc-animation-library" ? "is-current" : ""} 
+          ${router.pathname === "/plugins" ? "active-page" : ""}
+        `}>
+          <Link href="/plugins/#animation-library" className="toc-animation-library">Animation Library</Link>
+        </li>
         <li className={router.pathname === "/plugins" ? "active-page" : ""}><Link href="/plugins">View Options</Link>
           <ul>
             <li className={activeId === "toc-dark-mode" ? "is-current" : ""}>
