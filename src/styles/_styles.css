@@ -516,6 +516,14 @@ section p {
   margin-bottom: 5rem;
 }
 
+.wd-content ul {
+  margin-bottom: 2rem;
+}
+
+.wd-content h4 {
+  margin-top: 3rem;
+}
+
 .wd-subitems {
   border-left: .15rem solid var(--color-wd-overlay);
   padding-left: 3rem;
@@ -570,6 +578,7 @@ section p {
 
 .wd-sidebar > li > a {
   text-decoration: none !important;
+  font-weight: 800;
 }
 
 .wd-visual-ex {
@@ -992,4 +1001,8 @@ h3.spacer {
 .template-preview > div {
   display: none;
 } 
+}
+
+video {
+  width: 100%;
 }
