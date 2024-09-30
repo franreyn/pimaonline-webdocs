@@ -11,7 +11,9 @@ import LargeText from "@/components/plugins/LargeText";
 import NarrowWidth from "@/components/plugins/NarrowWidth";
 import ViewOptions from "@/components/plugins/ViewOptions";
 import CustomCombos from "@/components/plugins/CustomCombos";
-import AnimationLibrary from "@/components/plugins/AnimationLibrary";
+import FadeInAnimation from "@/components/plugins/FadeInAnimation";
+import SlideInAnimations from "@/components/plugins/SlideInAnimations";
+import ButtonsAnimations from "@/components/plugins/ButtonAnimations";
 import PluginsSidebar from "@/components/PluginsSidebar";
 
 export default function Plugins() {
@@ -73,12 +75,18 @@ export default function Plugins() {
       </div>
       <div className="wd-grid">
         <main>
-          <h2>Animation Library</h2>
-          <p>Add animation classes to content you'd like to animate.</p>
+          <h2 id="animation-library" className="section-top anchor">Animation Library</h2>
+          <p className="wd-break">Add animation classes to content you'd like to animate.</p>
           <div className="wd-subitems">
-          <AnimationLibrary />
+            <FadeInAnimation />
           </div>
-          <h2>View Options</h2>
+          <div className="wd-subitems">
+            <SlideInAnimations />
+          </div>
+          <div className="wd-subitems">
+            <ButtonsAnimations />
+          </div>
+          <h2 id="view-options-main" className="section-top anchor">View Options</h2>
         <p className="wd-break">Quickly offer view option features by adding just a single attribute to your <span className="wd-monospace">&lt;body&gt;</span> element</p>
           <div className="wd-subitems">
           <DarkMode />
