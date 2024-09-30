@@ -36,7 +36,10 @@ export default function AnimationLibrary() {
         <p>The fade-in class added to the <span className="wd-monospace">&lt;h2&gt;</span> and <span className="wd-monospace">&lt;p&gt;</span> elements will fade-in the elements when users scroll to it.</p>
         <div className="wd-window">
           <div className="wd-visual-ex center-ex">
-            <Image src="/images/plugins/animation-library/fade-in.webp" alt="" width={400} height={200} />
+          <video width="640" height="360" controls>
+            <source src="/images/plugins/animation-library/fade-in.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
           </div>
           <div className="wd-btn-container">
             <button className="wd-copy-btn" onClick={handleCopyCode}>{buttonText}</button>
@@ -55,7 +58,10 @@ export default function AnimationLibrary() {
         <h4><span className="wd-monospace">slide-left-offscreen</span></h4>
         <div className="wd-window">
           <div className="wd-visual-ex center-ex">
-            <Image src="/images/plugins/animation-library/slide-left-offscreen.webp" alt="" width={400} height={200} />
+            <video width="640" height="360" controls>
+              <source src="/images/plugins/animation-library/slide-left-offscreen.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
           </div>
           <div className="wd-btn-container">
             <button className="wd-copy-btn" onClick={handleCopyCode}>{buttonText}</button>
@@ -72,7 +78,10 @@ export default function AnimationLibrary() {
         <h4><span className="wd-monospace">slide-right-offscreen</span></h4>
         <div className="wd-window">
           <div className="wd-visual-ex center-ex">
-            <Image src="/images/plugins/animation-library/slide-right-offscreen.webp" alt="" width={400} height={200} />
+            <video width="640" height="360" controls>
+              <source src="/images/plugins/animation-library/slide-right-offscreen.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
           </div>
           <div className="wd-btn-container">
             <button className="wd-copy-btn" onClick={handleCopyCode}>{buttonText}</button>
@@ -89,7 +98,10 @@ export default function AnimationLibrary() {
         <h4><span className="wd-monospace">slide-top-offscreen</span></h4>
         <div className="wd-window">
           <div className="wd-visual-ex center-ex">
-            <Image src="/images/plugins/animation-library/slide-top-offscreen.webp" alt="" width={400} height={200} />
+            <video width="640" height="360" controls>
+              <source src="/images/plugins/animation-library/slide-top-offscreen.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
           </div>
           <div className="wd-btn-container">
             <button className="wd-copy-btn" onClick={handleCopyCode}>{buttonText}</button>
@@ -106,7 +118,10 @@ export default function AnimationLibrary() {
         <h4><span className="wd-monospace">slide-bottom-offscreen</span></h4>
         <div className="wd-window">
           <div className="wd-visual-ex center-ex">
-            <Image src="/images/plugins/animation-library/slide-bottom-offscreen.webp" alt="" width={400} height={200} />
+            <video width="640" height="360" controls>
+              <source src="/images/plugins/animation-library/slide-bottom-offscreen.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
           </div>
           <div className="wd-btn-container">
             <button className="wd-copy-btn" onClick={handleCopyCode}>{buttonText}</button>
@@ -123,7 +138,10 @@ export default function AnimationLibrary() {
         <h4><span className="wd-monospace">slide-left-subtle</span></h4>
         <div className="wd-window">
           <div className="wd-visual-ex center-ex">
-            <Image src="/images/plugins/animation-library/slide-left-subtle.webp" alt="" width={400} height={200} />
+            <video width="640" height="360" controls>
+              <source src="/images/plugins/animation-library/slide-left-subtle.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
           </div>
           <div className="wd-btn-container">
             <button className="wd-copy-btn" onClick={handleCopyCode}>{buttonText}</button>
@@ -140,7 +158,10 @@ export default function AnimationLibrary() {
         <h4><span className="wd-monospace">slide-right-subtle</span></h4>
         <div className="wd-window">
           <div className="wd-visual-ex center-ex">
-            <Image src="/images/plugins/animation-library/slide-right-subtle.webp" alt="" width={400} height={200} />
+            <video width="640" height="360" controls>
+              <source src="/images/plugins/animation-library/slide-right-subtle.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
           </div>
           <div className="wd-btn-container">
             <button className="wd-copy-btn" onClick={handleCopyCode}>{buttonText}</button>
@@ -157,7 +178,10 @@ export default function AnimationLibrary() {
         <h4><span className="wd-monospace">slide-top-subtle</span></h4>
         <div className="wd-window">
           <div className="wd-visual-ex center-ex">
-            <Image src="/images/plugins/animation-library/slide-top-subtle.webp" alt="" width={400} height={200} />
+            <video width="640" height="360" controls>
+              <source src="/images/plugins/animation-library/slide-top-subtle.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
           </div>
           <div className="wd-btn-container">
             <button className="wd-copy-btn" onClick={handleCopyCode}>{buttonText}</button>
@@ -174,7 +198,10 @@ export default function AnimationLibrary() {
         <h4><span className="wd-monospace">slide-bottom-subtle</span></h4>
         <div className="wd-window">
           <div className="wd-visual-ex center-ex">
-            <Image src="/images/plugins/animation-library/slide-bottom-subtle.webp" alt="" width={400} height={200} />
+            <video width="640" height="360" controls>
+              <source src="/images/plugins/animation-library/slide-bottom-subtle.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
           </div>
           <div className="wd-btn-container">
             <button className="wd-copy-btn" onClick={handleCopyCode}>{buttonText}</button>
