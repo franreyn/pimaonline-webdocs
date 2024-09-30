@@ -1,13 +1,61 @@
 
 /* Class to add to lists to help with spacing between images and text for each step */
 
+.d2lInstructions {
+  counter-reset: step-counter;
+}
+
 .d2lInstructions li {
 	margin-bottom: 2.5rem;
-	list-style-type: decimal;
+	list-style-type: none;
+	background-color: var(--color-wd-overlay);
+	padding: 80px 20px 50px 40px;
+	border-radius: 20px;
+	counter-increment: step-counter;
+  position: relative;
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 2.5rem;
+}
+
+.d2lInstructions > li > div > ul > li, .d2lInstructions > li > div > ol > li {
+	list-style-type: none !important;
+	background-color: transparent !important;
+	margin: 0 0 0 -2px !important;
+	padding: 0 0 0 20px !important;
+	border-left: 1px solid var(--color-wd-accent);
+	border-radius: 0 !important;
+	counter-increment: none !important;
+	display: block !important;
+	gap: 0 !important;
+	font-size: .8rem;
+}
+
+.d2lInstructions li::before {
+  content: "STEP " counter(step-counter);
+  position: absolute;
+  top: 40px;
+  left: 0;
+  font-weight: 800;
+	letter-spacing: 0.1rem;
+  color: var(--color-wd-accent);
+  padding-left: 40px;
+	border-radius: 5px;
+  display: inline-block;
+}
+
+.d2lInstructions > li > div > ul > li::before, .d2lInstructions > li > div > ol > li::before {
+	display: none !important;
 }
 
 .d2lInstructions img {
-	max-width: 80%;
+	max-width: 95%;
+	max-height: auto;
+	object-fit: cover;
+	border-radius: 15px;
+	text-align: right;
+	align-items: end;
+	margin-top: -30px;
 }
 
 .d2lInstructions ul li {
@@ -17,4 +65,16 @@
 
 .d2lInstructions .codeBlock {
 	max-width: 80%;
+}
+
+@media screen and (max-width: 768px) {
+  .d2lInstructions li {
+    grid-template-columns: 1fr;
+    padding-right: 30px;
+		gap: 1.5rem;
+  }
+	.d2lInstructions img {
+		margin-top: 0;
+		max-width: 95%;
+	}
 }
