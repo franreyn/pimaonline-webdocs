@@ -35,7 +35,7 @@ body::before {
   position: fixed;
   width: 100%;
   z-index: 10;
-  background-color: rgba(30, 33, 47, .7);
+  background-color: var(--color-wd-primary);
 }
 
 .wd-navbar {
