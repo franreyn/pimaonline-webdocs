@@ -1460,3 +1460,202 @@ cause all other hidden content areas with that data-key to also be shown.
 .flip-card:hover > div .back .overlay {
   opacity: 1; /* Show the overlay on hover */
 }
+
+/* Button animations */
+.btn.change-bg-color {
+  background-color: var(--color-pcc-primary);
+  transition: all 0.5s ease-in-out;
+}
+
+.btn.change-bg-color:hover {
+  background-color: var(--color-pcc-primary-hover);
+  border-color: var(--color-pcc-primary-hover);
+}
+
+.btn.slide-bg-color {
+  position: relative;
+  background-color: var(--color-pcc-primary);
+  color: var(--color-pcc-white);
+  overflow: hidden;
+  z-index: 1;
+  border: none;
+}
+
+.btn.slide-bg-color::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-pcc-primary-hover);
+  z-index: -1;
+  transition: left 0.5s ease-out;
+}
+
+.btn.slide-bg-color:hover {
+  background-color: var(--color-pcc-primary);
+}
+
+.btn.slide-bg-color:hover::before {
+  left: 0;
+}
+
+.btn.pulse-hover {
+  transition: transform 0.3s ease;
+  background-color: var(--color-pcc-primary);
+}
+
+.btn.pulse-hover:hover {
+  transform: scale(1.05);
+  background-color: var(--color-pcc-primary-hover);
+}
+
+.btn.click-shadow {
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+  background-color: var(--color-pcc-primary);
+}
+
+.btn.click-shadow:active {
+  box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.2);
+  transform: translateY(2px);
+  background-color: var(--color-pcc-primary-hover);
+}
+
+.btn.hover-glow {
+  transition: box-shadow 0.3s ease;
+  background-color: var(--color-pcc-primary);
+}
+
+.btn.hover-glow:hover {
+  box-shadow: 0 0 15px rgba(255, 255, 255, .1);
+  background-color: var(--color-pcc-primary-hover);
+}
+
+.btn.rounded-bg-slide {
+  border-radius: 10rem;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  border: none;
+  background-color: var(--color-pcc-primary);
+}
+
+.btn.rounded-bg-slide::before {
+  content: "";
+  background-color: var(--color-pcc-primary-hover);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  transition: all 0.3s;
+  border-radius: 10rem;
+  z-index: -1;
+}
+
+.btn.rounded-bg-slide:hover::before {
+  width: 100%;
+}
+
+.btn.parallel-outlines {
+  transition: all 0.3s;
+  position: relative;
+  border: transparent;
+  border-radius: 0;
+  background-color: var(--color-pcc-primary);
+}
+
+.btn.parallel-outlines:hover {
+  background: transparent;
+  color: var(--color-dark-primary);
+}
+
+.btn.parallel-outlines:hover::before {
+  opacity: 1;
+  transform: scale(1, 1);
+}
+
+.btn.parallel-outlines:hover::after {
+  opacity: 0;
+  transform: scale(0.1, 1);
+}
+
+.btn.parallel-outlines::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.3s;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-top-color: var(--color-pcc-primary);
+  border-bottom-color: var(--color-pcc-primary);
+  transform: scale(0.1, 1);
+}
+
+.btn.parallel-outlines::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: all 0.3s;
+}
+
+.btn.outline {
+  transition: all 0.5s;
+  position: relative;
+  background-color: var(--color-pcc-primary);
+  border: none;
+  border-radius: 0;
+}
+
+.btn.outline:hover {
+  background-color: transparent;
+  color: var(--color-pcc-primary);
+}
+
+.btn.outline:hover::before {
+  opacity: 0;
+  transform: scale(0.5, 0.5);
+}
+
+.btn.outline:hover::after {
+  opacity: 1;
+  transform: scale(1, 1);
+}
+
+.btn.outline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: all 0.3s;
+}
+
+.btn.outline::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.3s;
+  border: 1px solid var(--color-pcc-primary);
+  transform: scale(1.2, 1.2);
+}

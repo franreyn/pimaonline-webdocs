@@ -9,7 +9,7 @@ export default function PluginsSidebar() {
   const router = useRouter();
 
   const sections = useRef([
-    "toc-dark-mode", "toc-focus-text", "toc-large-text", "toc-narrow-width", "toc-custom-combos", "toc-view-options"
+    "toc-animation-library", "toc-custom-combos", "toc-dark-mode", "toc-focus-text", "toc-large-text", "toc-narrow-width", "toc-view-options", "toc-fade-in-animation", "toc-slide-in-animations", "toc-button-animations"
   ]);
 
   useEffect(() => {
@@ -56,7 +56,21 @@ export default function PluginsSidebar() {
         <span></span>
       </button>
       <ul className={`wd-sidebar ${tocOpen ? "show-toc" : "hide-toc"}`}>
-        <li className={router.pathname === "/plugins" ? "active-page" : ""}><Link href="/plugins">View Options</Link>
+        <li className={activeId === "toc-animation-library" ? "is-current" : ""}>
+          <Link href="/plugins/#animation-library" className="toc-animation-library">Animation Library</Link>
+          <ul>
+            <li className={activeId === "toc-fade-in-animation" ? "is-current" : ""}>
+              <Link href="/plugins/#fade-in-animation" className="toc-fade-in-animation">Fade-in Content</Link>
+            </li>
+            <li className={activeId === "toc-slide-in-animations" ? "is-current" : ""}>
+              <Link href="/plugins/#slide-in-animations" className="toc-slide-in-animations">Slide-in Content</Link>
+            </li>
+            <li className={activeId === "toc-button-animations" ? "is-current" : ""}>
+              <Link href="/plugins/#button-animations" className="toc-button-animations">Button Animations</Link>
+            </li>
+          </ul>
+        </li>
+        <li className={activeId === "toc-view-options-main" ? "is-current" : ""}><Link href="/plugins/#view-options-main" className="toc-view-options-main">View Options</Link>
           <ul>
             <li className={activeId === "toc-dark-mode" ? "is-current" : ""}>
               <Link href="/plugins/#dark-mode" className="toc-dark-mode">Dark Mode</Link>
