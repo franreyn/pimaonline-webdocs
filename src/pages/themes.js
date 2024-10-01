@@ -7,6 +7,7 @@ import { useState } from "react";
 import Head from "next/head"
 import GallerySidebar from "@/components/GallerySidebar";
 import Footer from "@/components/Footer";
+import BackToTop from "@/components/BackToTop";
 
 export default function Themes({ onThemeSelect }) {
 
@@ -59,7 +60,8 @@ export default function Themes({ onThemeSelect }) {
            </div>
       </main>
       </div>
-      <footer>x
+      <BackToTop />
+      <footer>
         <Footer />
       </footer>
     </>
