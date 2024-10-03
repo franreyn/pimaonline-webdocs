@@ -283,10 +283,19 @@ h4.layout-type {
   cursor: pointer;
 }
 
+.to-top-btn:hover {
+  background: var(--color-wd-accent);
+  color: var(--color-wd-primary);
+}
+
 .to-top-icon {
   margin-right: 10px;
   margin-top: -5px;
   margin-bottom: -5px;
+}
+
+.to-top-btn:hover .to-top-icon {
+  filter: brightness(0) saturate(100%) invert(100%);
 }
 
 @media screen and (max-width: 767px) {
