@@ -8,6 +8,7 @@ import { useEffect, useRef, useState, useLayoutEffect } from "react";
 import styles from "../styles/layouts.module.css"
 import Footer from "../components/Footer"
 import DocsIntro from "@/components/DocsIntro";
+import BackToTop from "@/components/BackToTop";
 
 export default function Layouts() {
   
@@ -262,6 +263,7 @@ export default function Layouts() {
           <Sidebar />
       </aside>
       </div>
+      <BackToTop/>
       <footer>
           <Footer />
         </footer>

@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import HelpSidebar from "@/components/HelpSidebar";
 import { useLayoutEffect, useRef, useState } from "react";
 import "highlight.js/styles/night-owl.css";
+import BackToTop from "@/components/BackToTop";
 
 export default function AddingContentBody() {
 
@@ -110,6 +111,7 @@ export default function AddingContentBody() {
             <HelpSidebar />
           </aside>
         </div>
+				<BackToTop/>
         <footer>
           <Footer />
         </footer>

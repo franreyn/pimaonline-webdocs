@@ -7,6 +7,7 @@ import Head from "next/head"
 import GallerySidebar from "@/components/GallerySidebar";
 import Footer from "@/components/Footer";
 import LayoutCarousel from "@/components/LayoutCarousel";
+import BackToTop from "@/components/BackToTop";
 
 export default function Theme() {
 
@@ -40,6 +41,7 @@ export default function Theme() {
       </main>
       </div>
       </div>
+      <BackToTop />
       <footer>
         <Footer />
       </footer>

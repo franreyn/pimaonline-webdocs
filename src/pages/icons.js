@@ -9,6 +9,7 @@ import FontAwesome from "@/components/icons/FontAwesome";
 import BootstrapIcons from "@/components/icons/BootstrapIcons";
 import RemixIcons from "@/components/icons/RemixIcons";
 import UtilitiesSidebar from "@/components/UtilitiesSidebar";
+import BackToTop from "@/components/BackToTop";
 
 export default function Icons() {
 
@@ -85,6 +86,7 @@ export default function Icons() {
           <UtilitiesSidebar />
         </aside>
         </div>
+        <BackToTop />
         <footer>
           <Footer />
         </footer>
