@@ -2,6 +2,10 @@ import React, { useState, useEffect } from "react";
 import styles from "../styles/version.module.css";
 
 export default function Version() {
+
+  // Use two digits only
+  const currentVersion = "5.0"
+
   const [isHidden, setIsHidden] = useState(false);
 
   useEffect(() => {
@@ -16,7 +20,7 @@ export default function Version() {
 
   return (
     <div className={`${styles['wd-version']} ${isHidden ? styles['wd-version-hidden'] : ''}`}>
-      <p className="pub-version">LATEST VERSION PUBLISHED v5.0</p>
+      <p className="pub-version">LATEST VERSION PUBLISHED v{currentVersion}</p>
     </div>
   )
 }
