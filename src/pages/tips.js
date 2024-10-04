@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import { useLayoutEffect } from "react";
 import DocsIntro from "@/components/DocsIntro";
 import Link from "next/link";
+import BackToTop from "@/components/BackToTop";
 
 export default function Tips() {
 
@@ -129,6 +130,7 @@ export default function Tips() {
           <Sidebar />
         </aside>
         </div>
+        <BackToTop />
         <footer>
           <Footer />
         </footer>

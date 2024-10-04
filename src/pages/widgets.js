@@ -23,6 +23,7 @@ import WidgetSidebar from "@/components/WidgetSidebar";
 import hljs from "highlight.js/lib/core";
 import "highlight.js/styles/night-owl.css";
 import html from "highlight.js/lib/languages/xml";
+import BackToTop from "@/components/BackToTop";
 
 export default function Widgets() {
 
@@ -82,6 +83,7 @@ export default function Widgets() {
           <WidgetSidebar />
         </aside>
         </div>
+        <BackToTop/>
         <footer>
           <Footer />
         </footer>

@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useLayoutEffect } from "react";
 import TemplateSidebar from "@/components/TemplateSidebar";
+import BackToTop from "@/components/BackToTop";
 
 export default function Templates() {
 
@@ -149,6 +150,7 @@ export default function Templates() {
             <TemplateSidebar />
           </aside>
         </div>
+        <BackToTop />
         <footer>
           <Footer />
         </footer>

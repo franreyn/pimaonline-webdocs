@@ -62,7 +62,7 @@ export default function HelpSidebar() {
               <Link href="/help/AddingTemplates" className="toc-caption">Adding a Template</Link>
             </li>
 						<li className={activeId === "toc-adding-youtube" ? "is-current" : ""}>
-              <Link href="/help/AddingYouTube" className="toc-caption">Addin a YouTube Video</Link>
+              <Link href="/help/AddingYouTube" className="toc-caption">Adding a YouTube Video</Link>
             </li>
             <li className={activeId === "toc-adding-panopto" ? "is-current" : ""}>
               <Link href="/help/AddingPanopto" className="toc-caption">Adding a Panopto Video</Link>

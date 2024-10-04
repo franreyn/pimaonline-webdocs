@@ -8,6 +8,7 @@ import "highlight.js/styles/night-owl.css";
 import html from "highlight.js/lib/languages/xml";
 import Image from "next/image";
 import TemplateSidebar from "@/components/TemplateSidebar";
+import BackToTop from "@/components/BackToTop";
 
 export default function OneColumn6() {
   const codeRef = useRef(null);
@@ -270,6 +271,7 @@ export default function OneColumn6() {
             <TemplateSidebar />
           </aside>
       </div>
+      <BackToTop/>
       <footer>
           <Footer />
         </footer>
