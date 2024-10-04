@@ -35,7 +35,12 @@ p {
 }
 
 p.pub-version {
-  color: var(--color-wd-accent);
+  font-family: "JetBrains", monospace;
+  color: var(--color-wd-grey);
+  font-weight: 400;
+  font-size: .75rem;
+  letter-spacing: 0;
+  margin-right: 10px;
 }
 
 ul > li, ol > li {
