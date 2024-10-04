@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
 import styles from "../styles/version.module.css";
+import Image from "next/image";
 
 export default function Version() {
 
   // Use two digits only
-  const currentVersion = "5.0"
+  const currentVersion = "5.0.29"
 
   const [isHidden, setIsHidden] = useState(false);
 
@@ -20,7 +21,9 @@ export default function Version() {
 
   return (
     <div className={`${styles['wd-version']} ${isHidden ? styles['wd-version-hidden'] : ''}`}>
-      <p className="pub-version">LATEST VERSION PUBLISHED v{currentVersion}</p>
+      <p className="pub-version">Latest v{currentVersion}</p>
+      <a href="https://github.com/franreyn/pimaonline-webdocs" target="_blank" rel="noopener noreferrer">
+      <Image src="/images/github-icon.svg" alt="GitHub logo" width={20} height={20}/></a>
     </div>
   )
 }
