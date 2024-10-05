@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
+
+.wd-version {
+  width: 100vw;
+  background: var(--color-wd-bg-alt);
+  opacity: 95%;
+  vertical-align: middle;
+  max-height: fit-content;
+  padding: 5px 10%;
+  text-align: right;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.wd-version-hidden {
+  opacity: 0;
+  transition: opacity .5s ease-out;
+  visibility: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+@media (max-width:1024px) {
+  .wd-version {
+    padding: 5px 2%;
+  }
+}
+
+@media (max-width:850px) {
+  .wd-version {
+    padding: 5px;
+  }
+}

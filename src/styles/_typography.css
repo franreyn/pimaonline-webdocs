@@ -34,6 +34,15 @@ p {
   line-height: 1.5rem;
 }
 
+p.pub-version {
+  font-family: "JetBrains", monospace;
+  color: var(--color-wd-grey);
+  font-weight: 400;
+  font-size: .75rem;
+  letter-spacing: 0;
+  margin-right: 10px;
+}
+
 ul > li, ol > li {
   font-family: "Inter", sans-serif;
   color: var(--color-wd-secondary);
