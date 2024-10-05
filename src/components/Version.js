@@ -22,7 +22,7 @@ export default function Version() {
   return (
     <div className={`${styles['wd-version']} ${isHidden ? styles['wd-version-hidden'] : ''}`}>
       <p className="pub-version">Latest v{currentVersion}</p>
-      <a href="https://github.com/franreyn/pimaonline-webdocs" target="_blank" rel="noopener noreferrer">
+      <a href="https://github.com/franreyn/pimaonline-themepack" target="_blank" rel="noopener noreferrer">
       <Image src="/images/github-icon.svg" alt="GitHub logo" width={20} height={20}/></a>
     </div>
   )
