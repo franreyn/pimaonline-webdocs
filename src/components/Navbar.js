@@ -3,11 +3,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import Announcement from "./Announcement";
+import Version from "./Version";
 
 const Navbar = () => {
-
-  // Use two digits only
-  const currentVersion = "5.0"
 
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -19,6 +17,7 @@ const Navbar = () => {
 
   return (
     <>
+    <Version/>
       <nav className="wd-navbar">
         {/* logo */}
         <Link href="/">
@@ -62,7 +61,6 @@ const Navbar = () => {
 						<li className={router.pathname === "/help" ? "active-nav" : ""}>
               <Link href="/help">D2L Help</Link>
             </li>
-						<li className="version-number">v{currentVersion}</li>
           </ul>
         </div>
       </nav>

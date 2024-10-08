@@ -7,6 +7,7 @@ import QuickStart from "@/components/getting-started/QuickStart";
 import ManualSetup from "@/components/getting-started/ManualSetup";
 import Community from "@/components/getting-started/Community";
 import DocsIntro from "@/components/DocsIntro";
+import BackToTop from "@/components/BackToTop";
 
 export default function GettingStarted() {
 
@@ -41,6 +42,7 @@ export default function GettingStarted() {
           <Sidebar />
         </aside>
         </div>
+        <BackToTop/>
         <footer>
           <Footer />
         </footer>

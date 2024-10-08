@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import Link from "next/link";
 import { useLayoutEffect } from "react";
 import HelpSidebar from "@/components/HelpSidebar";
+import BackToTop from "@/components/BackToTop";
 
 export default function Help() {
 
@@ -61,6 +62,7 @@ export default function Help() {
             <HelpSidebar />
           </aside>
         </div>
+        <BackToTop/>
         <footer>
           <Footer />
         </footer>

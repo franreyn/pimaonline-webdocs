@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { useLayoutEffect } from "react";
 import HelpSidebar from "@/components/HelpSidebar";
+import BackToTop from "@/components/BackToTop";
 
 export default function AddingTemplates() {
 
@@ -68,6 +69,7 @@ export default function AddingTemplates() {
             <HelpSidebar />
           </aside>
         </div>
+				<BackToTop/>
         <footer>
           <Footer />
         </footer>

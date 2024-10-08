@@ -15,6 +15,7 @@ import FadeInAnimation from "@/components/plugins/FadeInAnimation";
 import SlideInAnimations from "@/components/plugins/SlideInAnimations";
 import ButtonsAnimations from "@/components/plugins/ButtonAnimations";
 import PluginsSidebar from "@/components/PluginsSidebar";
+import BackToTop from "@/components/BackToTop";
 
 export default function Plugins() {
 
@@ -111,6 +112,7 @@ export default function Plugins() {
           <PluginsSidebar />
         </aside>
         </div>
+        <BackToTop />
         <footer>
           <Footer />
         </footer>

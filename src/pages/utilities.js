@@ -13,6 +13,7 @@ import "highlight.js/styles/night-owl.css";
 import html from "highlight.js/lib/languages/xml";
 import { useEffect, useRef, useState, useLayoutEffect } from "react";
 import UtilitiesSidebar from "@/components/UtilitiesSidebar";
+import BackToTop from "@/components/BackToTop";
 
 export default function Utilities() {
 
@@ -101,6 +102,7 @@ export default function Utilities() {
           <UtilitiesSidebar />
         </aside>
         </div>
+        <BackToTop/>
         <footer>
           <Footer />
         </footer>

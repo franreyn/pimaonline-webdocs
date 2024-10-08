@@ -270,6 +270,47 @@ h4.layout-type {
   }
 }
 
+.to-top-btn {
+  position: fixed;
+  right: 5%;
+  bottom: 3%;
+  background: var(--color-wd-bg-alt);
+  border-radius: 20px;
+  padding: 10px 20px;
+  color: white;
+  font-size: .9rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.to-top-btn:hover {
+  background: var(--color-wd-accent);
+  color: var(--color-wd-primary);
+}
+
+.to-top-icon {
+  margin-right: 10px;
+  margin-top: -5px;
+  margin-bottom: -5px;
+}
+
+.to-top-btn:hover .to-top-icon {
+  filter: brightness(0) saturate(100%) invert(100%);
+}
+
+@media screen and (max-width: 767px) {
+  .to-top-text {
+    display: none;
+  }
+  .to-top-btn {
+    padding: 10px;
+    border-radius: 50px;
+  }
+  .to-top-icon {
+    margin: 2px 5px;
+  }
+}
+
 .badge {
   background: rgb(250, 86, 86);
   border-radius: 25px;
@@ -956,7 +997,8 @@ footer .wd-logo-wrapper .logo {
 }
 
 .template-preview > img {
-  width: 1500px;
+  max-width: 1500px;
+  width: 100%;
   height: fit-content;
   border-radius: 15px;
 }

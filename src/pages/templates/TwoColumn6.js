@@ -235,6 +235,7 @@ const [templateImage, setTemplateImage] = useState("/images/templates/twocolumn6
             <TemplateSidebar />
           </aside>
       </div>
+      <BackToTop/>
       <footer>
           <Footer />
         </footer>
