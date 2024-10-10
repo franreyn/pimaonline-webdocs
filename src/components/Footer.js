@@ -16,7 +16,7 @@ export default function Footer() {
               <li><Link href="getting-started">Getting Started</Link></li>
               <li><Link href="layouts">Layouts</Link></li>
               <li><Link href="templates">Templates</Link></li>
-              <li><Link href="https://pimaonline-course-builder.netlify.app/">Course Builder</Link></li>
+              <li><Link href="https://pimaonline-course-builder.netlify.app/" className="ext" target="_blank">Course Builder</Link></li>
             </ul>
           </li>
         </ul>
