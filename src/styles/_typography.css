@@ -28,6 +28,10 @@ h2 {
   font-size: 2rem;
 }
 
+h4.accent {
+  color: var(--color-wd-accent);
+}
+
 p {
   font-family: "Inter", sans-serif;
   color: var(--color-wd-secondary);

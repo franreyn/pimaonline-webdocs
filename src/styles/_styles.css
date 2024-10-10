@@ -839,6 +839,16 @@ footer .wd-logo-wrapper .logo {
   margin: 0 !important;
 }
 
+.ext::after {
+  font-family: "FontAwesome";
+  content: "" !important;
+  font-size: .75em;
+  margin-left: .35em;
+  opacity: .9;
+  text-decoration: none;
+  display: inline-block;
+}
+
 .wd-logo-wrapper {
   padding: 0;
   max-width: var(--breakpoint-xl);
