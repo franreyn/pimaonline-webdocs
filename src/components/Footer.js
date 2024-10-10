@@ -42,10 +42,10 @@ export default function Footer() {
         <ul>
           <li><h4 className="accent">Quick Links</h4>
               <ul className="sub-items">
-                <li><Link href="https://github.com/">GitHub</Link></li>
-                <li><Link href="https://d2l.pima.edu/">D2L</Link></li>
-                <li><Link href="https://fontawesome.com/icons">FontAwesome</Link></li>
-                <li><Link href="https://www.gettyimages.com/">Getty Images</Link></li>
+                <li><Link href="https://github.com/" className="ext" target="_blank" rel="noopener">GitHub</Link></li>
+                <li><Link href="https://d2l.pima.edu/" className="ext" target="_blank" rel="noopener">D2L</Link></li>
+                <li><Link href="https://fontawesome.com/icons" className="ext" target="_blank" rel="noopener">FontAwesome</Link></li>
+                <li><Link href="https://www.gettyimages.com/" className="ext" target="_blank" rel="noopener">Getty Images</Link></li>
               </ul>
           </li>
         </ul>
