@@ -46,7 +46,7 @@ export default function Accordion() {
     <section className="wd-content" id="toc-accordion">
       <h2 id="accordion" className="section-top anchor">Accordion</h2>
       <p>Use the <strong>Accordion</strong> to display content in collapsible compartments.</p>
-      <p>Use <span className="wd-monospace">&lt;div class="accordion"&gt;&lt;/div&gt;</span> to wrap your content.</p>
+      <p>Wrap your full accordion with <span className="wd-monospace">&lt;div class="accordion"&gt;&lt;/div&gt;</span>.<br/> Then, wrap each tab (and its collapsible content) with <span className="wd-monospace">&lt;div class="accordion-item"&gt;&lt;/div&gt;</span>.</p>
       <div className="wd-window">
         <div className="wd-visual-ex">
           <div className="accordion">
@@ -65,17 +65,13 @@ export default function Accordion() {
           <pre>
             <code className="language-html" ref={codeRef}>
             {String.raw`<div class="accordion">
-   <div class="accordion-item">
-      <h3 class="accordion-title arrow-down toggle-btn">Read</h3>
-      <div class="accordion-content toggle-btn-content">
-         <p>Making News, March/April 2018. By Deb Venasse...</p>
-      </div>
+    <div class="accordion-item">
+      <h3>Read</h3>
+      <p>Making News, March/April 2018. By Deb Venasse, Reporter, IBPA Independent magazine</p>
    </div>
    <div class="accordion-item">
-      <h3 class="accordion-title arrow-down toggle-btn">Discuss</h3>
-      <div class="accordion-content toggle-btn-content">
-         <p>Adweek is a well-known organization that...</p>
-      </div>
+      <h3>Discuss</h3>
+      <p>Adweek is a well-known organization that...</p>
    </div>
 </div>`}</code>
           </pre>
