@@ -2,115 +2,118 @@
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
 
 body {
-  font-family: "Inter", sans-serif;
-  font-size: 1rem;
-  color: var(--color-wd-secondary);
+	font-family: "Inter", sans-serif;
+	font-size: 1rem;
+	color: var(--color-wd-secondary);
 }
 
-h1, h2, h3, h4 {
-  font-family: "Inter", sans-serif;
-  color: var(--color-wd-secondary);
-  margin-bottom: 1rem;
-  font-weight: 800;
+h1,
+h2,
+h3,
+h4 {
+	font-family: "Inter", sans-serif;
+	color: var(--color-wd-secondary);
+	margin-bottom: 1rem;
+	font-weight: 800;
 }
 
 h1 {
-  font-size: 3rem;
+	font-size: 3rem;
 }
 
 h1 ~ p {
-  font-size: 1.1rem;
-  line-height: 2rem;
-  margin-bottom: 3%;
+	font-size: 1.1rem;
+	line-height: 2rem;
+	margin-bottom: 3%;
 }
 
 h2 {
-  font-size: 2rem;
+	font-size: 2rem;
 }
 
-h4.accent {
-  color: var(--color-wd-accent);
+.accent {
+	color: var(--color-wd-accent);
 }
 
 p {
-  font-family: "Inter", sans-serif;
-  color: var(--color-wd-secondary);
-  line-height: 1.5rem;
+	font-family: "Inter", sans-serif;
+	color: var(--color-wd-secondary);
+	line-height: 1.5rem;
 }
 
 p.pub-version {
-  font-family: "JetBrains", monospace;
-  color: var(--color-wd-grey);
-  font-weight: 400;
-  font-size: .75rem;
-  letter-spacing: 0;
-  margin-right: 10px;
+	font-family: "JetBrains", monospace;
+	color: var(--color-wd-grey);
+	font-weight: 400;
+	font-size: 0.75rem;
+	letter-spacing: 0;
+	margin-right: 10px;
 }
 
-ul > li, ol > li {
-  font-family: "Inter", sans-serif;
-  color: var(--color-wd-secondary);
-  line-height: 1.5rem;
-  font-size: 0.9rem;
+ul > li,
+ol > li {
+	font-family: "Inter", sans-serif;
+	color: var(--color-wd-secondary);
+	line-height: 1.5rem;
+	font-size: 0.9rem;
 }
 
 code {
-  font-size: 0.7rem;
-  line-height: 1.45;
+	font-size: 0.7rem;
+	line-height: 1.45;
 }
 
 .nav-links {
-  font-family: "Inter", sans-serif;
-
+	font-family: "Inter", sans-serif;
 }
 
 .nav-links li {
-  margin: .75rem 0;
+	margin: 0.75rem 0;
 }
 
 .nav-links li a {
-  font-weight: 400 !important;
+	font-weight: 400 !important;
 }
 
 h5 {
-  color: var(--color-wd-accent);
-  font-size: 0.8rem;
-  margin-bottom: 10px;
+	color: var(--color-wd-accent);
+	font-size: 0.8rem;
+	margin-bottom: 10px;
 }
 
 .wd-footer > ul > li:first-child {
-  font-family: 'Inter', sans-serif;
-  font-weight: 700;
+	font-family: "Inter", sans-serif;
+	font-weight: 700;
 }
 
 .sub-items {
-  font-family: "Inter", sans-serif;
-  font-weight: 400;
+	font-family: "Inter", sans-serif;
+	font-weight: 400;
 }
 
 .sub-items li a {
-  font-weight: 400 !important;
+	font-weight: 400 !important;
 }
 
 .with-marker li {
-  list-style-type: decimal !important;
-  padding-left: 5px;
+	list-style-type: decimal !important;
+	padding-left: 5px;
 }
 
 .with-marker ul li {
-  list-style-type: disc !important;
+	list-style-type: disc !important;
 }
 
 @media screen and (min-width: 768px) {
-  .wd-hero h1 {
-    font-size: 2.75rem;
-  }
+	.wd-hero h1 {
+		font-size: 2.75rem;
+	}
 
-  .wd-hero p {
-    font-size: 1.25rem;
-  }
+	.wd-hero p {
+		font-size: 1.25rem;
+	}
 
-  .wd-content-body h2 {
-    font-size: 1.75rem;
-  }
+	.wd-content-body h2 {
+		font-size: 1.75rem;
+	}
 }
