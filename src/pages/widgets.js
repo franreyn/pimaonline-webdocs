@@ -18,75 +18,80 @@ import Tabs from "@/components/widgets/Tabs";
 import VideoWidget from "@/components/widgets/VideoWidget";
 import VocabCards from "@/components/widgets/VocabCards";
 import VocabList from "@/components/widgets/VocabList";
-import { useEffect,useLayoutEffect } from "react";
+import { useEffect, useLayoutEffect } from "react";
 import WidgetSidebar from "@/components/WidgetSidebar";
 import hljs from "highlight.js/lib/core";
 import "highlight.js/styles/night-owl.css";
 import html from "highlight.js/lib/languages/xml";
 import BackToTop from "@/components/BackToTop";
+import Columns from "@/components/widgets/Columns";
 
 export default function Widgets() {
-
-  // Remove any existing theme link (required to keep theme styles just on the theme page)
-  useLayoutEffect(() => {
-    const existingLink = document.querySelector("link[data-theme-link]");
-    if (existingLink) {
-      document.head.removeChild(existingLink);
-    }
-  }, []);
+	// Remove any existing theme link (required to keep theme styles just on the theme page)
+	useLayoutEffect(() => {
+		const existingLink = document.querySelector("link[data-theme-link]");
+		if (existingLink) {
+			document.head.removeChild(existingLink);
+		}
+	}, []);
 
 	hljs.registerLanguage("html", html);
-  useEffect(() => {
-		  // Iterate over each code block and check if it's already highlighted
-			document.querySelectorAll('pre code').forEach((block) => {
-				if (!block.dataset.highlighted) {
-					// If not highlighted, highlight it and set the dataset attribute
-					hljs.highlightElement(block);
-					block.dataset.highlighted = true;  // Mark the element as highlighted
-				}
-			});
-  }, []);
+	useEffect(() => {
+		// Iterate over each code block and check if it's already highlighted
+		document.querySelectorAll("pre code").forEach((block) => {
+			if (!block.dataset.highlighted) {
+				// If not highlighted, highlight it and set the dataset attribute
+				hljs.highlightElement(block);
+				block.dataset.highlighted = true; // Mark the element as highlighted
+			}
+		});
+	}, []);
 
-  return (
-    <>
-      <Head>
-        <title>Widgets</title>
-      </Head>
-      <header className="wd-header">
-        <Navbar />
-      </header>
-      <div className="wd-intro">
-      <h1>Widgets</h1>
-          <p>Widgets are individual components that you can mix-and-match to form your web page. With these, there’s plenty of opportunity for customization.</p>
-      </div>
-      <div className="wd-grid">
-        <main>
-          <Accordion />
-          <Assignments />
-          <Blockquote />
-          <Border />
-          <CallOut />
-          <CardHorizontal />
-          <FlipCard />
-          <HorizontalDisplay />
-          <ImageGallery />
-          <LockedContent />
-          <MediaContainer />
-          <SideBySide />
-          <Tables />
-          <Tabs />
-          <VideoWidget />
-          <VocabCards />
-          <VocabList />
-        </main>
-        <aside>
-          <WidgetSidebar />
-        </aside>
-        </div>
-        <BackToTop/>
-        <footer>
-          <Footer />
-        </footer>
-    </>
-  )
+	return (
+		<>
+			<Head>
+				<title>Widgets</title>
+			</Head>
+			<header className="wd-header">
+				<Navbar />
+			</header>
+			<div className="wd-intro">
+				<h1>Widgets</h1>
+				<p>
+					Widgets are individual components that you can mix-and-match to form
+					your web page. With these, there’s plenty of opportunity for
+					customization.
+				</p>
+			</div>
+			<div className="wd-grid">
+				<main>
+					<Accordion />
+					<Assignments />
+					<Blockquote />
+					<Border />
+					<CallOut />
+					<CardHorizontal />
+					<Columns />
+					<FlipCard />
+					<HorizontalDisplay />
+					<ImageGallery />
+					<LockedContent />
+					<MediaContainer />
+					<SideBySide />
+					<Tables />
+					<Tabs />
+					<VideoWidget />
+					<VocabCards />
+					<VocabList />
+				</main>
+				<aside>
+					<WidgetSidebar />
+				</aside>
+			</div>
+			<BackToTop />
+			<footer>
+				<Footer />
+			</footer>
+		</>
+	);
 }
