@@ -33,15 +33,14 @@ export default function Columns() {
 			</p>
 			<p>
 				Use <span className="wd-monospace">.columns</span> as the parent
-				element, and nest <span className="wd-monospace">.col-1</span>,{" "}
-				<span className="wd-monospace">.col-2</span>,{" "}
-				<span className="wd-monospace">.col-3</span>, etc. within the parent{" "}
-				<span className="wd-monospace">div</span>.
+				element. Each nested block element will format as a column – wrap
+				multiple elements within a <span className="wd-monospace">div</span> to
+				keep them in the same column.
 			</p>
 			<div className="wd-window">
 				<div className="wd-visual-ex">
 					<div className="columns">
-						<div className="col-1">
+						<div>
 							<h3>About Epistemology</h3>
 							<p>
 								Epistemology examines the nature and limits of knowledge,
@@ -51,19 +50,16 @@ export default function Columns() {
 								opinion and fact.{" "}
 							</p>
 						</div>
-						<div className="col-2">
+						<div>
 							<img src="https://unsplash.it/300/300" alt="" />
 						</div>
-						<div className="col-3">
-							<p>
-								In cognitive science, researchers study the mechanisms behind
-								thought and perception, integrating psychology, neuroscience,
-								and computer science. This interdisciplinary work has fueled
-								advances in artificial intelligence and deepened our
-								understanding of mental processes and human-computer
-								interactions.
-							</p>
-						</div>
+						<p>
+							In cognitive science, researchers study the mechanisms behind
+							thought and perception, integrating psychology, neuroscience, and
+							computer science. This interdisciplinary work has fueled advances
+							in artificial intelligence and deepened our understanding of
+							mental processes and human-computer interactions.
+						</p>
 					</div>
 				</div>
 				<div className="wd-btn-container">
@@ -75,16 +71,14 @@ export default function Columns() {
 					<pre>
 						<code className="language-html" ref={codeRef}>
 							{String.raw`<div className="columns">
- <div className="col-1">
+ <div>
   <h3>About Epistemology</h3>
   <p>Epistemology examines the nature and limits of knowledge, questioning what it means to "know" and how knowledge differs from mere belief. Epistemologists seek to define truth and explore how people justify beliefs, bridging the gap between opinion and fact.</p>
  </div>
- <div className="col-2">
+ <div>
   <img src="https://unsplash.it/300/300" alt="" />
  </div>
- <div className="col-3">
-  <p>In cognitive science, researchers study the mechanisms behind thought and perception, integrating psychology, neuroscience, and computer science. This interdisciplinary work has fueled advances in artificial intelligence and deepened our understanding of mental processes and human-computer interactions.</p>
- </div>
+ <p>In cognitive science, researchers study the mechanisms behind thought and perception, integrating psychology, neuroscience, and computer science. This interdisciplinary work has fueled advances in artificial intelligence and deepened our understanding of mental processes and human-computer interactions.</p>
 </div>`}
 						</code>
 					</pre>
