@@ -2,10 +2,9 @@ import React, { useState, useEffect } from "react";
 import styles from "../styles/version.module.css";
 import Image from "next/image";
 
-export default function Version() {
+export const currentVersion = "5.0.29";
 
-  // Use two digits only
-  const currentVersion = "5.0.29"
+export default function Version() {
 
   const [isHidden, setIsHidden] = useState(false);
 

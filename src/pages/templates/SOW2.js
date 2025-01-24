@@ -9,6 +9,7 @@ import html from "highlight.js/lib/languages/xml";
 import Image from "next/image";
 import TemplateSidebar from "@/components/TemplateSidebar";
 import BackToTop from "@/components/BackToTop";
+import { currentVersion } from '../../components/Version';
 
 export default function SOW2() {
   const codeRef = useRef(null);
@@ -70,7 +71,43 @@ const [templateImage, setTemplateImage] = useState("/images/templates/sow2.jpg")
       else {setTemplateView()};
     };
 
-  return (
+ useEffect(() => {
+			const addMetaToCodeSnippets = () => {
+				const codeBlocks = document.querySelectorAll('.wd-html-code code.language-html');
+			
+				if (codeBlocks.length > 0) {
+					codeBlocks.forEach((codeBlock) => {
+						let codeContent = codeBlock.textContent;
+			
+						if (!codeContent.includes('<meta name="version"')) {
+							const metaRegex = /<meta[^>]*>/g;
+							const matches = [...codeContent.matchAll(metaRegex)];
+			
+							if (matches.length > 0) {
+								const lastMeta = matches[matches.length - 1];
+								const insertPosition = lastMeta.index + lastMeta[0].length;
+			
+								const versionMeta = `\n<meta name="version" content="v${currentVersion}">`;
+								codeContent =
+									codeContent.slice(0, insertPosition) +
+									versionMeta +
+									codeContent.slice(insertPosition);
+							} else {
+								codeContent = codeContent.replace(
+									'<head>',
+									`<head>\n<meta name="version" content="v${currentVersion}">`
+								);
+							}
+			
+							codeBlock.textContent = codeContent;
+						}
+					});
+				}
+			};
+			addMetaToCodeSnippets();
+		}, []);
+	
+		return (
     <>
       <Head>
         <title>Module-By-Module</title>
