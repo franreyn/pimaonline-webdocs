@@ -171,6 +171,11 @@ export default function WidgetSidebar() {
 								Side-by-side
 							</Link>
 						</li>
+						<li className={activeId === "toc-social-post" ? "is-current" : ""}>
+							<Link href="/widgets/#social-post" className="toc-social-post">
+								Social Post
+							</Link>
+						</li>
 						<li className={activeId === "toc-tables" ? "is-current" : ""}>
 							<Link href="/widgets/#tables" className="toc-tables">
 								Tables
