@@ -61,12 +61,12 @@ export default function Accordion() {
 						<div className="social-post-image">
 							<img src="https://placehold.co/650x350" alt="Post Content" />
 						</div>
-						<div className="social-post-body">Nullam lobortis quam id justo porta suscipit.</div>
-						<div className="social-post-likes"></div>
 						<div className="social-post-icons">
 							<span className="like-icon" onClick={toggleLike} role="button" tabIndex={0}></span>
 							<span className="comment-icon"></span>
 						</div>
+						<div className="social-post-likes"></div>
+						<div className="social-post-body">Nullam lobortis quam id justo porta suscipit.</div>
 					</div>
 				</div>
 
