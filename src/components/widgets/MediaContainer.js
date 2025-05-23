@@ -1,4 +1,8 @@
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
+import hljs from "highlight.js/lib/core";
+import html from "highlight.js/lib/languages/xml";
+
+hljs.registerLanguage("html", html);
 
 export default function MediaContainer() {
   const captionMediaWidgetRef = useRef(null);
@@ -6,6 +10,21 @@ export default function MediaContainer() {
 
 	const [captionMediaWidgetText, setCaptionMediaWidgetButtonText]  = useState("Copy code");
 	const [noCaptionMediaWidgetText, setNoCaptionMediaWidgetButtonText]  = useState("Copy code");
+
+	const [showCaptionCode, setShowCaptionCode] = useState(false);
+	const [showNoCaptionCode, setShowNoCaptionCode] = useState(false);
+
+	useEffect(() => {
+		if (showCaptionCode && captionMediaWidgetRef.current) {
+			hljs.highlightElement(captionMediaWidgetRef.current);
+		}
+	}, [showCaptionCode]);
+	
+	useEffect(() => {
+		if (showNoCaptionCode && noCaptionMediaWidgetRef.current) {
+			hljs.highlightElement(noCaptionMediaWidgetRef.current);
+		}
+	}, [showNoCaptionCode]);
 
   const handleCopyCode = (codeRef, setButtonText) => {
     const codeElement = codeRef.current;
@@ -57,8 +76,12 @@ export default function MediaContainer() {
           </div>
         </div>
         <div className="wd-btn-container">
-          <button className="wd-copy-btn" onClick={() => handleCopyCode(captionMediaWidgetRef, setCaptionMediaWidgetButtonText)}>{captionMediaWidgetText}</button>
-        </div>
+					<button className="wd-toggle-btn" onClick={() => setShowCaptionCode(!showCaptionCode)}>{showCaptionCode ? "Hide code" : "Show code"}</button>
+					{showCaptionCode && (	
+					<button className="wd-copy-btn" onClick={() => handleCopyCode(captionMediaWidgetRef, setCaptionMediaWidgetButtonText)}>{captionMediaWidgetText}</button>
+					)}
+				</div>
+				{showCaptionCode && (
         <div className="wd-html-code">
           <pre>
             <code className="language-html" ref={captionMediaWidgetRef}>
@@ -73,6 +96,7 @@ export default function MediaContainer() {
             </code>
           </pre>
         </div>
+				)}
       </div><br /><br />
       <h3>Without caption</h3>
       <p>
@@ -96,8 +120,12 @@ export default function MediaContainer() {
           </div>
         </div>
         <div className="wd-btn-container">
-          <button className="wd-copy-btn" onClick={() => handleCopyCode(noCaptionMediaWidgetRef, setNoCaptionMediaWidgetButtonText)}>{noCaptionMediaWidgetText}</button>
-        </div>
+					<button className="wd-toggle-btn" onClick={() => setShowNoCaptionCode(!showNoCaptionCode)}>{showNoCaptionCode ? "Hide code" : "Show code"}</button>
+					{showNoCaptionCode && (
+					<button className="wd-copy-btn" onClick={() => handleCopyCode(noCaptionMediaWidgetRef, setNoCaptionMediaWidgetButtonText)}>{noCaptionMediaWidgetText}</button>
+					)}
+				</div>
+				{showNoCaptionCode && (
         <div className="wd-html-code">
           <pre>
             <code className="language-html" ref={noCaptionMediaWidgetRef}>
@@ -109,6 +137,7 @@ export default function MediaContainer() {
             </code>
           </pre>
         </div>
+				)}
       </div>
     </section>
   );

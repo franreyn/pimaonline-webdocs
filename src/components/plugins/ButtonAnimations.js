@@ -3,11 +3,19 @@ import hljs from "highlight.js/lib/core";
 import "highlight.js/styles/night-owl.css";
 import html from "highlight.js/lib/languages/xml";
 
+hljs.registerLanguage("html", html);
+
 export default function ButtonsAnimations() {
   const codeRef = useRef(null);
   const [buttonText, setButtonText] = useState("Copy code");
+	const [showCode, setShowCode] = useState(false);
 
-  hljs.registerLanguage("html", html);
+	useEffect(() => {
+		if (showCode) {
+			hljs.highlightElement(codeRef.current); 
+		}
+	}, [showCode]);
+  
   useEffect(() => {
     hljs.highlightAll();
   }, []);
@@ -43,17 +51,13 @@ export default function ButtonsAnimations() {
           <li><span className="wd-monospace">parallel-outlines</span>: background color of a button turns transparent and outlines get added to the top and bottom</li>
           <li><span className="wd-monospace">outline</span>: background color turns transparent and outline is added</li>
         </ul>
-        <div className="wd-window">
-          <div className="wd-visual-ex">
-            <a class="btn change-bg-color" href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou=608068&amp;type=content&amp;rcode=PIMA-3596885" target="_blank">Change bg color</a>
-            <a class="btn slide-bg-color" href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou=608068&amp;type=content&amp;rcode=PIMA-3596885" target="_blank">Slide bg color</a>
-            <a class="btn pulse-hover" href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou=608068&amp;type=content&amp;rcode=PIMA-3596885" target="_blank">Pulse hover</a>
-            <a class="btn click-shadow" href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou=608068&amp;type=content&amp;rcode=PIMA-3596885" target="_blank">Click shadow</a>
-            <a class="btn hover-glow" href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou=608068&amp;type=content&amp;rcode=PIMA-3596885" target="_blank">Hover glow</a>
-            <a class="btn rounded-bg-slide" href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou=608068&amp;type=content&amp;rcode=PIMA-3596885" target="_blank">Rounded bg slide</a>
-            <a class="btn parallel-outlines" href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou=608068&amp;type=content&amp;rcode=PIMA-3596885" target="_blank">Parallel outlines</a>
-            <a class="btn outline" href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou=608068&amp;type=content&amp;rcode=PIMA-3596885" target="_blank">Outline</a>
-          </div>
+				<div className="wd-btn-container">
+						<button className="wd-toggle-btn"	onClick={() => setShowCode(!showCode)}>{showCode ? "Hide code" : "Show code"}</button>
+						{showCode && (
+						<button className="wd-copy-btn" onClick={handleCopyCode}>{buttonText}</button>
+						)}
+					</div>
+					{showCode && (
           <div className="wd-html-code">
             <pre>
               <code className="language-html" ref={codeRef}>
@@ -83,8 +87,18 @@ export default function ButtonsAnimations() {
               </code>
             </pre>
           </div>
-          <div className="wd-btn-container">
-            <button className="wd-copy-btn" onClick={handleCopyCode}>{buttonText}</button>
+					)}
+					<br/>
+        <div className="wd-window">
+          <div className="wd-visual-ex">
+            <a class="btn change-bg-color" href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou=608068&amp;type=content&amp;rcode=PIMA-3596885" target="_blank">Change bg color</a>
+            <a class="btn slide-bg-color" href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou=608068&amp;type=content&amp;rcode=PIMA-3596885" target="_blank">Slide bg color</a>
+            <a class="btn pulse-hover" href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou=608068&amp;type=content&amp;rcode=PIMA-3596885" target="_blank">Pulse hover</a>
+            <a class="btn click-shadow" href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou=608068&amp;type=content&amp;rcode=PIMA-3596885" target="_blank">Click shadow</a>
+            <a class="btn hover-glow" href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou=608068&amp;type=content&amp;rcode=PIMA-3596885" target="_blank">Hover glow</a>
+            <a class="btn rounded-bg-slide" href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou=608068&amp;type=content&amp;rcode=PIMA-3596885" target="_blank">Rounded bg slide</a>
+            <a class="btn parallel-outlines" href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou=608068&amp;type=content&amp;rcode=PIMA-3596885" target="_blank">Parallel outlines</a>
+            <a class="btn outline" href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou=608068&amp;type=content&amp;rcode=PIMA-3596885" target="_blank">Outline</a>
           </div>
         </div>
       </section>

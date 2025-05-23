@@ -10,9 +10,18 @@ import Image from "next/image";
 import TemplateSidebar from "@/components/TemplateSidebar";
 import BackToTop from "@/components/BackToTop";
 
+hljs.registerLanguage("html", html);
+
 export default function TwoColumn5() {
   const codeRef = useRef(null);
   const [buttonText, setButtonText] = useState("Copy code");
+	const [showCode, setShowCode] = useState(false);
+
+	useEffect(() => {
+		if (showCode) {
+			hljs.highlightElement(codeRef.current); 
+		}
+	}, [showCode]);
 
   hljs.registerLanguage("html", html);
   useEffect(() => {
@@ -107,36 +116,19 @@ const [templateImage, setTemplateImage] = useState("/images/templates/twocolumn5
         <main className="anchor" id="two-column-5">
           <h2>Course Clarity</h2>
           <p>Get down and detailed with this template: provide a welcome message, course overview, course structure, course learning objects, and set expectations for the major exams and assignments throughout the semester.</p>
-            <h3 className="spacer">Template Preview</h3>
-          <div className="template-preview">
-            <Image src={templateImage} alt="" width={800} height={1400} priority />
-            <div>
-              <h4>Featured Widgets</h4>
-              <div className="wd-border">
-              <h5>Table</h5>
-              <p>Display tasks, due dates, and more in an organized and clear manner.</p>
-              <br />
-              <button className="wd-btn thin" onClick={changeToTable}>Toggle in Preview</button>
-              </div>
-              <div className="wd-border">
-              <h5>Border</h5>
-              <p>Call out a main idea, draw attention to learning objectives or any other content that needs to stand out.</p>
-              <br />
-              <button className="wd-btn thin" onClick={changeToBorder}>Toggle in Preview</button>
-              </div>
-              <div className="wd-border">
-              <h5>Caption</h5>
-              <p>Style text as a caption: lighter, gray, and smaller.</p>
-              <br />
-              <button className="wd-btn thin" onClick={changeToCaption}>Toggle in Preview</button>
-              </div>
-            </div>
-          </div>
+          
           <br />
           <div className="wd-window">
           <div className="wd-btn-container">
-              <button className="wd-copy-btn" onClick={handleCopyCode}>{buttonText}</button>
+							<button
+						className="wd-toggle-btn"	onClick={() => setShowCode(!showCode)}>
+						{showCode ? "Hide code" : "Show code"}
+					</button>
+					{showCode && (
+					<button className="wd-copy-btn" onClick={handleCopyCode}>{buttonText}</button>
+					)}
             </div>
+						{showCode && (
             <div className="wd-html-code">
               <pre>
                 <code className="language-html" ref={codeRef}>
@@ -257,6 +249,32 @@ const [templateImage, setTemplateImage] = useState("/images/templates/twocolumn5
 </html>`}
                 </code>
               </pre>
+            </div>
+						)}
+          </div>
+					<h3 className="spacer">Template Preview</h3>
+          <div className="template-preview">
+            <Image src={templateImage} alt="" width={800} height={1400} priority />
+            <div>
+              <h4>Featured Widgets</h4>
+              <div className="wd-border">
+              <h5>Table</h5>
+              <p>Display tasks, due dates, and more in an organized and clear manner.</p>
+              <br />
+              <button className="wd-btn thin" onClick={changeToTable}>Toggle in Preview</button>
+              </div>
+              <div className="wd-border">
+              <h5>Border</h5>
+              <p>Call out a main idea, draw attention to learning objectives or any other content that needs to stand out.</p>
+              <br />
+              <button className="wd-btn thin" onClick={changeToBorder}>Toggle in Preview</button>
+              </div>
+              <div className="wd-border">
+              <h5>Caption</h5>
+              <p>Style text as a caption: lighter, gray, and smaller.</p>
+              <br />
+              <button className="wd-btn thin" onClick={changeToCaption}>Toggle in Preview</button>
+              </div>
             </div>
           </div>
         </main>

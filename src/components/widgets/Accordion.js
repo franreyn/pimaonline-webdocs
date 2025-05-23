@@ -3,6 +3,8 @@ import hljs from "highlight.js/lib/core";
 import "highlight.js/styles/night-owl.css";
 import html from "highlight.js/lib/languages/xml";
 
+hljs.registerLanguage("html", html);
+
 function AccordionItem({ title, children }) {
 	const [isOpen, setIsOpen] = useState(false);
 
@@ -26,6 +28,13 @@ function AccordionItem({ title, children }) {
 export default function Accordion() {
 	const codeRef = useRef(null);
 	const [buttonText, setButtonText] = useState("Copy code");
+	const [showCode, setShowCode] = useState(false);
+
+	useEffect(() => {
+		if (showCode) {
+			hljs.highlightElement(codeRef.current); 
+		}
+	}, [showCode]);
 
 	const handleCopyCode = () => {
 		const codeElement = codeRef.current;
@@ -86,10 +95,17 @@ export default function Accordion() {
 					</div>
 				</div>
 				<div className="wd-btn-container">
+					<button
+						className="wd-toggle-btn"	onClick={() => setShowCode(!showCode)}>
+						{showCode ? "Hide code" : "Show code"}
+					</button>
+					{showCode && (
 					<button className="wd-copy-btn" onClick={handleCopyCode}>
 						{buttonText}
 					</button>
+					)}
 				</div>
+				{showCode && (
 				<div className="wd-html-code">
 					<pre>
 						<code className="language-html" ref={codeRef}>
@@ -106,6 +122,7 @@ export default function Accordion() {
 						</code>
 					</pre>
 				</div>
+				)}
 			</div>
 		</section>
 	);

@@ -4,11 +4,19 @@ import "highlight.js/styles/night-owl.css";
 import html from "highlight.js/lib/languages/xml";
 import Image from "next/image";
 
+hljs.registerLanguage("html", html);
+
 export default function LargeText() {
   const codeRef = useRef(null);
   const [buttonText, setButtonText] = useState("Copy code");
+	const [showCode, setShowCode] = useState(false);
 
-  hljs.registerLanguage("html", html);
+	useEffect(() => {
+		if (showCode) {
+			hljs.highlightElement(codeRef.current); 
+		}
+	}, [showCode]);
+
   useEffect(() => {
     hljs.highlightAll();
   }, []);
@@ -34,7 +42,27 @@ export default function LargeText() {
       <section className="wd-content" id="toc-large-text">
         <h3 id="large-text" className="section-top anchor">Large Text</h3>
         <p>Use <span className="wd-monospace">large-text</span> to add the large text view option to your course shell. This gives students the option to toggle on a version of the webpage that increases the font sizes (without zooming the entire viewport).</p>
-        <div className="wd-visual-ex">
+				<div className="wd-window">
+					<div className="wd-btn-container">
+						<button
+						className="wd-toggle-btn"	onClick={() => setShowCode(!showCode)}>
+						{showCode ? "Hide code" : "Show code"}
+					</button>
+					{showCode && (
+					<button className="wd-copy-btn" onClick={handleCopyCode}>{buttonText}</button>
+					)}          </div>
+					{showCode && (
+          <div className="wd-html-code">
+            <pre>
+              <code className="language-html" ref={codeRef}>
+                {String.raw`<body large-text>`}
+              </code>
+            </pre>
+          </div>
+					)}
+          </div>
+					<br/>
+				<div className="wd-visual-ex">
         <section className="wd-side-by-side">
         <div className="wd-side-by-side-item">
          <Image src="/images/plugins/VO-large.jpg" alt="" width={292} height={280} priority="true"  />
@@ -44,18 +72,7 @@ export default function LargeText() {
           </div>
           </section>
           </div>
-          <div className="wd-window">
-          <div className="wd-html-code">
-            <pre>
-              <code className="language-html" ref={codeRef}>
-                {String.raw`<body large-text>`}
-              </code>
-            </pre>
-          </div>
-          <div className="wd-btn-container">
-            <button className="wd-copy-btn" onClick={handleCopyCode}>{buttonText}</button>
-          </div>
-          </div>
+
       </section>
     </>
   )

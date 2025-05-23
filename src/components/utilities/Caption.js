@@ -3,11 +3,19 @@ import hljs from "highlight.js/lib/core";
 import "highlight.js/styles/night-owl.css";
 import html from "highlight.js/lib/languages/xml";
 
+hljs.registerLanguage("html", html);
+
 export default function Caption() {
   const codeRef = useRef(null);
   const [buttonText, setButtonText] = useState("Copy code");
+	const [showCode, setShowCode] = useState(false);
 
-  hljs.registerLanguage("html", html);
+	useEffect(() => {
+		if (showCode) {
+			hljs.highlightElement(codeRef.current); 
+		}
+	}, [showCode]);
+
   useEffect(() => {
     hljs.highlightAll();
   }, []);
@@ -38,8 +46,12 @@ export default function Caption() {
             <p className="caption">Some text to help display a caption</p>
           </div>
           <div className="wd-btn-container">
-            <button className="wd-copy-btn" onClick={handleCopyCode}>{buttonText}</button>
-          </div>
+					<button className="wd-toggle-btn"	onClick={() => setShowCode(!showCode)}>{showCode ? "Hide code" : "Show code"}</button>
+					{showCode && (
+					<button className="wd-copy-btn" onClick={handleCopyCode}>{buttonText}</button>
+					)}          
+					</div>
+					{showCode && (
           <div className="wd-html-code">
             <pre>
               <code className="language-html" ref={codeRef}>
@@ -47,6 +59,7 @@ export default function Caption() {
               </code>
             </pre>
           </div>
+					)}
         </div>
       </section>
     </>

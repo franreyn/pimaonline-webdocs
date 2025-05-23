@@ -10,9 +10,18 @@ import Image from "next/image";
 import TemplateSidebar from "@/components/TemplateSidebar";
 import BackToTop from "@/components/BackToTop";
 
+hljs.registerLanguage("html", html);
+
 export default function OneColumn5() {
   const codeRef = useRef(null);
   const [buttonText, setButtonText] = useState("Copy code");
+	const [showCode, setShowCode] = useState(false);
+
+	useEffect(() => {
+		if (showCode) {
+			hljs.highlightElement(codeRef.current); 
+		}
+	}, [showCode]);
 
   hljs.registerLanguage("html", html);
   useEffect(() => {
@@ -130,48 +139,18 @@ export default function OneColumn5() {
         <main className="anchor" id="one-column-5">
           <h2>Detailed Intro</h2>
           <p>Give your students every detail, expectation, and agenda item all in one place with this all-encompassing template. Break up text-heavy sections with border widgets to provide visual checkpoint for students as they work there way through the content.</p>
-            <h3 className="spacer">Template Preview</h3>
-          <div className="template-preview">
-            <Image src={templateImage} alt="" width={800} height={1400} priority />
-            <div>
-              <h4>Featured Widgets</h4>
-              <div className="wd-border">
-              <h5>Side-by-Side</h5>
-              <p>Display two horizontal containers that can contain any content.</p>
-              <br />
-              <button className="wd-btn thin" onClick={changeToSideBySide}>Toggle in Preview</button>
-              </div>
-              <div className="wd-border">
-              <h5>Border</h5>
-              <p>Call out a main idea, draw attention to learning objectives or any other content that needs to stand out.</p>
-              <br />
-              <button className="wd-btn thin" onClick={changeToBorder}>Toggle in Preview</button>
-              </div>
-              <div className="wd-border">
-              <h5>Horizontal Display</h5>
-              <p>Display any content in an inline fashion with the flexibility to make one column wider than the other.</p>
-              <br />
-              <button className="wd-btn thin" onClick={changeToHorizontal}>Toggle in Preview</button>
-              </div>
-              <div className="wd-border">
-              <h5>Table</h5>
-              <p>Display tasks, due dates, and more in an organized and clear manner.</p>
-              <br />
-              <button className="wd-btn thin" onClick={changeToTable}>Toggle in Preview</button>
-              </div>
-              <div className="wd-border">
-              <h5>Border Yellow</h5>
-              <p>Another means to call out a main idea with an extra pop of color.</p>
-              <br />
-              <button className="wd-btn thin" onClick={changeToBorderYellow}>Toggle in Preview</button>
-              </div>
-            </div>
-          </div>
-          <br />
+					<br />
           <div className="wd-window">
           <div className="wd-btn-container">
-              <button className="wd-copy-btn" onClick={handleCopyCode}>{buttonText}</button>
+							<button
+						className="wd-toggle-btn"	onClick={() => setShowCode(!showCode)}>
+						{showCode ? "Hide code" : "Show code"}
+					</button>
+					{showCode && (
+					<button className="wd-copy-btn" onClick={handleCopyCode}>{buttonText}</button>
+					)}
             </div>
+						{showCode && (
             <div className="wd-html-code">
               <pre>
                 <code className="language-html" ref={codeRef}>
@@ -182,7 +161,6 @@ export default function OneColumn5() {
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@pimaonline/pimaonline-themepack/dist/css/themes/cards/styles.css">
 <link rel="stylesheet" type="text/css" href="../css/custom.css">
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js" defer></script> 
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@pimaonline/pimaonline-themepack/dist/js/scripts2.js" defer></script>
 <title>Course Intro</title>
 </head>
@@ -317,6 +295,44 @@ export default function OneColumn5() {
 </html>
 `}</code>
               </pre>
+            </div>
+						)}
+          </div>
+					<h3 className="spacer">Template Preview</h3>
+          <div className="template-preview">
+            <Image src={templateImage} alt="" width={800} height={1400} priority />
+            <div>
+              <h4>Featured Widgets</h4>
+              <div className="wd-border">
+              <h5>Side-by-Side</h5>
+              <p>Display two horizontal containers that can contain any content.</p>
+              <br />
+              <button className="wd-btn thin" onClick={changeToSideBySide}>Toggle in Preview</button>
+              </div>
+              <div className="wd-border">
+              <h5>Border</h5>
+              <p>Call out a main idea, draw attention to learning objectives or any other content that needs to stand out.</p>
+              <br />
+              <button className="wd-btn thin" onClick={changeToBorder}>Toggle in Preview</button>
+              </div>
+              <div className="wd-border">
+              <h5>Horizontal Display</h5>
+              <p>Display any content in an inline fashion with the flexibility to make one column wider than the other.</p>
+              <br />
+              <button className="wd-btn thin" onClick={changeToHorizontal}>Toggle in Preview</button>
+              </div>
+              <div className="wd-border">
+              <h5>Table</h5>
+              <p>Display tasks, due dates, and more in an organized and clear manner.</p>
+              <br />
+              <button className="wd-btn thin" onClick={changeToTable}>Toggle in Preview</button>
+              </div>
+              <div className="wd-border">
+              <h5>Border Yellow</h5>
+              <p>Another means to call out a main idea with an extra pop of color.</p>
+              <br />
+              <button className="wd-btn thin" onClick={changeToBorderYellow}>Toggle in Preview</button>
+              </div>
             </div>
           </div>
         </main>

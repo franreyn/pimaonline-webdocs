@@ -9,6 +9,13 @@ export default function Accordion() {
 	const codeRef = useRef(null);
 	const [buttonText, setButtonText] = useState("Copy code");
 	const [liked, setLiked] = useState(false);
+	const [showCode, setShowCode] = useState(false);
+
+	useEffect(() => {
+		if (showCode) {
+			hljs.highlightElement(codeRef.current); 
+		}
+	}, [showCode]);
 
 	useEffect(() => {
 		hljs.highlightAll();
@@ -71,11 +78,17 @@ export default function Accordion() {
 				</div>
 
 				<div className="wd-btn-container">
+					<button
+						className="wd-toggle-btn"	onClick={() => setShowCode(!showCode)}>
+						{showCode ? "Hide code" : "Show code"}
+					</button>
+					{showCode && (
 					<button className="wd-copy-btn" onClick={handleCopyCode}>
 						{buttonText}
 					</button>
+					)}
 				</div>
-
+				{showCode && (
 				<div className="wd-html-code">
 					<pre>
 						<code className="language-html" ref={codeRef}>
@@ -89,6 +102,7 @@ export default function Accordion() {
 						</code>
 					</pre>
 				</div>
+				)}
 			</div>
 		</section>
 	);
