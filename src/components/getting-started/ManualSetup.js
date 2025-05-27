@@ -1,10 +1,28 @@
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
+import hljs from "highlight.js/lib/core";
+import html from "highlight.js/lib/languages/xml";
 
-export default function Edit() {
+hljs.registerLanguage("html", html);
+
+export default function ManualSetup() {
   const cssCodeRef = useRef(null);
   const jsCodeRef = useRef(null);
-  const [cssButtonText, setCssButtonText] = useState("Copy code");
+	const [cssButtonText, setCssButtonText] = useState("Copy code");
   const [jsButtonText, setJsButtonText] = useState("Copy code");
+	const [showCssCode, setShowCssCode] = useState(false);
+  const [showJsCode, setShowJsCode] = useState(false);
+
+  useEffect(() => {
+    if (showCssCode && cssCodeRef.current) {
+      hljs.highlightElement(cssCodeRef.current);
+    }
+  }, [showCssCode]);
+
+  useEffect(() => {
+    if (showJsCode && jsCodeRef.current) {
+      hljs.highlightElement(jsCodeRef.current);
+    }
+  }, [showJsCode]);
 
   const handleCopyCode = (codeRef, setButtonText) => {
     const codeElement = codeRef.current;
@@ -35,13 +53,10 @@ export default function Edit() {
           </p>
           <div className="wd-window">
             <div className="wd-btn-container">
-              <button
-                className="wd-copy-btn"
-                onClick={() => handleCopyCode(cssCodeRef, setCssButtonText)}
-              >
-                {cssButtonText}
-              </button>
+							<button className="wd-toggle-btn" onClick={() => setShowCssCode(!showCssCode)}>{showCssCode ? "Hide code" : "Show code"} </button>
+							{showCssCode && ( <button className="wd-copy-btn" onClick={() => handleCopyCode(cssCodeRef, setCssButtonText)}>{cssButtonText}</button>)}
             </div>
+						{showCssCode && (
             <div className="wd-html-code">
               <pre>
                 <code className="language-html" ref={cssCodeRef}>
@@ -49,6 +64,7 @@ export default function Edit() {
                 </code>
               </pre>
             </div>
+						)}
           </div>
           <br />
           <br />
@@ -59,13 +75,13 @@ export default function Edit() {
           </p>
           <div className="wd-window">
             <div className="wd-btn-container">
+						<button className="wd-toggle-btn" onClick={() => setShowJsCode(!showJsCode)}>{showJsCode ? "Hide code" : "Show code"}</button>
+						{showJsCode && (
               <button
-                className="wd-copy-btn"
-                onClick={() => handleCopyCode(jsCodeRef, setJsButtonText)}
-              >
-                {jsButtonText}
-              </button>
+                className="wd-copy-btn" onClick={() => handleCopyCode(jsCodeRef, setJsButtonText)}> {jsButtonText}
+              </button>)}
             </div>
+						{showJsCode && (
             <div className="wd-html-code">
               <pre>
                 <code className="language-html" ref={jsCodeRef}>
@@ -73,6 +89,7 @@ export default function Edit() {
                 </code>
               </pre>
             </div>
+						)}
           </div>
         </div>
       </section>

@@ -4,12 +4,20 @@ import "highlight.js/styles/night-owl.css";
 import html from "highlight.js/lib/languages/xml";
 import Link from "next/link";
 
+hljs.registerLanguage("html", html);
+
 export default function FontAwesome() {
 
   const codeRef = useRef(null);
   const [buttonText, setButtonText] = useState("Copy code");
+	const [showCode, setShowCode] = useState(false);
 
-  hljs.registerLanguage("html", html);
+	useEffect(() => {
+		if (showCode) {
+			hljs.highlightElement(codeRef.current); 
+		}
+	}, [showCode]);
+
   useEffect(() => {
     hljs.highlightAll();
   }, []);
@@ -44,8 +52,12 @@ export default function FontAwesome() {
             <h3 className="fa-bullhorn">Module Objectives</h3>
           </div>
           <div className="wd-btn-container">
-            <button className="wd-copy-btn" onClick={handleCopyCode}>{buttonText}</button>
+					<button className="wd-toggle-btn"	onClick={() => setShowCode(!showCode)}>{showCode ? "Hide code" : "Show code"}</button>
+					{showCode && (
+					<button className="wd-copy-btn" onClick={handleCopyCode}>{buttonText}</button>
+					)}
           </div>
+					{showCode && (
           <div className="wd-html-code">
             <pre>
               <code className="language-html" ref={codeRef}>
@@ -53,6 +65,7 @@ export default function FontAwesome() {
               </code>
             </pre>
           </div>
+					)}
         </div>
       </section>
     </>
