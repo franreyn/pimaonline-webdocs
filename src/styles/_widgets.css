@@ -1835,3 +1835,76 @@ cause all other hidden content areas with that data-key to also be shown.
 	font-weight: 900;
   color: var(--color-heart)
 }
+
+/* Persistent Checklist styles */
+
+div.persistent-checklist-container {
+	padding: 15px;
+}
+
+.persistent-checklist.strike-through label {
+	position: relative;
+	cursor: pointer;
+	transition: color 0.5s ease-in-out;
+}
+
+.persistent-checklist.strike-through label::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 50%;
+	width: 0%;
+	height: 2px;
+	min-height: 2px;
+	max-height: 2px;
+	background-color: var(--color-pcc-black);
+	transition: width 0.5s ease-in-out, opacity 0.5s ease-in-out;
+	opacity: 0;
+	overflow: hidden;
+	display: block;
+	box-sizing: border-box;
+}
+
+.persistent-checklist.strike-through .persistent-checklist li:first-child label::after {
+	height: 2px !important;
+	min-height: 2px !important;
+	max-height: 2px !important;
+}
+
+.persistent-checklist.strike-through input[type=checkbox]:checked + label {
+	color: var(--color-pcc-dkgrey);
+}
+
+.persistent-checklist.strike-through input[type=checkbox]:checked + label::after {
+	width: 100%;
+	opacity: 1;
+}
+
+ul.persistent-checklist li::marker {
+	color: rgba(0, 0, 0, 0) !important;
+}
+
+.persistent-checklist li {
+	display: grid;
+	grid-template-columns: 20px auto;
+	grid-gap: 0.5rem;
+	align-items: baseline;
+}
+
+.persistent-checklist ul.not-persistent li,
+.persistent-checklist ol.not-persistent li {
+	display: list-item;
+}
+
+[dark-mode-on] .persistent-checklist.strike-through label::after {
+	background-color: var(--dark-mode-main-text);
+}
+
+[dark-mode-on] .persistent-checklist.strike-through input[type=checkbox]:checked + label {
+	color: var(--dark-mode-secondary-text);
+}
+
+[dark-mode-on] ul.persistent-checklist li::marker {
+	color: rgba(0, 0, 0, 0) !important;
+}
+
