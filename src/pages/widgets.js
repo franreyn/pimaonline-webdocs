@@ -26,6 +26,7 @@ import "highlight.js/styles/night-owl.css";
 import html from "highlight.js/lib/languages/xml";
 import BackToTop from "@/components/BackToTop";
 import Columns from "@/components/widgets/Columns";
+import PersistentChecklist from "@/components/widgets/PersistentChecklist";
 
 
 export default function Widgets() {
@@ -79,6 +80,7 @@ export default function Widgets() {
 					<ImageGallery />
 					<LockedContent />
 					<MediaContainer />
+					<PersistentChecklist />
 					<SideBySide />
 					<SocialPost />
 					<Tables />

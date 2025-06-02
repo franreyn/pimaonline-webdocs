@@ -166,6 +166,11 @@ export default function WidgetSidebar() {
 								Media Container
 							</Link>
 						</li>
+						<li className={activeId === "toc-persistent-checklist" ? "is-current" : ""}>
+							<Link href="/widgets/#persistent-checklist" className="toc-persistent-checklist">
+								Persistent Checklist
+							</Link>
+						</li>
 						<li className={activeId === "toc-side-by-side" ? "is-current" : ""}>
 							<Link href="/widgets/#side-by-side" className="toc-side-by-side">
 								Side-by-side
