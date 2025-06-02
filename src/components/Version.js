@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function Version() {
 
   // Use two digits only
-  const currentVersion = "5.13.3"
+  const currentVersion = "5.13.6"
 
   const [isHidden, setIsHidden] = useState(false);
 
