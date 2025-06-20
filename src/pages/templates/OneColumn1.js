@@ -72,6 +72,7 @@ export default function OneColumn1() {
     }, 2000);
   };
 
+	// Remove any existing theme link (required to keep theme styles just on the theme page)
   useLayoutEffect(() => {
     const existingLink = document.querySelector("link[data-theme-link]");
     if (existingLink) {
@@ -79,7 +80,9 @@ export default function OneColumn1() {
     }
   }, []);
 
+	// Show the highlighted component
   const [templateView, setTemplateView] = useState();
+	// Change the url for the highlighted image
   const [templateImage, setTemplateImage] = useState("/images/templates/onecolumn1.jpg");
 
   useEffect(() => {
@@ -106,23 +109,43 @@ export default function OneColumn1() {
   }, [templateView]);
 
   const changeToBorder = () => {
-    setTemplateView(templateView !== "border" ? "border" : undefined);
+    if (templateView !== "border") {
+      setTemplateView("border");
+    } else {
+      setTemplateView();
+    }
   };
 
   const changeToVocabCards = () => {
-    setTemplateView(templateView !== "vocab-cards" ? "vocab-cards" : undefined);
+    if (templateView !== "vocab-cards") {
+      setTemplateView("vocab-cards");
+    } else {
+      setTemplateView();
+    }
   };
 
   const changeToSideBySide = () => {
-    setTemplateView(templateView !== "side-by-side" ? "side-by-side" : undefined);
+    if (templateView !== "side-by-side") {
+      setTemplateView("side-by-side");
+    } else {
+      setTemplateView();
+    }
   };
 
   const changeToBlockquote = () => {
-    setTemplateView(templateView !== "blockquote" ? "blockquote" : undefined);
+    if (templateView !== "blockquote") {
+      setTemplateView("blockquote");
+    } else {
+      setTemplateView();
+    }
   };
 
   const changeToImgGal = () => {
-    setTemplateView(templateView !== "image-gallery" ? "image-gallery" : undefined);
+    if (templateView !== "image-gallery") {
+      setTemplateView("image-gallery");
+    } else {
+      setTemplateView();
+    }
   };
 
   return (
