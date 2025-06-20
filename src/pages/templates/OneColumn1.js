@@ -72,7 +72,7 @@ export default function OneColumn1() {
     }, 2000);
   };
 
-	// Remove any existing theme link (required to keep theme styles just on the theme page)
+  // Remove any existing theme link (required to keep theme styles just on the theme page)
   useLayoutEffect(() => {
     const existingLink = document.querySelector("link[data-theme-link]");
     if (existingLink) {
@@ -80,9 +80,9 @@ export default function OneColumn1() {
     }
   }, []);
 
-	// Show the highlighted component
+  // Show the highlighted component
   const [templateView, setTemplateView] = useState();
-	// Change the url for the highlighted image
+  // Change the url for the highlighted image
   const [templateImage, setTemplateImage] = useState("/images/templates/onecolumn1.jpg");
 
   useEffect(() => {
