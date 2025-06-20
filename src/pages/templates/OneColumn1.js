@@ -1,8 +1,7 @@
 import Head from "next/head";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { useLayoutEffect } from "react";
-import { useEffect, useRef, useState } from "react";
+import { useLayoutEffect, useEffect, useRef, useState } from "react";
 import hljs from "highlight.js/lib/core";
 import "highlight.js/styles/night-owl.css";
 import html from "highlight.js/lib/languages/xml";
@@ -16,18 +15,47 @@ hljs.registerLanguage("html", html);
 export default function OneColumn1() {
   const codeRef = useRef(null);
   const [buttonText, setButtonText] = useState("Copy code");
-	const [showCode, setShowCode] = useState(false);
+  const [showCode, setShowCode] = useState(false);
 
-	useEffect(() => {
-		if (showCode) {
-			hljs.highlightElement(codeRef.current); 
-		}
-	}, [showCode]);
-
-  hljs.registerLanguage("html", html);
   useEffect(() => {
-    hljs.highlightAll();
-  }, []);
+    if (showCode) {
+      hljs.highlightElement(codeRef.current);
+
+      // Delay meta tag injection until after highlight.js finishes DOM manipulation
+      setTimeout(() => {
+        const codeBlocks = document.querySelectorAll('.wd-html-code code.language-html');
+
+        if (codeBlocks.length > 0) {
+          codeBlocks.forEach((codeBlock) => {
+            let codeContent = codeBlock.textContent;
+
+            if (!codeContent.includes('<meta name="version"')) {
+              const metaRegex = /<meta[^>]*>/g;
+              const matches = [...codeContent.matchAll(metaRegex)];
+
+              if (matches.length > 0) {
+                const lastMeta = matches[matches.length - 1];
+                const insertPosition = lastMeta.index + lastMeta[0].length;
+
+                const versionMeta = `\n<meta name="version" content="v${currentVersion}">`;
+                codeContent =
+                  codeContent.slice(0, insertPosition) +
+                  versionMeta +
+                  codeContent.slice(insertPosition);
+              } else {
+                codeContent = codeContent.replace(
+                  '<head>',
+                  `<head>\n<meta name="version" content="v${currentVersion}">`
+                );
+              }
+
+              codeBlock.textContent = codeContent;
+            }
+          });
+        }
+      }, 0);
+    }
+  }, [showCode]);
 
   const handleCopyCode = () => {
     const codeElement = codeRef.current;
@@ -39,13 +67,11 @@ export default function OneColumn1() {
     window.getSelection().removeAllRanges();
 
     setButtonText("Copied!");
-
     setTimeout(() => {
       setButtonText("Copy code");
     }, 2000);
   };
 
-  // Remove any existing theme link (required to keep theme styles just on the theme page)
   useLayoutEffect(() => {
     const existingLink = document.querySelector("link[data-theme-link]");
     if (existingLink) {
@@ -53,10 +79,7 @@ export default function OneColumn1() {
     }
   }, []);
 
-  // Show the highlighted component
   const [templateView, setTemplateView] = useState();
-
-  // Change the url for the highlighted image
   const [templateImage, setTemplateImage] = useState("/images/templates/onecolumn1.jpg");
 
   useEffect(() => {
@@ -64,23 +87,18 @@ export default function OneColumn1() {
       case "border":
         setTemplateImage("/images/templates/onecolumn1-border.jpg");
         break;
-
       case "vocab-cards":
         setTemplateImage("/images/templates/onecolumn1-vocabcards.jpg");
         break;
-
       case "side-by-side":
         setTemplateImage("/images/templates/onecolumn1-sidebyside.jpg");
         break;
-
       case "blockquote":
         setTemplateImage("/images/templates/onecolumn1-blockquote.jpg");
         break;
-
       case "image-gallery":
         setTemplateImage("/images/templates/onecolumn1-imagegallery.jpg");
         break;
-
       default:
         setTemplateImage("/images/templates/onecolumn1.jpg");
         break;
@@ -88,80 +106,24 @@ export default function OneColumn1() {
   }, [templateView]);
 
   const changeToBorder = () => {
-    if (templateView !== "border") {
-      setTemplateView("border");
-    } else {
-      setTemplateView();
-    }
+    setTemplateView(templateView !== "border" ? "border" : undefined);
   };
 
   const changeToVocabCards = () => {
-    if (templateView !== "vocab-cards") {
-      setTemplateView("vocab-cards");
-    } else {
-      setTemplateView();
-    }
+    setTemplateView(templateView !== "vocab-cards" ? "vocab-cards" : undefined);
   };
 
   const changeToSideBySide = () => {
-    if (templateView !== "side-by-side") {
-      setTemplateView("side-by-side");
-    } else {
-      setTemplateView();
-    }
+    setTemplateView(templateView !== "side-by-side" ? "side-by-side" : undefined);
   };
 
   const changeToBlockquote = () => {
-    if (templateView !== "blockquote") {
-      setTemplateView("blockquote");
-    } else {
-      setTemplateView();
-    }
+    setTemplateView(templateView !== "blockquote" ? "blockquote" : undefined);
   };
 
   const changeToImgGal = () => {
-    if (templateView !== "image-gallery") {
-      setTemplateView("image-gallery");
-    } else {
-      setTemplateView();
-    }
+    setTemplateView(templateView !== "image-gallery" ? "image-gallery" : undefined);
   };
-
-	useEffect(() => {
-		const addMetaToCodeSnippets = () => {
-			const codeBlocks = document.querySelectorAll('.wd-html-code code.language-html');
-		
-			if (codeBlocks.length > 0) {
-				codeBlocks.forEach((codeBlock) => {
-					let codeContent = codeBlock.textContent;
-		
-					if (!codeContent.includes('<meta name="version"')) {
-						const metaRegex = /<meta[^>]*>/g;
-						const matches = [...codeContent.matchAll(metaRegex)];
-		
-						if (matches.length > 0) {
-							const lastMeta = matches[matches.length - 1];
-							const insertPosition = lastMeta.index + lastMeta[0].length;
-		
-							const versionMeta = `\n<meta name="version" content="v${currentVersion}">`;
-							codeContent =
-								codeContent.slice(0, insertPosition) +
-								versionMeta +
-								codeContent.slice(insertPosition);
-						} else {
-							codeContent = codeContent.replace(
-								'<head>',
-								`<head>\n<meta name="version" content="v${currentVersion}">`
-							);
-						}
-		
-						codeBlock.textContent = codeContent;
-					}
-				});
-			}
-		};
-		addMetaToCodeSnippets();
-	}, []);
 
   return (
     <>
