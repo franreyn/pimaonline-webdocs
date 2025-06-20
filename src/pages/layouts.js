@@ -5,16 +5,15 @@ import hljs from "highlight.js/lib/core";
 import "highlight.js/styles/night-owl.css";
 import html from "highlight.js/lib/languages/xml";
 import { useEffect, useRef, useState, useLayoutEffect } from "react";
-import styles from "../styles/layouts.module.css"
-import Footer from "../components/Footer"
+import styles from "../styles/layouts.module.css";
+import Footer from "../components/Footer";
 import DocsIntro from "@/components/DocsIntro";
 import BackToTop from "@/components/BackToTop";
-import { currentVersion } from '../components/Version';
+import { currentVersion } from "../components/Version";
 
 hljs.registerLanguage("html", html);
 
 export default function Layouts() {
-  
   // Remove any existing theme link (required to keep theme styles just on the theme page)
   useLayoutEffect(() => {
     const existingLink = document.querySelector("link[data-theme-link]");
@@ -26,35 +25,17 @@ export default function Layouts() {
   useEffect(() => {
     hljs.highlightAll();
   }, []);
-	
+
   const oneColumnCodeRef = useRef(null);
   const twoColumnCodeRef = useRef(null);
-	const threeColumnCodeRef = useRef(null);
+  const threeColumnCodeRef = useRef(null);
 
   const [oneColumnButtonText, setOneColumnButtonText] = useState("Copy code");
   const [twoColumnButtonText, setTwoColumnButtonText] = useState("Copy code");
-	const [threeColumnButtonText, setThreeColumnButtonText] = useState("Copy code");
-	const [showOneColumnCode, setShowOneColumnCode] = useState(false);
-	const [showTwoColumnCode, setShowTwoColumnCode] = useState(false);
-	const [showThreeColumnCode, setShowThreeColumnCode] = useState(false);
-
-	useEffect(() => {
-		if (showOneColumnCode && oneColumnCodeRef.current) {
-			hljs.highlightElement(oneColumnCodeRef.current);
-		}
-	}, [showOneColumnCode]);
-	
-	useEffect(() => {
-		if (showTwoColumnCode && twoColumnCodeRef.current) {
-			hljs.highlightElement(twoColumnCodeRef.current);
-		}
-	}, [showTwoColumnCode]);
-	
-	useEffect(() => {
-		if (showThreeColumnCode && threeColumnCodeRef.current) {
-			hljs.highlightElement(threeColumnCodeRef.current);
-		}
-	}, [showThreeColumnCode]);
+  const [threeColumnButtonText, setThreeColumnButtonText] = useState("Copy code");
+  const [showOneColumnCode, setShowOneColumnCode] = useState(false);
+  const [showTwoColumnCode, setShowTwoColumnCode] = useState(false);
+  const [showThreeColumnCode, setShowThreeColumnCode] = useState(false);
 
   const handleCopyCode = (codeRef, setButtonText) => {
     const codeElement = codeRef.current;
@@ -70,44 +51,56 @@ export default function Layouts() {
     setTimeout(() => {
       setButtonText("Copy code");
     }, 2000);
-  };  
+  };
 
-		useEffect(() => {
-			const addMetaToCodeSnippets = () => {
-				const codeBlocks = document.querySelectorAll('.wd-html-code code.language-html');
-			
-				if (codeBlocks.length > 0) {
-					codeBlocks.forEach((codeBlock) => {
-						let codeContent = codeBlock.textContent;
-			
-						if (!codeContent.includes('<meta name="version"')) {
-							const metaRegex = /<meta[^>]*>/g;
-							const matches = [...codeContent.matchAll(metaRegex)];
-			
-							if (matches.length > 0) {
-								const lastMeta = matches[matches.length - 1];
-								const insertPosition = lastMeta.index + lastMeta[0].length;
-			
-								const versionMeta = `\n<meta name="version" content="v${currentVersion}">`;
-								codeContent =
-									codeContent.slice(0, insertPosition) +
-									versionMeta +
-									codeContent.slice(insertPosition);
-							} else {
-								codeContent = codeContent.replace(
-									'<head>',
-									`<head>\n<meta name="version" content="v${currentVersion}">`
-								);
-							}
-			
-							codeBlock.textContent = codeContent;
-						}
-					});
-				}
-			};
-			addMetaToCodeSnippets();
-		}, []);
+  // Helper function to inject <meta name="version"> tag into the code snippet
+  const injectVersionMeta = (codeElem) => {
+    let codeContent = codeElem.textContent;
 
+    if (!codeContent.includes('<meta name="version"')) {
+      const metaRegex = /<meta[^>]*>/g;
+      const matches = [...codeContent.matchAll(metaRegex)];
+
+      if (matches.length > 0) {
+        const lastMeta = matches[matches.length - 1];
+        const insertPosition = lastMeta.index + lastMeta[0].length;
+
+        const versionMeta = `\n<meta name="version" content="v${currentVersion}">`;
+        codeContent =
+          codeContent.slice(0, insertPosition) +
+          versionMeta +
+          codeContent.slice(insertPosition);
+      } else {
+        codeContent = codeContent.replace(
+          "<head>",
+          `<head>\n<meta name="version" content="v${currentVersion}">`
+        );
+      }
+
+      codeElem.textContent = codeContent;
+    }
+  };
+
+  useEffect(() => {
+    if (showOneColumnCode && oneColumnCodeRef.current) {
+      hljs.highlightElement(oneColumnCodeRef.current);
+      setTimeout(() => injectVersionMeta(oneColumnCodeRef.current), 0);
+    }
+  }, [showOneColumnCode]);
+
+  useEffect(() => {
+    if (showTwoColumnCode && twoColumnCodeRef.current) {
+      hljs.highlightElement(twoColumnCodeRef.current);
+      setTimeout(() => injectVersionMeta(twoColumnCodeRef.current), 0);
+    }
+  }, [showTwoColumnCode]);
+
+  useEffect(() => {
+    if (showThreeColumnCode && threeColumnCodeRef.current) {
+      hljs.highlightElement(threeColumnCodeRef.current);
+      setTimeout(() => injectVersionMeta(threeColumnCodeRef.current), 0);
+    }
+  }, [showThreeColumnCode]);
 
   return (
     <>

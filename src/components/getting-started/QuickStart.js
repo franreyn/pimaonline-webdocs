@@ -12,14 +12,44 @@ export default function QuickStart() {
 	const [showCode, setShowCode] = useState(false);
 
 	useEffect(() => {
-		if (showCode) {
-			hljs.highlightElement(codeRef.current); 
-		}
-	}, [showCode]);
+    if (showCode) {
+      hljs.highlightElement(codeRef.current);
 
-  useEffect(() => {
-    hljs.highlightAll();
-  }, []);
+      // Delay meta tag injection until after highlight.js finishes DOM manipulation
+      setTimeout(() => {
+        const codeBlocks = document.querySelectorAll('.wd-html-code code.language-html');
+
+        if (codeBlocks.length > 0) {
+          codeBlocks.forEach((codeBlock) => {
+            let codeContent = codeBlock.textContent;
+
+            if (!codeContent.includes('<meta name="version"')) {
+              const metaRegex = /<meta[^>]*>/g;
+              const matches = [...codeContent.matchAll(metaRegex)];
+
+              if (matches.length > 0) {
+                const lastMeta = matches[matches.length - 1];
+                const insertPosition = lastMeta.index + lastMeta[0].length;
+
+                const versionMeta = `\n<meta name="version" content="v${currentVersion}">`;
+                codeContent =
+                  codeContent.slice(0, insertPosition) +
+                  versionMeta +
+                  codeContent.slice(insertPosition);
+              } else {
+                codeContent = codeContent.replace(
+                  '<head>',
+                  `<head>\n<meta name="version" content="v${currentVersion}">`
+                );
+              }
+
+              codeBlock.textContent = codeContent;
+            }
+          });
+        }
+      }, 0);
+    }
+  }, [showCode]);
 
   const handleCopyCode = () => {
     const codeElement = codeRef.current;
@@ -36,42 +66,6 @@ export default function QuickStart() {
       setButtonText("Copy code");
     }, 2000);
   };
-
-	useEffect(() => {
-    const addMetaToCodeSnippets = () => {
-      const codeBlocks = document.querySelectorAll('.wd-html-code code.language-html');
-    
-      if (codeBlocks.length > 0) {
-        codeBlocks.forEach((codeBlock) => {
-          let codeContent = codeBlock.textContent;
-    
-          if (!codeContent.includes('<meta name="version"')) {
-            const metaRegex = /<meta[^>]*>/g;
-            const matches = [...codeContent.matchAll(metaRegex)];
-    
-            if (matches.length > 0) {
-              const lastMeta = matches[matches.length - 1];
-              const insertPosition = lastMeta.index + lastMeta[0].length;
-    
-              const versionMeta = `\n<meta name="version" content="v${currentVersion}">`;
-              codeContent =
-                codeContent.slice(0, insertPosition) +
-                versionMeta +
-                codeContent.slice(insertPosition);
-            } else {
-              codeContent = codeContent.replace(
-                '<head>',
-                `<head>\n<meta name="version" content="v${currentVersion}">`
-              );
-            }
-    
-            codeBlock.textContent = codeContent;
-          }
-        });
-      }
-    };
-    addMetaToCodeSnippets();
-  }, []);
 
   return (
     <>
