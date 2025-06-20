@@ -4,12 +4,20 @@ import "highlight.js/styles/night-owl.css";
 import html from "highlight.js/lib/languages/xml";
 import Image from "next/image";
 
+hljs.registerLanguage("html", html);
+
 export default function NarrowWidth() {
   const codeRef = useRef(null);
   const [buttonText, setButtonText] = useState("Copy code");
+	const [showCode, setShowCode] = useState(false);
 
-  hljs.registerLanguage("html", html);
-  useEffect(() => {
+	useEffect(() => {
+		if (showCode) {
+			hljs.highlightElement(codeRef.current); 
+		}
+	}, [showCode]);
+
+	useEffect(() => {
     hljs.highlightAll();
   }, []);
 
@@ -34,7 +42,28 @@ export default function NarrowWidth() {
       <section className="wd-content" id="toc-narrow-width">
         <h3 id="narrow-width" className="section-top anchor">Narrow Width</h3>
         <p>Use <span className="wd-monospace">narrow-width</span> to add the narrow width view option to your course shell. This gives students the option to toggle on a version of the webpage with a more narrow paragraph width.</p>
-        <div className="wd-visual-ex">
+				<div className="wd-window">
+					<div className="wd-btn-container">
+						<button
+						className="wd-toggle-btn"	onClick={() => setShowCode(!showCode)}>
+						{showCode ? "Hide code" : "Show code"}
+					</button>
+					{showCode && (
+					<button className="wd-copy-btn" onClick={handleCopyCode}>{buttonText}</button>
+					)}
+          </div>
+					{showCode && (
+          <div className="wd-html-code">
+            <pre>
+              <code className="language-html" ref={codeRef}>
+                {String.raw`<body narrow-width>`}
+              </code>
+            </pre>
+          </div>
+					)}
+          </div>
+					<br/>
+				<div className="wd-visual-ex">
         <section className="wd-side-by-side">
         <div className="wd-side-by-side-item">
          <Image src="/images/plugins/VO-narrow.jpg" alt="" width={292} height={280} priority="true"  />
@@ -43,18 +72,6 @@ export default function NarrowWidth() {
           <Image src="/images/plugins/VO-narrow-on.jpg" alt="" width={292} height={280} />
           </div>
           </section>
-          </div>
-          <div className="wd-window">
-          <div className="wd-html-code">
-            <pre>
-              <code className="language-html" ref={codeRef}>
-                {String.raw`<body narrow-width>`}
-              </code>
-            </pre>
-          </div>
-          <div className="wd-btn-container">
-            <button className="wd-copy-btn" onClick={handleCopyCode}>{buttonText}</button>
-          </div>
           </div>
       </section>
     </>

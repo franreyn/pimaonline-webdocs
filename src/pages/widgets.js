@@ -13,6 +13,7 @@ import ImageGallery from "@/components/widgets/ImageGallery";
 import LockedContent from "@/components/widgets/LockedContent";
 import MediaContainer from "@/components/widgets/MediaContainer";
 import SideBySide from "@/components/widgets/SideBySide";
+import SocialPost from "@/components/widgets/SocialPost";
 import Tables from "@/components/widgets/Tables";
 import Tabs from "@/components/widgets/Tabs";
 import VideoWidget from "@/components/widgets/VideoWidget";
@@ -25,6 +26,8 @@ import "highlight.js/styles/night-owl.css";
 import html from "highlight.js/lib/languages/xml";
 import BackToTop from "@/components/BackToTop";
 import Columns from "@/components/widgets/Columns";
+import PersistentChecklist from "@/components/widgets/PersistentChecklist";
+
 
 export default function Widgets() {
 	// Remove any existing theme link (required to keep theme styles just on the theme page)
@@ -77,7 +80,9 @@ export default function Widgets() {
 					<ImageGallery />
 					<LockedContent />
 					<MediaContainer />
+					<PersistentChecklist />
 					<SideBySide />
+					<SocialPost />
 					<Tables />
 					<Tabs />
 					<VideoWidget />

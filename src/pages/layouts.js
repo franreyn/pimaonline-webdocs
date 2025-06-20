@@ -11,6 +11,8 @@ import DocsIntro from "@/components/DocsIntro";
 import BackToTop from "@/components/BackToTop";
 import { currentVersion } from '../components/Version';
 
+hljs.registerLanguage("html", html);
+
 export default function Layouts() {
   
   // Remove any existing theme link (required to keep theme styles just on the theme page)
@@ -21,13 +23,10 @@ export default function Layouts() {
     }
   }, []);
 
-  hljs.registerLanguage("html", html);
   useEffect(() => {
     hljs.highlightAll();
   }, []);
-
 	
-
   const oneColumnCodeRef = useRef(null);
   const twoColumnCodeRef = useRef(null);
 	const threeColumnCodeRef = useRef(null);
@@ -35,6 +34,27 @@ export default function Layouts() {
   const [oneColumnButtonText, setOneColumnButtonText] = useState("Copy code");
   const [twoColumnButtonText, setTwoColumnButtonText] = useState("Copy code");
 	const [threeColumnButtonText, setThreeColumnButtonText] = useState("Copy code");
+	const [showOneColumnCode, setShowOneColumnCode] = useState(false);
+	const [showTwoColumnCode, setShowTwoColumnCode] = useState(false);
+	const [showThreeColumnCode, setShowThreeColumnCode] = useState(false);
+
+	useEffect(() => {
+		if (showOneColumnCode && oneColumnCodeRef.current) {
+			hljs.highlightElement(oneColumnCodeRef.current);
+		}
+	}, [showOneColumnCode]);
+	
+	useEffect(() => {
+		if (showTwoColumnCode && twoColumnCodeRef.current) {
+			hljs.highlightElement(twoColumnCodeRef.current);
+		}
+	}, [showTwoColumnCode]);
+	
+	useEffect(() => {
+		if (showThreeColumnCode && threeColumnCodeRef.current) {
+			hljs.highlightElement(threeColumnCodeRef.current);
+		}
+	}, [showThreeColumnCode]);
 
   const handleCopyCode = (codeRef, setButtonText) => {
     const codeElement = codeRef.current;
@@ -113,8 +133,16 @@ export default function Layouts() {
           <img className={styles.mockLayout} src="/images/1-column.jpg"/>
         </div>
         <div className="wd-btn-container">
+				<button
+					className="wd-toggle-btn"
+					onClick={() => setShowOneColumnCode(!showOneColumnCode)}>
+					{showOneColumnCode ? "Hide code" : "Show code"}
+				</button>
+				{showOneColumnCode && (
           <button className="wd-copy-btn" onClick={() => handleCopyCode(oneColumnCodeRef, setOneColumnButtonText)}>{oneColumnButtonText}</button>
-        </div>
+				)}
+					</div>
+				{showOneColumnCode && (
         <div className="wd-html-code">
           <pre>
             <code className="language-html" ref={oneColumnCodeRef}>
@@ -159,6 +187,7 @@ export default function Layouts() {
 `}</code>
           </pre>
         </div>
+				)}
       </div>
       </div>
       </section>
@@ -171,8 +200,16 @@ export default function Layouts() {
           <img className={styles.mockLayout} src="/images/2-column.jpg"/>
         </div>
         <div className="wd-btn-container">
+				<button
+					className="wd-toggle-btn"
+					onClick={() => setShowTwoColumnCode(!showTwoColumnCode)}>
+					{showTwoColumnCode ? "Hide code" : "Show code"}
+				</button>
+				{showTwoColumnCode && (
           <button className="wd-copy-btn" onClick={() => handleCopyCode(twoColumnCodeRef, setTwoColumnButtonText)}>{twoColumnButtonText}</button>
-        </div>
+				)}
+					</div>
+				{showTwoColumnCode && (
         <div className="wd-html-code">
           <pre>
             <code className="language-html" ref={twoColumnCodeRef}>
@@ -222,6 +259,7 @@ export default function Layouts() {
 </html>`}</code>
           </pre>
         </div>
+				)}
     </div>
     </div>
       </section>
@@ -235,8 +273,16 @@ export default function Layouts() {
           <img className={styles.mockLayout} src="/images/3-column.jpg"/>
         </div>
         <div className="wd-btn-container">
+				<button
+					className="wd-toggle-btn"
+					onClick={() => setShowThreeColumnCode(!showThreeColumnCode)}>
+					{showThreeColumnCode ? "Hide code" : "Show code"}
+				</button>
+				{showThreeColumnCode && (
           <button className="wd-copy-btn" onClick={() => handleCopyCode(threeColumnCodeRef, setThreeColumnButtonText)}>{threeColumnButtonText}</button>
-        </div>
+				)}
+				</div>
+				{showThreeColumnCode && (
         <div className="wd-html-code">
           <pre>
             <code className="language-html" ref={threeColumnCodeRef}>
@@ -292,6 +338,7 @@ export default function Layouts() {
 </html>`}</code>
           </pre>
         </div>
+				)}
       </div>
       </div>
       </section>

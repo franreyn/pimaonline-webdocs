@@ -1752,3 +1752,159 @@ cause all other hidden content areas with that data-key to also be shown.
 	border: 1px solid var(--color-pcc-primary);
 	transform: scale(1.2, 1.2);
 }
+
+:root {
+	--color-heart: rgba(220, 20, 60, 1); 
+	--post-likes-default: "Liked by 2,834 people";
+	--post-likes-toggle: "Liked by 2,835 people"; 
+}
+
+.social-post {
+  width: auto;
+  max-width: 600px;
+  margin: auto;
+  border-radius: 20px;
+  padding-bottom: 20px;
+	background-color: var(--color-pcc-white);
+	box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+}
+
+.social-post-title {
+  font-weight: bold;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+	color: var(--color-pcc-black);
+}
+
+.social-post-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  padding-bottom: 10px;
+}
+
+.social-post-body {
+  padding: 10px 15px;
+	color: var(--color-pcc-black);
+}
+
+.social-post-likes {
+  font-weight: bold;
+  padding: 0px 15px 10px;
+}
+
+.social-post-likes::before {
+  content: var(--post-likes-default);
+  font-weight: bold;
+  display: block;
+	color: var(--color-pcc-black);
+}
+
+.social-post.liked .social-post-likes::before {
+  content: var(--post-likes-toggle);
+	color: var(--color-pcc-black);
+}
+
+.social-post-icons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 10px 15px;
+}
+
+.social-post-icons span {
+  font-family: "Font Awesome 5 Free";
+  font-size: 1.5rem;
+  margin-right: 10px;
+}
+
+.like-icon::before {
+  content: "\f004";
+  color: var(--color-pcc-black);
+	cursor: pointer;
+}
+
+.comment-icon::before {
+  content: "\f075";
+  color: var(--color-pcc-dkgrey);
+}
+
+.liked .like-icon::before {
+	font-weight: 900;
+  color: var(--color-heart)
+}
+
+/* Persistent Checklist styles */
+
+div.persistent-checklist-container {
+	padding: 15px;
+}
+
+.persistent-checklist.strike-through label {
+	position: relative;
+	cursor: pointer;
+	transition: color 0.5s ease-in-out;
+}
+
+.persistent-checklist.strike-through label::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 50%;
+	width: 0%;
+	height: 2px;
+	min-height: 2px;
+	max-height: 2px;
+	background-color: var(--color-pcc-black);
+	transition: width 0.5s ease-in-out, opacity 0.5s ease-in-out;
+	opacity: 0;
+	overflow: hidden;
+	display: block;
+	box-sizing: border-box;
+}
+
+.persistent-checklist.strike-through .persistent-checklist li:first-child label::after {
+	height: 2px !important;
+	min-height: 2px !important;
+	max-height: 2px !important;
+}
+
+.persistent-checklist.strike-through input[type=checkbox]:checked + label {
+	color: var(--color-pcc-dkgrey);
+}
+
+.persistent-checklist.strike-through input[type=checkbox]:checked + label::after {
+	width: 100%;
+	opacity: 1;
+}
+
+ul.persistent-checklist li::marker {
+	color: rgba(0, 0, 0, 0) !important;
+}
+
+.persistent-checklist li {
+	display: grid;
+	grid-template-columns: 20px auto;
+	grid-gap: 0.5rem;
+	align-items: baseline;
+}
+
+.persistent-checklist ul.not-persistent li,
+.persistent-checklist ol.not-persistent li {
+	display: list-item;
+}
+
+[dark-mode-on] .persistent-checklist.strike-through label::after {
+	background-color: var(--dark-mode-main-text);
+}
+
+[dark-mode-on] .persistent-checklist.strike-through input[type=checkbox]:checked + label {
+	color: var(--dark-mode-secondary-text);
+}
+
+[dark-mode-on] ul.persistent-checklist li::marker {
+	color: rgba(0, 0, 0, 0) !important;
+}
+

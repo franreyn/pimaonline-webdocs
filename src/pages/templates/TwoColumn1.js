@@ -11,9 +11,18 @@ import TemplateSidebar from "@/components/TemplateSidebar";
 import BackToTop from "@/components/BackToTop";
 import { currentVersion } from '../../components/Version';
 
+hljs.registerLanguage("html", html);
+
 export default function TwoColumn1() {
   const codeRef = useRef(null);
   const [buttonText, setButtonText] = useState("Copy code");
+	const [showCode, setShowCode] = useState(false);
+
+	useEffect(() => {
+		if (showCode) {
+			hljs.highlightElement(codeRef.current); 
+		}
+	}, [showCode]);
 
   hljs.registerLanguage("html", html);
   useEffect(() => {
@@ -167,48 +176,19 @@ export default function TwoColumn1() {
         <main className="anchor" id="two-column-1">
           <h2>Interactive Introductions</h2>
           <p>Put some power in your students hands with this highly interactive template: with tabs to click through, images to connect with, clear course objectives and a list of upcoming assignments. Students will have a more dynamic experience with the page. </p>
-            <h3 className="spacer">Template Preview</h3>
-          <div className="template-preview">
-            <Image src={templateImage} alt="" width={800} height={1400} priority />
-            <div>
-              <h4>Featured Widgets</h4>
-              <div className="wd-border">
-              <h5>Tabs</h5>
-              <p>Organize and separate related information into their own individual tabs.</p>
-              <br />
-              <button className="wd-btn thin" onClick={changeToTabs}>Toggle in Preview</button>
-              </div>
-              <div className="wd-border">
-              <h5>Horizontal Display</h5>
-              <p>Display any content in an inline fashion with responsive stacking on mobile devices.</p>
-              <br />
-              <button className="wd-btn thin" onClick={changeToHorizontal}>Toggle in Preview</button>
-              </div>
-              <div className="wd-border">
-              <h5>Border</h5>
-              <p>Call out a main idea, draw attention to learning objectives or any other content that needs to stand out.</p>
-              <br />
-              <button className="wd-btn thin" onClick={changeToBorder}>Toggle in Preview</button>
-              </div>
-              <div className="wd-border">
-              <h5>Assignments</h5>
-              <p>List out the week's tasks in organized, interactive cards.</p>
-              <br />
-              <button className="wd-btn thin" onClick={changeToAssignments}>Toggle in Preview</button>
-              </div>
-              <div className="wd-border">
-              <h5>Blockquote</h5>
-              <p>Separate any block of text with supportive quotes. Use to draw attention to key text or inspiration.</p>
-              <br />
-              <button className="wd-btn thin" onClick={changeToBlockquote}>Toggle in Preview</button>
-              </div>
-            </div>
-          </div>
+          
           <br />
           <div className="wd-window">
           <div className="wd-btn-container">
-              <button className="wd-copy-btn" onClick={handleCopyCode}>{buttonText}</button>
+							<button
+						className="wd-toggle-btn"	onClick={() => setShowCode(!showCode)}>
+						{showCode ? "Hide code" : "Show code"}
+					</button>
+					{showCode && (
+					<button className="wd-copy-btn" onClick={handleCopyCode}>{buttonText}</button>
+					)}
             </div>
+						{showCode && (
             <div className="wd-html-code">
               <pre>
                 <code className="language-html" ref={codeRef}>
@@ -219,7 +199,6 @@ export default function TwoColumn1() {
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@pimaonline/pimaonline-themepack/dist/css/themes/cards/styles.css">
 <link rel="stylesheet" type="text/css" href="../css/custom.css">
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js" defer></script> 
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@pimaonline/pimaonline-themepack/dist/js/scripts2.js" defer></script>
 <title>Course Introduction</title>
 </head>
@@ -372,6 +351,44 @@ export default function TwoColumn1() {
 </html>`}
                 </code>
               </pre>
+            </div>
+						)}
+          </div>
+					<h3 className="spacer">Template Preview</h3>
+          <div className="template-preview">
+            <Image src={templateImage} alt="" width={800} height={1400} priority />
+            <div>
+              <h4>Featured Widgets</h4>
+              <div className="wd-border">
+              <h5>Tabs</h5>
+              <p>Organize and separate related information into their own individual tabs.</p>
+              <br />
+              <button className="wd-btn thin" onClick={changeToTabs}>Toggle in Preview</button>
+              </div>
+              <div className="wd-border">
+              <h5>Horizontal Display</h5>
+              <p>Display any content in an inline fashion with responsive stacking on mobile devices.</p>
+              <br />
+              <button className="wd-btn thin" onClick={changeToHorizontal}>Toggle in Preview</button>
+              </div>
+              <div className="wd-border">
+              <h5>Border</h5>
+              <p>Call out a main idea, draw attention to learning objectives or any other content that needs to stand out.</p>
+              <br />
+              <button className="wd-btn thin" onClick={changeToBorder}>Toggle in Preview</button>
+              </div>
+              <div className="wd-border">
+              <h5>Assignments</h5>
+              <p>List out the week's tasks in organized, interactive cards.</p>
+              <br />
+              <button className="wd-btn thin" onClick={changeToAssignments}>Toggle in Preview</button>
+              </div>
+              <div className="wd-border">
+              <h5>Blockquote</h5>
+              <p>Separate any block of text with supportive quotes. Use to draw attention to key text or inspiration.</p>
+              <br />
+              <button className="wd-btn thin" onClick={changeToBlockquote}>Toggle in Preview</button>
+              </div>
             </div>
           </div>
         </main>

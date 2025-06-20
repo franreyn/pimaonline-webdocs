@@ -11,9 +11,18 @@ import TemplateSidebar from "@/components/TemplateSidebar";
 import BackToTop from "@/components/BackToTop";
 import { currentVersion } from '../../components/Version';
 
+hljs.registerLanguage("html", html);
+
 export default function TwoColumn2() {
   const codeRef = useRef(null);
   const [buttonText, setButtonText] = useState("Copy code");
+	const [showCode, setShowCode] = useState(false);
+
+	useEffect(() => {
+		if (showCode) {
+			hljs.highlightElement(codeRef.current); 
+		}
+	}, [showCode]);
 
   hljs.registerLanguage("html", html);
   useEffect(() => {
@@ -166,48 +175,19 @@ const [templateImage, setTemplateImage] = useState("/images/templates/twocolumn2
         <main className="anchor" id="two-column-2">
           <h2>Warm Welcome</h2>
           <p>Set students up for success with a warm video greeting, a clear path for the rest of the semester, the week's agenda, and some visual imagery and inspiration!</p>
-            <h3 className="spacer">Template Preview</h3>
-          <div className="template-preview">
-            <Image src={templateImage} alt="" width={800} height={1400} priority/>
-            <div>
-              <h4>Featured Widgets</h4>
-              <div className="wd-border">
-              <h5>Media Container</h5>
-              <p>Welcome students with a introductory video and keep it responsive for any device.</p>
-              <br />
-              <button className="wd-btn thin" onClick={changeToMedia}>Toggle in Preview</button>
-              </div>
-              <div className="wd-border">
-              <h5>Vocab Cards</h5>
-              <p>More than just for vocab! Use these interactive cards to build on a standard list.</p>
-              <br />
-              <button className="wd-btn thin" onClick={changeToVocabCards}>Toggle in Preview</button>
-              </div>
-              <div className="wd-border">
-              <h5>Table</h5>
-              <p>Display tasks, due dates, and more in an organized and clear manner.</p>
-              <br />
-              <button className="wd-btn thin" onClick={changeToTable}>Toggle in Preview</button>
-              </div>
-              <div className="wd-border">
-              <h5>Image Gallery</h5>
-              <p>Break up large chunks of text or add some flair with imagery.</p>
-              <br />
-              <button className="wd-btn thin" onClick={changeToImageGallery}>Toggle in Preview</button>
-              </div>
-              <div className="wd-border">
-              <h5>Blockquote</h5>
-              <p>Separate any block of text with attention-grabbing key quotes</p>
-              <br />
-              <button className="wd-btn thin" onClick={changeToBlockquote}>Toggle in Preview</button>
-              </div>
-            </div>
-          </div>
+          
           <br />
           <div className="wd-window">
           <div className="wd-btn-container">
-              <button className="wd-copy-btn" onClick={handleCopyCode}>{buttonText}</button>
+							<button
+						className="wd-toggle-btn"	onClick={() => setShowCode(!showCode)}>
+						{showCode ? "Hide code" : "Show code"}
+					</button>
+					{showCode && (
+					<button className="wd-copy-btn" onClick={handleCopyCode}>{buttonText}</button>
+					)}
             </div>
+						{showCode && (
             <div className="wd-html-code">
               <pre>
                 <code className="language-html" ref={codeRef}>
@@ -218,7 +198,6 @@ const [templateImage, setTemplateImage] = useState("/images/templates/twocolumn2
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@pimaonline/pimaonline-themepack/dist/css/themes/cards/styles.css">
 <link rel="stylesheet" type="text/css" href="../../css/custom.css">
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js" defer></script> 
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@pimaonline/pimaonline-themepack/dist/js/scripts2.js" defer></script>
 <title>Course Overview</title>
 </head>
@@ -328,6 +307,44 @@ const [templateImage, setTemplateImage] = useState("/images/templates/twocolumn2
 `}
                 </code>
               </pre>
+            </div>
+						)}
+          </div>
+					<h3 className="spacer">Template Preview</h3>
+          <div className="template-preview">
+            <Image src={templateImage} alt="" width={800} height={1400} priority/>
+            <div>
+              <h4>Featured Widgets</h4>
+              <div className="wd-border">
+              <h5>Media Container</h5>
+              <p>Welcome students with a introductory video and keep it responsive for any device.</p>
+              <br />
+              <button className="wd-btn thin" onClick={changeToMedia}>Toggle in Preview</button>
+              </div>
+              <div className="wd-border">
+              <h5>Vocab Cards</h5>
+              <p>More than just for vocab! Use these interactive cards to build on a standard list.</p>
+              <br />
+              <button className="wd-btn thin" onClick={changeToVocabCards}>Toggle in Preview</button>
+              </div>
+              <div className="wd-border">
+              <h5>Table</h5>
+              <p>Display tasks, due dates, and more in an organized and clear manner.</p>
+              <br />
+              <button className="wd-btn thin" onClick={changeToTable}>Toggle in Preview</button>
+              </div>
+              <div className="wd-border">
+              <h5>Image Gallery</h5>
+              <p>Break up large chunks of text or add some flair with imagery.</p>
+              <br />
+              <button className="wd-btn thin" onClick={changeToImageGallery}>Toggle in Preview</button>
+              </div>
+              <div className="wd-border">
+              <h5>Blockquote</h5>
+              <p>Separate any block of text with attention-grabbing key quotes</p>
+              <br />
+              <button className="wd-btn thin" onClick={changeToBlockquote}>Toggle in Preview</button>
+              </div>
             </div>
           </div>
         </main>

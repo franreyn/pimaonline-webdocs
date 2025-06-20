@@ -11,9 +11,18 @@ import TemplateSidebar from "@/components/TemplateSidebar";
 import BackToTop from "@/components/BackToTop";
 import { currentVersion } from '../../components/Version';
 
+hljs.registerLanguage("html", html);
+
 export default function OneColumn4() {
   const codeRef = useRef(null);
   const [buttonText, setButtonText] = useState("Copy code");
+	const [showCode, setShowCode] = useState(false);
+
+	useEffect(() => {
+		if (showCode) {
+			hljs.highlightElement(codeRef.current); 
+		}
+	}, [showCode]);
 
   hljs.registerLanguage("html", html);
   useEffect(() => {
@@ -156,42 +165,18 @@ useEffect(() => {
         <main className="anchor" id="one-column-4">
           <h2>Clean Grids</h2>
           <p>Provide some visual structure to your content with this template that leans into row- and column-based widgets. Include the weeks tasks in a table, provide key takeaways in card format, and offer supplemental video walkthroughs in a grid-like fashionl.</p>
-            <h3 className="spacer">Template Preview</h3>
-          <div className="template-preview">
-            <Image src={templateImage} alt="" width={800} height={1400} priority/>
-            <div>
-              <h4>Featured Widgets</h4>
-              <div className="wd-border">
-              <h5>Table</h5>
-              <p>Display tasks, due dates, and more in an organized and clear manner.</p>
-              <br />
-              <button className="wd-btn thin" onClick={changeToTable}>Toggle in Preview</button>
-              </div>
-              <div className="wd-border">
-              <h5>Vocab Cards</h5>
-              <p>Not just for vocabulary! A versatile, interactive tile layout to display your content.</p>
-              <br />
-              <button className="wd-btn thin" onClick={changeToVocabCards}>Toggle in Preview</button>
-              </div>
-              <div className="wd-border">
-              <h5>Video Gallery</h5>
-              <p>Create a grid-like video gallery, with general information like title and video duration.</p>
-              <br />
-              <button className="wd-btn thin" onClick={changeToVideoGallery}>Toggle in Preview</button>
-              </div>
-              <div className="wd-border">
-              <h5>Callout</h5>
-              <p>Invite students to explore more resources on any given topic.</p>
-              <br />
-              <button className="wd-btn thin" onClick={changeToCallout}>Toggle in Preview</button>
-              </div>
-            </div>
-          </div>
-          <br />
+					<br />
           <div className="wd-window">
           <div className="wd-btn-container">
-              <button className="wd-copy-btn" onClick={handleCopyCode}>{buttonText}</button>
+							<button
+						className="wd-toggle-btn"	onClick={() => setShowCode(!showCode)}>
+						{showCode ? "Hide code" : "Show code"}
+					</button>
+					{showCode && (
+					<button className="wd-copy-btn" onClick={handleCopyCode}>{buttonText}</button>
+					)}
             </div>
+						{showCode && (
             <div className="wd-html-code">
               <pre>
                 <code className="language-html" ref={codeRef}>
@@ -202,7 +187,6 @@ useEffect(() => {
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@pimaonline/pimaonline-themepack/dist/css/themes/cards/styles.css">
 <link rel="stylesheet" type="text/css" href="../css/custom.css">
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js" defer></script> 
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@pimaonline/pimaonline-themepack/dist/js/scripts2.js" defer></script>
 <title>Writing 101: Introduction</title>
 </head>
@@ -340,6 +324,38 @@ useEffect(() => {
 </body>
 </html>`}</code>
               </pre>
+            </div>
+						)}
+          </div>
+					  <h3 className="spacer">Template Preview</h3>
+          <div className="template-preview">
+            <Image src={templateImage} alt="" width={800} height={1400} priority/>
+            <div>
+              <h4>Featured Widgets</h4>
+              <div className="wd-border">
+              <h5>Table</h5>
+              <p>Display tasks, due dates, and more in an organized and clear manner.</p>
+              <br />
+              <button className="wd-btn thin" onClick={changeToTable}>Toggle in Preview</button>
+              </div>
+              <div className="wd-border">
+              <h5>Vocab Cards</h5>
+              <p>Not just for vocabulary! A versatile, interactive tile layout to display your content.</p>
+              <br />
+              <button className="wd-btn thin" onClick={changeToVocabCards}>Toggle in Preview</button>
+              </div>
+              <div className="wd-border">
+              <h5>Video Gallery</h5>
+              <p>Create a grid-like video gallery, with general information like title and video duration.</p>
+              <br />
+              <button className="wd-btn thin" onClick={changeToVideoGallery}>Toggle in Preview</button>
+              </div>
+              <div className="wd-border">
+              <h5>Callout</h5>
+              <p>Invite students to explore more resources on any given topic.</p>
+              <br />
+              <button className="wd-btn thin" onClick={changeToCallout}>Toggle in Preview</button>
+              </div>
             </div>
           </div>
         </main>

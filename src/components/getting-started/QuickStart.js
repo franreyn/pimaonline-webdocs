@@ -4,11 +4,19 @@ import "highlight.js/styles/night-owl.css";
 import html from "highlight.js/lib/languages/xml";
 import { currentVersion } from '../Version';
 
-export default function Caption() {
+hljs.registerLanguage("html", html);
+
+export default function QuickStart() {
   const codeRef = useRef(null);
   const [buttonText, setButtonText] = useState("Copy code");
+	const [showCode, setShowCode] = useState(false);
 
-  hljs.registerLanguage("html", html);
+	useEffect(() => {
+		if (showCode) {
+			hljs.highlightElement(codeRef.current); 
+		}
+	}, [showCode]);
+
   useEffect(() => {
     hljs.highlightAll();
   }, []);
@@ -72,8 +80,14 @@ export default function Caption() {
         <p>The easiest way to get started with our templates is to copy the code for the Starter Template and paste it into your course files.</p>
         <div className="wd-window">
         <div className="wd-btn-container">
-            <button className="wd-copy-btn" onClick={handleCopyCode}>{buttonText}</button>
+				<button
+						className="wd-toggle-btn"	onClick={() => setShowCode(!showCode)}>
+						{showCode ? "Hide code" : "Show code"}
+					</button>
+					{showCode && (
+            <button className="wd-copy-btn" onClick={handleCopyCode}>{buttonText}</button>)}
           </div>
+					{showCode && (
           <div className="wd-html-code">
             <pre>
               <code className="language-html" ref={codeRef}>
@@ -118,6 +132,7 @@ export default function Caption() {
               </code>
             </pre>
           </div>
+					)}
         </div>
       </section>
     </>

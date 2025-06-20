@@ -11,9 +11,18 @@ import TemplateSidebar from "@/components/TemplateSidebar";
 import BackToTop from "@/components/BackToTop";
 import { currentVersion } from '../../components/Version';
 
+hljs.registerLanguage("html", html);
+
 export default function TwoColumn3() {
   const codeRef = useRef(null);
   const [buttonText, setButtonText] = useState("Copy code");
+	const [showCode, setShowCode] = useState(false);
+
+	useEffect(() => {
+		if (showCode) {
+			hljs.highlightElement(codeRef.current); 
+		}
+	}, [showCode]);
 
   hljs.registerLanguage("html", html);
   useEffect(() => {
@@ -155,42 +164,19 @@ export default function TwoColumn3() {
         <main className="anchor" id="two-column-3">
           <h2>Key Topics &amp; Tasks</h2>
           <p>Focus on the headlines with this template. List learning objectives, brief overviews of main takeaways from the text, and an easy-to-follow assignmnet list that takes students exactly where they need to be.</p>
-            <h3 className="spacer">Template Preview</h3>
-          <div className="template-preview">
-            <Image src={templateImage} alt="" width={800} height={1400} priority/>
-            <div>
-              <h4>Featured Widgets</h4>
-              <div className="wd-border">
-              <h5>Border</h5>
-              <p>Call out a main idea, draw attention to learning objectives or any other content that needs to stand out.</p>
-              <br />
-              <button className="wd-btn thin" onClick={changeToBorder}>Toggle in Preview</button>
-              </div>
-              <div className="wd-border">
-              <h5>Side-by-Side</h5>
-              <p>Display two horizontal containers that can contain any content.</p>
-              <br />
-              <button className="wd-btn thin" onClick={changeToSideBySide}>Toggle in Preview</button>
-              </div>
-              <div className="wd-border">
-              <h5>Tabs</h5>
-              <p>Organize and separate related information into their own individual tabs.</p>
-              <br />
-              <button className="wd-btn thin" onClick={changeToTabs}>Toggle in Preview</button>
-              </div>
-              <div className="wd-border">
-              <h5>Assignments</h5>
-              <p>List out the week's tasks in organized, interactive cards.</p>
-              <br />
-              <button className="wd-btn thin" onClick={changeToAssignments}>Toggle in Preview</button>
-              </div>
-            </div>
-          </div>
+          
           <br />
           <div className="wd-window">
           <div className="wd-btn-container">
-              <button className="wd-copy-btn" onClick={handleCopyCode}>{buttonText}</button>
+							<button
+						className="wd-toggle-btn"	onClick={() => setShowCode(!showCode)}>
+						{showCode ? "Hide code" : "Show code"}
+					</button>
+					{showCode && (
+					<button className="wd-copy-btn" onClick={handleCopyCode}>{buttonText}</button>
+					)}
             </div>
+						{showCode && (
             <div className="wd-html-code">
               <pre>
                 <code className="language-html" ref={codeRef}>
@@ -201,7 +187,6 @@ export default function TwoColumn3() {
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@pimaonline/pimaonline-themepack/dist/css/themes/cards/styles.css">
 <link rel="stylesheet" type="text/css" href="../css/custom.css">
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js" defer></script> 
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@pimaonline/pimaonline-themepack/dist/js/scripts2.js" defer></script>
 <title>Module One</title>
 </head>
@@ -311,6 +296,38 @@ export default function TwoColumn3() {
 </html>`}
                 </code>
               </pre>
+            </div>
+						)}
+          </div>
+					<h3 className="spacer">Template Preview</h3>
+          <div className="template-preview">
+            <Image src={templateImage} alt="" width={800} height={1400} priority/>
+            <div>
+              <h4>Featured Widgets</h4>
+              <div className="wd-border">
+              <h5>Border</h5>
+              <p>Call out a main idea, draw attention to learning objectives or any other content that needs to stand out.</p>
+              <br />
+              <button className="wd-btn thin" onClick={changeToBorder}>Toggle in Preview</button>
+              </div>
+              <div className="wd-border">
+              <h5>Side-by-Side</h5>
+              <p>Display two horizontal containers that can contain any content.</p>
+              <br />
+              <button className="wd-btn thin" onClick={changeToSideBySide}>Toggle in Preview</button>
+              </div>
+              <div className="wd-border">
+              <h5>Tabs</h5>
+              <p>Organize and separate related information into their own individual tabs.</p>
+              <br />
+              <button className="wd-btn thin" onClick={changeToTabs}>Toggle in Preview</button>
+              </div>
+              <div className="wd-border">
+              <h5>Assignments</h5>
+              <p>List out the week's tasks in organized, interactive cards.</p>
+              <br />
+              <button className="wd-btn thin" onClick={changeToAssignments}>Toggle in Preview</button>
+              </div>
             </div>
           </div>
         </main>

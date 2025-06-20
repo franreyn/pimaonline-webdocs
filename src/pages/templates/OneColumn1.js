@@ -11,9 +11,18 @@ import TemplateSidebar from "@/components/TemplateSidebar";
 import BackToTop from "@/components/BackToTop";
 import { currentVersion } from '../../components/Version';
 
+hljs.registerLanguage("html", html);
+
 export default function OneColumn1() {
   const codeRef = useRef(null);
   const [buttonText, setButtonText] = useState("Copy code");
+	const [showCode, setShowCode] = useState(false);
+
+	useEffect(() => {
+		if (showCode) {
+			hljs.highlightElement(codeRef.current); 
+		}
+	}, [showCode]);
 
   hljs.registerLanguage("html", html);
   useEffect(() => {
@@ -170,48 +179,18 @@ export default function OneColumn1() {
         <main className="anchor" id="one-column-1">
           <h2>Inspirational Structure</h2>
           <p>Give students a clear idea of the course overview and objects, while also providing a bit of encouragement and support. With opportunities for images throughout, this layout will feel visually balanced rather than intimidating chunks of text. Plus, give them quick reference shortcuts to the resources they'll need throughout the semester.</p>
-          <h3 className="spacer">Template Preview</h3>
-          <div className="template-preview">
-            <Image src={templateImage} alt="" width={800} height={1400} priority />
-            <div>
-              <h4>Featured Widgets</h4>
-              <div className="wd-border">
-                <h5>Border</h5>
-                <p>Call out a main idea, draw attention to learning objectives or any other content that needs to stand out.</p>
-                <br />
-                <button className="wd-btn thin" onClick={changeToBorder}>Toggle in Preview</button>
-              </div>
-              <div className="wd-border">
-                <h5>Vocab Cards</h5>
-                <p>More than just for vocab! Use these subtly-interactive cards to build on a standard list.</p>
-                <br />
-                <button className="wd-btn thin" onClick={changeToVocabCards}>Toggle in Preview</button>
-              </div>
-              <div className="wd-border">
-                <h5>Side-by-Side</h5>
-                <p>Display two horizontal containers that can contain any content.</p>
-                <br />
-                <button className="wd-btn thin" onClick={changeToSideBySide}>Toggle in Preview</button>
-              </div>
-              <div className="wd-border">
-                <h5>Blockquote</h5>
-                <p>Separate any block of text along with supportive quotes. Call out phrases from the text or just relevant inspiration.</p>
-                <br />
-                <button className="wd-btn thin" onClick={changeToBlockquote}>Toggle in Preview</button>
-              </div>
-              <div className="wd-border">
-                <h5>Image Gallery</h5>
-                <p>Break up large chunks of text or add some flair to your course shell with imagery.</p>
-                <br />
-                <button className="wd-btn thin" onClick={changeToImgGal}>Toggle in Preview</button>
-              </div>
-            </div>
-          </div>
-          <br />
-          <div className="wd-window">
+          <br/>
+					<div className="wd-window">
             <div className="wd-btn-container">
-              <button className="wd-copy-btn" onClick={handleCopyCode}>{buttonText}</button>
+							<button
+						className="wd-toggle-btn"	onClick={() => setShowCode(!showCode)}>
+						{showCode ? "Hide code" : "Show code"}
+					</button>
+					{showCode && (
+					<button className="wd-copy-btn" onClick={handleCopyCode}>{buttonText}</button>
+					)}
             </div>
+						{showCode && (
             <div className="wd-html-code">
               <pre>
                 <code className="language-html" ref={codeRef}>
@@ -222,7 +201,6 @@ export default function OneColumn1() {
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@pimaonline/pimaonline-themepack/dist/css/themes/cards/styles.css">
 <link rel="stylesheet" type="text/css" href="../css/custom.css">
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js" defer></script> 
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@pimaonline/pimaonline-themepack/dist/js/scripts2.js" defer></script>
 <title>Course Introduction</title>
 </head>
@@ -340,7 +318,46 @@ export default function OneColumn1() {
 `}</code>
               </pre>
             </div>
+						)}
           </div>
+					<h3 className="spacer">Template Preview</h3>
+          <div className="template-preview">
+            <Image src={templateImage} alt="" width={800} height={1400} priority />
+            <div>
+              <h4>Featured Widgets</h4>
+              <div className="wd-border">
+                <h5>Border</h5>
+                <p>Call out a main idea, draw attention to learning objectives or any other content that needs to stand out.</p>
+                <br />
+                <button className="wd-btn thin" onClick={changeToBorder}>Toggle in Preview</button>
+              </div>
+              <div className="wd-border">
+                <h5>Vocab Cards</h5>
+                <p>More than just for vocab! Use these subtly-interactive cards to build on a standard list.</p>
+                <br />
+                <button className="wd-btn thin" onClick={changeToVocabCards}>Toggle in Preview</button>
+              </div>
+              <div className="wd-border">
+                <h5>Side-by-Side</h5>
+                <p>Display two horizontal containers that can contain any content.</p>
+                <br />
+                <button className="wd-btn thin" onClick={changeToSideBySide}>Toggle in Preview</button>
+              </div>
+              <div className="wd-border">
+                <h5>Blockquote</h5>
+                <p>Separate any block of text along with supportive quotes. Call out phrases from the text or just relevant inspiration.</p>
+                <br />
+                <button className="wd-btn thin" onClick={changeToBlockquote}>Toggle in Preview</button>
+              </div>
+              <div className="wd-border">
+                <h5>Image Gallery</h5>
+                <p>Break up large chunks of text or add some flair to your course shell with imagery.</p>
+                <br />
+                <button className="wd-btn thin" onClick={changeToImgGal}>Toggle in Preview</button>
+              </div>
+            </div>
+          </div>
+          <br />
         </main>
         <aside>
           <TemplateSidebar />
