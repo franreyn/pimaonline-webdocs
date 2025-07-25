@@ -809,6 +809,16 @@ pre code.hljs {
   cursor: pointer;
 }
 
+.numbered-list {
+  margin-bottom: 1rem;
+}
+
+.numbered-list li {
+  list-style-type: decimal;
+  padding-left: 0.5rem;
+  margin-left: 1rem;
+}
+
 /* Footer */
 footer {
   margin-top: 4rem;
