@@ -1,8 +1,19 @@
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
+import hljs from "highlight.js/lib/core";
+import html from "highlight.js/lib/languages/xml";
+
+hljs.registerLanguage("html", html);
 
 export default function Columns() {
 	const codeRef = useRef(null);
 	const [buttonText, setButtonText] = useState("Copy code");
+	const [showCode, setShowCode] = useState(false);
+
+	useEffect(() => {
+		if (showCode) {
+			hljs.highlightElement(codeRef.current); 
+		}
+	}, [showCode]);
 
 	const handleCopyCode = () => {
 		const codeElement = codeRef.current;
@@ -63,10 +74,17 @@ export default function Columns() {
 					</div>
 				</div>
 				<div className="wd-btn-container">
+					<button
+						className="wd-toggle-btn"	onClick={() => setShowCode(!showCode)}>
+						{showCode ? "Hide code" : "Show code"}
+					</button>
+					{showCode && (
 					<button className="wd-copy-btn" onClick={handleCopyCode}>
 						{buttonText}
 					</button>
+					)}
 				</div>
+				{showCode && (
 				<div className="wd-html-code">
 					<pre>
 						<code className="language-html" ref={codeRef}>
@@ -83,6 +101,7 @@ export default function Columns() {
 						</code>
 					</pre>
 				</div>
+				)}
 			</div>
 		</section>
 	);

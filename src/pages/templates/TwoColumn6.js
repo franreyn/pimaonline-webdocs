@@ -8,10 +8,20 @@ import "highlight.js/styles/night-owl.css";
 import html from "highlight.js/lib/languages/xml";
 import Image from "next/image";
 import TemplateSidebar from "@/components/TemplateSidebar";
+import BackToTop from "@/components/BackToTop";
+
+hljs.registerLanguage("html", html);
 
 export default function TwoColumn6() {
   const codeRef = useRef(null);
   const [buttonText, setButtonText] = useState("Copy code");
+	const [showCode, setShowCode] = useState(false);
+
+	useEffect(() => {
+		if (showCode) {
+			hljs.highlightElement(codeRef.current); 
+		}
+	}, [showCode]);
 
   hljs.registerLanguage("html", html);
   useEffect(() => {
@@ -96,30 +106,18 @@ const [templateImage, setTemplateImage] = useState("/images/templates/twocolumn6
         <main className="anchor" id="two-column-6">
           <h2>Visual Overview</h2>
           <p>Keep things concise with this template, providing a brief topic overview, neatly arranged tasks &amp; due dates, some relevant imagery, and a key quote from the text. Students will appreciate the direction, without being overwhelmed by information.</p>
-            <h3 className="spacer">Template Preview</h3>
-          <div className="template-preview">
-            <Image src={templateImage} alt="" width={800} height={1400} priority/>
-            <div>
-              <h4>Featured Widgets</h4>
-              <div className="wd-border">
-              <h5>Table</h5>
-              <p>Display tasks, due dates, and more in an organized and clear manner.</p>
-              <br />
-              <button className="wd-btn thin" onClick={changeToTable}>Toggle in Preview</button>
-              </div>
-              <div className="wd-border">
-              <h5>Blockquote</h5>
-              <p>Separate any block of text with attention-grabbing key quotes</p>
-              <br />
-              <button className="wd-btn thin" onClick={changeToBlockquote}>Toggle in Preview</button>
-              </div>
-            </div>
-          </div>
-          <br />
+					<br />
           <div className="wd-window">
           <div className="wd-btn-container">
-              <button className="wd-copy-btn" onClick={handleCopyCode}>{buttonText}</button>
+							<button
+						className="wd-toggle-btn"	onClick={() => setShowCode(!showCode)}>
+						{showCode ? "Hide code" : "Show code"}
+					</button>
+					{showCode && (
+					<button className="wd-copy-btn" onClick={handleCopyCode}>{buttonText}</button>
+					)}
             </div>
+						{showCode && (
             <div className="wd-html-code">
               <pre>
                 <code className="language-html" ref={codeRef}>
@@ -228,6 +226,26 @@ const [templateImage, setTemplateImage] = useState("/images/templates/twocolumn6
 </html>`}
                 </code>
               </pre>
+            </div>
+						)}
+          </div>
+					<h3 className="spacer">Template Preview</h3>
+          <div className="template-preview">
+            <Image src={templateImage} alt="" width={800} height={1400} priority/>
+            <div>
+              <h4>Featured Widgets</h4>
+              <div className="wd-border">
+              <h5>Table</h5>
+              <p>Display tasks, due dates, and more in an organized and clear manner.</p>
+              <br />
+              <button className="wd-btn thin" onClick={changeToTable}>Toggle in Preview</button>
+              </div>
+              <div className="wd-border">
+              <h5>Blockquote</h5>
+              <p>Separate any block of text with attention-grabbing key quotes</p>
+              <br />
+              <button className="wd-btn thin" onClick={changeToBlockquote}>Toggle in Preview</button>
+              </div>
             </div>
           </div>
         </main>

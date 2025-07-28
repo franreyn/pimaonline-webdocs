@@ -796,7 +796,7 @@ pre code.hljs {
   }
 }
 
-.wd-copy-btn {
+.wd-copy-btn, .wd-toggle-btn {
   color: var(--color-wd-secondary);
   background-color: var(--color-wd-primary);
   padding: 0.5rem 1rem;
@@ -807,7 +807,11 @@ pre code.hljs {
   font-weight: 700;
 }
 
-.wd-copy-btn:hover {
+.wd-toggle-btn {
+	margin-right: 10px;
+}
+
+.wd-copy-btn:hover, .wd-toggle-btn:hover {
   background-color: var(--color-wd-accent);
   color: var(--color-wd-primary);
   cursor: pointer;
