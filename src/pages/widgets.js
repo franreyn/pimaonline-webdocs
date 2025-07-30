@@ -7,6 +7,7 @@ import Blockquote from "@/components/widgets/Blockquote";
 import Border from "@/components/widgets/Border";
 import CallOut from "@/components/widgets/CallOut";
 import CardHorizontal from "@/components/widgets/CardHorizontal";
+import ExpandableBanner from "@/components/widgets/ExpandableBanner";
 import FlipCard from "@/components/widgets/FlipCard";
 import HorizontalDisplay from "@/components/widgets/HorizontalDisplay";
 import ImageGallery from "@/components/widgets/ImageGallery";
@@ -75,6 +76,7 @@ export default function Widgets() {
 					<CallOut />
 					<CardHorizontal />
 					<Columns />
+					<ExpandableBanner />
 					<FlipCard />
 					<HorizontalDisplay />
 					<ImageGallery />

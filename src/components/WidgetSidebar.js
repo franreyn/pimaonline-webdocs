@@ -14,8 +14,9 @@ export default function WidgetSidebar() {
 		"toc-blockquote",
 		"toc-border",
 		"toc-call-out",
-		"toc-flip-card",
 		"toc-card-horizontal",
+		"toc-expandable-banner",
+		"toc-flip-card",
 		"toc-horizontal-display",
 		"toc-img-gallery",
 		"toc-locked-content",
@@ -122,6 +123,11 @@ export default function WidgetSidebar() {
 						<li className={activeId === "toc-columns" ? "is-current" : ""}>
 							<Link href="/widgets/#columns" className="toc-columns">
 								Columns
+							</Link>
+						</li>
+						<li className={activeId === "toc-expandable-banner" ? "is-current" : ""}>
+							<Link href="/widgets/#expandable-banner" className="toc-expandable-banner">
+								Expandable Banner
 							</Link>
 						</li>
 						<li className={activeId === "toc-flip-card" ? "is-current" : ""}>

@@ -379,6 +379,10 @@ section p {
   border-radius: 25px;
 }
 
+.wd-btn-container {
+  margin-top: 0.5rem;
+}
+
 .wd-btn {
   background-color: var(--color-wd-primary);
   color: var(--color-wd-secondary);
@@ -811,6 +815,16 @@ pre code.hljs {
   background-color: var(--color-wd-accent);
   color: var(--color-wd-primary);
   cursor: pointer;
+}
+
+.numbered-list {
+  margin-bottom: 1rem;
+}
+
+.numbered-list li {
+  list-style-type: decimal;
+  padding-left: 0.5rem;
+  margin-left: 1rem;
 }
 
 /* Footer */
