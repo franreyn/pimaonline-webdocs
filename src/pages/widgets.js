@@ -28,6 +28,7 @@ import html from "highlight.js/lib/languages/xml";
 import BackToTop from "@/components/BackToTop";
 import Columns from "@/components/widgets/Columns";
 import PersistentChecklist from "@/components/widgets/PersistentChecklist";
+import NumberedDl from "@/components/widgets/NumberedDl";
 
 
 export default function Widgets() {
@@ -82,6 +83,7 @@ export default function Widgets() {
 					<ImageGallery />
 					<LockedContent />
 					<MediaContainer />
+					<NumberedDl />
 					<PersistentChecklist />
 					<SideBySide />
 					<SocialPost />

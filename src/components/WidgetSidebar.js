@@ -15,13 +15,17 @@ export default function WidgetSidebar() {
 		"toc-border",
 		"toc-call-out",
 		"toc-card-horizontal",
+		"toc-columns",
 		"toc-expandable-banner",
 		"toc-flip-card",
 		"toc-horizontal-display",
 		"toc-img-gallery",
 		"toc-locked-content",
 		"toc-media-container",
+		"toc-numbered-dl",
+		"toc-persistent-checklist",
 		"toc-side-by-side",
+		"toc-social-post",
 		"toc-tables",
 		"toc-tabs",
 		"toc-video-widget",
@@ -170,6 +174,11 @@ export default function WidgetSidebar() {
 								className="toc-media-container"
 							>
 								Media Container
+							</Link>
+						</li>
+						<li className={activeId === "toc-numbered-dl" ? "is-current" : ""}>
+							<Link href="/widgets/#numbered-dl" className="toc-numbered-dl">
+								Numbered DL
 							</Link>
 						</li>
 						<li className={activeId === "toc-persistent-checklist" ? "is-current" : ""}>
