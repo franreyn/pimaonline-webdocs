@@ -2004,3 +2004,28 @@ ul.persistent-checklist li::marker {
 	color: rgba(0, 0, 0, 0) !important;
 }
 
+dl.numbered-list {
+  /* Initializes a counter named 'step-counter' */
+  counter-reset: step-counter;
+  padding-left: 0; /* Removes default list padding */
+}
+
+dl.numbered-list dt {
+  font-weight: bold;
+
+  /* Increments the counter for each <dt> */
+  counter-increment: step-counter;
+}
+
+dl.numbered-list dt::before {
+  /* Displays the counter value */
+  content: counter(step-counter) ". ";
+  margin-right: 0.4em;
+}
+
+dl.numbered-list dd {
+  /* Adds indentation for readability */
+  margin-left: 1.5em !important;
+  margin-bottom: 1em;
+  margin-top: 0.5rem;
+}
