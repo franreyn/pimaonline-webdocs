@@ -1,32 +1,61 @@
 import Head from "next/head";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { useLayoutEffect } from "react";
-import { useEffect, useRef, useState } from "react";
+import { useLayoutEffect, useEffect, useRef, useState } from "react";
 import hljs from "highlight.js/lib/core";
 import "highlight.js/styles/night-owl.css";
 import html from "highlight.js/lib/languages/xml";
 import Image from "next/image";
 import TemplateSidebar from "@/components/TemplateSidebar";
 import BackToTop from "@/components/BackToTop";
+import { currentVersion } from '../../components/Version';
 
 hljs.registerLanguage("html", html);
 
 export default function OneColumn1() {
   const codeRef = useRef(null);
   const [buttonText, setButtonText] = useState("Copy code");
-	const [showCode, setShowCode] = useState(false);
+  const [showCode, setShowCode] = useState(false);
 
-	useEffect(() => {
-		if (showCode) {
-			hljs.highlightElement(codeRef.current); 
-		}
-	}, [showCode]);
-
-  hljs.registerLanguage("html", html);
   useEffect(() => {
-    hljs.highlightAll();
-  }, []);
+    if (showCode) {
+      hljs.highlightElement(codeRef.current);
+
+      // Delay meta tag injection until after highlight.js finishes DOM manipulation
+      setTimeout(() => {
+        const codeBlocks = document.querySelectorAll('.wd-html-code code.language-html');
+
+        if (codeBlocks.length > 0) {
+          codeBlocks.forEach((codeBlock) => {
+            let codeContent = codeBlock.textContent;
+
+            if (!codeContent.includes('<meta name="version"')) {
+              const metaRegex = /<meta[^>]*>/g;
+              const matches = [...codeContent.matchAll(metaRegex)];
+
+              if (matches.length > 0) {
+                const lastMeta = matches[matches.length - 1];
+                const insertPosition = lastMeta.index + lastMeta[0].length;
+
+                const versionMeta = `\n<meta name="version" content="v${currentVersion}">`;
+                codeContent =
+                  codeContent.slice(0, insertPosition) +
+                  versionMeta +
+                  codeContent.slice(insertPosition);
+              } else {
+                codeContent = codeContent.replace(
+                  '<head>',
+                  `<head>\n<meta name="version" content="v${currentVersion}">`
+                );
+              }
+
+              codeBlock.textContent = codeContent;
+            }
+          });
+        }
+      }, 0);
+    }
+  }, [showCode]);
 
   const handleCopyCode = () => {
     const codeElement = codeRef.current;
@@ -38,7 +67,6 @@ export default function OneColumn1() {
     window.getSelection().removeAllRanges();
 
     setButtonText("Copied!");
-
     setTimeout(() => {
       setButtonText("Copy code");
     }, 2000);
@@ -54,7 +82,6 @@ export default function OneColumn1() {
 
   // Show the highlighted component
   const [templateView, setTemplateView] = useState();
-
   // Change the url for the highlighted image
   const [templateImage, setTemplateImage] = useState("/images/templates/onecolumn1.jpg");
 
@@ -63,23 +90,18 @@ export default function OneColumn1() {
       case "border":
         setTemplateImage("/images/templates/onecolumn1-border.jpg");
         break;
-
       case "vocab-cards":
         setTemplateImage("/images/templates/onecolumn1-vocabcards.jpg");
         break;
-
       case "side-by-side":
         setTemplateImage("/images/templates/onecolumn1-sidebyside.jpg");
         break;
-
       case "blockquote":
         setTemplateImage("/images/templates/onecolumn1-blockquote.jpg");
         break;
-
       case "image-gallery":
         setTemplateImage("/images/templates/onecolumn1-imagegallery.jpg");
         break;
-
       default:
         setTemplateImage("/images/templates/onecolumn1.jpg");
         break;
