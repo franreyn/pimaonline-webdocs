@@ -8,6 +8,7 @@ import { useEffect, useRef, useState, useLayoutEffect } from "react";
 import DarkMode from "@/components/plugins/DarkMode";
 import FocusText from "@/components/plugins/FocusText";
 import LargeText from "@/components/plugins/LargeText";
+import MouseHoverHighlight from "@/components/plugins/MouseHoverHighlight";
 import NarrowWidth from "@/components/plugins/NarrowWidth";
 import ViewOptions from "@/components/plugins/ViewOptions";
 import CustomCombos from "@/components/plugins/CustomCombos";
@@ -97,6 +98,9 @@ export default function Plugins() {
           </div>
           <div className="wd-subitems">
           <LargeText />
+          </div>
+					<div className="wd-subitems">
+          <MouseHoverHighlight />
           </div>
           <div className="wd-subitems">
           <NarrowWidth />
