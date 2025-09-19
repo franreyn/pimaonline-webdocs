@@ -9,7 +9,7 @@ export default function PluginsSidebar() {
   const router = useRouter();
 
   const sections = useRef([
-    "toc-animation-library", "toc-custom-combos", "toc-dark-mode", "toc-focus-text", "toc-large-text", "toc-narrow-width", "toc-view-options", "toc-fade-in-animation", "toc-slide-in-animations", "toc-button-animations"
+    "toc-animation-library", "toc-custom-combos", "toc-dark-mode", "toc-focus-text", "toc-large-text", "toc-mouse-highlight", "toc-narrow-width", "toc-view-options", "toc-fade-in-animation", "toc-slide-in-animations", "toc-button-animations"
   ]);
 
   useEffect(() => {
@@ -80,6 +80,9 @@ export default function PluginsSidebar() {
             </li>
             <li className={activeId === "toc-large-text" ? "is-current" : ""}>
               <Link href="/plugins/#large-text" className="toc-large-text">Large Text</Link>
+            </li>
+						<li className={activeId === "toc-mouse-highlight" ? "is-current" : ""}>
+              <Link href="/plugins/#mouse-highlight" className="toc-mouse-highlight">Mouse Hover Highlight</Link>
             </li>
             <li className={activeId === "toc-narrow-width" ? "is-current" : ""}>
               <Link href="/plugins/#narrow-width" className="toc-narrow-width">Narrow Width</Link>
