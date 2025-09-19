@@ -6,7 +6,7 @@ import Image from "next/image";
 
 hljs.registerLanguage("html", html);
 
-export default function LargeText() {
+export default function MouseHoverHighlight() {
   const codeRef = useRef(null);
   const [buttonText, setButtonText] = useState("Copy code");
 	const [showCode, setShowCode] = useState(false);
