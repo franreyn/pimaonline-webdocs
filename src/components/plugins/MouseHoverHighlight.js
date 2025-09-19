@@ -16,11 +16,7 @@ export default function MouseHoverHighlight() {
 			hljs.highlightElement(codeRef.current); 
 		}
 	}, [showCode]);
-
-  useEffect(() => {
-    hljs.highlightAll();
-  }, []);
-
+	
   const handleCopyCode = () => {
     const codeElement = codeRef.current;
     const range = document.createRange();
