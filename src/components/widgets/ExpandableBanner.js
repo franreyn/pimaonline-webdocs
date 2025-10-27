@@ -1,23 +1,32 @@
 import { useRef, useState } from "react";
 
 export default function ExpandableBanner() {
-  const codeRef = useRef(null);
-  const [buttonText, setButtonText] = useState("Copy code");
+  const codeRef1 = useRef(null);
+  const codeRef2 = useRef(null);
+  const codeRef3 = useRef(null);
+  const codeRef4 = useRef(null);
+  const [buttonText1, setButtonText1] = useState("Copy code");
+  const [buttonText2, setButtonText2] = useState("Copy code");
+  const [buttonText3, setButtonText3] = useState("Copy code");
+  const [buttonText4, setButtonText4] = useState("Copy code");
 
   const [isOverlayOpen, setOverlayOpen] = useState(false);
   const [overlayImgSrc, setOverlayImgSrc] = useState("");
 
-  const handleCopyCode = () => {
-    const codeElement = codeRef.current;
-    const range = document.createRange();
-    range.selectNode(codeElement);
-    window.getSelection().removeAllRanges();
-    window.getSelection().addRange(range);
-    document.execCommand("copy");
-    window.getSelection().removeAllRanges();
-
-    setButtonText("Copied!");
-    setTimeout(() => setButtonText("Copy code"), 2000);
+  const handleCopyCode = async (codeRef, setButtonText) => {
+    if (!codeRef.current) {
+      return;
+    }
+    try {
+      await navigator.clipboard.writeText(codeRef.current.textContent);
+      setButtonText("Copied!");
+      setTimeout(() => {
+        setButtonText("Copy code");
+      }, 2000);
+    } catch (err) {
+      console.error("Failed to copy: ", err);
+      setButtonText("Failed to copy");
+    }
   };
 
   const handleExpandImage = (src) => {
@@ -42,13 +51,13 @@ export default function ExpandableBanner() {
       <ol className="numbered-list">
         <li>An image with <span className="wd-monospace">no description</span>.
           <div className="wd-btn-container">
-            <button className="wd-copy-btn" onClick={handleCopyCode}>
-              {buttonText}
+            <button className="wd-copy-btn" onClick={() => handleCopyCode(codeRef1, setButtonText1)}>
+              {buttonText1}
             </button>
           </div>
           <div className="wd-html-code">
             <pre>
-              <code className="language-html" ref={codeRef}>
+              <code className="language-html" ref={codeRef1}>
                 {String.raw`// This option has no alt text and no data-description attribute
 <header className="header expandable-banner">
   <img src="/images/widgets/expandable-banner/portrait-art.jpg" alt="" />
@@ -63,13 +72,13 @@ export default function ExpandableBanner() {
         </li>
         <li>An image that uses the <span className="wd-monospace">alt text as the description</span>. Alt text should be <span className="wd-monospace">short and concise</span>. If the description is longer and more detailed, use the next option.
           <div className="wd-btn-container">
-            <button className="wd-copy-btn" onClick={handleCopyCode}>
-              {buttonText}
+            <button className="wd-copy-btn" onClick={() => handleCopyCode(codeRef2, setButtonText2)}>
+              {buttonText2}
             </button>
           </div>
           <div className="wd-html-code">
             <pre>
-              <code className="language-html" ref={codeRef}>
+              <code className="language-html" ref={codeRef2}>
                 {String.raw`// This option contains a short alt text that will display as a caption
 <header className="header expandable-banner">
   <img src="/images/widgets/expandable-banner/portrait-art.jpg" alt="The Salon of Hercules ceiling painting in the Palace of Versailles" />
@@ -84,13 +93,13 @@ export default function ExpandableBanner() {
         </li>
         <li>An image with a <span className="wd-monospace">detailed description</span> that uses the <span className="wd-monospace">data-description attribute</span>.
           <div className="wd-btn-container">
-            <button className="wd-copy-btn" onClick={handleCopyCode}>
-              {buttonText}
+            <button className="wd-copy-btn" onClick={() => handleCopyCode(codeRef3, setButtonText3)}>
+              {buttonText3}
             </button>
           </div>
           <div className="wd-html-code">
             <pre>
-              <code className="language-html" ref={codeRef}>
+              <code className="language-html" ref={codeRef3}>
                 {String.raw`// This option also contains a more detailed data-description attribute that will display as a caption
 <header className="header expandable-banner">
   <img src="/images/widgets/expandable-banner/portrait-art.jpg" alt="The Salon of Hercules ceiling painting in the Palace of Versailles" data-description="The Salon of Hercules ceiling painting in the Palace of Versailles, completed by François Lemoyne in 1736, is a grand Baroque masterpiece titled The Apotheosis of Hercules. Covering an expansive 1,400 square feet, the fresco depicts Hercules ascending to Mount Olympus, welcomed by the gods in a dramatic and dynamic composition filled with swirling clouds, rich colors, and expressive figures." />
@@ -127,13 +136,13 @@ export default function ExpandableBanner() {
           </header>
         </div>
         <div className="wd-btn-container">
-          <button className="wd-copy-btn" onClick={handleCopyCode}>
-            {buttonText}
+          <button className="wd-copy-btn" onClick={() => handleCopyCode(codeRef4, setButtonText4)}>
+            {buttonText4}
           </button>
         </div>
         <div className="wd-html-code">
           <pre>
-            <code className="language-html" ref={codeRef}>
+            <code className="language-html" ref={codeRef4}>
               {String.raw`<header className="header expandable-banner">
   <img src="/images/widgets/expandable-banner/portrait-art.jpg" alt="" />
   <div class="text-container">

@@ -8,6 +8,7 @@ hljs.registerLanguage("html", html);
 export default function SlideInAnimations() {
   const codeRef = useRef(null);
   const [buttonText, setButtonText] = useState("Copy code");
+	const [buttonTexts, setButtonTexts] = useState({});
 	const slideLeftOffRef = useRef(null);
 	const [showSlideLeftOff, setSlideLeftOff] = useState(false);
 	const slideRightOffRef = useRef(null);
@@ -77,22 +78,18 @@ export default function SlideInAnimations() {
     hljs.highlightAll();
   }, []);
 
-	const handleCopyCode = (ref) => {
-		const codeElement = ref.current;
-		if (!codeElement) return;
-	
-		const range = document.createRange();
-		range.selectNode(codeElement);
-		const selection = window.getSelection();
-		selection.removeAllRanges();
-		selection.addRange(range);
-		document.execCommand("copy");
-		selection.removeAllRanges();
-	
-		setButtonText("Copied!");
-		setTimeout(() => {
-			setButtonText("Copy code");
-		}, 2000);
+	const handleCopyCode = async (ref, id) => {
+		if (!ref.current) return;
+		try {
+			await navigator.clipboard.writeText(ref.current.textContent);
+			setButtonTexts(prev => ({ ...prev, [id]: "Copied!" }));
+			setTimeout(() => {
+				setButtonTexts(prev => ({ ...prev, [id]: "Copy code" }));
+			}, 2000);
+		} catch (err) {
+			console.error("Copy failed:", err);
+			setButtonTexts(prev => ({ ...prev, [id]: "Failed to copy" }));
+		}
 	};
 
   return (
@@ -105,7 +102,7 @@ export default function SlideInAnimations() {
 				<div className="wd-btn-container">
 						<button className="wd-toggle-btn" onClick={() => setSlideLeftOff(!showSlideLeftOff)}>{showSlideLeftOff ? "Hide code" : "Show code"}</button>
 						{showSlideLeftOff && (
-						<button className="wd-copy-btn" onClick={() => handleCopyCode(slideLeftOffRef)}>{buttonText}</button>
+						<button className="wd-copy-btn" onClick={() => handleCopyCode(slideLeftOffRef, 'slideLeftOff')}>{buttonTexts['slideLeftOff'] || 'Copy code'}</button>
 						)}
 					</div>
 					{showSlideLeftOff && (
@@ -132,7 +129,7 @@ export default function SlideInAnimations() {
 				<div className="wd-btn-container">
 						<button className="wd-toggle-btn" onClick={() => setSlideRightOff(!showSlideRightOff)}>{showSlideRightOff ? "Hide code" : "Show code"}</button>
 						{showSlideRightOff && (
-						<button className="wd-copy-btn" onClick={() => handleCopyCode(slideRightOffRef)}>{buttonText}</button>
+						<button className="wd-copy-btn" onClick={() => handleCopyCode(slideRightOffRef, 'slideRightOff')}>{buttonTexts['slideRightOff'] || 'Copy code'}</button>
 						)}
 					</div>
 					{showSlideRightOff && (
@@ -159,7 +156,7 @@ export default function SlideInAnimations() {
 				<div className="wd-btn-container">
 						<button className="wd-toggle-btn" onClick={() => setSlideTopOff(!showSlideTopOff)}>{showSlideTopOff ? "Hide code" : "Show code"}</button>
 						{showSlideTopOff && (
-						<button className="wd-copy-btn" onClick={() => handleCopyCode(slideTopOffRef)}>{buttonText}</button>
+						<button className="wd-copy-btn" onClick={() => handleCopyCode(slideTopOffRef, 'slideTopOff')}>{buttonTexts['slideTopOff'] || 'Copy code'}</button>
 						)}
 					</div>
 					{showSlideTopOff && (
@@ -186,7 +183,7 @@ export default function SlideInAnimations() {
 				<div className="wd-btn-container">
 						<button className="wd-toggle-btn" onClick={() => setSlideBottomOff(!showSlideBottomOff)}>{showSlideBottomOff ? "Hide code" : "Show code"}</button>
 						{showSlideBottomOff && (
-						<button className="wd-copy-btn" onClick={() => handleCopyCode(slideBottomOffRef)}>{buttonText}</button>
+						<button className="wd-copy-btn" onClick={() => handleCopyCode(slideBottomOffRef, 'slideBottomOff')}>{buttonTexts['slideBottomOff'] || 'Copy code'}</button>
 						)}
 					</div>
 					{showSlideBottomOff && (
@@ -213,7 +210,7 @@ export default function SlideInAnimations() {
 				<div className="wd-btn-container">
 						<button className="wd-toggle-btn" onClick={() => setSlideLeftSubtle(!showSlideLeftSubtle)}>{showSlideLeftSubtle ? "Hide code" : "Show code"}</button>
 						{showSlideLeftSubtle && (
-						<button className="wd-copy-btn" onClick={() => handleCopyCode(slideLeftSubtleRef)}>{buttonText}</button>
+						<button className="wd-copy-btn" onClick={() => handleCopyCode(slideLeftSubtleRef, 'slideLeftSubtle')}>{buttonTexts['slideLeftSubtle'] || 'Copy code'}</button>
 						)}
 					</div>
 					{showSlideLeftSubtle && (
@@ -240,7 +237,7 @@ export default function SlideInAnimations() {
 				<div className="wd-btn-container">
 						<button className="wd-toggle-btn" onClick={() => setSlideRightSubtle(!showSlideRightSubtle)}>{showSlideRightSubtle ? "Hide code" : "Show code"}</button>
 						{showSlideRightSubtle && (
-						<button className="wd-copy-btn" onClick={() => handleCopyCode(slideRightSubtleRef)}>{buttonText}</button>
+						<button className="wd-copy-btn" onClick={() => handleCopyCode(slideRightSubtleRef, 'slideRightSubtle')}>{buttonTexts['slideRightSubtle'] || 'Copy code'}</button>
 						)}
 					</div>
 					{showSlideRightSubtle && (
@@ -267,7 +264,7 @@ export default function SlideInAnimations() {
 				<div className="wd-btn-container">
 						<button className="wd-toggle-btn" onClick={() => setSlideTopSubtle(!showSlideTopSubtle)}>{showSlideTopSubtle ? "Hide code" : "Show code"}</button>
 						{showSlideTopSubtle && (
-						<button className="wd-copy-btn" onClick={() => handleCopyCode(slideTopSubtleRef)}>{buttonText}</button>
+						<button className="wd-copy-btn" onClick={() => handleCopyCode(slideTopSubtleRef, 'slideTopSubtle')}>{buttonTexts['slideTopSubtle'] || 'Copy code'}</button>
 						)}
 					</div>
 					{showSlideTopSubtle && (
@@ -294,7 +291,7 @@ export default function SlideInAnimations() {
 				<div className="wd-btn-container">
 						<button className="wd-toggle-btn" onClick={() => setSlideBottomSubtle(!showSlideBottomSubtle)}>{showSlideBottomSubtle ? "Hide code" : "Show code"}</button>
 						{showSlideBottomSubtle && (
-						<button className="wd-copy-btn" onClick={() => handleCopyCode(slideBottomSubtleRef)}>{buttonText}</button>
+						<button className="wd-copy-btn" onClick={() => handleCopyCode(slideBottomSubtleRef, 'slideBottomSubtle')}>{buttonTexts['slideBottomSubtle'] || 'Copy code'}</button>
 						)}
 					</div>
 					{showSlideBottomSubtle && (

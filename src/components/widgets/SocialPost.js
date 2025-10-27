@@ -22,6 +22,7 @@ export default function Accordion() {
 	}, []);
 
 	const handleCopyCode = async () => {
+		if (!codeRef.current) return;
 		try {
 			await navigator.clipboard.writeText(codeRef.current.textContent);
 			setButtonText("Copied!");
