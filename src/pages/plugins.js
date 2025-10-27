@@ -48,15 +48,13 @@ export default function Plugins() {
     if (!codeRefs[index].current) return;
     try {
       await navigator.clipboard.writeText(codeRefs[index].current.textContent);
-      const newButtonTexts = [...buttonTexts];
-      newButtonTexts[index] = "Copied!";
-      setButtonTexts(newButtonTexts);
+      setButtonTexts(texts => texts.map((text, i) => (i === index ? "Copied!" : text)));
       setTimeout(() => {
-        newButtonTexts[index] = "Copy code";
-        setButtonTexts(newButtonTexts);
+        setButtonTexts(texts => texts.map((text, i) => (i === index ? "Copy code" : text)));
       }, 2000);
     } catch (err) {
       console.error("Copy failed:", err);
+      setButtonTexts(texts => texts.map((text, i) => (i === index ? "Failed to copy" : text)));
     }
   };
 
