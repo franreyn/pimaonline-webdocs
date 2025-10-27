@@ -28,20 +28,16 @@ export default function OneColumn2() {
     hljs.highlightAll();
   }, []);
 
-  const handleCopyCode = () => {
-    const codeElement = codeRef.current;
-    const range = document.createRange();
-    range.selectNode(codeElement);
-    window.getSelection().removeAllRanges();
-    window.getSelection().addRange(range);
-    document.execCommand("copy");
-    window.getSelection().removeAllRanges();
-
-    setButtonText("Copied!");
-
-    setTimeout(() => {
-      setButtonText("Copy code");
-    }, 2000);
+  const handleCopyCode = async () => {
+    if (!codeRef.current) return;
+    try {
+      await navigator.clipboard.writeText(codeRef.current.textContent);
+      setButtonText("Copied!");
+      setTimeout(() => setButtonText("Copy code"), 2000);
+    } catch (err) {
+      console.error("Copy failed:", err);
+      setButtonText("Failed to copy");
+    }
   };
 
   // Remove any existing theme link (required to keep theme styles just on the theme page)

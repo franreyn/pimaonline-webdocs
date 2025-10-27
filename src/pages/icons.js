@@ -38,23 +38,21 @@ export default function Icons() {
     "Copy code"
   ]);
 
-  const handleCopyCode = (index) => {
-    const range = document.createRange();
-    range.selectNode(codeRefs[index].current);
-    window.getSelection().removeAllRanges();
-    window.getSelection().addRange(range);
-    document.execCommand("copy");
-    window.getSelection().removeAllRanges();
-
-    const newButtonTexts = [...buttonTexts];
-    newButtonTexts[index] = "Copied!";
-    setButtonTexts(newButtonTexts);
-
-    setTimeout(() => {
-      newButtonTexts[index] = "Copy code";
+  const handleCopyCode = async (index) => {
+    if (!codeRefs[index].current) return;
+    try {
+      await navigator.clipboard.writeText(codeRefs[index].current.textContent);
+      const newButtonTexts = [...buttonTexts];
+      newButtonTexts[index] = "Copied!";
       setButtonTexts(newButtonTexts);
-    }, 2000);
-  }; 
+      setTimeout(() => {
+        newButtonTexts[index] = "Copy code";
+        setButtonTexts(newButtonTexts);
+      }, 2000);
+    } catch (err) {
+      console.error("Copy failed:", err);
+    }
+  };
 
   return (
     <>
