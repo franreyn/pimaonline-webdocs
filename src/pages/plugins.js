@@ -44,23 +44,19 @@ export default function Plugins() {
     "Copy code"
   ]);
 
-  const handleCopyCode = (index) => {
-    const range = document.createRange();
-    range.selectNode(codeRefs[index].current);
-    window.getSelection().removeAllRanges();
-    window.getSelection().addRange(range);
-    document.execCommand("copy");
-    window.getSelection().removeAllRanges();
-
-    const newButtonTexts = [...buttonTexts];
-    newButtonTexts[index] = "Copied!";
-    setButtonTexts(newButtonTexts);
-
-    setTimeout(() => {
-      newButtonTexts[index] = "Copy code";
-      setButtonTexts(newButtonTexts);
-    }, 2000);
-  };  
+  const handleCopyCode = async (index) => {
+    if (!codeRefs[index].current) return;
+    try {
+      await navigator.clipboard.writeText(codeRefs[index].current.textContent);
+      setButtonTexts(texts => texts.map((text, i) => (i === index ? "Copied!" : text)));
+      setTimeout(() => {
+        setButtonTexts(texts => texts.map((text, i) => (i === index ? "Copy code" : text)));
+      }, 2000);
+    } catch (err) {
+      console.error("Copy failed:", err);
+      setButtonTexts(texts => texts.map((text, i) => (i === index ? "Failed to copy" : text)));
+    }
+  };
 
   return (
     <>
