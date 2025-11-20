@@ -39,18 +39,33 @@ export default function Tables() {
       </h2>
       <p>
         Use <strong>Tables</strong> to organize information in rows and columns.
-      </p>
-      <p>
         Add <span className="wd-monospace">.display-lg</span> to <span className="wd-monospace">&lt;table&gt;</span> to create a responsive table.
       </p>
+      <p>Additional classes are globally available to further customize your tables:</p>
+      <dl className="info-table lined">
+        <dt>Table Variants</dt>
+        <dd>
+          <code>.display-lg</code> → Applies responsive js to table (mobile stacking)<br />
+          <code>.custom-width</code> → Sets specific column widths and can be customized (use alongside <code>.display-lg</code>) <br />
+          <code>.two-column-table</code> → Two-column label/value table layout (use in place of <code>.display-lg</code>)
+        </dd>
+        <dt>Utility Classes</dt>
+        <dd>
+          <code>.no-margin</code> → Removes all margin (add to <code>&lt;table&gt;</code>)<br />
+          <code>.no-padding</code> → Removes all padding (add to <code>&lt;table&gt;</code>)<br />
+          <code>.sm-table-col</code> → 20% column width (add to individual <code>&lt;th&gt;</code>)<br />
+          <code>.md-table-col</code> → 30% column width (add to individual <code>&lt;th&gt;</code>)<br />
+          <code>.lg-table-col</code> → 50% column width (add to individual <code>&lt;th&gt;</code>)
+        </dd>
+      </dl>
       <div className="wd-window">
         <div className="wd-visual-ex">
           <table className="display-lg">
             <thead>
               <tr>
-                <th>Assignments</th>
-                <th>Points</th>
-                <th>Due Dates</th>
+                <th scope="col">Assignments</th>
+                <th scope="col">Points</th>
+                <th scope="col">Due Dates</th>
               </tr>
             </thead>
             <tbody>
@@ -82,9 +97,9 @@ export default function Tables() {
               {String.raw`<table class="display-lg">
   <thead>
     <tr>
-      <th>Assignments</th>
-      <th>Points</th>
-      <th>Due Dates</th>
+      <th scope="col">Assignments</th>
+      <th scope="col">Points</th>
+      <th scope="col">Due Dates</th>
     </tr>
   </thead>
   <tbody>
