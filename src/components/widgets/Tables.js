@@ -45,9 +45,9 @@ export default function Tables() {
       <dl className="info-table lined">
         <dt>Table Variants</dt>
         <dd>
-          <code>.display-lg</code> → Applies responsive js to table (mobile stacking)<br />
-          <code>.custom-width</code> → Sets specific column widths and can be customized (use alongside <code>.display-lg</code>) <br />
-          <code>.two-column-table</code> → Two-column label/value table layout (use in place of <code>.display-lg</code>)
+          <div><code>.display-lg</code> → Applies responsive js to table (mobile stacking)</div>
+          <div><code>.custom-width</code> → Sets specific column widths and can be customized (use alongside <code>.display-lg</code>)</div>
+          <div><code>.two-column-table</code> → Two-column label/value table layout (use in place of <code>.display-lg</code>)</div>
         </dd>
         <dt>Utility Classes</dt>
         <dd>
