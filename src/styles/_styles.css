@@ -1076,3 +1076,32 @@ h3.spacer {
 video {
   width: 100%;
 }
+
+dl.info-table {
+  display: grid;
+  grid-template-columns: minmax(100px, max-content) minmax(150px, max-content);
+  column-gap: 1rem;
+}
+
+dl.info-table.lined {
+  row-gap: 1rem;
+  font-size: 0.8rem;
+}
+
+dl.info-table.lined dd, dl.info-table.lined dt {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--color-wd-grey);
+}
+
+dl.info-table.lined dt {
+  font-weight: 700;
+}
+
+dl.info-table.lined code {
+  font-size: 0.8rem;
+  color: var(--color-wd-accent);
+}
+
+dl.info-table.lined dd:last-of-type, dl.info-table.lined dt:last-of-type {
+  border-bottom: none;
+}
