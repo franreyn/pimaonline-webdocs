@@ -51,11 +51,11 @@ export default function Tables() {
         </dd>
         <dt>Utility Classes</dt>
         <dd>
-          <code>.no-margin</code> → Removes all margin (add to <code>&lt;table&gt;</code>)<br />
-          <code>.no-padding</code> → Removes all padding (add to <code>&lt;table&gt;</code>)<br />
-          <code>.sm-table-col</code> → 20% column width (add to individual <code>&lt;th&gt;</code>)<br />
-          <code>.md-table-col</code> → 30% column width (add to individual <code>&lt;th&gt;</code>)<br />
-          <code>.lg-table-col</code> → 50% column width (add to individual <code>&lt;th&gt;</code>)
+          <div><code>.no-margin</code> → Removes all margin (add to <code>&lt;table&gt;</code>)</div>
+          <div><code>.no-padding</code> → Removes all padding (add to <code>&lt;table&gt;</code>)</div>
+          <div><code>.sm-table-col</code> → 20% column width (add to individual <code>&lt;th&gt;</code>)</div>
+          <div><code>.md-table-col</code> → 30% column width (add to individual <code>&lt;th&gt;</code>)</div>
+          <div><code>.lg-table-col</code> → 50% column width (add to individual <code>&lt;th&gt;</code>)</div>
         </dd>
       </dl>
       <div className="wd-window">
