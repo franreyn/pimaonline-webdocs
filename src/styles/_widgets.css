@@ -1370,7 +1370,7 @@ table.display-lg thead {
 	right: 1rem;
 }
 
-/* White Background for Locked Content Widget */
+/* White Background for Content Lock Widget */
 
 .white-background {
 	background-color: white;
@@ -1385,20 +1385,7 @@ table.display-lg thead {
 	color: var(--color-pcc-black);
 }
 
-/* Locked Content Widget */
-
-/*
-- To use the locked content widget do the following:
-1. Wrap the hidden content in a div with the class "locked-content"
-2. Add a data key HTML attribute "data-key='1'"
-3. Add the text area for the button and text
- <div class="instructions">
-    <h4>To continue please read Module 1 Readings</h4>
-    <a class="unlock-btn">I've read Module 1 Readings</a>
-  </div>
-4. Because we are using local storage, that means once a data key is marked as true, it'll 
-cause all other hidden content areas with that data-key to also be shown.
-*/
+/* Content Lock Widget */
 
 .content-body {
 	margin-bottom: 10px;

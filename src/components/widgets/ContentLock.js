@@ -4,7 +4,7 @@ import html from "highlight.js/lib/languages/xml";
 
 hljs.registerLanguage("html", html);
 
-export default function LockedContent() {
+export default function ContentLockWidget() {
   // State variables
   const codeRef = useRef(null);
   const [buttonText, setButtonText] = useState("Copy code");
@@ -84,29 +84,40 @@ export default function LockedContent() {
 
 
   return (
-    <section className="wd-content" id="toc-locked-content">
-      <h2 id="locked-content" className="section-top anchor">
-        Locked Content
+    <section className="wd-content" id="toc-content-lock">
+      <h2 id="content-lock" className="section-top anchor">
+        Content Lock
       </h2>
       <p>
-        Use the <strong>Locked Content Widget</strong> to lock and unlock content.
+        Use the <strong>Content Lock Widget</strong> to lock and unlock content.
       </p>
       <p>
+				Use <span className="wd-monospace">.content-lock-widget</span> to wrap the entire widget.
         Use <span className="wd-monospace">.locked-content</span> to wrap the content you want hidden.
         Use <span className="wd-monospace">.instructions</span> to inform students about why content is hidden.
         Use <span className="wd-monospace">.unlocked-btn</span> to label the condition for unlocking the content.
       </p>
+			<h3>Data Keys</h3>
+			<p>
+				Each instance of the Content Lock Widget requries a <span className="wd-monospace">data-key</span> atribute assigned to a number to be attached to the <span className="wd-monospace">.locked-content</span> div. These data keys give you control as to which areas are unlocked.
+			</p>
+			<h4>For Example:</h4>
+			<p>
+			If two Content Lock Widgets on a single page have the same data key. Once one is unlocked, both will unlock. If they have different data keys, they can be unlocked independently.
+			</p>
       <div className="wd-window">
         <div className="wd-visual-ex">
           <div className="white-background">
-					<div className="locked-content">
-					<h2>Visible Content Section</h2>
-					<p>This section displays the initial part of the content that is only partially revealed. As you scroll or interact with the widget, more of the content gradually becomes visible. This mechanism encourages engagement by requiring the user to reveal additional information, enhancing their learning experience.</p>
-				</div>
-				<div className="instructions">
-					<p>Please follow the steps below.</p>
-					<a className="btn unlock-btn">Confirm Completion of Steps A, B, and C</a>
-				</div>
+						<div className="content-lock-widget">
+							<div className="locked-content" data-key="1">
+								<h2>Visible Content Section</h2>
+								<p>This section displays the initial part of the content that is only partially revealed. As you scroll or interact with the widget, more of the content gradually becomes visible. This mechanism encourages engagement by requiring the user to reveal additional information, enhancing their learning experience.</p>
+								</div>
+								<div className="instructions">
+									<p>Please follow the steps below.</p>
+									<a className="btn unlock-btn">Confirm Completion of Steps A, B, and C</a>
+								</div>
+						</div>
           </div>
         </div>
         <div className="wd-btn-container">
@@ -125,14 +136,16 @@ export default function LockedContent() {
           <pre>
             <code className="language-html" ref={codeRef}>
               {String.raw`<div class="content-body">
-   <div class="locked-content">
+  <div class="content-lock-widget">
+    <div class="locked-content" data-key="1">
       <h2>Visible Content Section</h2>
       <p>This section displays the initial part of the content that is only...</p>
-   </div>
-   <div class="instructions">
+    </div>
+    <div class="instructions">
       <p>Please follow the steps below.</p>
       <a class="unlock-btn">Confirm Completion of Steps A, B, and C</a>
-   </div>
+    </div>
+  </div>
 </div>`}
             </code>
           </pre>

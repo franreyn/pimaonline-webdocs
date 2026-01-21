@@ -11,7 +11,7 @@ import ExpandableBanner from "@/components/widgets/ExpandableBanner";
 import FlipCard from "@/components/widgets/FlipCard";
 import HorizontalDisplay from "@/components/widgets/HorizontalDisplay";
 import ImageGallery from "@/components/widgets/ImageGallery";
-import LockedContent from "@/components/widgets/LockedContent";
+import ContentLock from "@/components/widgets/ContentLock";
 import MediaContainer from "@/components/widgets/MediaContainer";
 import SideBySide from "@/components/widgets/SideBySide";
 import SocialPost from "@/components/widgets/SocialPost";
@@ -77,11 +77,11 @@ export default function Widgets() {
 					<CallOut />
 					<CardHorizontal />
 					<Columns />
+					<ContentLock />
 					<ExpandableBanner />
 					<FlipCard />
 					<HorizontalDisplay />
 					<ImageGallery />
-					<LockedContent />
 					<MediaContainer />
 					<NumberedDl />
 					<PersistentChecklist />
