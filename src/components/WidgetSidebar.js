@@ -129,6 +129,16 @@ export default function WidgetSidebar() {
 								Columns
 							</Link>
 						</li>
+						<li
+							className={activeId === "toc-content-lock" ? "is-current" : ""}
+						>
+							<Link
+								href="/widgets/#content-lock"
+								className="toc-content-lock"
+							>
+								Content Lock
+							</Link>
+						</li>
 						<li className={activeId === "toc-expandable-banner" ? "is-current" : ""}>
 							<Link href="/widgets/#expandable-banner" className="toc-expandable-banner">
 								Expandable Banner
@@ -154,16 +164,6 @@ export default function WidgetSidebar() {
 						<li className={activeId === "toc-img-gallery" ? "is-current" : ""}>
 							<Link href="/widgets/#img-gallery" className="toc-img-gallery">
 								Image Gallery
-							</Link>
-						</li>
-						<li
-							className={activeId === "toc-locked-content" ? "is-current" : ""}
-						>
-							<Link
-								href="/widgets/#locked-content"
-								className="toc-locked-content"
-							>
-								Locked Content
 							</Link>
 						</li>
 						<li
