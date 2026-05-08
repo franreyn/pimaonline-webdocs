@@ -2278,9 +2278,3 @@ dl.info-table {
     margin-right: 0;
   }
 }
-
-@media (min-width: 1024px) {
-  .short-content:not(#second-column .short-content) > div {
-    transform: translateY(25%);
-  }
-}
