@@ -8,7 +8,7 @@ hljs.registerLanguage("html", html);
 function SliderExample({ children }) {
 	const [currentSlide, setCurrentSlide] = useState(0);
 
-	const slides = React.Children.toArray(children);
+	const slides = React.useMemo(() => React.Children.toArray(children), [children]);
 
 	const previousSlide = () => {
 		setCurrentSlide((prev) =>
