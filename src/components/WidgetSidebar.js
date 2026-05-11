@@ -28,6 +28,7 @@ export default function WidgetSidebar() {
 		"toc-numbered-dl",
 		"toc-persistent-checklist",
 		"toc-side-by-side",
+		"toc-slider",
 		"toc-social-post",
 		"toc-tables",
 		"toc-tabs",
@@ -212,6 +213,11 @@ export default function WidgetSidebar() {
 						<li className={activeId === "toc-side-by-side" ? "is-current" : ""}>
 							<Link href="/widgets/#side-by-side" className="toc-side-by-side">
 								Side-by-side
+							</Link>
+						</li>
+						<li className={activeId === "toc-slider" ? "is-current" : ""}>
+							<Link href="/widgets/#slider" className="toc-slider">
+								Slider
 							</Link>
 						</li>
 						<li className={activeId === "toc-social-post" ? "is-current" : ""}>
