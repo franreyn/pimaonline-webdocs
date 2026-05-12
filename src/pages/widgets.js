@@ -18,6 +18,7 @@ import ContentLockQuiz from "@/components/widgets/ContentLockQuiz";
 import MediaContainer from "@/components/widgets/MediaContainer";
 import SideBySide from "@/components/widgets/SideBySide";
 import SocialPost from "@/components/widgets/SocialPost";
+import Steps from "@/components/widgets/Steps";
 import Tables from "@/components/widgets/Tables";
 import Tabs from "@/components/widgets/Tabs";
 import VideoWidget from "@/components/widgets/VideoWidget";
@@ -32,7 +33,6 @@ import BackToTop from "@/components/BackToTop";
 import Columns from "@/components/widgets/Columns";
 import PersistentChecklist from "@/components/widgets/PersistentChecklist";
 import NumberedDl from "@/components/widgets/NumberedDl";
-
 
 export default function Widgets() {
 	// Remove any existing theme link (required to keep theme styles just on the theme page)
@@ -93,6 +93,7 @@ export default function Widgets() {
 					<PersistentChecklist />
 					<SideBySide />
 					<SocialPost />
+					<Steps />
 					<Tables />
 					<Tabs />
 					<VideoWidget />
