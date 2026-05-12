@@ -17,6 +17,7 @@ import ContentLock from "@/components/widgets/ContentLock";
 import ContentLockQuiz from "@/components/widgets/ContentLockQuiz";
 import MediaContainer from "@/components/widgets/MediaContainer";
 import SideBySide from "@/components/widgets/SideBySide";
+import Slider from "@/components/widgets/Slider";
 import SocialPost from "@/components/widgets/SocialPost";
 import Steps from "@/components/widgets/Steps";
 import Tables from "@/components/widgets/Tables";
@@ -92,6 +93,7 @@ export default function Widgets() {
 					<NumberedDl />
 					<PersistentChecklist />
 					<SideBySide />
+					<Slider />
 					<SocialPost />
 					<Steps />
 					<Tables />
