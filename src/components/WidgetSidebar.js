@@ -225,6 +225,11 @@ export default function WidgetSidebar() {
 								Social Post
 							</Link>
 						</li>
+						<li className={activeId === "toc-steps" ? "is-current" : ""}>
+							<Link href="/widgets/#steps" className="toc-steps">
+								Steps
+							</Link>
+						</li>
 						<li className={activeId === "toc-tables" ? "is-current" : ""}>
 							<Link href="/widgets/#tables" className="toc-tables">
 								Tables
