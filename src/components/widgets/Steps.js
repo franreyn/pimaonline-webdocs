@@ -40,22 +40,12 @@ function StepsWidget({ steps }) {
 							isActive ? "active" : ""
 						}`}
 					>
-						<div
+						<button
+							type="button"
 							className="step-header"
-							role="button"
-							tabIndex={0}
 							aria-expanded={isActive}
 							aria-controls={`step-content-${index}`}
 							onClick={() => toggleStep(index)}
-							onKeyDown={(event) => {
-								if (
-									event.key === "Enter" ||
-									event.key === " "
-								) {
-									event.preventDefault();
-									toggleStep(index);
-								}
-							}}
 						>
 							<div
 								className="step-marker"
@@ -65,7 +55,7 @@ function StepsWidget({ steps }) {
 							<span className="step-number">
 								Step {index + 1}
 							</span>
-						</div>
+						</button>
 
 						{isActive && (
 							<span className="step-status">
