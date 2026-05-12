@@ -57,15 +57,6 @@ function StepsWidget({ steps }) {
 							</span>
 						</button>
 
-						{isActive && (
-							<span className="step-status">
-								<span className="sr-only">
-									,{" "}
-								</span>
-								(current step)
-							</span>
-						)}
-
 						<div
               className={`step-content ${
                 isActive ? "active" : ""
