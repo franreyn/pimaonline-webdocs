@@ -30,7 +30,7 @@ function StepsWidget({ steps }) {
 				</button>
 			</div>
 
-			{steps.map((step, index) => {
+			{steps?.map((step, index) => {
 				const isActive = activeStep === index;
 
 				return (
