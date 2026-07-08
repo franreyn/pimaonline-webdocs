@@ -12,6 +12,7 @@ import ExpandableBanner from "@/components/widgets/ExpandableBanner";
 import FlipCard from "@/components/widgets/FlipCard";
 import HorizontalDisplay from "@/components/widgets/HorizontalDisplay";
 import ImageGallery from "@/components/widgets/ImageGallery";
+import InfoPopup from "@/components/widgets/InfoPopup";
 import InfoTable from "@/components/widgets/InfoTable";
 import ContentLock from "@/components/widgets/ContentLock";
 import ContentLockQuiz from "@/components/widgets/ContentLockQuiz";
@@ -88,6 +89,7 @@ export default function Widgets() {
 					<FlipCard />
 					<HorizontalDisplay />
 					<ImageGallery />
+					<InfoPopup />
 					<InfoTable />
 					<MediaContainer />
 					<NumberedDl />
