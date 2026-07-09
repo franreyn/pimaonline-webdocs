@@ -23,6 +23,7 @@ export default function WidgetSidebar() {
 		"toc-flip-card",
 		"toc-horizontal-display",
 		"toc-img-gallery",
+		"toc-info-popup",
 		"toc-info-table",
 		"toc-media-container",
 		"toc-numbered-dl",
@@ -183,6 +184,11 @@ export default function WidgetSidebar() {
 						<li className={activeId === "toc-img-gallery" ? "is-current" : ""}>
 							<Link href="/widgets/#img-gallery" className="toc-img-gallery">
 								Image Gallery
+							</Link>
+						</li>
+						<li className={activeId === "toc-info-popup" ? "is-current" : ""}>
+							<Link href="/widgets/#info-popup" className="toc-info-popup">
+								Info Popup
 							</Link>
 						</li>
 						<li className={activeId === "toc-info-table" ? "is-current" : ""}>

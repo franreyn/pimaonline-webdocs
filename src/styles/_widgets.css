@@ -10,7 +10,10 @@
 	--color-pcc-tertiary-hover: rgba(0, 146, 199, 1);
 	--color-pcc-white: rgba(255, 255, 255, 1);
 	--color-error: rgba(189, 66, 84, 1);
-	--color-success-text: rgba(0, 128, 0, 1); 
+	--color-success-text: rgba(0, 128, 0, 1);
+	--info-popup-red: var(--color-error);
+	--info-popup-green: var(--color-success-text);
+	--info-popup-blue: var(--color-wd-accent);
 }
 .btn {
 	background-color: #2e5e8e;
@@ -2387,4 +2390,119 @@ dl.info-table {
   color: var(--color-wd-grey);
   background: none;
   text-decoration: underline;
+}
+
+/* Info Popup Widget */
+/* Layout-only helpers for this demo (not production class names) */
+.info-popup-demo-visual-ex {
+  /* reserves room below the trigger so the open popup doesn't overlap the code toggle controls */
+  padding-bottom: 5rem;
+}
+
+.info-popup-demo-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+/* Everything below matches the production ThemePack's Info Popup class names */
+.info-popup {
+  cursor: pointer;
+  border-bottom: 2px dotted var(--color-wd-accent);
+}
+
+.info-popup:hover,
+.info-popup[aria-expanded="true"] {
+  border-bottom-color: var(--color-wd-secondary);
+}
+
+.info-popup.red {
+  border-bottom-color: var(--info-popup-red);
+}
+
+.info-popup.green {
+  border-bottom-color: var(--info-popup-green);
+}
+
+.info-popup.blue {
+  border-bottom-color: var(--info-popup-blue);
+}
+
+.info-popup-modal {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  z-index: 5;
+  display: block;
+  min-width: 220px;
+  max-width: 320px;
+  padding: 0.7rem 1.75rem 0.7rem 1rem;
+  background-color: var(--color-wd-primary);
+  border-left: 3px solid var(--color-wd-accent);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.info-popup-theme-red {
+  border-left-color: var(--info-popup-red);
+}
+
+.info-popup-theme-green {
+  border-left-color: var(--info-popup-green);
+}
+
+.info-popup-theme-blue {
+  border-left-color: var(--info-popup-blue);
+}
+
+.info-popup-caret {
+  position: absolute;
+  top: -8px;
+  left: 16px;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid var(--color-wd-primary);
+}
+
+.info-popup-close-btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 20px;
+  height: 20px;
+  line-height: 1;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+  font-size: 1rem;
+}
+
+.info-popup-content {
+  display: block;
+}
+
+.info-popup-mobile-message {
+  display: none;
+  border: 2px solid var(--color-wd-accent);
+  border-radius: 8px;
+  padding: 0.8rem 1rem;
+  margin-top: 0.75rem;
+}
+
+/* Matches the production widget's hideInfoPopupWidth breakpoint: "(max-width: 699.98px)" */
+@media screen and (max-width: 699.98px) {
+  .info-popup {
+    pointer-events: none;
+    border-bottom: none;
+  }
+
+  .info-popup-modal {
+    display: none;
+  }
+
+  .info-popup-mobile-message {
+    display: block;
+  }
 }
