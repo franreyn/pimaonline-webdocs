@@ -33,6 +33,7 @@ export default function WidgetSidebar() {
 		"toc-social-post",
 		"toc-tables",
 		"toc-tabs",
+		"toc-timeline",
 		"toc-video-widget",
 		"toc-vocab-cards",
 		"toc-vocab-list",
@@ -244,6 +245,11 @@ export default function WidgetSidebar() {
 						<li className={activeId === "toc-tabs" ? "is-current" : ""}>
 							<Link href="/widgets/#tabs" className="toc-tabs">
 								Tabs
+							</Link>
+						</li>
+						<li className={activeId === "toc-timeline" ? "is-current" : ""}>
+							<Link href="/widgets/#timeline" className="toc-timeline">
+								Timeline
 							</Link>
 						</li>
 						<li className={activeId === "toc-video-widget" ? "is-current" : ""}>
