@@ -23,6 +23,7 @@ import SocialPost from "@/components/widgets/SocialPost";
 import Steps from "@/components/widgets/Steps";
 import Tables from "@/components/widgets/Tables";
 import Tabs from "@/components/widgets/Tabs";
+import Timeline from "@/components/widgets/Timeline";
 import VideoWidget from "@/components/widgets/VideoWidget";
 import VocabCards from "@/components/widgets/VocabCards";
 import VocabList from "@/components/widgets/VocabList";
@@ -100,6 +101,7 @@ export default function Widgets() {
 					<Steps />
 					<Tables />
 					<Tabs />
+					<Timeline />
 					<VideoWidget />
 					<VocabCards />
 					<VocabList />
