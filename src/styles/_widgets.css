@@ -1898,6 +1898,129 @@ h3, span {
 	transform: scale(1.2, 1.2);
 }
 
+/* Header banner animations */
+.header[data-header-animation="pan-zoom"] {
+	overflow: hidden;
+}
+
+.header[data-header-animation="pan-zoom"] img {
+	animation: ken-burns 18s ease-in-out forwards;
+}
+
+@keyframes ken-burns {
+	from {
+		transform: scale(1) translate(0, 0);
+	}
+
+	to {
+		transform: scale(1.12) translate(-2%, -2%);
+	}
+}
+
+.banner-anim-wrap {
+	display: block;
+	overflow: hidden;
+}
+
+.banner-anim-wrap img {
+	display: block;
+	width: 100%;
+	opacity: 0;
+	transition: opacity 0.3s ease-out;
+}
+
+.banner-anim-wrap img.loaded {
+	opacity: 1;
+}
+
+.banner-anim-wrap img.banner-zoom-in.loaded {
+	animation: banner-zoom-in 0.6s ease-out forwards;
+	transform-origin: center center;
+}
+
+.banner-anim-wrap img.banner-zoom-out.loaded {
+	animation: banner-zoom-out 0.6s ease-out forwards;
+	transform-origin: center center;
+}
+
+.banner-anim-wrap img.banner-pan.loaded {
+	animation: banner-pan 0.6s ease-in-out forwards;
+}
+
+.banner-anim-wrap img.banner-fade-in.loaded {
+	animation: banner-fade-in 0.6s ease-in forwards;
+}
+
+.banner-anim-wrap img.banner-fade-in.loaded[class*="banner-zoom-in"] {
+	animation: banner-fade-in 0.6s ease-in forwards, banner-zoom-in 0.6s ease-out forwards;
+}
+
+.banner-anim-wrap img.banner-fade-in.loaded[class*="banner-zoom-out"] {
+	animation: banner-fade-in 0.6s ease-in forwards, banner-zoom-out 0.6s ease-out forwards;
+}
+
+.banner-anim-wrap img.banner-fade-in.loaded[class*="banner-pan"] {
+	animation: banner-fade-in 0.6s ease-in forwards, banner-pan 0.6s ease-in-out forwards;
+}
+
+.banner-anim-wrap img[class*="banner-zoom-in--"].loaded {
+	animation: banner-zoom-in 0.6s ease-out forwards;
+}
+
+.banner-anim-wrap img[class*="banner-zoom-out--"].loaded {
+	animation: banner-zoom-out 0.6s ease-out forwards;
+}
+
+.banner-anim-wrap img[class*="banner-pan--"].loaded {
+	animation: banner-pan 0.6s ease-in-out forwards;
+}
+
+.banner-anim-wrap img.banner-zoom-in--right.loaded, .banner-anim-wrap img.banner-zoom-out--right.loaded { transform-origin: right center; }
+.banner-anim-wrap img.banner-zoom-in--left.loaded, .banner-anim-wrap img.banner-zoom-out--left.loaded { transform-origin: left center; }
+.banner-anim-wrap img.banner-zoom-in--top.loaded, .banner-anim-wrap img.banner-zoom-out--top.loaded { transform-origin: center top; }
+.banner-anim-wrap img.banner-zoom-in--bottom.loaded, .banner-anim-wrap img.banner-zoom-out--bottom.loaded { transform-origin: center bottom; }
+.banner-anim-wrap img.banner-zoom-in--top-left.loaded, .banner-anim-wrap img.banner-zoom-out--top-left.loaded { transform-origin: left top; }
+.banner-anim-wrap img.banner-zoom-in--top-right.loaded, .banner-anim-wrap img.banner-zoom-out--top-right.loaded { transform-origin: right top; }
+.banner-anim-wrap img.banner-zoom-in--bottom-left.loaded, .banner-anim-wrap img.banner-zoom-out--bottom-left.loaded { transform-origin: left bottom; }
+.banner-anim-wrap img.banner-zoom-in--bottom-right.loaded, .banner-anim-wrap img.banner-zoom-out--bottom-right.loaded { transform-origin: right bottom; }
+
+.banner-anim-wrap img.banner-pan--right.loaded { --banner-pan-x: -4%; --banner-pan-y: 0; }
+.banner-anim-wrap img.banner-pan--left.loaded { --banner-pan-x: 4%; --banner-pan-y: 0; }
+.banner-anim-wrap img.banner-pan--top.loaded { --banner-pan-x: 0; --banner-pan-y: 4%; }
+.banner-anim-wrap img.banner-pan--bottom.loaded { --banner-pan-x: 0; --banner-pan-y: -4%; }
+.banner-anim-wrap img.banner-pan--top-left.loaded { --banner-pan-x: 4%; --banner-pan-y: 4%; }
+.banner-anim-wrap img.banner-pan--top-right.loaded { --banner-pan-x: -4%; --banner-pan-y: 4%; }
+.banner-anim-wrap img.banner-pan--bottom-left.loaded { --banner-pan-x: 4%; --banner-pan-y: -4%; }
+.banner-anim-wrap img.banner-pan--bottom-right.loaded { --banner-pan-x: -4%; --banner-pan-y: -4%; }
+
+@keyframes banner-zoom-in {
+	from { transform: scale(1); }
+	to { transform: scale(1.06); }
+}
+
+@keyframes banner-zoom-out {
+	from { transform: scale(1.06); }
+	to { transform: scale(1); }
+}
+
+@keyframes banner-pan {
+	from { transform: scale(1.12) translate(0, 0); }
+	to { transform: scale(1.12) translate(var(--banner-pan-x, 0), var(--banner-pan-y, 0)); }
+}
+
+@keyframes banner-fade-in {
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.banner-anim-wrap img,
+	.header[data-header-animation="pan-zoom"] img {
+		animation: none !important;
+		transition: none !important;
+	}
+}
+
 :root {
 	--color-heart: rgba(220, 20, 60, 1); 
 	--post-likes-default: "Liked by 2,834 people";
