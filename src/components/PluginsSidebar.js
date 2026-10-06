@@ -9,7 +9,7 @@ export default function PluginsSidebar() {
   const router = useRouter();
 
   const sections = useRef([
-    "toc-animation-library", "toc-custom-combos", "toc-dark-mode", "toc-focus-text", "toc-large-text", "toc-narrow-width", "toc-view-options", "toc-fade-in-animation", "toc-slide-in-animations", "toc-button-animations"
+    "toc-animation-library", "toc-custom-combos", "toc-dark-mode", "toc-focus-text", "toc-large-text", "toc-narrow-width", "toc-view-options", "toc-fade-in-animation", "toc-slide-in-animations", "toc-button-animations", "toc-banner-animations"
   ]);
 
   useEffect(() => {
@@ -67,6 +67,9 @@ export default function PluginsSidebar() {
             </li>
             <li className={activeId === "toc-button-animations" ? "is-current" : ""}>
               <Link href="/plugins/#button-animations" className="toc-button-animations">Button Animations</Link>
+            </li>
+            <li className={activeId === "toc-banner-animations" ? "is-current" : ""}>
+              <Link href="/plugins/#banner-animations" className="toc-banner-animations">Banner Animations</Link>
             </li>
           </ul>
         </li>

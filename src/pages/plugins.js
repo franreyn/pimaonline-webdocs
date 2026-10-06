@@ -9,6 +9,7 @@ import ViewOptions from "@/components/plugins/ViewOptions";
 import FadeInAnimation from "@/components/plugins/FadeInAnimation";
 import SlideInAnimations from "@/components/plugins/SlideInAnimations";
 import ButtonsAnimations from "@/components/plugins/ButtonAnimations";
+import BannerAnimations from "@/components/plugins/BannerAnimations";
 import PluginsSidebar from "@/components/PluginsSidebar";
 import BackToTop from "@/components/BackToTop";
 
@@ -77,6 +78,9 @@ export default function Plugins() {
           </div>
           <div className="wd-subitems">
             <ButtonsAnimations />
+          </div>
+          <div className="wd-subitems">
+            <BannerAnimations />
           </div>
           <h2 id="view-options-main" className="section-top anchor">View Options</h2>
         <p className="wd-break">Quickly offer view option features by adding just a single attribute to your <span className="wd-monospace">&lt;body&gt;</span> element</p>
